@@ -98,13 +98,15 @@ export interface ScheduleHeaderProps
 export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderProps>(
   ({ className, tone, layout, icon, title, subtext, ...props }, ref) => {
     const toneKey = tone ?? "default";
+    const medallionTone =
+      toneKey === "default" || toneKey === "brand" ? "gradient" : toneKey;
     return (
       <div
         ref={ref}
         className={cn(scheduleHeaderVariants({ tone, layout }), className)}
         {...props}
       >
-        <span className={featureMedallionVariants({ tone: "gradient", size: "sm" })}>
+        <span className={featureMedallionVariants({ tone: medallionTone, size: "sm" })}>
           <Icon name={icon} size="sm" />
         </span>
         <div className="flex flex-col gap-1">

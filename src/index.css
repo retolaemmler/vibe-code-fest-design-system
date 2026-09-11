@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* ============================================================================
    VIBE DESIGN SYSTEM — DESIGN TOKENS
    ----------------------------------------------------------------------------
@@ -21,6 +23,15 @@
    7. No magic numbers in components: shadows, blurs, durations, easings and
       the type scale are tokens too.
    ========================================================================= */
+
+/* Class-based dark mode: toggle by putting `dark` on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+}
 
 :root {
   /* --- Raw brand anchors (referenced by semantic tokens only) ------------ */

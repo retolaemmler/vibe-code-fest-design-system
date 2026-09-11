@@ -740,7 +740,7 @@ function StyleGuide() {
                 </CardContent>
                 <CardFooter className="flex gap-3">
                   <Button variant="gradient">Reserve seat</Button>
-                  <Button variant="ghost">Cancel</Button>
+                  <Button variant="secondary">Cancel</Button>
                 </CardFooter>
               </Card>
             </div>
@@ -827,7 +827,7 @@ function StyleGuide() {
                         </Text>
                       </CardContent>
                       <CardFooter>
-                        <Button variant="ghost" size="sm">
+                        <Button variant="secondary" size="sm">
                           Details
                         </Button>
                       </CardFooter>

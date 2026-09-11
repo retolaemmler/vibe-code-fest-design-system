@@ -114,6 +114,51 @@ function Showcase() {
               Secondary
             </Button>
           </div>
+
+          <div className="grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <TicketCard
+              pill={<Badge variant="brand" tone="solid">Early bird</Badge>}
+            >
+              <TicketHeader>
+                <TicketTitle>Regular</TicketTitle>
+                <TicketDescription>Full day, all talks</TicketDescription>
+              </TicketHeader>
+              <TicketPrice>
+                <span className="text-h2">89 CHF</span>
+                <span className="text-caption opacity-70">until sold out</span>
+              </TicketPrice>
+            </TicketCard>
+            <TicketCard variant="brand">
+              <TicketHeader>
+                <TicketTitle>VIP</TicketTitle>
+                <TicketDescription>Talks + afterparty</TicketDescription>
+              </TicketHeader>
+              <TicketPrice>
+                <span className="text-h2">149 CHF</span>
+                <span className="text-caption opacity-70">best value</span>
+              </TicketPrice>
+            </TicketCard>
+            <TicketCard variant="accent">
+              <TicketHeader>
+                <TicketTitle>Workshop</TicketTitle>
+                <TicketDescription>Hands-on morning</TicketDescription>
+              </TicketHeader>
+              <TicketPrice>
+                <span className="text-h2">199 CHF</span>
+                <span className="text-caption opacity-70">12 seats left</span>
+              </TicketPrice>
+            </TicketCard>
+            <TicketCard variant="muted">
+              <TicketHeader>
+                <TicketTitle>Student</TicketTitle>
+                <TicketDescription>Valid student ID</TicketDescription>
+              </TicketHeader>
+              <TicketPrice>
+                <span className="text-h2">49 CHF</span>
+                <span className="text-caption opacity-70">limited</span>
+              </TicketPrice>
+            </TicketCard>
+          </div>
         </Container>
       </Section>
 

@@ -3,6 +3,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
+import { Icon } from "./icon";
 
 export const buttonVariants = cva(
   [
@@ -42,17 +43,29 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   /** Render as the single child element instead of a <button>. */
   asChild?: boolean;
+  /** Shows a spinner and blocks interaction while an action is in flight. */
+  loading?: boolean;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  (
+    { className, variant, size, asChild = false, loading = false, children, disabled, ...props },
+    ref,
+  ) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         ref={ref}
         className={cn(buttonVariants({ variant, size }), className)}
+        disabled={disabled || loading}
+        aria-busy={loading || undefined}
         {...props}
-      />
+      >
+        {loading && !asChild ? (
+          <Icon name="spinner" className="animate-spin" aria-hidden />
+        ) : null}
+        {children}
+      </Comp>
     );
   },
 );

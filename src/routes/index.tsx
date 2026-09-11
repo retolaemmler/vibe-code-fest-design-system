@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -77,6 +77,12 @@ function Showcase() {
         <Link variant="nav" href="#event">
           Event blocks
         </Link>
+        <RouterLink
+          to="/style-guide"
+          className="rounded-field px-3 py-2 text-small text-muted-foreground outline-none transition-colors hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        >
+          Style guide
+        </RouterLink>
       </Navbar>
 
       <Section spacing="lg" surface="gradient">

@@ -15,15 +15,15 @@ import { cn } from "@/lib/utils";
  * gradient, muted or image backgrounds — not only on the default page colour.
  */
 export const ticketCardVariants = cva(
-  "relative flex flex-col overflow-hidden rounded-card text-center text-card-foreground",
+  "relative flex flex-col rounded-card text-center",
   {
     variants: {
       variant: {
-        default: "border border-border bg-card shadow-raised",
+        default: "border border-border bg-card text-card-foreground shadow-raised",
         brand: "bg-gradient-primary text-primary-foreground shadow-glow",
-        accent: "border border-accent/30 bg-accent-subtle text-accent-foreground",
-        muted: "border border-border bg-muted text-foreground",
-        outline: "border border-border bg-card shadow-flat",
+        accent: "border border-accent/30 bg-accent-subtle text-accent shadow-raised",
+        muted: "border border-border bg-muted text-foreground shadow-raised",
+        outline: "border border-border bg-card text-card-foreground shadow-flat",
       },
     },
     defaultVariants: { variant: "default" },
@@ -44,13 +44,7 @@ export const TicketCard = React.forwardRef<HTMLDivElement, TicketCardProps>(
   ({ className, variant, pill, children, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn(ticketCardVariants({ variant }), className)}
-      style={{
-        maskImage: TICKET_NOTCH_MASK,
-        WebkitMaskImage: TICKET_NOTCH_MASK,
-        maskComposite: "intersect",
-        WebkitMaskComposite: "source-in",
-      }}
+      className={cn("relative", pill ? "pt-4" : "", className)}
       {...props}
     >
       {pill ? (
@@ -58,7 +52,21 @@ export const TicketCard = React.forwardRef<HTMLDivElement, TicketCardProps>(
           {pill}
         </div>
       ) : null}
-      {children}
+      <div
+        className={cn(
+          ticketCardVariants({ variant }),
+          "overflow-hidden",
+          className,
+        )}
+        style={{
+          maskImage: TICKET_NOTCH_MASK,
+          WebkitMaskImage: TICKET_NOTCH_MASK,
+          maskComposite: "intersect",
+          WebkitMaskComposite: "source-in",
+        }}
+      >
+        {children}
+      </div>
     </div>
   ),
 );
@@ -92,7 +100,7 @@ export const TicketDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-  <p ref={ref} className={cn("text-small opacity-90", className)} {...props} />
+  <p ref={ref} className={cn("text-small opacity-80", className)} {...props} />
 ));
 TicketDescription.displayName = "TicketDescription";
 

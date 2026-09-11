@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,7 +12,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "dfa490af3d0211cfa81dd17bf9cb2feb23148232e91d90f6ea0b00c85d7019d0",
+      "#enrichment": "9392c86332cea74d3c33bf25fbecd2b83e691f5cb934b2124f460c63be56c4fb",
       ".dsignore": "3d148fa40816def80be7d6bb088faa24",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -25,6 +25,7 @@
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
       "package.json": "5f8e34f695f7133be9ac499c3edcd93f",
       "public/favicon.ico": "9f504444f85a5af2eef9264b02ae40be",
+      "roadmap.md": "e32c1ed71cb202ab4de4e2499abbd7e3",
       "src/components/ui/avatar.tsx": "f96cbac02ce2948061ca38dcf6d1b019",
       "src/components/ui/badge.tsx": "341d4392cf2315b7f4b483d7c4554953",
       "src/components/ui/button.tsx": "30f9871ae0f0cff9dd1930c5157949c3",
@@ -41,9 +42,10 @@
       "src/components/ui/schedule-item.tsx": "087cc0a3de36d6445d1d846d404e7aed",
       "src/components/ui/speaker-card.tsx": "e3d99ce3aa8a868d5c35b54addf4dab3",
       "src/components/ui/stat.tsx": "72b0da6d313da436ba2f884dd076860d",
+      "src/components/ui/ticket-card.tsx": "b914a71c0f793143affaa6cc4b2bfe3e",
       "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
-      "src/index.css": "f182f569302aaf792e031042c16c0572",
-      "src/index.ts": "567e5666b5cd429044df498d4799c07b",
+      "src/index.css": "9d4f6f3808854d3e00551865bf36cf86",
+      "src/index.ts": "13e615dab4e53ac70894757f33a79a75",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -51,9 +53,9 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
-      "src/routes/index.tsx": "d329c3242f17ee786c7a9feb7953baa7",
-      "src/routes/style-guide.tsx": "5327b144b9bdc9d346ebb2b926f49e7b",
-      "src/styles.css": "5f4fa7bcc831ccd8202243a8b14a71cd",
+      "src/routes/index.tsx": "6a9f57ba5f2a2ed88ab8b8ee0e58f1f1",
+      "src/routes/style-guide.tsx": "94951cb1f61730cacc60c7b575b1664e",
+      "src/styles.css": "2dc2c7d36261a53a8bc42173c3bd20da",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
       "wrangler.jsonc": "680b897d48e44bcc65fe437c29b38f3b"
@@ -1396,6 +1398,49 @@
           "type": "function"
         }
       ]
+    },
+    {
+      "name": "TicketCard",
+      "file": "src/components/ui/ticket-card",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "default",
+            "brand",
+            "accent",
+            "muted",
+            "outline"
+          ],
+          "default": "default"
+        },
+        {
+          "name": "pill",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "TicketHeader",
+      "file": "src/components/ui/ticket-card",
+      "import_path": ""
+    },
+    {
+      "name": "TicketTitle",
+      "file": "src/components/ui/ticket-card",
+      "import_path": ""
+    },
+    {
+      "name": "TicketDescription",
+      "file": "src/components/ui/ticket-card",
+      "import_path": ""
+    },
+    {
+      "name": "TicketPrice",
+      "file": "src/components/ui/ticket-card",
+      "import_path": ""
     }
   ]
 }

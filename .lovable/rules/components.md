@@ -348,3 +348,40 @@ import { Text } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab79
 | `family` | sans · mono | `sans` |
 | `as` | p · span · div | `—` |
 
+### TicketCard
+
+```ts
+import { TicketCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `variant` | default · brand · accent · muted · outline | `default` |
+| `pill` | any | `—` |
+
+### TicketDescription
+
+```ts
+import { TicketDescription } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+### TicketHeader
+
+```ts
+import { TicketHeader } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+### TicketPrice
+
+```ts
+import { TicketPrice } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+### TicketTitle
+
+```ts
+import { TicketTitle } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+

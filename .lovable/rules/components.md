@@ -241,6 +241,34 @@ import { Navbar } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab
 | `brand` | any | `—` |
 | `actions` | any | `—` |
 
+### Schedule
+
+```ts
+import { Schedule } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `children` | any | `—` |
+
+### ScheduleHeader
+
+```ts
+import { ScheduleHeader } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `tone` | default · brand · accent · info · success · warning · destructive | `default` |
+| `layout` | card · flush | `card` |
+| `icon` | any | `—` |
+| `title` | string | `—` |
+| `subtext` | string | `—` |
+
 ### ScheduleItem
 
 ```ts
@@ -251,7 +279,7 @@ import { ScheduleItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-c
 
 | Prop | Type | Default |
 |---|---|---|
-| `variant` | list · boxed | `list` |
+| `variant` | list · boxed · grouped | `list` |
 | `time` | string | `—` |
 | `title` | string | `—` |
 | `speaker` | string | `—` |

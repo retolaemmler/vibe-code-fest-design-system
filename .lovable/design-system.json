@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,38 +12,38 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "9e9bd924a794fb84cfa879b3db3523f1c7b02de6ff6545dd407493e7c48c48cf",
+      "#enrichment": "dfa490af3d0211cfa81dd17bf9cb2feb23148232e91d90f6ea0b00c85d7019d0",
       ".dsignore": "3d148fa40816def80be7d6bb088faa24",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
       ".lovable/plan/core-components-for-the-vibe-code-fest-design-system-2026-09-11.md": "b09001bded226b7ee979a67cd10f531f",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
-      ".lovable/system.md": "137059dcae33936e1e951d2a465f1249",
+      ".lovable/system.md": "bf3e4a43e95db0219b1fadfdc5a232c5",
       "README.md": "d19675c449605f23c7cfa133c69b398b",
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
-      "package.json": "364b5dd79eab18013b104e818e24fa60",
+      "package.json": "5f8e34f695f7133be9ac499c3edcd93f",
       "public/favicon.ico": "9f504444f85a5af2eef9264b02ae40be",
       "src/components/ui/avatar.tsx": "f96cbac02ce2948061ca38dcf6d1b019",
       "src/components/ui/badge.tsx": "32be6d5a3f99eb3b5e72599c289a4df1",
       "src/components/ui/button.tsx": "3d6f58cba5ac7d33bcc6e670364e33be",
       "src/components/ui/card.tsx": "6df11903d6ed500da6bca03d97b91dd2",
       "src/components/ui/cta-panel.tsx": "bbd1c3cc24aa1bc644e2b4a3e47d4a47",
-      "src/components/ui/faq.tsx": "d239da4ed0d4dc186006f019cdb6531c",
-      "src/components/ui/feature-card.tsx": "78b69f5be7bd04d9e4fce0b73452fa30",
+      "src/components/ui/faq.tsx": "c46e3d4ebff6749c734586678ac25477",
+      "src/components/ui/feature-card.tsx": "52bea2d5dfc6a1b664a54e26f2f689fd",
       "src/components/ui/footer.tsx": "d20952ee98161ae6f8928ce7fbb905d9",
       "src/components/ui/icon.tsx": "80165dc56abb5db7bc57115c0e3320de",
       "src/components/ui/input.tsx": "2c31a0332b4ef52532f013917c5a1050",
       "src/components/ui/layout.tsx": "c4739b75b1b4b44fc7d6ea723fc751d6",
       "src/components/ui/link.tsx": "e2a15c13fc3d8a3a817c95a5b790d435",
       "src/components/ui/navbar.tsx": "e479f37f7ab4335abe0e8763de01040b",
-      "src/components/ui/schedule-item.tsx": "41c500213cc14763859dc1b7693f947d",
+      "src/components/ui/schedule-item.tsx": "087cc0a3de36d6445d1d846d404e7aed",
       "src/components/ui/speaker-card.tsx": "e3d99ce3aa8a868d5c35b54addf4dab3",
       "src/components/ui/stat.tsx": "72b0da6d313da436ba2f884dd076860d",
       "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
-      "src/index.css": "89274a36cfbcc825e13ed4977211d8ab",
-      "src/index.ts": "3fd32878048e898b4ac59e510381ea90",
+      "src/index.css": "f182f569302aaf792e031042c16c0572",
+      "src/index.ts": "567e5666b5cd429044df498d4799c07b",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -51,8 +51,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
-      "src/routes/index.tsx": "7607595ebc128a265bb83bd7270777be",
-      "src/routes/style-guide.tsx": "666c9cd6d849e56834e7cce19c21fd7b",
+      "src/routes/index.tsx": "d329c3242f17ee786c7a9feb7953baa7",
+      "src/routes/style-guide.tsx": "5327b144b9bdc9d346ebb2b926f49e7b",
       "src/styles.css": "5f4fa7bcc831ccd8202243a8b14a71cd",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -1126,6 +1126,18 @@
       ]
     },
     {
+      "name": "Schedule",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "children",
+          "type": "any",
+          "required": true
+        }
+      ]
+    },
+    {
       "name": "ScheduleItem",
       "file": "src/components/ui/schedule-item",
       "import_path": "",
@@ -1135,7 +1147,8 @@
           "type": "enum",
           "values": [
             "list",
-            "boxed"
+            "boxed",
+            "grouped"
           ],
           "default": "list"
         },
@@ -1155,6 +1168,50 @@
         },
         {
           "name": "track",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "ScheduleHeader",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "tone",
+          "type": "enum",
+          "values": [
+            "default",
+            "brand",
+            "accent",
+            "info",
+            "success",
+            "warning",
+            "destructive"
+          ],
+          "default": "default"
+        },
+        {
+          "name": "layout",
+          "type": "enum",
+          "values": [
+            "card",
+            "flush"
+          ],
+          "default": "card"
+        },
+        {
+          "name": "icon",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "subtext",
           "type": "string"
         }
       ]

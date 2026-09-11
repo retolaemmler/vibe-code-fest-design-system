@@ -32,7 +32,7 @@ export const buttonVariants = cva(
       size: {
         sm: "h-8 rounded-field px-3 text-small",
         md: "h-10 rounded-field px-4 text-small",
-        lg: "h-12 rounded-pill px-6 text-body",
+        lg: "h-12 rounded-field px-6 text-body",
         icon: "size-10 rounded-field",
       },
     },

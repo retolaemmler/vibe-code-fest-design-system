@@ -20,6 +20,27 @@ calm neutral surfaces, technical-but-friendly voice (Geist Sans / Geist Mono).
   font sizes or weights.
 - **Spacing** uses the standard 4px Tailwind scale.
 
+## Elevation — one ladder, four steps
+
+Every shadow in the system is one of these tokens. Never write a raw
+`box-shadow`, a Tailwind default (`shadow-md`, `shadow-xl`) or an arbitrary
+`shadow-[...]` value.
+
+| Level | Class | Token | Use |
+| --- | --- | --- | --- |
+| 0 flat | `shadow-flat` | `--shadow-flat` | Flush with the page; separation via `border-border` only |
+| 1 raised | `shadow-raised` | `--shadow-raised` | Resting lift: cards, gradient button, sticky header |
+| 2 lifted | `shadow-lifted` | `--shadow-lifted` | Hover or drag of a level-1 surface |
+| 3 overlay | `shadow-overlay` | `--shadow-overlay` | Popovers, dropdowns, dialogs, toasts |
+| accent | `shadow-glow` | `--shadow-glow` | Brand emphasis behind gradient surfaces — not a depth step |
+
+- Skip no more than one step: a level-1 surface hovers to level 2, never 3.
+- Elevation belongs to a component's `cva()` variant (see `Card`'s
+  `plain | outline | raised | elevated | overlay | glass | gradient`), not to a
+  call-site `className`.
+- Both themes define all five tokens; dark mode deepens the shadow rather than
+  dropping it.
+
 ## Icons — one set, no exceptions
 
 - The design system's icon set is **Lucide**, and it is the only one.

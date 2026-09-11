@@ -16,7 +16,7 @@ import { Footer } from "@/components/ui/footer";
 import { Container, Section } from "@/components/ui/layout";
 import { Link } from "@/components/ui/link";
 import { Navbar } from "@/components/ui/navbar";
-import { ScheduleItem } from "@/components/ui/schedule-item";
+import { ScheduleHeader, ScheduleItem } from "@/components/ui/schedule-item";
 import { SpeakerCard } from "@/components/ui/speaker-card";
 import { Stat } from "@/components/ui/stat";
 import { Heading, Text } from "@/components/ui/typography";

@@ -275,10 +275,38 @@ const RADII = [
   { cls: "rounded-pill", token: "--radius-pill", use: "Badges and large buttons" },
 ] as const;
 const SHADOWS = [
-  { cls: "shadow-soft", token: "--shadow-soft", use: "Resting elevation of a raised card" },
-  { cls: "shadow-lifted", token: "--shadow-lifted", use: "Hover or dragged elevation" },
-  { cls: "shadow-glow", token: "--shadow-glow", use: "Brand emphasis behind a hero element" },
+  {
+    level: "Level 0",
+    cls: "shadow-flat",
+    token: "--shadow-flat",
+    use: "Flush with the page. Separation comes from border-border alone: outline cards, table rows, section blocks.",
+  },
+  {
+    level: "Level 1",
+    cls: "shadow-raised",
+    token: "--shadow-raised",
+    use: "Resting lift: raised cards, the gradient button, sticky headers, feature medallions.",
+  },
+  {
+    level: "Level 2",
+    cls: "shadow-lifted",
+    token: "--shadow-lifted",
+    use: "Something is being acted on: hover or drag of a level-1 surface, elevated cards.",
+  },
+  {
+    level: "Level 3",
+    cls: "shadow-overlay",
+    token: "--shadow-overlay",
+    use: "Floats above the page and closes: popovers, dropdowns, dialogs, toasts.",
+  },
+  {
+    level: "Accent",
+    cls: "shadow-glow",
+    token: "--shadow-glow",
+    use: "Not a depth step. Brand emphasis behind gradient surfaces such as the hero CTA panel.",
+  },
 ] as const;
+const SHADOW_TOKEN_NAMES = SHADOWS.map((s) => s.token);
 const MOTION = [
   { token: "--duration-fast", use: "Colour changes on buttons and links" },
   { token: "--duration-base", use: "Lifts, expands, toggles" },

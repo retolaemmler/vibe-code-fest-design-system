@@ -570,7 +570,7 @@ function StyleGuide() {
                   />
                   <div className="min-w-0 space-y-1">
                     <div className="flex flex-wrap items-center gap-2">
-                      <Caption className="text-muted-foreground">{s.level}</Caption>
+                      <Caption>{s.level}</Caption>
                       <code className="rounded-field bg-muted px-2 py-0.5 font-mono text-caption text-foreground">
                         {s.cls}
                       </code>
@@ -579,7 +579,7 @@ function StyleGuide() {
                       </code>
                     </div>
                     <Text className="text-small text-muted-foreground">{s.use}</Text>
-                    <Caption className="block break-words font-mono text-muted-foreground">
+                    <Caption>
                       {shadowValues[s.token] ?? "—"}
                     </Caption>
                   </div>

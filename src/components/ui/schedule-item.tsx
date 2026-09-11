@@ -13,6 +13,7 @@ export const scheduleItemVariants = cva(
       variant: {
         list: "border-b last:border-b-0",
         boxed: "rounded-card border bg-card px-5",
+        grouped: "border-b last:border-b-0 px-5",
       },
     },
     defaultVariants: { variant: "list" },

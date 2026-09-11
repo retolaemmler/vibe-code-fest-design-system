@@ -53,11 +53,7 @@ export const TicketCard = React.forwardRef<HTMLDivElement, TicketCardProps>(
         </div>
       ) : null}
       <div
-        className={cn(
-          ticketCardVariants({ variant }),
-          "overflow-hidden",
-          className,
-        )}
+        className={cn(ticketCardVariants({ variant }), "overflow-hidden")}
         style={{
           maskImage: TICKET_NOTCH_MASK,
           WebkitMaskImage: TICKET_NOTCH_MASK,

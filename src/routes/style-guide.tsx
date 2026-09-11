@@ -689,6 +689,27 @@ function StyleGuide() {
               </Card>
             </div>
 
+            {/* Feature card & CTA panel */}
+            <div className="flex flex-col gap-4">
+              <Heading level="h3">Feature card &amp; CTA panel</Heading>
+              <div className="grid gap-6 lg:grid-cols-2">
+                <FeatureCard
+                  icon="sparkles"
+                  title="Feature card"
+                  description="Icon medallion, heading and short supporting text — the pattern used for criteria, perks and highlights."
+                />
+                <CtaPanel
+                  title="Call-to-action panel"
+                  description="Full-bleed gradient panel for the closing action on a page."
+                  actionLabel="Get your ticket"
+                  actionHref="#"
+                />
+              </div>
+              <Snippet
+                code={`<FeatureCard\n  icon="sparkles"\n  title="Feature card"\n  description="Short supporting text."\n/>\n\n<CtaPanel\n  title="Call-to-action panel"\n  description="Full-bleed gradient panel."\n  actionLabel="Get your ticket"\n  actionHref="/tickets"\n/>`}
+              />
+            </div>
+
             {/* Input */}
             <div className="flex flex-col gap-4">
               <Heading level="h3">Input</Heading>

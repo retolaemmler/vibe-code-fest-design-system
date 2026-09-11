@@ -275,10 +275,38 @@ const RADII = [
   { cls: "rounded-pill", token: "--radius-pill", use: "Badges and large buttons" },
 ] as const;
 const SHADOWS = [
-  { cls: "shadow-soft", token: "--shadow-soft", use: "Resting elevation of a raised card" },
-  { cls: "shadow-lifted", token: "--shadow-lifted", use: "Hover or dragged elevation" },
-  { cls: "shadow-glow", token: "--shadow-glow", use: "Brand emphasis behind a hero element" },
+  {
+    level: "Level 0",
+    cls: "shadow-flat",
+    token: "--shadow-flat",
+    use: "Flush with the page. Separation comes from border-border alone: outline cards, table rows, section blocks.",
+  },
+  {
+    level: "Level 1",
+    cls: "shadow-raised",
+    token: "--shadow-raised",
+    use: "Resting lift: raised cards, the gradient button, sticky headers, feature medallions.",
+  },
+  {
+    level: "Level 2",
+    cls: "shadow-lifted",
+    token: "--shadow-lifted",
+    use: "Something is being acted on: hover or drag of a level-1 surface, elevated cards.",
+  },
+  {
+    level: "Level 3",
+    cls: "shadow-overlay",
+    token: "--shadow-overlay",
+    use: "Floats above the page and closes: popovers, dropdowns, dialogs, toasts.",
+  },
+  {
+    level: "Accent",
+    cls: "shadow-glow",
+    token: "--shadow-glow",
+    use: "Not a depth step. Brand emphasis behind gradient surfaces such as the hero CTA panel.",
+  },
 ] as const;
+const SHADOW_TOKEN_NAMES = SHADOWS.map((s) => s.token);
 const MOTION = [
   { token: "--duration-fast", use: "Colour changes on buttons and links" },
   { token: "--duration-base", use: "Lifts, expands, toggles" },
@@ -320,6 +348,7 @@ function StyleGuide() {
   const typeValues = useTokenValues(TYPE_TOKEN_NAMES, theme);
   const motionValues = useTokenValues(MOTION_TOKEN_NAMES, theme);
   const surfaceValues = useTokenValues(SURFACE_TOKEN_NAMES, theme);
+  const shadowValues = useTokenValues(SHADOW_TOKEN_NAMES, theme);
 
   const iconNames = (Object.keys(icons) as IconName[]).filter((n) =>
     n.toLowerCase().includes(iconQuery.trim().toLowerCase()),
@@ -514,7 +543,7 @@ function StyleGuide() {
           <Block
             id="shape"
             title="Radius & elevation"
-            intro="Every radius derives from one token, so changing --radius rescales the whole system. Shadows carry meaning: soft is resting, lifted is hover, glow is brand emphasis."
+            intro="Every radius derives from one token, so changing --radius rescales the whole system. Elevation is one ladder of four steps plus a brand accent — every shadow in the system is one of these variables, never a hand-written box-shadow."
           >
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {RADII.map((r) => (
@@ -527,11 +556,36 @@ function StyleGuide() {
                 </Spec>
               ))}
             </div>
-            <div className="grid gap-6 sm:grid-cols-3">
+            <div className="space-y-4">
               {SHADOWS.map((s) => (
-                <Spec key={s.cls} label={s.use} token={s.cls}>
-                  <div className={cn("h-20 rounded-card bg-card", s.cls)} />
-                </Spec>
+                <div
+                  key={s.cls}
+                  className="grid items-center gap-4 rounded-card border border-border bg-card p-4 sm:grid-cols-[10rem_1fr]"
+                >
+                  <div
+                    className={cn(
+                      "h-20 rounded-card border border-border/60 bg-card",
+                      s.cls,
+                    )}
+                  />
+                  <div className="min-w-0 space-y-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <Caption>{s.level}</Caption>
+                      <code className="rounded-field bg-muted px-2 py-0.5 font-mono text-caption text-foreground">
+                        {s.cls}
+                      </code>
+                      <code className="rounded-field bg-muted px-2 py-0.5 font-mono text-caption text-muted-foreground">
+                        {s.token}
+                      </code>
+                    </div>
+                    <Text className="text-small text-muted-foreground">{s.use}</Text>
+                    <Caption>
+                      <span className="font-mono break-words">
+                        {shadowValues[s.token] ?? "—"}
+                      </span>
+                    </Caption>
+                  </div>
+                </div>
               ))}
             </div>
             <div className="grid gap-6 sm:grid-cols-2">

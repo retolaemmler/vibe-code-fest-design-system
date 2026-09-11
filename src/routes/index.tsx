@@ -233,7 +233,7 @@ function Showcase() {
                   </Text>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="ghost" size="sm">
+                  <Button variant="secondary" size="sm">
                     Details
                   </Button>
                 </CardFooter>

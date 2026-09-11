@@ -1,3 +1,6 @@
+// Side-effect import: consumers get the design tokens by importing the library.
+import "./index.css";
+
 export { cn } from "./lib/utils";
 
 export { Button, buttonVariants, type ButtonProps } from "./components/ui/button";

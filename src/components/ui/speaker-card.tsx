@@ -25,7 +25,7 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
       className={cn("flex flex-col items-start gap-4", className)}
       {...props}
     >
-      <Avatar name={name} src={photoUrl} size="lg" shape="rounded" />
+      <Avatar name={name} src={photoUrl} size="lg" shape="circle" />
       <div className="flex flex-col gap-1">
         <Heading as="h3" level="h3">
           {name}

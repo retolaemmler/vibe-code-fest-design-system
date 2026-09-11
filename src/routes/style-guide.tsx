@@ -348,6 +348,7 @@ function StyleGuide() {
   const typeValues = useTokenValues(TYPE_TOKEN_NAMES, theme);
   const motionValues = useTokenValues(MOTION_TOKEN_NAMES, theme);
   const surfaceValues = useTokenValues(SURFACE_TOKEN_NAMES, theme);
+  const shadowValues = useTokenValues(SHADOW_TOKEN_NAMES, theme);
 
   const iconNames = (Object.keys(icons) as IconName[]).filter((n) =>
     n.toLowerCase().includes(iconQuery.trim().toLowerCase()),

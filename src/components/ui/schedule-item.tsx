@@ -52,7 +52,7 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
 ScheduleItem.displayName = "ScheduleItem";
 
 export const scheduleHeaderVariants = cva(
-  "flex items-start gap-4 rounded-card border p-5",
+  "flex items-start gap-4 p-5",
   {
     variants: {
       tone: {
@@ -64,8 +64,12 @@ export const scheduleHeaderVariants = cva(
         warning: "border-warning/20 bg-warning-subtle",
         destructive: "border-destructive/20 bg-destructive-subtle",
       },
+      layout: {
+        card: "rounded-card border",
+        flush: "rounded-none border-x-0 border-t-0 border-b border-border",
+      },
     },
-    defaultVariants: { tone: "default" },
+    defaultVariants: { tone: "default", layout: "card" },
   },
 );
 

@@ -13,6 +13,7 @@ export const scheduleItemVariants = cva(
       variant: {
         list: "border-b last:border-b-0",
         boxed: "rounded-card border bg-card px-5",
+        grouped: "border-b last:border-b-0 px-5",
       },
     },
     defaultVariants: { variant: "list" },
@@ -51,7 +52,7 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
 ScheduleItem.displayName = "ScheduleItem";
 
 export const scheduleHeaderVariants = cva(
-  "flex items-start gap-4 rounded-card border p-5",
+  "flex items-start gap-4 p-5",
   {
     variants: {
       tone: {
@@ -63,8 +64,12 @@ export const scheduleHeaderVariants = cva(
         warning: "border-warning/20 bg-warning-subtle",
         destructive: "border-destructive/20 bg-destructive-subtle",
       },
+      layout: {
+        card: "rounded-card border",
+        flush: "rounded-none border-x-0 border-t-0 border-b border-border",
+      },
     },
-    defaultVariants: { tone: "default" },
+    defaultVariants: { tone: "default", layout: "card" },
   },
 );
 
@@ -103,12 +108,12 @@ export interface ScheduleHeaderProps
 }
 
 export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderProps>(
-  ({ className, tone, icon, title, subtext, ...props }, ref) => {
+  ({ className, tone, layout, icon, title, subtext, ...props }, ref) => {
     const toneKey = tone ?? "default";
     return (
       <div
         ref={ref}
-        className={cn(scheduleHeaderVariants({ tone }), className)}
+        className={cn(scheduleHeaderVariants({ tone, layout }), className)}
         {...props}
       >
         <div className="flex size-10 shrink-0 items-center justify-center rounded-field bg-background p-2">
@@ -137,3 +142,24 @@ export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderPro
   },
 );
 ScheduleHeader.displayName = "ScheduleHeader";
+
+export interface ScheduleProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+}
+
+export const Schedule = React.forwardRef<HTMLDivElement, ScheduleProps>(
+  ({ className, children, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(
+        "overflow-hidden rounded-card border border-border bg-card shadow-raised",
+        className,
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  ),
+);
+Schedule.displayName = "Schedule";

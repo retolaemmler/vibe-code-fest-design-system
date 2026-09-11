@@ -46,6 +46,8 @@ export {
   type SpeakerCardProps,
 } from "./components/ui/speaker-card";
 export {
+  Schedule,
+  type ScheduleProps,
   ScheduleItem,
   scheduleItemVariants,
   type ScheduleItemProps,

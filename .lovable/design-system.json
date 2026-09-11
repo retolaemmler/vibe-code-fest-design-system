@@ -1345,7 +1345,35 @@
         {
           "name": "note",
           "type": "any"
+        },
+        {
+          "name": "columns",
+          "type": "FooterLinkColumn[]",
+          "required": true
+        },
+        {
+          "name": "newsletterLabel",
+          "type": "string",
+          "default": "Subscribe to newsletter"
+        },
+        {
+          "name": "newsletterHref",
+          "type": "string"
+        },
+        {
+          "name": "onNewsletterClick",
+          "type": "function"
         }
+      ],
+      "usage": "Use at the end of public pages for brand context, three compact navigation groups, and a newsletter action.",
+      "examples": [
+        {
+          "label": "Event footer",
+          "code": "<Footer brand={<Logo />} note=\"Zurich · 2026\" columns={columns} newsletterHref=\"/newsletter\" />"
+        }
+      ],
+      "antipatterns": [
+        "Do not pass ungrouped links or replace the newsletter action with a one-off button style."
       ]
     },
     {

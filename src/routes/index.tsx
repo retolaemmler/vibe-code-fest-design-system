@@ -380,17 +380,31 @@ function Showcase() {
         surface="muted"
         brand={<span className="text-h3 text-gradient-primary">Vibe</span>}
         note="Design system showcase"
-      >
-        <Link variant="quiet" href="#buttons">
-          Buttons
-        </Link>
-        <Link variant="quiet" href="#cards">
-          Cards
-        </Link>
-        <Link variant="inline" href="#event">
-          Event blocks
-        </Link>
-      </Footer>
+        columns={[
+          {
+            title: "Explore",
+            links: [
+              { label: "Buttons", href: "#buttons" },
+              { label: "Cards", href: "#cards" },
+            ],
+          },
+          {
+            title: "Event",
+            links: [
+              { label: "Schedule", href: "#event" },
+              { label: "Speakers", href: "#event" },
+            ],
+          },
+          {
+            title: "Resources",
+            links: [
+              { label: "Style guide", href: "/style-guide" },
+              { label: "Contact", href: "mailto:hello@vibecodefest.ch" },
+            ],
+          },
+        ]}
+        newsletterHref="mailto:hello@vibecodefest.ch?subject=Newsletter"
+      />
     </div>
   );
 }

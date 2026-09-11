@@ -29,6 +29,8 @@ import { Badge } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7
 |---|---|---|
 | `variant` | neutral · brand · info · success · warning · destructive | `neutral` |
 | `tone` | subtle · solid | `subtle` |
+| `iconStart` | any | `—` |
+| `iconEnd` | any | `—` |
 
 ### Button
 
@@ -44,6 +46,8 @@ import { Button } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab
 | `size` | sm · md · lg · icon | `md` |
 | `asChild` | boolean | `false` |
 | `loading` | boolean | `false` |
+| `iconStart` | any | `—` |
+| `iconEnd` | any | `—` |
 
 ### Card
 

@@ -46,23 +46,18 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
             {note && <span className="text-small text-muted-foreground">{note}</span>}
           </div>
           {newsletterHref ? (
-            <Button
-              asChild
-              variant="gradient"
-              size="icon"
-              iconStart="mail"
-              aria-label="Subscribe to newsletter"
-            >
-              <a href={newsletterHref} />
+            <Button asChild variant="gradient" size="sm" iconStart="mail">
+              <a href={newsletterHref}>Subscribe to newsletter</a>
             </Button>
           ) : (
             <Button
               variant="gradient"
-              size="icon"
+              size="sm"
               iconStart="mail"
-              aria-label="Subscribe to newsletter"
               onClick={onNewsletterClick}
-            />
+            >
+              Subscribe to newsletter
+            </Button>
           )}
         </div>
         <nav

@@ -228,10 +228,13 @@
   );
 
   /* --- Elevation ---------------------------------------------------------------- */
-  --shadow-soft: 0 1px 2px hsl(var(--shadow-color) / 0.5),
+  --shadow-flat: none;
+  --shadow-raised: 0 1px 2px hsl(var(--shadow-color) / 0.5),
     0 2px 8px hsl(var(--shadow-color) / 0.45);
   --shadow-lifted: 0 8px 24px hsl(var(--shadow-color) / 0.6),
     0 2px 6px hsl(var(--shadow-color) / 0.5);
+  --shadow-overlay: 0 24px 56px hsl(var(--shadow-color) / 0.7),
+    0 4px 12px hsl(var(--shadow-color) / 0.6);
   --shadow-glow: 0 12px 40px hsl(var(--brand-purple) / 0.35);
   --blur-surface: 12px;
 

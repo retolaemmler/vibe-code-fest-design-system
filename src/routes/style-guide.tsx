@@ -4,6 +4,8 @@ import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { FeatureCard } from "@/components/ui/feature-card";
+import { CtaPanel } from "@/components/ui/cta-panel";
 import {
   Card,
   CardContent,

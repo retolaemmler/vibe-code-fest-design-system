@@ -91,11 +91,21 @@
     hsl(var(--muted)) 100%
   );
 
-  /* --- Elevation ---------------------------------------------------------- */
-  --shadow-soft: 0 1px 2px hsl(var(--shadow-color) / 0.06),
+  /* --- Elevation ----------------------------------------------------------
+     One ladder, four steps plus a brand accent. Never write a raw box-shadow.
+     0 flat     — flush with the page, separated by --border only
+     1 raised   — cards, inputs, sticky bars at rest
+     2 lifted   — hover / drag state of a level-1 surface
+     3 overlay  — popovers, dropdowns, dialogs floating above the page
+     glow       — brand emphasis behind gradient surfaces (not a depth step)
+  ------------------------------------------------------------------------ */
+  --shadow-flat: none;
+  --shadow-raised: 0 1px 2px hsl(var(--shadow-color) / 0.06),
     0 2px 8px hsl(var(--shadow-color) / 0.06);
   --shadow-lifted: 0 8px 24px hsl(var(--shadow-color) / 0.1),
     0 2px 6px hsl(var(--shadow-color) / 0.06);
+  --shadow-overlay: 0 24px 56px hsl(var(--shadow-color) / 0.16),
+    0 4px 12px hsl(var(--shadow-color) / 0.08);
   --shadow-glow: 0 12px 40px hsl(var(--brand-purple) / 0.28);
   --blur-surface: 12px;
 

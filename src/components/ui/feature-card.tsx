@@ -10,7 +10,7 @@ export const featureMedallionVariants = cva(
   {
     variants: {
       tone: {
-        gradient: "bg-gradient-primary text-primary-foreground shadow-soft",
+        gradient: "bg-gradient-primary text-primary-foreground shadow-raised",
         muted: "bg-muted text-foreground",
         outline: "border border-border bg-card text-foreground",
       },

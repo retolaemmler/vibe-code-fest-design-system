@@ -18,7 +18,7 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         gradient:
-          "bg-gradient-primary text-primary-foreground shadow-soft hover:bg-gradient-primary-hover",
+          "bg-gradient-primary text-primary-foreground shadow-raised hover:bg-gradient-primary-hover",
         solid: "bg-primary text-primary-foreground hover:bg-primary-hover",
         outline:
           "border border-border bg-background text-foreground hover:bg-muted",

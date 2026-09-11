@@ -65,7 +65,7 @@ Pick the Button variant from the surface it sits on, not from personal taste.
 
 - **Inside cards** — use `gradient`, `solid` or `secondary`. These sit on a
   `card` or `elevated` surface and need enough visual weight to feel clickable.
-- **Inside call-to-action panels** — use `outline`. The CTA panel already has
+- **Inside call-to-action panels** — use `secondary`. The CTA panel already has
   high contrast (gradient background or strong border), so the button should
   read as an invitation, not another heavy accent.
 - **Never use `ghost` or `link` for primary actions** inside cards or CTAs.

@@ -340,8 +340,10 @@
   --radius-pill: 9999px;
 
   /* Elevation & blur */
-  --shadow-soft: var(--shadow-soft);
+  --shadow-flat: var(--shadow-flat);
+  --shadow-raised: var(--shadow-raised);
   --shadow-lifted: var(--shadow-lifted);
+  --shadow-overlay: var(--shadow-overlay);
   --shadow-glow: var(--shadow-glow);
   --blur-surface: var(--blur-surface);
 

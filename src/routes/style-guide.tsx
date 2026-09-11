@@ -722,6 +722,17 @@ function StyleGuide() {
                 Hover and focus are live — point at or tab to any button above. The
                 focus column shows the ring statically so both can be compared.
               </Text>
+              <Text size="small" tone="muted">
+                Which variant where: inside cards use{" "}
+                <code className="font-mono text-primary">gradient</code>,{" "}
+                <code className="font-mono text-primary">solid</code> or{" "}
+                <code className="font-mono text-primary">secondary</code>. Inside a
+                call-to-action panel use{" "}
+                <code className="font-mono text-primary">outline</code>.{" "}
+                <code className="font-mono text-primary">ghost</code> and{" "}
+                <code className="font-mono text-primary">link</code> stay for tertiary
+                and inline actions only.
+              </Text>
               <Snippet
                 code={`<Button variant="gradient" size="lg" loading={isSaving}>\n  Get tickets\n</Button>`}
               />

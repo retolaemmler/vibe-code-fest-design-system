@@ -65,3 +65,12 @@ export {
   type FeatureCardProps,
 } from "./components/ui/feature-card";
 export { CtaPanel, type CtaPanelProps } from "./components/ui/cta-panel";
+export {
+  TicketCard,
+  TicketHeader,
+  TicketTitle,
+  TicketDescription,
+  TicketPrice,
+  ticketCardVariants,
+  type TicketCardProps,
+} from "./components/ui/ticket-card";

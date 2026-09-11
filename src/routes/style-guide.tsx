@@ -878,9 +878,9 @@ function StyleGuide() {
                   >
                     <TicketHeader>
                       <TicketTitle>Regular pass</TicketTitle>
-                      <Text size="small" tone="muted">
+                      <TicketDescription>
                         Full day access to all talks.
-                      </Text>
+                      </TicketDescription>
                     </TicketHeader>
                     <TicketPrice>
                       <span className="text-h2">129 CHF</span>

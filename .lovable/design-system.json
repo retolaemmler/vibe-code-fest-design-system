@@ -1,0 +1,1326 @@
+{
+  "meta": {
+    "name": "VibeCode Fest Incremental Current Polish",
+    "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
+    "version": "1.0.0",
+    "framework": "react",
+    "css_framework": "tailwind",
+    "starter_template": "custom_design_system",
+    "theme_files": [
+      "src/index.css",
+      "src/styles.css"
+    ],
+    "source_type": "local",
+    "source_manifest": {
+      "#enrichment": "9e9bd924a794fb84cfa879b3db3523f1c7b02de6ff6545dd407493e7c48c48cf",
+      ".dsignore": "3d148fa40816def80be7d6bb088faa24",
+      ".gitignore": "6059213806e442947666752f3db6bfdc",
+      ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
+      ".lovable/plan/core-components-for-the-vibe-code-fest-design-system-2026-09-11.md": "b09001bded226b7ee979a67cd10f531f",
+      ".lovable/system.md": "c8901817e72f44815e2e9c962e470494",
+      "README.md": "d19675c449605f23c7cfa133c69b398b",
+      "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
+      "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
+      "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
+      "package.json": "54ceff05f5d4cbaf7399e510e7620311",
+      "public/favicon.ico": "9f504444f85a5af2eef9264b02ae40be",
+      "src/components/ui/avatar.tsx": "f96cbac02ce2948061ca38dcf6d1b019",
+      "src/components/ui/badge.tsx": "32be6d5a3f99eb3b5e72599c289a4df1",
+      "src/components/ui/button.tsx": "28d640d3abf92442348c544ccf2715c0",
+      "src/components/ui/card.tsx": "6df11903d6ed500da6bca03d97b91dd2",
+      "src/components/ui/cta-panel.tsx": "90d88ea3ca97dbefc6f3c02e73cf8ec0",
+      "src/components/ui/faq.tsx": "d239da4ed0d4dc186006f019cdb6531c",
+      "src/components/ui/feature-card.tsx": "78b69f5be7bd04d9e4fce0b73452fa30",
+      "src/components/ui/footer.tsx": "d20952ee98161ae6f8928ce7fbb905d9",
+      "src/components/ui/icon.tsx": "80165dc56abb5db7bc57115c0e3320de",
+      "src/components/ui/input.tsx": "2c31a0332b4ef52532f013917c5a1050",
+      "src/components/ui/layout.tsx": "c4739b75b1b4b44fc7d6ea723fc751d6",
+      "src/components/ui/link.tsx": "e2a15c13fc3d8a3a817c95a5b790d435",
+      "src/components/ui/navbar.tsx": "e479f37f7ab4335abe0e8763de01040b",
+      "src/components/ui/schedule-item.tsx": "41c500213cc14763859dc1b7693f947d",
+      "src/components/ui/speaker-card.tsx": "e3d99ce3aa8a868d5c35b54addf4dab3",
+      "src/components/ui/stat.tsx": "72b0da6d313da436ba2f884dd076860d",
+      "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
+      "src/index.css": "89274a36cfbcc825e13ed4977211d8ab",
+      "src/index.ts": "3fd32878048e898b4ac59e510381ea90",
+      "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
+      "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
+      "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
+      "src/router.tsx": "8f905e713b0eba7fa8148b7995a708c9",
+      "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
+      "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
+      "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
+      "src/routes/index.tsx": "2919e03b35ae618a921b393e98010008",
+      "src/routes/style-guide.tsx": "9d77930615b98bffca251eb25eb12b3f",
+      "src/styles.css": "5f4fa7bcc831ccd8202243a8b14a71cd",
+      "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
+      "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
+      "wrangler.jsonc": "680b897d48e44bcc65fe437c29b38f3b"
+    },
+    "pipeline_version": 8
+  },
+  "tokens": {
+    "color": [
+      {
+        "name": "--brand-pink",
+        "raw": "330 81% 60%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--brand-purple",
+        "raw": "271 91% 65%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--background",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--foreground",
+        "raw": "60 3% 11%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--card",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--card-foreground",
+        "raw": "60 3% 11%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--popover",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--popover-foreground",
+        "raw": "60 3% 11%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--primary",
+        "raw": "271 91% 65%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--primary-foreground",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--primary-hover",
+        "raw": "271 84% 58%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--primary-subtle",
+        "raw": "271 91% 96%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--secondary",
+        "raw": "60 5% 96%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--secondary-foreground",
+        "raw": "60 3% 11%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--muted",
+        "raw": "60 5% 96%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--muted-foreground",
+        "raw": "240 4% 46%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--accent",
+        "raw": "330 81% 60%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--accent-foreground",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--accent-subtle",
+        "raw": "330 81% 96%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--destructive",
+        "raw": "0 84% 60%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--destructive-foreground",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--destructive-subtle",
+        "raw": "0 86% 97%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--info",
+        "raw": "217 91% 60%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--info-foreground",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--info-subtle",
+        "raw": "214 95% 96%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--success",
+        "raw": "142 71% 45%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--success-foreground",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--success-subtle",
+        "raw": "141 79% 95%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--warning",
+        "raw": "38 92% 50%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--warning-foreground",
+        "raw": "60 3% 11%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--warning-subtle",
+        "raw": "48 96% 94%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--border",
+        "raw": "240 6% 90%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--input",
+        "raw": "240 6% 90%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--ring",
+        "raw": "271 91% 65%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--surface-glass",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--gradient-primary",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink)) 0%,\n    hsl(var(--brand-purple)) 100%\n  )",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--gradient-primary-hover",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink) / 0.9) 0%,\n    hsl(var(--brand-purple) / 0.9) 100%\n  )",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-background",
+        "raw": "hsl(var(--background))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-foreground",
+        "raw": "hsl(var(--foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-card",
+        "raw": "hsl(var(--card))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-card-foreground",
+        "raw": "hsl(var(--card-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-popover",
+        "raw": "hsl(var(--popover))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-popover-foreground",
+        "raw": "hsl(var(--popover-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-primary",
+        "raw": "hsl(var(--primary))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-primary-foreground",
+        "raw": "hsl(var(--primary-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-primary-hover",
+        "raw": "hsl(var(--primary-hover))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-primary-subtle",
+        "raw": "hsl(var(--primary-subtle))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-secondary",
+        "raw": "hsl(var(--secondary))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-secondary-foreground",
+        "raw": "hsl(var(--secondary-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-muted",
+        "raw": "hsl(var(--muted))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-muted-foreground",
+        "raw": "hsl(var(--muted-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-accent",
+        "raw": "hsl(var(--accent))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-accent-foreground",
+        "raw": "hsl(var(--accent-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-accent-subtle",
+        "raw": "hsl(var(--accent-subtle))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-destructive",
+        "raw": "hsl(var(--destructive))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-destructive-foreground",
+        "raw": "hsl(var(--destructive-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-destructive-subtle",
+        "raw": "hsl(var(--destructive-subtle))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-info",
+        "raw": "hsl(var(--info))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-info-foreground",
+        "raw": "hsl(var(--info-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-info-subtle",
+        "raw": "hsl(var(--info-subtle))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-success",
+        "raw": "hsl(var(--success))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-success-foreground",
+        "raw": "hsl(var(--success-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-success-subtle",
+        "raw": "hsl(var(--success-subtle))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-warning",
+        "raw": "hsl(var(--warning))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-warning-foreground",
+        "raw": "hsl(var(--warning-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-warning-subtle",
+        "raw": "hsl(var(--warning-subtle))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-border",
+        "raw": "hsl(var(--border))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-input",
+        "raw": "hsl(var(--input))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-ring",
+        "raw": "hsl(var(--ring))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-surface-glass",
+        "raw": "hsl(var(--surface-glass))",
+        "source": "src/index.css"
+      }
+    ],
+    "typography": [
+      {
+        "name": "--font-sans",
+        "raw": "\"Geist\", system-ui, -apple-system, sans-serif",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--font-mono",
+        "raw": "\"Geist Mono\", ui-monospace, \"SFMono-Regular\", monospace",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-display-size",
+        "raw": "4.5rem",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-display-weight",
+        "raw": "700",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-display-leading",
+        "raw": "1.02",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-display-tracking",
+        "raw": "-0.03em",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h1-size",
+        "raw": "3rem",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h1-weight",
+        "raw": "700",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h1-leading",
+        "raw": "1.1",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h1-tracking",
+        "raw": "-0.025em",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h2-size",
+        "raw": "2rem",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h2-weight",
+        "raw": "600",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h2-leading",
+        "raw": "1.2",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h2-tracking",
+        "raw": "-0.02em",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h3-size",
+        "raw": "1.375rem",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h3-weight",
+        "raw": "600",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h3-leading",
+        "raw": "1.3",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-h3-tracking",
+        "raw": "-0.01em",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-body-size",
+        "raw": "1rem",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-body-weight",
+        "raw": "400",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-body-leading",
+        "raw": "1.65",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-body-tracking",
+        "raw": "0em",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-small-size",
+        "raw": "0.875rem",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-small-weight",
+        "raw": "400",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-small-leading",
+        "raw": "1.55",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-small-tracking",
+        "raw": "0em",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-caption-size",
+        "raw": "0.75rem",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-caption-weight",
+        "raw": "500",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-caption-leading",
+        "raw": "1.4",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--text-caption-tracking",
+        "raw": "0.06em",
+        "source": "src/index.css"
+      }
+    ],
+    "radius": [
+      {
+        "name": "--radius",
+        "raw": "0.75rem",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--radius-field",
+        "raw": "calc(var(--radius) - 4px)",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--radius-lg",
+        "raw": "calc(var(--radius) + 8px)",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--radius-pill",
+        "raw": "9999px",
+        "source": "src/index.css"
+      }
+    ],
+    "shadow": [
+      {
+        "name": "--shadow-color",
+        "raw": "271 40% 20%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--shadow-flat",
+        "raw": "none",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--shadow-raised",
+        "raw": "0 1px 2px hsl(var(--shadow-color) / 0.06),\n    0 2px 8px hsl(var(--shadow-color) / 0.06)",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--shadow-lifted",
+        "raw": "0 8px 24px hsl(var(--shadow-color) / 0.1),\n    0 2px 6px hsl(var(--shadow-color) / 0.06)",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--shadow-overlay",
+        "raw": "0 24px 56px hsl(var(--shadow-color) / 0.16),\n    0 4px 12px hsl(var(--shadow-color) / 0.08)",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--shadow-glow",
+        "raw": "0 12px 40px hsl(var(--brand-purple) / 0.28)",
+        "source": "src/index.css"
+      }
+    ],
+    "other": [
+      {
+        "name": "--gradient-surface",
+        "raw": "linear-gradient(\n    180deg,\n    hsl(var(--background)) 0%,\n    hsl(var(--muted)) 100%\n  )",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--blur-surface",
+        "raw": "12px",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--duration-fast",
+        "raw": "120ms",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--duration-base",
+        "raw": "200ms",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--duration-slow",
+        "raw": "400ms",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--ease-standard",
+        "raw": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--ease-emphasized",
+        "raw": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--hover-lift",
+        "raw": "-2px",
+        "source": "src/index.css"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button",
+      "file": "src/components/ui/button",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "gradient",
+            "solid",
+            "outline",
+            "ghost",
+            "link",
+            "destructive"
+          ],
+          "default": "solid"
+        },
+        {
+          "name": "size",
+          "type": "enum",
+          "values": [
+            "sm",
+            "md",
+            "lg",
+            "icon"
+          ],
+          "default": "md"
+        },
+        {
+          "name": "asChild",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "Badge",
+      "file": "src/components/ui/badge",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "neutral",
+            "brand",
+            "info",
+            "success",
+            "warning",
+            "destructive"
+          ],
+          "default": "neutral"
+        },
+        {
+          "name": "tone",
+          "type": "enum",
+          "values": [
+            "subtle",
+            "solid"
+          ],
+          "default": "subtle"
+        }
+      ]
+    },
+    {
+      "name": "Card",
+      "file": "src/components/ui/card",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "plain",
+            "outline",
+            "raised",
+            "elevated",
+            "overlay",
+            "glass",
+            "gradient"
+          ],
+          "default": "outline"
+        },
+        {
+          "name": "padding",
+          "type": "enum",
+          "values": [
+            "none",
+            "sm",
+            "md",
+            "lg"
+          ],
+          "default": "md"
+        }
+      ]
+    },
+    {
+      "name": "CardHeader",
+      "file": "src/components/ui/card",
+      "import_path": ""
+    },
+    {
+      "name": "CardTitle",
+      "file": "src/components/ui/card",
+      "import_path": ""
+    },
+    {
+      "name": "CardDescription",
+      "file": "src/components/ui/card",
+      "import_path": ""
+    },
+    {
+      "name": "CardContent",
+      "file": "src/components/ui/card",
+      "import_path": ""
+    },
+    {
+      "name": "CardFooter",
+      "file": "src/components/ui/card",
+      "import_path": ""
+    },
+    {
+      "name": "Container",
+      "file": "src/components/ui/layout",
+      "import_path": "",
+      "props": [
+        {
+          "name": "size",
+          "type": "enum",
+          "values": [
+            "sm",
+            "md",
+            "lg",
+            "full"
+          ],
+          "default": "lg"
+        }
+      ]
+    },
+    {
+      "name": "Section",
+      "file": "src/components/ui/layout",
+      "import_path": "",
+      "props": [
+        {
+          "name": "spacing",
+          "type": "enum",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ],
+          "default": "md"
+        },
+        {
+          "name": "surface",
+          "type": "enum",
+          "values": [
+            "none",
+            "muted",
+            "card",
+            "gradient"
+          ],
+          "default": "none"
+        }
+      ]
+    },
+    {
+      "name": "Heading",
+      "file": "src/components/ui/typography",
+      "import_path": "",
+      "props": [
+        {
+          "name": "level",
+          "type": "enum",
+          "values": [
+            "display",
+            "h1",
+            "h2",
+            "h3"
+          ],
+          "default": "h2"
+        },
+        {
+          "name": "tone",
+          "type": "enum",
+          "values": [
+            "default",
+            "muted",
+            "gradient"
+          ],
+          "default": "default"
+        },
+        {
+          "name": "as",
+          "type": "enum",
+          "values": [
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "p"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Text",
+      "file": "src/components/ui/typography",
+      "import_path": "",
+      "props": [
+        {
+          "name": "size",
+          "type": "enum",
+          "values": [
+            "body",
+            "small",
+            "caption"
+          ],
+          "default": "body"
+        },
+        {
+          "name": "tone",
+          "type": "enum",
+          "values": [
+            "default",
+            "muted",
+            "primary",
+            "destructive"
+          ],
+          "default": "default"
+        },
+        {
+          "name": "family",
+          "type": "enum",
+          "values": [
+            "sans",
+            "mono"
+          ],
+          "default": "sans"
+        },
+        {
+          "name": "as",
+          "type": "enum",
+          "values": [
+            "p",
+            "span",
+            "div"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Link",
+      "file": "src/components/ui/link",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "inline",
+            "nav",
+            "quiet"
+          ],
+          "default": "inline"
+        },
+        {
+          "name": "active",
+          "type": "enum",
+          "values": [
+            "true",
+            "false"
+          ],
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "Icon",
+      "file": "src/components/ui/icon",
+      "import_path": "",
+      "props": [
+        {
+          "name": "size",
+          "type": "enum",
+          "values": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ],
+          "default": "sm"
+        },
+        {
+          "name": "tone",
+          "type": "enum",
+          "values": [
+            "current",
+            "default",
+            "muted",
+            "brand",
+            "info",
+            "success",
+            "warning",
+            "destructive"
+          ],
+          "default": "current"
+        },
+        {
+          "name": "name",
+          "type": "enum",
+          "values": [
+            "arrowRight",
+            "arrowUpRight",
+            "calendar",
+            "check",
+            "chevronDown",
+            "chevronRight",
+            "clock",
+            "code",
+            "externalLink",
+            "globe",
+            "link",
+            "spinner",
+            "info",
+            "mail",
+            "moon",
+            "mapPin",
+            "menu",
+            "mic",
+            "minus",
+            "plus",
+            "search",
+            "send",
+            "sparkles",
+            "share",
+            "star",
+            "sun",
+            "ticket",
+            "warning",
+            "users",
+            "video",
+            "close"
+          ],
+          "required": true
+        },
+        {
+          "name": "label",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Input",
+      "file": "src/components/ui/input",
+      "import_path": "",
+      "props": [
+        {
+          "name": "state",
+          "type": "enum",
+          "values": [
+            "default",
+            "invalid"
+          ],
+          "default": "default"
+        },
+        {
+          "name": "size",
+          "type": "enum",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ],
+          "default": "md"
+        },
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "error",
+          "type": "string"
+        },
+        {
+          "name": "hint",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Avatar",
+      "file": "src/components/ui/avatar",
+      "import_path": "",
+      "props": [
+        {
+          "name": "size",
+          "type": "enum",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ],
+          "default": "md"
+        },
+        {
+          "name": "shape",
+          "type": "enum",
+          "values": [
+            "circle",
+            "rounded"
+          ],
+          "default": "circle"
+        },
+        {
+          "name": "src",
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "SpeakerCard",
+      "file": "src/components/ui/speaker-card",
+      "import_path": "",
+      "props": [
+        {
+          "name": "name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "role",
+          "type": "string"
+        },
+        {
+          "name": "company",
+          "type": "string"
+        },
+        {
+          "name": "photoUrl",
+          "type": "string"
+        },
+        {
+          "name": "topics",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "ScheduleItem",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "list",
+            "boxed"
+          ],
+          "default": "list"
+        },
+        {
+          "name": "time",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "speaker",
+          "type": "string"
+        },
+        {
+          "name": "track",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Stat",
+      "file": "src/components/ui/stat",
+      "import_path": "",
+      "props": [
+        {
+          "name": "align",
+          "type": "enum",
+          "values": [
+            "start",
+            "center"
+          ],
+          "default": "center"
+        },
+        {
+          "name": "tone",
+          "type": "enum",
+          "values": [
+            "default",
+            "brand"
+          ],
+          "default": "default"
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Faq",
+      "file": "src/components/ui/faq",
+      "import_path": ""
+    },
+    {
+      "name": "FaqItem",
+      "file": "src/components/ui/faq",
+      "import_path": ""
+    },
+    {
+      "name": "FaqTrigger",
+      "file": "src/components/ui/faq",
+      "import_path": ""
+    },
+    {
+      "name": "FaqContent",
+      "file": "src/components/ui/faq",
+      "import_path": ""
+    },
+    {
+      "name": "Navbar",
+      "file": "src/components/ui/navbar",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "solid",
+            "glass",
+            "transparent"
+          ],
+          "default": "solid"
+        },
+        {
+          "name": "sticky",
+          "type": "enum",
+          "values": [
+            "true",
+            "false"
+          ],
+          "default": "false"
+        },
+        {
+          "name": "brand",
+          "type": "any"
+        },
+        {
+          "name": "actions",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "Footer",
+      "file": "src/components/ui/footer",
+      "import_path": "",
+      "props": [
+        {
+          "name": "surface",
+          "type": "enum",
+          "values": [
+            "default",
+            "muted",
+            "card"
+          ],
+          "default": "default"
+        },
+        {
+          "name": "brand",
+          "type": "any"
+        },
+        {
+          "name": "note",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "FeatureCard",
+      "file": "src/components/ui/feature-card",
+      "import_path": "",
+      "props": [
+        {
+          "name": "icon",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "CtaPanel",
+      "file": "src/components/ui/cta-panel",
+      "import_path": "",
+      "props": [
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "actionLabel",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "actionHref",
+          "type": "string"
+        },
+        {
+          "name": "onAction",
+          "type": "function"
+        }
+      ]
+    }
+  ]
+}

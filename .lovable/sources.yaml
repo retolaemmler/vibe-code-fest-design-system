@@ -1,0 +1,8 @@
+tokens:
+    - file: src/index.css
+      operation: css-variables
+    - file: src/styles.css
+      operation: css-variables
+components:
+    - file: src/index.ts
+      operation: ts-named-exports

@@ -24,6 +24,13 @@ import { Navbar } from "@/components/ui/navbar";
 import { Schedule, ScheduleHeader, ScheduleItem } from "@/components/ui/schedule-item";
 import { SpeakerCard } from "@/components/ui/speaker-card";
 import { Stat } from "@/components/ui/stat";
+import {
+  TicketCard,
+  TicketDescription,
+  TicketHeader,
+  TicketPrice,
+  TicketTitle,
+} from "@/components/ui/ticket-card";
 import { Heading, Text } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
 

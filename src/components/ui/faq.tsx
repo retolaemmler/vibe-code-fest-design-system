@@ -37,9 +37,10 @@ export const FaqTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <ChevronDown
-        aria-hidden="true"
-        className="size-4 shrink-0 text-muted-foreground transition-transform duration-(--duration-base) ease-(--ease-standard)"
+      <Icon
+        name="chevronDown"
+        tone="muted"
+        className="transition-transform duration-(--duration-base) ease-(--ease-standard)"
       />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>

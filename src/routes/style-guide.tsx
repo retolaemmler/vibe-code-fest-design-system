@@ -67,7 +67,7 @@ function useTokenValues(names: readonly string[], theme: string) {
 
 function TokenName({ children }: { children: React.ReactNode }) {
   return (
-    <code className="rounded-field bg-muted px-1.5 py-0.5 font-mono text-caption text-muted-foreground">
+    <code className="w-fit rounded-field bg-muted px-1.5 py-0.5 font-mono text-caption text-muted-foreground">
       {children}
     </code>
   );
@@ -627,7 +627,7 @@ function StyleGuide() {
             {/* Button */}
             <div className="flex flex-col gap-4">
               <Heading level="h3">Button</Heading>
-              <StateGrid columns={["Variant", "Default", "Hover", "Focus", "Disabled", "Loading"]}>
+              <StateGrid columns={["Variant", "Default", "Hover (point at it)", "Focus", "Disabled", "Loading"]}>
                 {(["gradient", "solid", "outline", "ghost", "link", "destructive"] as const).map(
                   (variant) => (
                     <React.Fragment key={variant}>

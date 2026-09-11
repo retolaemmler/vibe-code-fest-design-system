@@ -15,6 +15,7 @@ export const featureMedallionVariants = cva(
         outline: "border border-border bg-card text-foreground",
       },
       size: {
+        sm: "size-10",
         md: "size-12",
         lg: "size-14",
       },

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Badge } from "./badge";
 import { Heading, Text } from "./typography";
 import { Icon, type IconName } from "./icon";
+import { featureMedallionVariants } from "./feature-card";
 
 export const scheduleItemVariants = cva(
   "flex flex-col gap-2 border-border py-5 sm:flex-row sm:items-baseline sm:gap-6",

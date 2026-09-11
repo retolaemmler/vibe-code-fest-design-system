@@ -74,19 +74,6 @@ export const scheduleHeaderVariants = cva(
   },
 );
 
-const headerIconTone = {
-  default: "muted",
-  brand: "brand",
-  accent: "accent",
-  info: "info",
-  success: "success",
-  warning: "warning-foreground",
-  destructive: "destructive",
-} as const satisfies Record<
-  NonNullable<VariantProps<typeof scheduleHeaderVariants>["tone"]>,
-  string
->;
-
 const headerTitleTone = {
   default: "foreground",
   brand: "primary",

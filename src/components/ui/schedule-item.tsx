@@ -108,12 +108,12 @@ export interface ScheduleHeaderProps
 }
 
 export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderProps>(
-  ({ className, tone, icon, title, subtext, ...props }, ref) => {
+  ({ className, tone, layout, icon, title, subtext, ...props }, ref) => {
     const toneKey = tone ?? "default";
     return (
       <div
         ref={ref}
-        className={cn(scheduleHeaderVariants({ tone }), className)}
+        className={cn(scheduleHeaderVariants({ tone, layout }), className)}
         {...props}
       >
         <div className="flex size-10 shrink-0 items-center justify-center rounded-field bg-background p-2">

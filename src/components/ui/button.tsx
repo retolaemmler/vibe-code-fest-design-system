@@ -3,7 +3,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
-import { Icon } from "./icon";
+import { Icon, type IconName } from "./icon";
 
 export const buttonVariants = cva(
   [
@@ -47,14 +47,44 @@ export interface ButtonProps
   asChild?: boolean;
   /** Shows a spinner and blocks interaction while an action is in flight. */
   loading?: boolean;
+  /** Optional decorative icon rendered before the label. */
+  iconStart?: IconName;
+  /** Optional decorative icon rendered after the label. */
+  iconEnd?: IconName;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, variant, size, asChild = false, loading = false, children, disabled, ...props },
+    {
+      className,
+      variant,
+      size,
+      asChild = false,
+      loading = false,
+      iconStart,
+      iconEnd,
+      children,
+      disabled,
+      ...props
+    },
     ref,
   ) => {
+    const content = (
+      <>
+        {loading ? (
+          <Icon name="spinner" className="animate-spin" aria-hidden />
+        ) : iconStart ? (
+          <Icon name={iconStart} aria-hidden />
+        ) : null}
+        {children}
+        {iconEnd ? <Icon name={iconEnd} aria-hidden /> : null}
+      </>
+    );
+
     if (asChild) {
+      const child = React.Children.only(children) as React.ReactElement<{
+        children?: React.ReactNode;
+      }>;
       return (
         <Slot
           ref={ref}
@@ -62,7 +92,17 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           aria-busy={loading || undefined}
           {...props}
         >
-          {children}
+          {iconStart || iconEnd || loading
+            ? React.cloneElement(child, undefined, [
+                loading ? (
+                  <Icon key="lead" name="spinner" className="animate-spin" aria-hidden />
+                ) : iconStart ? (
+                  <Icon key="lead" name={iconStart} aria-hidden />
+                ) : null,
+                <React.Fragment key="label">{child.props.children}</React.Fragment>,
+                iconEnd ? <Icon key="trail" name={iconEnd} aria-hidden /> : null,
+              ])
+            : child}
         </Slot>
       );
     }
@@ -74,10 +114,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         aria-busy={loading || undefined}
         {...props}
       >
-        {loading ? (
-          <Icon name="spinner" className="animate-spin" aria-hidden />
-        ) : null}
-        {children}
+        {content}
       </button>
     );
   },

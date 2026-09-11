@@ -2,6 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
+import { Icon, type IconName } from "./icon";
 
 export const badgeVariants = cva(
   "inline-flex items-center gap-1.5 rounded-pill border px-3 py-1 text-caption [&_svg]:size-3.5 [&_svg]:shrink-0",
@@ -85,15 +86,24 @@ export const badgeVariants = cva(
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement>,
-    VariantProps<typeof badgeVariants> {}
+    VariantProps<typeof badgeVariants> {
+  /** Optional decorative icon rendered before the label. */
+  iconStart?: IconName;
+  /** Optional decorative icon rendered after the label. */
+  iconEnd?: IconName;
+}
 
 export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
-  ({ className, variant, tone, ...props }, ref) => (
+  ({ className, variant, tone, iconStart, iconEnd, children, ...props }, ref) => (
     <span
       ref={ref}
       className={cn(badgeVariants({ variant, tone }), className)}
       {...props}
-    />
+    >
+      {iconStart ? <Icon name={iconStart} aria-hidden /> : null}
+      {children}
+      {iconEnd ? <Icon name={iconEnd} aria-hidden /> : null}
+    </span>
   ),
 );
 Badge.displayName = "Badge";

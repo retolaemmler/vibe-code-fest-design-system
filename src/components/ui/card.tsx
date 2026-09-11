@@ -3,13 +3,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
+/**
+ * Elevation ladder (see --shadow-* tokens in index.css):
+ * plain / outline -> level 0 flat, raised -> level 1, elevated -> level 2,
+ * overlay -> level 3, gradient -> brand glow.
+ */
 export const cardVariants = cva("rounded-card text-card-foreground", {
   variants: {
     variant: {
-      plain: "bg-card",
-      outline: "border border-border bg-card",
+      plain: "bg-card shadow-flat",
+      outline: "border border-border bg-card shadow-flat",
+      raised: "border border-border/60 bg-card shadow-raised",
       elevated: "border border-border/60 bg-card shadow-lifted",
-      glass: "surface-glass rounded-card",
+      overlay: "border border-border/60 bg-popover text-popover-foreground shadow-overlay",
+      glass: "surface-glass rounded-card shadow-raised",
       gradient: "bg-gradient-primary text-primary-foreground shadow-glow",
     },
     padding: { none: "", sm: "p-4", md: "p-6", lg: "p-8" },

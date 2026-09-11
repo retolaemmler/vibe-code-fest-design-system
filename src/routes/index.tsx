@@ -1,29 +1,296 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, Calendar, Ticket } from "lucide-react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Avatar } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Faq, FaqContent, FaqItem, FaqTrigger } from "@/components/ui/faq";
+import { Footer } from "@/components/ui/footer";
+import { Container, Section } from "@/components/ui/layout";
+import { Link } from "@/components/ui/link";
+import { Navbar } from "@/components/ui/navbar";
+import { ScheduleItem } from "@/components/ui/schedule-item";
+import { SpeakerCard } from "@/components/ui/speaker-card";
+import { Stat } from "@/components/ui/stat";
+import { Heading, Text } from "@/components/ui/typography";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Vibe Design System — Component Showcase" },
+      {
+        name: "description",
+        content:
+          "Every component and variant in the Vibe design system: buttons, badges, cards, speakers, schedule, stats and FAQ, all driven by semantic tokens.",
+      },
+      { property: "og:title", content: "Vibe Design System — Component Showcase" },
+      {
+        property: "og:description",
+        content:
+          "Browse the Vibe design system components and variants, built on semantic light and dark tokens.",
+      },
+    ],
+  }),
+  component: Showcase,
 });
 
-// Placeholder route. Add pages as files in src/routes/.
-function Index() {
+function Row({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        minHeight: "100vh",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#fcfbf8",
-      }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="flex flex-col gap-3">
+      <Text size="caption" tone="muted" as="span">
+        {title}
+      </Text>
+      <div className="flex flex-wrap items-center gap-3">{children}</div>
+    </div>
+  );
+}
+
+function Showcase() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar
+        sticky
+        variant="glass"
+        brand={
+          <span className="text-h3 text-gradient-primary">Vibe</span>
+        }
+        actions={
+          <Button variant="gradient" size="sm">
+            <Ticket />
+            Get tickets
+          </Button>
+        }
+      >
+        <Link variant="nav" href="#buttons" active>
+          Buttons
+        </Link>
+        <Link variant="nav" href="#cards">
+          Cards
+        </Link>
+        <Link variant="nav" href="#event">
+          Event blocks
+        </Link>
+      </Navbar>
+
+      <Section spacing="lg" surface="gradient">
+        <Container className="flex flex-col items-start gap-6">
+          <Badge variant="brand" tone="solid">
+            <Calendar />
+            Design system v1
+          </Badge>
+          <Heading level="display" tone="gradient">
+            Components, tokens, nothing hardcoded
+          </Heading>
+          <Text size="body" tone="muted" className="max-w-2xl">
+            Every colour, radius, shadow and motion value below comes from a
+            semantic token, in both light and dark themes.
+          </Text>
+          <div className="flex flex-wrap gap-3">
+            <Button variant="gradient" size="lg">
+              Primary action
+              <ArrowRight />
+            </Button>
+            <Button variant="outline" size="lg">
+              Secondary
+            </Button>
+          </div>
+        </Container>
+      </Section>
+
+      <Section id="buttons">
+        <Container className="flex flex-col gap-10">
+          <Heading level="h2">Buttons</Heading>
+          <Row title="Variants">
+            <Button variant="gradient">Gradient</Button>
+            <Button variant="solid">Solid</Button>
+            <Button variant="outline">Outline</Button>
+            <Button variant="ghost">Ghost</Button>
+            <Button variant="link">Link</Button>
+            <Button variant="destructive">Destructive</Button>
+          </Row>
+          <Row title="Sizes">
+            <Button size="sm">Small</Button>
+            <Button size="md">Medium</Button>
+            <Button size="lg">Large</Button>
+            <Button size="icon" aria-label="Next">
+              <ArrowRight />
+            </Button>
+          </Row>
+          <Row title="Disabled">
+            <Button variant="gradient" disabled>
+              Gradient
+            </Button>
+            <Button variant="outline" disabled>
+              Outline
+            </Button>
+          </Row>
+
+          <Heading level="h2">Badges</Heading>
+          <Row title="Subtle">
+            <Badge variant="neutral">Neutral</Badge>
+            <Badge variant="brand">Brand</Badge>
+            <Badge variant="info">Info</Badge>
+            <Badge variant="success">Success</Badge>
+            <Badge variant="warning">Warning</Badge>
+            <Badge variant="destructive">Sold out</Badge>
+          </Row>
+          <Row title="Solid">
+            <Badge variant="neutral" tone="solid">
+              Neutral
+            </Badge>
+            <Badge variant="brand" tone="solid">
+              Brand
+            </Badge>
+            <Badge variant="info" tone="solid">
+              Info
+            </Badge>
+            <Badge variant="success" tone="solid">
+              Free
+            </Badge>
+            <Badge variant="warning" tone="solid">
+              Few left
+            </Badge>
+            <Badge variant="destructive" tone="solid">
+              Closed
+            </Badge>
+          </Row>
+
+          <Heading level="h2">Typography</Heading>
+          <div className="flex flex-col gap-3">
+            <Heading level="display">Display</Heading>
+            <Heading level="h1">Heading 1</Heading>
+            <Heading level="h2">Heading 2</Heading>
+            <Heading level="h3">Heading 3</Heading>
+            <Text>Body text sits at a comfortable reading measure.</Text>
+            <Text size="small" tone="muted">
+              Small muted text for supporting detail.
+            </Text>
+            <Text size="caption" tone="muted" family="mono" as="span">
+              Caption / mono label
+            </Text>
+          </div>
+        </Container>
+      </Section>
+
+      <Section id="cards" surface="muted">
+        <Container className="flex flex-col gap-8">
+          <Heading level="h2">Cards</Heading>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {(["plain", "outline", "elevated", "glass"] as const).map((variant) => (
+              <Card key={variant} variant={variant} className="flex flex-col gap-4">
+                <CardHeader>
+                  <CardTitle className="capitalize">{variant}</CardTitle>
+                  <CardDescription>Surface variant</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Text size="small" tone="muted">
+                    Content area using body tokens.
+                  </Text>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="ghost" size="sm">
+                    Details
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+
+          <Heading level="h2">Stats</Heading>
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+            <Stat value="600+" label="Attendees" tone="brand" />
+            <Stat value="24" label="Talks" />
+            <Stat value="12" label="Workshops" />
+            <Stat value="1" label="Day" tone="brand" />
+          </div>
+        </Container>
+      </Section>
+
+      <Section id="event">
+        <Container className="flex flex-col gap-10">
+          <Heading level="h2">Speakers</Heading>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <SpeakerCard
+              name="Nora Keller"
+              role="Design Engineer"
+              company="Studio Nord"
+              topics={["Design systems", "Tokens"]}
+            />
+            <SpeakerCard
+              name="Luca Bianchi"
+              role="Founder"
+              company="Shipfast"
+              topics={["AI tooling"]}
+              variant="elevated"
+            />
+            <SpeakerCard
+              name="Ada Mwangi"
+              role="Staff Engineer"
+              company="Northwind"
+              topics={["Performance", "DX"]}
+              variant="glass"
+            />
+          </div>
+
+          <Heading level="h2">Schedule</Heading>
+          <div className="flex flex-col">
+            <ScheduleItem time="09:00" title="Doors & coffee" track="All" />
+            <ScheduleItem
+              time="10:00"
+              title="Designing with tokens, not pixels"
+              speaker="Nora Keller"
+              track="Main stage"
+            />
+            <ScheduleItem
+              time="11:30"
+              title="Shipping AI features fast"
+              speaker="Luca Bianchi"
+              track="Workshop"
+            />
+          </div>
+
+          <Heading level="h2">FAQ</Heading>
+          <Faq type="single" collapsible className="max-w-3xl">
+            <FaqItem value="tickets">
+              <FaqTrigger>Do I need a ticket?</FaqTrigger>
+              <FaqContent>
+                Yes — registration is free but seats are limited.
+              </FaqContent>
+            </FaqItem>
+            <FaqItem value="beginner">
+              <FaqTrigger>Is it beginner friendly?</FaqTrigger>
+              <FaqContent>
+                Absolutely. Tracks are marked by level, and workshops start from
+                the basics.
+              </FaqContent>
+            </FaqItem>
+          </Faq>
+        </Container>
+      </Section>
+
+      <Footer
+        surface="muted"
+        brand={<span className="text-h3 text-gradient-primary">Vibe</span>}
+        note="Design system showcase"
+      >
+        <Link variant="quiet" href="#buttons">
+          Buttons
+        </Link>
+        <Link variant="quiet" href="#cards">
+          Cards
+        </Link>
+        <Link variant="inline" href="#event">
+          Event blocks
+        </Link>
+      </Footer>
     </div>
   );
 }

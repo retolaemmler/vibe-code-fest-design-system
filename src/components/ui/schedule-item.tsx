@@ -117,13 +117,9 @@ export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderPro
         className={cn(scheduleHeaderVariants({ tone, layout }), className)}
         {...props}
       >
-        <div className="flex size-10 shrink-0 items-center justify-center rounded-field bg-background p-2">
-          <Icon
-            name={icon}
-            size="md"
-            className={cn(`text-${headerIconTone[toneKey]}`)}
-          />
-        </div>
+        <span className={featureMedallionVariants({ tone: "gradient", size: "sm" })}>
+          <Icon name={icon} size="sm" />
+        </span>
         <div className="flex flex-col gap-1">
           <Heading
             level="h3"

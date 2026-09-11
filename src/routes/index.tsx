@@ -278,6 +278,12 @@ function Showcase() {
           </div>
 
           <Heading level="h2">Schedule</Heading>
+          <ScheduleHeader
+            icon="share"
+            title="SHARE — Community Sessions"
+            subtext="Interactive sessions led by you, the community. Share your knowledge, learn from peers, and dive deep into topics that matter most."
+            tone="brand"
+          />
           <div className="flex flex-col">
             <ScheduleItem time="09:00" title="Doors & coffee" track="All" />
             <ScheduleItem

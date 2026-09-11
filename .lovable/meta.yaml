@@ -5,3 +5,8 @@ source_type: local
 upstream_package: ""
 starter_template: custom_design_system
 stack_packages: []
+upstream_versions:
+  react: 19.2.0
+  react-dom: 19.2.0
+  tailwindcss: 4.3.3
+  lucide-react: 1.45.0

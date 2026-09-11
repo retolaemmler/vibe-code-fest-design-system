@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Badge } from "./badge";
 import { Heading, Text } from "./typography";
 import { Icon, type IconName } from "./icon";
+import { featureMedallionVariants } from "./feature-card";
 
 export const scheduleItemVariants = cva(
   "flex flex-col gap-2 border-border py-5 sm:flex-row sm:items-baseline sm:gap-6",
@@ -73,19 +74,6 @@ export const scheduleHeaderVariants = cva(
   },
 );
 
-const headerIconTone = {
-  default: "muted",
-  brand: "brand",
-  accent: "accent",
-  info: "info",
-  success: "success",
-  warning: "warning-foreground",
-  destructive: "destructive",
-} as const satisfies Record<
-  NonNullable<VariantProps<typeof scheduleHeaderVariants>["tone"]>,
-  string
->;
-
 const headerTitleTone = {
   default: "foreground",
   brand: "primary",
@@ -116,13 +104,9 @@ export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderPro
         className={cn(scheduleHeaderVariants({ tone, layout }), className)}
         {...props}
       >
-        <div className="flex size-10 shrink-0 items-center justify-center rounded-field bg-background p-2">
-          <Icon
-            name={icon}
-            size="md"
-            className={cn(`text-${headerIconTone[toneKey]}`)}
-          />
-        </div>
+        <span className={featureMedallionVariants({ tone: "gradient", size: "sm" })}>
+          <Icon name={icon} size="sm" />
+        </span>
         <div className="flex flex-col gap-1">
           <Heading
             level="h3"

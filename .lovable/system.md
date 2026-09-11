@@ -71,5 +71,20 @@ Pick the Button variant from the surface it sits on, not from personal taste.
 - **Never use `ghost` or `link` for primary actions** inside cards or CTAs.
   Reserve them for tertiary actions, footer links, and inline text controls.
 
+## Font loading
+
+The type tokens reference **Geist Sans** (`--font-sans`) and **Geist Mono**
+(`--font-mono`). The design-system CSS does not embed or fetch font files, so
+consumers must load both families in their own app shell:
+
+- Add a `<link>` to Google Fonts (or self-host the files) in the consumer's root
+  HTML / root route `<head>`.
+- Load both **Geist** and **Geist Mono** weights 400, 500, 600 and 700.
+- If the fonts fail to load, the CSS fallback stack (`system-ui` for sans,
+  `ui-monospace` for mono) keeps the UI readable.
+
+The showcase app loads Geist via `src/routes/__root.tsx` — use that as a
+reference, but do not rely on the showcase route itself in a consumer project.
+
 See `.lovable/rules/design-tokens.md` for the token tables and
 `.lovable/rules/components.md` for the component catalogue.

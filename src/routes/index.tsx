@@ -1,6 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Calendar, Ticket } from "lucide-react";
-
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -12,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Icon, icons, type IconName } from "@/components/ui/icon";
 import { Faq, FaqContent, FaqItem, FaqTrigger } from "@/components/ui/faq";
 import { Footer } from "@/components/ui/footer";
 import { Container, Section } from "@/components/ui/layout";
@@ -64,7 +63,7 @@ function Showcase() {
         }
         actions={
           <Button variant="gradient" size="sm">
-            <Ticket />
+            <Icon name="ticket" />
             Get tickets
           </Button>
         }
@@ -83,7 +82,7 @@ function Showcase() {
       <Section spacing="lg" surface="gradient">
         <Container className="flex flex-col items-start gap-6">
           <Badge variant="brand" tone="solid">
-            <Calendar />
+            <Icon name="calendar" />
             Design system v1
           </Badge>
           <Heading level="display" tone="gradient">
@@ -96,7 +95,7 @@ function Showcase() {
           <div className="flex flex-wrap gap-3">
             <Button variant="gradient" size="lg">
               Primary action
-              <ArrowRight />
+              <Icon name="arrowRight" />
             </Button>
             <Button variant="outline" size="lg">
               Secondary
@@ -121,7 +120,7 @@ function Showcase() {
             <Button size="md">Medium</Button>
             <Button size="lg">Large</Button>
             <Button size="icon" aria-label="Next">
-              <ArrowRight />
+              <Icon name="arrowRight" />
             </Button>
           </Row>
           <Row title="Disabled">
@@ -162,6 +161,38 @@ function Showcase() {
               Closed
             </Badge>
           </Row>
+
+          <Heading level="h2">Icons</Heading>
+          <Text size="small" tone="muted" className="max-w-2xl">
+            One icon set only (Lucide), always rendered through the Icon
+            component. Colour is inherited from the surrounding token by
+            default.
+          </Text>
+          <Row title="Sizes">
+            {(["xs", "sm", "md", "lg", "xl"] as const).map((size) => (
+              <Icon key={size} name="sparkles" size={size} />
+            ))}
+          </Row>
+          <Row title="Tones">
+            {(
+              ["default", "muted", "brand", "info", "success", "warning", "destructive"] as const
+            ).map((tone) => (
+              <Icon key={tone} name="star" size="md" tone={tone} />
+            ))}
+          </Row>
+          <div className="grid grid-cols-3 gap-4 sm:grid-cols-6 lg:grid-cols-9">
+            {(Object.keys(icons) as IconName[]).map((name) => (
+              <div
+                key={name}
+                className="flex flex-col items-center gap-2 rounded-card border border-border p-3"
+              >
+                <Icon name={name} size="md" tone="muted" />
+                <Text size="caption" tone="muted" family="mono" as="span">
+                  {name}
+                </Text>
+              </div>
+            ))}
+          </div>
 
           <Heading level="h2">Typography</Heading>
           <div className="flex flex-col gap-3">

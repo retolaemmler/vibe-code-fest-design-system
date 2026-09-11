@@ -580,7 +580,9 @@ function StyleGuide() {
                     </div>
                     <Text className="text-small text-muted-foreground">{s.use}</Text>
                     <Caption>
-                      {shadowValues[s.token] ?? "—"}
+                      <span className="font-mono break-words">
+                        {shadowValues[s.token] ?? "—"}
+                      </span>
                     </Caption>
                   </div>
                 </div>

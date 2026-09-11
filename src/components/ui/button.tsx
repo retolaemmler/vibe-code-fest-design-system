@@ -26,8 +26,6 @@ export const buttonVariants = cva(
         link: "bg-transparent text-primary underline underline-offset-4 hover:text-primary-hover",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        /** For use on top of the primary gradient / dark imagery. */
-        inverse: "bg-background text-primary shadow-soft hover:bg-muted",
       },
       size: {
         sm: "h-8 rounded-field px-3 text-small",

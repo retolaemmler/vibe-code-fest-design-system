@@ -859,6 +859,52 @@ function StyleGuide() {
               />
             </div>
 
+            {/* Ticket card */}
+            <div className="flex flex-col gap-4">
+              <Heading level="h3">Ticket card</Heading>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                {(
+                  [
+                    { variant: "default", pill: "Early bird" },
+                    { variant: "brand", pill: "Most popular" },
+                    { variant: "accent", pill: "Limited" },
+                    { variant: "muted", pill: "Student" },
+                  ] as const
+                ).map(({ variant, pill }) => (
+                  <TicketCard
+                    key={variant}
+                    variant={variant}
+                    pill={<Badge variant="brand" tone="solid">{pill}</Badge>}
+                  >
+                    <TicketHeader>
+                      <TicketTitle>Regular pass</TicketTitle>
+                      <Text size="small" tone="muted">
+                        Full day access to all talks.
+                      </Text>
+                    </TicketHeader>
+                    <TicketPrice>
+                      <span className="text-h2">129 CHF</span>
+                      <span className="text-caption opacity-70">incl. VAT</span>
+                    </TicketPrice>
+                  </TicketCard>
+                ))}
+              </div>
+              <Text size="small" tone="muted">
+                The tear line and side notches are rendered with a CSS mask, so the
+                ticket works on gradient or image backgrounds too.
+              </Text>
+              <Snippet
+                code={`<TicketCard
+  pill={<Badge variant="brand" tone="solid">Early bird</Badge>}
+>
+  <TicketHeader>
+    <TicketTitle>Regular pass</TicketTitle>
+  </TicketHeader>
+  <TicketPrice>129 CHF</TicketPrice>
+</TicketCard>`}
+              />
+            </div>
+
             {/* Typography components */}
             <div className="flex flex-col gap-4">
               <Heading level="h3">Heading & Text</Heading>

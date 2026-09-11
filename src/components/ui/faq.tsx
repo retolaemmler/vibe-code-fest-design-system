@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { ChevronDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { Icon } from "./icon";
 
 export const Faq = AccordionPrimitive.Root;
 
@@ -37,9 +37,10 @@ export const FaqTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <ChevronDown
-        aria-hidden="true"
-        className="size-4 shrink-0 text-muted-foreground transition-transform duration-(--duration-base) ease-(--ease-standard)"
+      <Icon
+        name="chevronDown"
+        tone="muted"
+        className="transition-transform duration-(--duration-base) ease-(--ease-standard)"
       />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>

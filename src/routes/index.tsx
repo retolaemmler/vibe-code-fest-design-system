@@ -16,7 +16,7 @@ import { Footer } from "@/components/ui/footer";
 import { Container, Section } from "@/components/ui/layout";
 import { Link } from "@/components/ui/link";
 import { Navbar } from "@/components/ui/navbar";
-import { ScheduleItem } from "@/components/ui/schedule-item";
+import { ScheduleHeader, ScheduleItem } from "@/components/ui/schedule-item";
 import { SpeakerCard } from "@/components/ui/speaker-card";
 import { Stat } from "@/components/ui/stat";
 import { Heading, Text } from "@/components/ui/typography";
@@ -278,6 +278,12 @@ function Showcase() {
           </div>
 
           <Heading level="h2">Schedule</Heading>
+          <ScheduleHeader
+            icon="share"
+            title="SHARE — Community Sessions"
+            subtext="Interactive sessions led by you, the community. Share your knowledge, learn from peers, and dive deep into topics that matter most."
+            tone="brand"
+          />
           <div className="flex flex-col">
             <ScheduleItem time="09:00" title="Doors & coffee" track="All" />
             <ScheduleItem

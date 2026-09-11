@@ -21,7 +21,7 @@ import { Input } from "@/components/ui/input";
 import { Container, Section } from "@/components/ui/layout";
 import { Link } from "@/components/ui/link";
 import { Navbar } from "@/components/ui/navbar";
-import { ScheduleItem } from "@/components/ui/schedule-item";
+import { ScheduleHeader, ScheduleItem } from "@/components/ui/schedule-item";
 import { SpeakerCard } from "@/components/ui/speaker-card";
 import { Stat } from "@/components/ui/stat";
 import { Heading, Text } from "@/components/ui/typography";
@@ -930,7 +930,43 @@ function StyleGuide() {
 
             {/* Schedule item */}
             <div className="flex flex-col gap-4">
+              <Heading level="h3">Schedule header</Heading>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {(
+                  [
+                    "default",
+                    "brand",
+                    "accent",
+                    "info",
+                    "success",
+                    "warning",
+                  ] as const
+                ).map((tone) => (
+                  <ScheduleHeader
+                    key={tone}
+                    icon={tone === "success" ? "check" : "share"}
+                    title={tone === "default" ? "Default header" : `${tone} header`}
+                    subtext="Short context for the track or session group."
+                    tone={tone}
+                  />
+                ))}
+              </div>
+              <Snippet
+                code={`<ScheduleHeader
+  icon="share"
+  title="SHARE — Community Sessions"
+  subtext="Interactive sessions led by you, the community."
+  tone="brand"
+/>`}
+              />
+
               <Heading level="h3">Schedule item</Heading>
+              <ScheduleHeader
+                icon="share"
+                title="SHARE — Community Sessions"
+                subtext="Interactive sessions led by you, the community. Share your knowledge, learn from peers, and dive deep into topics that matter most."
+                tone="brand"
+              />
               <div className="flex flex-col">
                 <ScheduleItem time="09:00" title="Doors & coffee" track="All" />
                 <ScheduleItem

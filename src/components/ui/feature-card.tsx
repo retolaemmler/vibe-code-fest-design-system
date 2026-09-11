@@ -6,13 +6,18 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Icon, type IconName } from "@/components/ui/icon";
 
 export const featureMedallionVariants = cva(
-  "flex items-center justify-center rounded-pill",
+  "flex shrink-0 items-center justify-center rounded-pill",
   {
     variants: {
       tone: {
         gradient: "bg-gradient-primary text-primary-foreground shadow-raised",
         muted: "bg-muted text-foreground",
         outline: "border border-border bg-card text-foreground",
+        accent: "bg-accent text-accent-foreground shadow-raised",
+        info: "bg-info text-info-foreground shadow-raised",
+        success: "bg-success text-success-foreground shadow-raised",
+        warning: "bg-warning text-warning-foreground shadow-raised",
+        destructive: "bg-destructive text-destructive-foreground shadow-raised",
       },
       size: {
         sm: "size-10",

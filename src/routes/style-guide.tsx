@@ -853,6 +853,7 @@ function StyleGuide() {
                       name="Ada Mwangi"
                       role="Staff Engineer"
                       company="Northwind"
+                      photoUrl="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face"
                       topics={["Performance", "DX"]}
                       variant={variant}
                     />

@@ -3,7 +3,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
-import { Icon } from "./icon";
+import { Icon, type IconName } from "./icon";
 
 export const buttonVariants = cva(
   [
@@ -47,6 +47,10 @@ export interface ButtonProps
   asChild?: boolean;
   /** Shows a spinner and blocks interaction while an action is in flight. */
   loading?: boolean;
+  /** Optional decorative icon rendered before the label. */
+  iconStart?: IconName;
+  /** Optional decorative icon rendered after the label. */
+  iconEnd?: IconName;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(

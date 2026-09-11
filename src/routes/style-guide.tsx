@@ -1107,16 +1107,36 @@ function StyleGuide() {
                   surface="muted"
                   brand={<span className="text-h3 text-gradient-primary">Vibe</span>}
                   note="Zurich · 2026"
-                >
-                  <Link variant="quiet" href="#components">
-                    Code of conduct
-                  </Link>
-                  <Link variant="quiet" href="#components">
-                    Contact
-                  </Link>
-                </Footer>
+                  columns={[
+                    {
+                      title: "Event",
+                      links: [
+                        { label: "Schedule", href: "#components" },
+                        { label: "Speakers", href: "#components" },
+                      ],
+                    },
+                    {
+                      title: "Attend",
+                      links: [
+                        { label: "Tickets", href: "#components" },
+                        { label: "Venue", href: "#components" },
+                      ],
+                    },
+                    {
+                      title: "About",
+                      links: [
+                        { label: "Code of conduct", href: "#components" },
+                        { label: "Contact", href: "#components" },
+                      ],
+                    },
+                  ]}
+                  newsletterHref="#components"
+                />
               </div>
-              <Caption>Navbar variant=&quot;glass&quot; | &quot;solid&quot; · Footer surface=&quot;muted&quot;</Caption>
+              <Caption>
+                Footer columns: three groups with two links each · newsletter uses
+                Button variant=&quot;gradient&quot;
+              </Caption>
             </div>
           </Block>
         </div>

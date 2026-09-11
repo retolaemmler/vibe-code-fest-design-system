@@ -1134,8 +1134,8 @@ function StyleGuide() {
                 />
               </div>
               <Caption>
-                Footer columns: three groups with two links each · newsletter uses
-                Button variant=&quot;gradient&quot;
+                Footer columns: three groups with two links each · icon-only
+                newsletter button sits opposite the brand mark
               </Caption>
             </div>
           </Block>

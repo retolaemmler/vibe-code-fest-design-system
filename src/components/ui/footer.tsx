@@ -19,7 +19,6 @@ export interface FooterProps
   brand?: React.ReactNode;
   note?: React.ReactNode;
   columns: FooterLinkColumn[];
-  newsletterLabel?: string;
   newsletterHref?: string;
   onNewsletterClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -36,24 +35,35 @@ export interface FooterLinkColumn {
 
 export const Footer = React.forwardRef<HTMLElement, FooterProps>(
   (
-    {
-      className,
-      surface,
-      brand,
-      note,
-      columns,
-      newsletterLabel = "Subscribe to newsletter",
-      newsletterHref,
-      onNewsletterClick,
-      ...props
-    },
+    { className, surface, brand, note, columns, newsletterHref, onNewsletterClick, ...props },
     ref,
   ) => (
     <footer ref={ref} className={cn(footerVariants({ surface }), className)} {...props}>
-      <Container className="grid gap-10 py-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.5fr)_auto] lg:items-start lg:gap-12">
-        <div className="flex min-w-0 flex-col gap-2">
-          {brand}
-          {note && <span className="text-small text-muted-foreground">{note}</span>}
+      <Container className="flex flex-col gap-10 py-10">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex min-w-0 flex-col gap-2">
+            {brand}
+            {note && <span className="text-small text-muted-foreground">{note}</span>}
+          </div>
+          {newsletterHref ? (
+            <Button
+              asChild
+              variant="gradient"
+              size="icon"
+              iconStart="mail"
+              aria-label="Subscribe to newsletter"
+            >
+              <a href={newsletterHref} />
+            </Button>
+          ) : (
+            <Button
+              variant="gradient"
+              size="icon"
+              iconStart="mail"
+              aria-label="Subscribe to newsletter"
+              onClick={onNewsletterClick}
+            />
+          )}
         </div>
         <nav
           aria-label="Footer navigation"
@@ -72,22 +82,6 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
             </div>
           ))}
         </nav>
-        <div className="flex min-w-0 flex-col items-start gap-3 lg:items-end">
-          <span className="text-caption font-semibold text-foreground">Stay in the loop</span>
-          {newsletterHref ? (
-            <Button asChild variant="gradient" className="w-full sm:w-auto">
-              <a href={newsletterHref}>{newsletterLabel}</a>
-            </Button>
-          ) : (
-            <Button
-              variant="gradient"
-              className="w-full sm:w-auto"
-              onClick={onNewsletterClick}
-            >
-              {newsletterLabel}
-            </Button>
-          )}
-        </div>
       </Container>
     </footer>
   ),

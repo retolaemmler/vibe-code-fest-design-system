@@ -32,6 +32,13 @@ export {
   type TextProps,
 } from "./components/ui/typography";
 export { Link, linkVariants, type LinkProps } from "./components/ui/link";
+export {
+  Icon,
+  icons,
+  iconVariants,
+  type IconName,
+  type IconProps,
+} from "./components/ui/icon";
 export { Avatar, avatarVariants, type AvatarProps } from "./components/ui/avatar";
 export {
   SpeakerCard,

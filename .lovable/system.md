@@ -59,5 +59,17 @@ Every shadow in the system is one of these tokens. Never write a raw
 - Need a glyph that isn't in the registry? Add it to `icons` in
   `src/components/ui/icon.tsx` from Lucide. Never reach for another library.
 
+## Button usage by context
+
+Pick the Button variant from the surface it sits on, not from personal taste.
+
+- **Inside cards** — use `gradient`, `solid` or `secondary`. These sit on a
+  `card` or `elevated` surface and need enough visual weight to feel clickable.
+- **Inside call-to-action panels** — use `outline`. The CTA panel already has
+  high contrast (gradient background or strong border), so the button should
+  read as an invitation, not another heavy accent.
+- **Never use `ghost` or `link` for primary actions** inside cards or CTAs.
+  Reserve them for tertiary actions, footer links, and inline text controls.
+
 See `.lovable/rules/design-tokens.md` for the token tables and
 `.lovable/rules/components.md` for the component catalogue.

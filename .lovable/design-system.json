@@ -1352,11 +1352,6 @@
           "required": true
         },
         {
-          "name": "newsletterLabel",
-          "type": "string",
-          "default": "Subscribe to newsletter"
-        },
-        {
           "name": "newsletterHref",
           "type": "string"
         },
@@ -1365,7 +1360,7 @@
           "type": "function"
         }
       ],
-      "usage": "Use at the end of public pages for brand context, three compact navigation groups, and a newsletter action.",
+      "usage": "Use at the end of public pages for brand context, three compact navigation groups, and an icon-only newsletter action opposite the brand mark.",
       "examples": [
         {
           "label": "Event footer",

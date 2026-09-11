@@ -58,7 +58,13 @@ export {
 export { Stat, statVariants, type StatProps } from "./components/ui/stat";
 export { Faq, FaqItem, FaqTrigger, FaqContent } from "./components/ui/faq";
 export { Navbar, navbarVariants, type NavbarProps } from "./components/ui/navbar";
-export { Footer, footerVariants, type FooterProps } from "./components/ui/footer";
+export {
+  Footer,
+  footerVariants,
+  type FooterLink,
+  type FooterLinkColumn,
+  type FooterProps,
+} from "./components/ui/footer";
 export {
   FeatureCard,
   featureMedallionVariants,

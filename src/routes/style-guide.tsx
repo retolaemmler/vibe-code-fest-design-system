@@ -684,7 +684,7 @@ function StyleGuide() {
             <div className="flex flex-col gap-4">
               <Heading level="h3">Button</Heading>
               <StateGrid columns={["Variant", "Default", "Hover (point at it)", "Focus", "Disabled", "Loading"]}>
-                {(["gradient", "solid", "outline", "ghost", "link", "destructive"] as const).map(
+                {(["gradient", "solid", "outline", "secondary", "ghost", "link", "destructive"] as const).map(
                   (variant) => (
                     <React.Fragment key={variant}>
                       <TokenName>{`variant="${variant}"`}</TokenName>

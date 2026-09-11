@@ -22,6 +22,8 @@ export const buttonVariants = cva(
         solid: "bg-primary text-primary-foreground hover:bg-primary-hover",
         outline:
           "border border-border bg-background text-foreground hover:bg-muted",
+        secondary:
+          "border border-primary bg-background text-primary hover:border-primary-hover hover:bg-primary-subtle",
         ghost: "bg-transparent text-foreground hover:bg-muted",
         link: "bg-transparent text-primary underline underline-offset-4 hover:text-primary-hover",
         destructive:

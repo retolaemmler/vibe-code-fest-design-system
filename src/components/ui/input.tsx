@@ -63,8 +63,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             id={messageId}
             as="span"
             size="small"
-            tone={error ? "default" : "muted"}
-            className={error ? "text-destructive" : undefined}
+            tone={error ? "destructive" : "muted"}
           >
             {error ?? hint}
           </Text>

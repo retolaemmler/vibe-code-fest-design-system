@@ -50,6 +50,7 @@ export const textVariants = cva("", {
       default: "text-foreground",
       muted: "text-muted-foreground",
       primary: "text-primary",
+      destructive: "text-destructive",
     },
     family: { sans: "font-sans", mono: "font-mono" },
   },

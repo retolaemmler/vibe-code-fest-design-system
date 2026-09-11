@@ -278,27 +278,32 @@ function Showcase() {
           </div>
 
           <Heading level="h2">Schedule</Heading>
-          <ScheduleHeader
-            icon="share"
-            title="SHARE — Community Sessions"
-            subtext="Interactive sessions led by you, the community. Share your knowledge, learn from peers, and dive deep into topics that matter most."
-            tone="brand"
-          />
-          <div className="flex flex-col">
-            <ScheduleItem time="09:00" title="Doors & coffee" track="All" />
-            <ScheduleItem
-              time="10:00"
-              title="Designing with tokens, not pixels"
-              speaker="Nora Keller"
-              track="Main stage"
+          <Schedule>
+            <ScheduleHeader
+              icon="share"
+              title="SHARE — Community Sessions"
+              subtext="Interactive sessions led by you, the community. Share your knowledge, learn from peers, and dive deep into topics that matter most."
+              tone="brand"
+              layout="flush"
             />
-            <ScheduleItem
-              time="11:30"
-              title="Shipping AI features fast"
-              speaker="Luca Bianchi"
-              track="Workshop"
-            />
-          </div>
+            <div className="flex flex-col">
+              <ScheduleItem variant="grouped" time="09:00" title="Doors & coffee" track="All" />
+              <ScheduleItem
+                variant="grouped"
+                time="10:00"
+                title="Designing with tokens, not pixels"
+                speaker="Nora Keller"
+                track="Main stage"
+              />
+              <ScheduleItem
+                variant="grouped"
+                time="11:30"
+                title="Shipping AI features fast"
+                speaker="Luca Bianchi"
+                track="Workshop"
+              />
+            </div>
+          </Schedule>
 
           <Heading level="h2">FAQ</Heading>
           <Faq type="single" collapsible className="max-w-3xl">

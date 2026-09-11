@@ -151,9 +151,9 @@ function StateGrid({
   children: React.ReactNode;
 }) {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto rounded-card border border-border">
       <div
-        className="grid min-w-max items-center gap-x-6 gap-y-4"
+        className="grid min-w-max items-center gap-x-6 gap-y-4 px-4 py-4"
         style={{ gridTemplateColumns: `repeat(${columns.length}, minmax(0, auto))` }}
       >
         {columns.map((c) => (

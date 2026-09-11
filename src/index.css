@@ -117,7 +117,14 @@
   --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
   --hover-lift: -2px;
 
-  /* --- Typography: families ------------------------------------------------ */
+  /* --- Typography: families ------------------------------------------------
+     The tokens reference Geist / Geist Mono. The showcase loads these via a
+     Google Fonts <link> in its root route. Consumers must load the same
+     families (Geist Sans + Geist Mono) through their own app shell — the
+     design-system CSS does not fetch remote fonts, so it stays bundler-agnostic
+     and never blocks first paint. If a consumer cannot load Geist, the fallback
+     stack below is still usable.
+  ------------------------------------------------------------------------ */
   --font-sans: "Geist", system-ui, -apple-system, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", monospace;
 

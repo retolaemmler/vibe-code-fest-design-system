@@ -728,7 +728,7 @@ function StyleGuide() {
                 <code className="font-mono text-primary">solid</code> or{" "}
                 <code className="font-mono text-primary">secondary</code>. Inside a
                 call-to-action panel use{" "}
-                <code className="font-mono text-primary">outline</code>.{" "}
+                <code className="font-mono text-primary">secondary</code>.{" "}
                 <code className="font-mono text-primary">ghost</code> and{" "}
                 <code className="font-mono text-primary">link</code> stay for tertiary
                 and inline actions only.

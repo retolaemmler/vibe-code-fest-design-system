@@ -142,3 +142,24 @@ export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderPro
   },
 );
 ScheduleHeader.displayName = "ScheduleHeader";
+
+export interface ScheduleProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+}
+
+export const Schedule = React.forwardRef<HTMLDivElement, ScheduleProps>(
+  ({ className, children, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(
+        "overflow-hidden rounded-card border border-border bg-card shadow-raised",
+        className,
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  ),
+);
+Schedule.displayName = "Schedule";

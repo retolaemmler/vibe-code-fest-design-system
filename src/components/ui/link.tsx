@@ -15,7 +15,7 @@ export const linkVariants = cva(
     variants: {
       variant: {
         inline:
-          "px-1 py-1 text-primary underline underline-offset-4 hover:text-primary-hover",
+          "px-1 py-1 text-primary underline underline-offset-2 hover:text-primary-hover",
         nav: "px-3 py-2 text-small text-muted-foreground hover:text-foreground",
         quiet: "px-1 py-1 text-muted-foreground hover:text-foreground",
       },

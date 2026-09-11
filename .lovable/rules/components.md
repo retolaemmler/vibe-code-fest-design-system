@@ -40,7 +40,7 @@ import { Button } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab
 
 | Prop | Type | Default |
 |---|---|---|
-| `variant` | gradient · solid · outline · ghost · link · destructive | `solid` |
+| `variant` | gradient · solid · outline · secondary · ghost · link · destructive | `solid` |
 | `size` | sm · md · lg · icon | `md` |
 | `asChild` | boolean | `false` |
 | `loading` | boolean | `false` |

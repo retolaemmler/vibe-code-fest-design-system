@@ -65,7 +65,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 {column.title}
               </span>
               {column.links.map((link) => (
-                <Link key={`${column.title}-${link.href}`} variant="quiet" href={link.href}>
+                <Link key={`${column.title}-${link.label}`} variant="quiet" href={link.href}>
                   {link.label}
                 </Link>
               ))}

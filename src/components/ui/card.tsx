@@ -8,8 +8,9 @@ export const cardVariants = cva("rounded-card text-card-foreground", {
     variant: {
       plain: "bg-card",
       outline: "border border-border bg-card",
-      elevated: "bg-card shadow-lifted",
+      elevated: "border border-border/60 bg-card shadow-lifted",
       glass: "surface-glass rounded-card",
+      gradient: "bg-gradient-primary text-primary-foreground shadow-glow",
     },
     padding: { none: "", sm: "p-4", md: "p-6", lg: "p-8" },
   },

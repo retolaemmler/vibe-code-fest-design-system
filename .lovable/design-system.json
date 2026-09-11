@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,11 +12,12 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "9392c86332cea74d3c33bf25fbecd2b83e691f5cb934b2124f460c63be56c4fb",
+      "#enrichment": "01e5022514702e321dcbcae2b69fb908eb362e34ddd4942852a794c8e2ad7db1",
       ".dsignore": "3d148fa40816def80be7d6bb088faa24",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
       ".lovable/plan/core-components-for-the-vibe-code-fest-design-system-2026-09-11.md": "b09001bded226b7ee979a67cd10f531f",
+      ".lovable/plan/responsive-three-column-footer-2026-09-11.md": "7d8d7b2cd7461b26257035153711ab44",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
       ".lovable/system.md": "bf3e4a43e95db0219b1fadfdc5a232c5",
       "README.md": "d19675c449605f23c7cfa133c69b398b",
@@ -25,7 +26,7 @@
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
       "package.json": "5f8e34f695f7133be9ac499c3edcd93f",
       "public/favicon.ico": "9f504444f85a5af2eef9264b02ae40be",
-      "roadmap.md": "e32c1ed71cb202ab4de4e2499abbd7e3",
+      "roadmap.md": "014d1fd3534b90977f1cacbbd389e00e",
       "src/components/ui/avatar.tsx": "f96cbac02ce2948061ca38dcf6d1b019",
       "src/components/ui/badge.tsx": "341d4392cf2315b7f4b483d7c4554953",
       "src/components/ui/button.tsx": "30f9871ae0f0cff9dd1930c5157949c3",
@@ -33,7 +34,7 @@
       "src/components/ui/cta-panel.tsx": "bbd1c3cc24aa1bc644e2b4a3e47d4a47",
       "src/components/ui/faq.tsx": "c46e3d4ebff6749c734586678ac25477",
       "src/components/ui/feature-card.tsx": "52bea2d5dfc6a1b664a54e26f2f689fd",
-      "src/components/ui/footer.tsx": "d20952ee98161ae6f8928ce7fbb905d9",
+      "src/components/ui/footer.tsx": "e4aa593efac42f0e7a9f9f977b324c7a",
       "src/components/ui/icon.tsx": "80165dc56abb5db7bc57115c0e3320de",
       "src/components/ui/input.tsx": "2c31a0332b4ef52532f013917c5a1050",
       "src/components/ui/layout.tsx": "c4739b75b1b4b44fc7d6ea723fc751d6",
@@ -45,7 +46,7 @@
       "src/components/ui/ticket-card.tsx": "b914a71c0f793143affaa6cc4b2bfe3e",
       "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
       "src/index.css": "9d4f6f3808854d3e00551865bf36cf86",
-      "src/index.ts": "13e615dab4e53ac70894757f33a79a75",
+      "src/index.ts": "464e25e429750de2f03393eeeae06680",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -53,8 +54,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
-      "src/routes/index.tsx": "6a9f57ba5f2a2ed88ab8b8ee0e58f1f1",
-      "src/routes/style-guide.tsx": "94951cb1f61730cacc60c7b575b1664e",
+      "src/routes/index.tsx": "8e54200d747b55561ac6764a4c6e08ca",
+      "src/routes/style-guide.tsx": "9a2b106e95807b54bc35897e0e052076",
       "src/styles.css": "2dc2c7d36261a53a8bc42173c3bd20da",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -1348,7 +1349,7 @@
         },
         {
           "name": "columns",
-          "type": "FooterLinkColumn[]",
+          "type": "any",
           "required": true
         },
         {
@@ -1357,14 +1358,14 @@
         },
         {
           "name": "onNewsletterClick",
-          "type": "function"
+          "type": "any"
         }
       ],
       "usage": "Use at the end of public pages for brand context, three compact navigation groups, and an icon-only newsletter action opposite the brand mark.",
       "examples": [
         {
           "label": "Event footer",
-          "code": "<Footer brand={<Logo />} note=\"Zurich · 2026\" columns={columns} newsletterHref=\"/newsletter\" />"
+          "code": "\u003cFooter brand={\u003cLogo /\u003e} note=\"Zurich · 2026\" columns={columns} newsletterHref=\"/newsletter\" /\u003e"
         }
       ],
       "antipatterns": [

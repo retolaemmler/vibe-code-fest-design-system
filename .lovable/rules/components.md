@@ -164,6 +164,8 @@ import { FeatureCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ce
 import { Footer } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
+Use at the end of public pages for brand context, three compact navigation groups, and an icon-only newsletter action opposite the brand mark.
+
 **Props:**
 
 | Prop | Type | Default |
@@ -171,6 +173,20 @@ import { Footer } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab
 | `surface` | default · muted · card | `default` |
 | `brand` | any | `—` |
 | `note` | any | `—` |
+| `columns` | any | `—` |
+| `newsletterHref` | string | `—` |
+| `onNewsletterClick` | any | `—` |
+
+**Examples:**
+
+_Event footer_
+```tsx
+<Footer brand={<Logo />} note="Zurich · 2026" columns={columns} newsletterHref="/newsletter" />
+```
+
+**Avoid:**
+
+- Do not pass ungrouped links or replace the newsletter action with a one-off button style.
 
 ### Heading
 

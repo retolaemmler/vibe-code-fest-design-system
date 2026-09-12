@@ -23,6 +23,7 @@ import { Link } from "@/components/ui/link";
 import { Navbar } from "@/components/ui/navbar";
 import { Schedule, ScheduleHeader, ScheduleItem } from "@/components/ui/schedule-item";
 import { SpeakerCard } from "@/components/ui/speaker-card";
+import { SponsorCard } from "@/components/ui/sponsor-card";
 import { Stat } from "@/components/ui/stat";
 import {
   TicketCard,
@@ -33,6 +34,7 @@ import {
 } from "@/components/ui/ticket-card";
 import { Heading, Text } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
+import atollLogo from "@/assets/logos/atoll-logo.png";
 
 export const Route = createFileRoute("/style-guide")({
   head: () => ({
@@ -980,6 +982,26 @@ function StyleGuide() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Sponsor card */}
+            <div className="flex flex-col gap-4">
+              <Heading level="h3">Sponsor card</Heading>
+              <div className="grid gap-6 sm:grid-cols-2">
+                {(["default", "highlight"] as const).map((variant) => (
+                  <div key={variant} className="flex flex-col gap-2">
+                    <SponsorCard
+                      logoSrc={atollLogo}
+                      name="ATOLL by EUTIMA"
+                      variant={variant}
+                    />
+                    <TokenName>{`variant="${variant}"`}</TokenName>
+                  </div>
+                ))}
+              </div>
+              <Snippet
+                code={'<SponsorCard logoSrc={atollLogo} name="ATOLL by EUTIMA" variant="highlight" />'}
+              />
             </div>
 
             {/* Schedule item */}

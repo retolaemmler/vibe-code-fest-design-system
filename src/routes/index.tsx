@@ -18,6 +18,7 @@ import { Link } from "@/components/ui/link";
 import { Navbar } from "@/components/ui/navbar";
 import { Schedule, ScheduleHeader, ScheduleItem } from "@/components/ui/schedule-item";
 import { SpeakerCard } from "@/components/ui/speaker-card";
+import { SponsorCard } from "@/components/ui/sponsor-card";
 import { Stat } from "@/components/ui/stat";
 import {
   TicketCard,
@@ -27,6 +28,7 @@ import {
   TicketTitle,
 } from "@/components/ui/ticket-card";
 import { Heading, Text } from "@/components/ui/typography";
+import atollLogo from "@/assets/logos/atoll-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -43,6 +45,8 @@ export const Route = createFileRoute("/")({
         content:
           "Browse the Vibe design system components and variants, built on semantic light and dark tokens.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Showcase,
@@ -376,6 +380,20 @@ function Showcase() {
               </FaqContent>
             </FaqItem>
           </Faq>
+        </Container>
+      </Section>
+
+      <Section surface="muted">
+        <Container className="flex flex-col gap-8">
+          <Heading level="h2">Sponsors</Heading>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <SponsorCard logoSrc={atollLogo} name="ATOLL by EUTIMA" />
+            <SponsorCard
+              logoSrc={atollLogo}
+              name="ATOLL by EUTIMA"
+              variant="highlight"
+            />
+          </div>
         </Container>
       </Section>
 

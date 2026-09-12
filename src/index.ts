@@ -46,6 +46,11 @@ export {
   type SpeakerCardProps,
 } from "./components/ui/speaker-card";
 export {
+  SponsorCard,
+  sponsorCardVariants,
+  type SponsorCardProps,
+} from "./components/ui/sponsor-card";
+export {
   Schedule,
   type ScheduleProps,
   ScheduleItem,

@@ -1154,6 +1154,43 @@
       ]
     },
     {
+      "name": "SponsorCard",
+      "file": "src/components/ui/sponsor-card",
+      "import_path": "",
+      "usage": "Use to present sponsor logos in a consistent, responsive grid. Choose highlight only for sponsors that need stronger visual prominence.",
+      "examples": [
+        {
+          "label": "Highlighted sponsor",
+          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" />"
+        }
+      ],
+      "antipatterns": [
+        "Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces."
+      ],
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": ["default", "highlight"],
+          "default": "default"
+        },
+        {
+          "name": "logoSrc",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "href",
+          "type": "string"
+        }
+      ]
+    },
+    {
       "name": "Schedule",
       "file": "src/components/ui/schedule-item",
       "import_path": "",

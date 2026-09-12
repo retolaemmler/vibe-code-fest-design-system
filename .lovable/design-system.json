@@ -1147,6 +1147,17 @@
       "name": "SpeakerCard",
       "file": "src/components/ui/speaker-card",
       "import_path": "",
+      "usage": "Use to introduce a speaker with their photo, role, company and topic tags. Pass linkedinHref to add a bubble LinkedIn action on the avatar; use the action slot for a secondary bottom button such as \"View profile\".",
+      "examples": [
+        {
+          "label": "Speaker with LinkedIn bubble",
+          "code": "<SpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={<Button variant=\"secondary\" size=\"sm\">View profile</Button>}\n/>"
+        }
+      ],
+      "antipatterns": [
+        "Do not add extra social icons below the card; the avatar bubble is the single social action.",
+        "Do not use the action slot for the LinkedIn link; the bubble button is reserved for that."
+      ],
       "props": [
         {
           "name": "name",
@@ -1168,6 +1179,10 @@
         {
           "name": "topics",
           "type": "any"
+        },
+        {
+          "name": "linkedinHref",
+          "type": "string"
         },
         {
           "name": "action",

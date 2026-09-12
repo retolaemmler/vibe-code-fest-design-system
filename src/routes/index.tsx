@@ -316,6 +316,7 @@ function Showcase() {
               role="Design Engineer"
               company="Studio Nord"
               topics={["Design systems", "Tokens"]}
+              linkedinHref="https://linkedin.com/in/nora-keller"
               action={<Button variant="secondary" size="sm">View profile</Button>}
             />
             <SpeakerCard
@@ -324,6 +325,7 @@ function Showcase() {
               company="Shipfast"
               topics={["AI tooling"]}
               variant="elevated"
+              linkedinHref="https://linkedin.com/in/luca-bianchi"
               action={<Button variant="secondary" size="sm">View profile</Button>}
             />
             <SpeakerCard
@@ -332,6 +334,7 @@ function Showcase() {
               company="Northwind"
               topics={["Performance", "DX"]}
               variant="glass"
+              linkedinHref="https://linkedin.com/in/ada-mwangi"
               action={<Button variant="secondary" size="sm">View profile</Button>}
             />
           </div>

@@ -994,13 +994,14 @@ function StyleGuide() {
                       logoSrc={atollLogo}
                       name="ATOLL by EUTIMA"
                       variant={variant}
+                      href="https://atoll-by-eutima.example.com"
                     />
                     <TokenName>{`variant="${variant}"`}</TokenName>
                   </div>
                 ))}
               </div>
               <Snippet
-                code={'<SponsorCard logoSrc={atollLogo} name="ATOLL by EUTIMA" variant="highlight" />'}
+                code={'<SponsorCard logoSrc={atollLogo} name="ATOLL by EUTIMA" variant="highlight" href="https://atoll-by-eutima.example.com" />'}
               />
             </div>
 

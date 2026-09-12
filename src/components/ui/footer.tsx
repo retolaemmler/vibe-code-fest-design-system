@@ -39,7 +39,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
     ref,
   ) => (
     <footer ref={ref} className={cn(footerVariants({ surface }), className)} {...props}>
-      <Container className="flex flex-col gap-10 py-10">
+      <Container className="flex flex-col gap-8 py-10">
         <div className="flex items-start justify-between gap-4">
           <div className="flex min-w-0 flex-col gap-2">
             {brand}
@@ -60,6 +60,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
             </Button>
           )}
         </div>
+        <hr className="w-full border-t border-border" />
         <nav
           aria-label="Footer navigation"
           className="grid min-w-0 grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3"

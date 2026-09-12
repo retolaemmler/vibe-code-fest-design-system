@@ -312,6 +312,7 @@ function Showcase() {
               role="Design Engineer"
               company="Studio Nord"
               topics={["Design systems", "Tokens"]}
+              action={<Button variant="secondary" size="sm">View profile</Button>}
             />
             <SpeakerCard
               name="Luca Bianchi"
@@ -319,6 +320,7 @@ function Showcase() {
               company="Shipfast"
               topics={["AI tooling"]}
               variant="elevated"
+              action={<Button variant="secondary" size="sm">View profile</Button>}
             />
             <SpeakerCard
               name="Ada Mwangi"
@@ -326,6 +328,7 @@ function Showcase() {
               company="Northwind"
               topics={["Performance", "DX"]}
               variant="glass"
+              action={<Button variant="secondary" size="sm">View profile</Button>}
             />
           </div>
 

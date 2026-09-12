@@ -12,6 +12,8 @@ export interface SpeakerCardProps extends Omit<CardProps, "children"> {
   company?: string;
   photoUrl?: string;
   topics?: string[];
+  /** Optional bottom action, typically a Button with variant="secondary". */
+  action?: React.ReactNode;
 }
 
 export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(

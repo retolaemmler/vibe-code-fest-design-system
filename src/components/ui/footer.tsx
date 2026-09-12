@@ -40,6 +40,21 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
   ) => (
     <footer ref={ref} className={cn(footerVariants({ surface }), className)} {...props}>
       <Container className="flex flex-col gap-8 py-10">
+        <nav
+          aria-label="Footer navigation"
+          className="grid min-w-0 grid-cols-2 place-items-center gap-x-4 gap-y-6 sm:grid-cols-3"
+        >
+          {columns.map((column, index) => (
+            <div key={column.title ?? `column-${index}`} className="flex min-w-0 flex-col items-center gap-2">
+              {column.links.map((link) => (
+                <Link key={`${column.title}-${link.label}`} variant="quiet" href={link.href}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          ))}
+        </nav>
+        <hr className="w-full border-t border-border" />
         <div className="flex items-start justify-between gap-4">
           <div className="flex min-w-0 flex-col gap-2">
             {brand}
@@ -60,21 +75,6 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
             </Button>
           )}
         </div>
-        <hr className="w-full border-t border-border" />
-        <nav
-          aria-label="Footer navigation"
-          className="grid min-w-0 grid-cols-2 place-items-center gap-x-4 gap-y-6 sm:grid-cols-3"
-        >
-          {columns.map((column, index) => (
-            <div key={column.title ?? `column-${index}`} className="flex min-w-0 flex-col items-center gap-2">
-              {column.links.map((link) => (
-                <Link key={`${column.title}-${link.label}`} variant="quiet" href={link.href}>
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          ))}
-        </nav>
       </Container>
     </footer>
   ),

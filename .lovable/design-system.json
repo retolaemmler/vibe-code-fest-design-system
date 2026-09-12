@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.10.0",
+    "version": "1.11.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,7 +12,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "bf49764c0b451c2d41c12eb2eb4ca1d2855ff007683c47b461655fd5c3b287aa",
+      "#enrichment": "90e6bef09c73a1614c2d0e34786d8cf4cafdd304b6690f55f3712336d4073c68",
       ".dsignore": "c5928345fda053d58aba3720f63a8a91",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -20,7 +20,7 @@
       ".lovable/plan/responsive-three-column-footer-2026-09-11.md": "7d8d7b2cd7461b26257035153711ab44",
       ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
-      ".lovable/system.md": "ed4d97755ba5d4150ab083e8609d7282",
+      ".lovable/system.md": "af0b16b2e72f0688a737fd229b6105df",
       "README.md": "546e5b1f850a58d461165943ea376d15",
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
@@ -46,10 +46,10 @@
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
       "src/components/ui/speaker-card.tsx": "27248220f77a6101735570cb82bda21d",
       "src/components/ui/sponsor-card.tsx": "2b0612f987475a4fb19ae927679821d7",
-      "src/components/ui/stat.tsx": "72b0da6d313da436ba2f884dd076860d",
+      "src/components/ui/stat.tsx": "7c627c52ead55d4d6a2edac6ecad267b",
       "src/components/ui/ticket-card.tsx": "b914a71c0f793143affaa6cc4b2bfe3e",
       "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
-      "src/index.css": "f16852e6633ab820601a111071703373",
+      "src/index.css": "7309868844e3dbd96aff0f388a8ab7db",
       "src/index.ts": "c4a2e72ddaaba17db1e80be1fc58842e",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
@@ -59,7 +59,7 @@
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
       "src/routes/index.tsx": "a5a3ee4f570759bf1e349a352da43b10",
-      "src/routes/style-guide.tsx": "21bbd08c40afdb16c06f43411d00ac51",
+      "src/routes/style-guide.tsx": "7f9cdaa8572c7c900c730198cfea3d1b",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -240,6 +240,16 @@
         "source": "src/index.css"
       },
       {
+        "name": "--dark-section",
+        "raw": "228 60% 18%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--dark-section-foreground",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
         "name": "--surface-glass",
         "raw": "0 0% 100%",
         "source": "src/index.css"
@@ -417,6 +427,16 @@
       {
         "name": "--color-surface-glass",
         "raw": "hsl(var(--surface-glass))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-dark-section",
+        "raw": "hsl(var(--dark-section))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-dark-section-foreground",
+        "raw": "hsl(var(--dark-section-foreground))",
         "source": "src/index.css"
       }
     ],

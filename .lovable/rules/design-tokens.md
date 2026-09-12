@@ -45,6 +45,8 @@ Apply with any color utility: `bg-<name>`, `text-<name>`, `border-<name>`, `ring
 | `input` | `--color-input` |
 | `ring` | `--color-ring` |
 | `surface-glass` | `--color-surface-glass` |
+| `dark-section` | `--color-dark-section` |
+| `dark-section-foreground` | `--color-dark-section-foreground` |
 
 ## Typography
 

@@ -31,6 +31,12 @@
   * {
     border-color: hsl(var(--border));
   }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 :root {

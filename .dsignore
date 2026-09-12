@@ -1,3 +1,7 @@
 src/router.tsx
 src/routeTree.gen.ts
 src/mockup-preview.d.ts
+src/routes/
+src/mockupPreviewPlugin.ts
+vite.config.ts
+roadmap.md

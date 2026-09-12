@@ -29,7 +29,7 @@ export interface FooterLink {
 }
 
 export interface FooterLinkColumn {
-  title: string;
+  title?: string;
   links: FooterLink[];
 }
 

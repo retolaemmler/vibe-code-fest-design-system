@@ -41,6 +41,16 @@ Every shadow in the system is one of these tokens. Never write a raw
 - Both themes define all five tokens; dark mode deepens the shadow rather than
   dropping it.
 
+## Dark sections
+
+Use `--dark-section` / `bg-dark-section` for full-bleed alternate bands that
+must feel heavy and branded: sponsor strips, large CTAs, footer backgrounds.
+It is derived from the `#1E3CB9` hue and stays dark in both light and dark
+mode. Always pair it with `--dark-section-foreground` (white) and the gradient
+or `secondary` button variants; never place default body text (`text-foreground`)
+straight on it.
+
+
 ## Icons — one set, no exceptions
 
 - The design system's icon set is **Lucide**, and it is the only general icon

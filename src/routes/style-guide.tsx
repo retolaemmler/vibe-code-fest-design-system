@@ -192,7 +192,9 @@ const COLOR_GROUPS: { group: string; blurb: string; swatches: Swatch[] }[] = [
       { token: "muted", usage: "Quiet bands and fills that separate a section without a border." },
       { token: "secondary", usage: "Neutral chips and secondary fills that must not read as brand." },
       { token: "surface-glass", usage: "The frosted sticky header and glass cards." },
+      { token: "dark-section", usage: "Full-bleed alternate bands that stay dark in both themes: CTA, sponsors, footer.", on: "dark-section" },
     ],
+
   },
   {
     group: "Content",

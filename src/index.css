@@ -84,9 +84,18 @@
   --input: 240 6% 90%;
   --ring: 271 91% 65%;
 
+  /* --- Dark sections -------------------------------------------------------
+     Full-bleed alternate bands (CTA, sponsors, footer) that stay dark even
+     in light mode. Derived from the #1E3CB9 hue (228°), desaturated and
+     darkened so white text passes contrast.
+  ------------------------------------------------------------------------ */
+  --dark-section: 228 60% 18%;
+  --dark-section-foreground: 0 0% 100%;
+
   /* --- Glass / elevation surfaces ---------------------------------------- */
   --surface-glass: 0 0% 100%;
   --shadow-color: 271 40% 20%;
+
 
   /* --- Radius (single source of truth) ------------------------------------ */
   --radius: 0.75rem;
@@ -227,9 +236,14 @@
   --input: 60 3% 20%;
   --ring: 271 91% 72%;
 
+  /* --- Dark sections --------------------------------------------------------- */
+  --dark-section: 228 55% 16%;
+  --dark-section-foreground: 0 0% 100%;
+
   /* --- Glass / elevation ----------------------------------------------------- */
   --surface-glass: 60 3% 12%;
   --shadow-color: 0 0% 0%;
+
 
   /* --- Radius ----------------------------------------------------------------- */
   --radius: 0.75rem;
@@ -356,8 +370,11 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
   --color-surface-glass: hsl(var(--surface-glass));
+  --color-dark-section: hsl(var(--dark-section));
+  --color-dark-section-foreground: hsl(var(--dark-section-foreground));
 
   /* Radii — all derived from --radius */
+
   --radius-field: calc(var(--radius) - 4px);
   --radius-card: var(--radius);
   --radius-lg: calc(var(--radius) + 8px);

@@ -19,7 +19,7 @@ export const sponsorCardVariants = cva(
 );
 
 export interface SponsorCardProps
-  extends Omit<React.HTMLAttributes<HTMLAnchorElement>, "children">,
+  extends Omit<React.HTMLAttributes<HTMLElement>, "children">,
     VariantProps<typeof sponsorCardVariants> {
   /** URL or imported asset for the sponsor logo. */
   logoSrc: string;

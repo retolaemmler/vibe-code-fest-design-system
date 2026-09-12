@@ -45,6 +45,8 @@ export const Route = createFileRoute("/")({
         content:
           "Browse the Vibe design system components and variants, built on semantic light and dark tokens.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Showcase,

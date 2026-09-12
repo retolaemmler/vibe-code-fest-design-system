@@ -347,6 +347,40 @@ import { SpeakerCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ce
 | `topics` | any | `—` |
 | `action` | any | `—` |
 
+### SponsorCard
+
+```ts
+import { SponsorCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+Use to present sponsor logos in a consistent, responsive grid. Provide an href to make the whole card a clickable link with a lift-and-glow hover effect. Choose highlight only for sponsors that need stronger visual prominence.
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `variant` | default · highlight | `default` |
+| `logoSrc` | string | `—` |
+| `name` | string | `—` |
+| `href` | string | `—` |
+
+**Examples:**
+
+_Default sponsor card_
+```tsx
+<SponsorCard logoSrc={atollLogo} name="ATOLL by EUTIMA" href="https://atoll-by-eutima.example.com" />
+```
+
+_Highlighted sponsor card_
+```tsx
+<SponsorCard logoSrc={atollLogo} name="ATOLL by EUTIMA" variant="highlight" href="https://atoll-by-eutima.example.com" />
+```
+
+**Avoid:**
+
+- Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces.
+- Do not add extra hover transitions or shadows at the call site; elevation and motion are built into the component when href is provided.
+
 ### Stat
 
 ```ts

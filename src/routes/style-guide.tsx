@@ -1109,21 +1109,18 @@ function StyleGuide() {
                   note="Zurich · 2026"
                   columns={[
                     {
-                      title: "Event",
                       links: [
                         { label: "Schedule", href: "#components" },
                         { label: "Speakers", href: "#components" },
                       ],
                     },
                     {
-                      title: "Attend",
                       links: [
                         { label: "Tickets", href: "#components" },
                         { label: "Venue", href: "#components" },
                       ],
                     },
                     {
-                      title: "About",
                       links: [
                         { label: "Code of conduct", href: "#components" },
                         { label: "Contact", href: "#components" },

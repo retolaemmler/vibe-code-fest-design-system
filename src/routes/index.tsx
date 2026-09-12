@@ -382,21 +382,18 @@ function Showcase() {
         note="Design system showcase"
         columns={[
           {
-            title: "Explore",
             links: [
               { label: "Buttons", href: "#buttons" },
               { label: "Cards", href: "#cards" },
             ],
           },
           {
-            title: "Event",
             links: [
               { label: "Schedule", href: "#event" },
               { label: "Speakers", href: "#event" },
             ],
           },
           {
-            title: "Resources",
             links: [
               { label: "Style guide", href: "/style-guide" },
               { label: "Contact", href: "mailto:hello@vibecodefest.ch" },

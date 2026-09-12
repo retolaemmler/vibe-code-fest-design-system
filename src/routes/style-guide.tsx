@@ -646,7 +646,7 @@ function StyleGuide() {
           <Block
             id="icons"
             title="Icons"
-            intro="Lucide is the only icon set, always rendered through the Icon component so size and colour stay on-system."
+            intro="Lucide is the base icon set, plus curated brand/social glyphs, always rendered through the Icon component so size and colour stay on-system."
           >
             <Input
               label="Search icons"

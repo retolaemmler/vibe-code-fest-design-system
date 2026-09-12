@@ -36,9 +36,11 @@ import {
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { InstagramIcon, LinkedInIcon, WhatsAppIcon } from "./social-icons";
 
 /**
- * The one and only icon set of this design system: Lucide.
+ * The one and only icon set of this design system: Lucide, plus a small
+ * set of curated brand/social glyphs that Lucide does not provide.
  * Consumers pick an icon by name from `icons` — never import another
  * icon library, inline SVG, or emoji as an icon.
  */
@@ -56,6 +58,8 @@ export const icons = {
   link: Link2,
   spinner: Loader2,
   info: Info,
+  instagram: InstagramIcon,
+  linkedin: LinkedInIcon,
   mail: Mail,
   moon: Moon,
   mapPin: MapPin,
@@ -73,6 +77,7 @@ export const icons = {
   warning: TriangleAlert,
   users: Users,
   video: Video,
+  whatsapp: WhatsAppIcon,
   close: X,
 } satisfies Record<string, LucideIcon>;
 

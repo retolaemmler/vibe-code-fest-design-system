@@ -43,9 +43,11 @@ Every shadow in the system is one of these tokens. Never write a raw
 
 ## Icons — one set, no exceptions
 
-- The design system's icon set is **Lucide**, and it is the only one.
-  Do not add `react-icons`, Heroicons, Font Awesome, Material Symbols,
-  emoji-as-icons, or hand-written inline `<svg>` glyphs.
+- The design system's icon set is **Lucide**, and it is the only general icon
+  library. A small set of curated brand/social glyphs that Lucide does not ship
+  (e.g. `instagram`, `linkedin`, `whatsapp`) lives in the same `Icon` registry
+  as custom SVG components. Do not add `react-icons`, Heroicons, Font Awesome,
+  Material Symbols, emoji-as-icons, or ad-hoc inline `<svg>` glyphs.
 - Always render icons through the system's `Icon` component:
   `<Icon name="ticket" />`. Do not import glyphs from `lucide-react`
   directly in app code — the `icons` registry is the allowed surface.
@@ -57,7 +59,8 @@ Every shadow in the system is one of these tokens. Never write a raw
 - Decorative icons stay `aria-hidden`; an icon that carries meaning (or an
   icon-only control) needs `label` on `Icon` or an `aria-label` on the control.
 - Need a glyph that isn't in the registry? Add it to `icons` in
-  `src/components/ui/icon.tsx` from Lucide. Never reach for another library.
+  `src/components/ui/icon.tsx`. Prefer a Lucide import; for brand logos that
+  Lucide does not provide, add a custom SVG glyph in `src/components/ui/social-icons.tsx`.
 
 ## Button usage by context
 

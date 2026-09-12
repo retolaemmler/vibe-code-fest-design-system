@@ -1157,15 +1157,20 @@
       "name": "SponsorCard",
       "file": "src/components/ui/sponsor-card",
       "import_path": "",
-      "usage": "Use to present sponsor logos in a consistent, responsive grid. Choose highlight only for sponsors that need stronger visual prominence.",
+      "usage": "Use to present sponsor logos in a consistent, responsive grid. Provide an href to make the whole card a clickable link with a lift-and-glow hover effect. Choose highlight only for sponsors that need stronger visual prominence.",
       "examples": [
         {
-          "label": "Highlighted sponsor",
-          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" />"
+          "label": "Default sponsor card",
+          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" />"
+        },
+        {
+          "label": "Highlighted sponsor card",
+          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" />"
         }
       ],
       "antipatterns": [
-        "Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces."
+        "Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces.",
+        "Do not add extra hover transitions or shadows at the call site; elevation and motion are built into the component when href is provided."
       ],
       "props": [
         {

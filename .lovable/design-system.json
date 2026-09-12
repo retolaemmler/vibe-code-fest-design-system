@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.9.0",
+    "version": "1.10.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,13 +12,13 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "9e23f86ca496f2b947f849bce93ffdae050f1451c183b76d592a8a585cf860d1",
+      "#enrichment": "2b12adc09ee4b73cb44cb519cea2aead8559a7408c440cf82adfb2d1a07ccfad",
       ".dsignore": "c5928345fda053d58aba3720f63a8a91",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
-      ".lovable/plan.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/plan/core-components-for-the-vibe-code-fest-design-system-2026-09-11.md": "b09001bded226b7ee979a67cd10f531f",
       ".lovable/plan/responsive-three-column-footer-2026-09-11.md": "7d8d7b2cd7461b26257035153711ab44",
+      ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
       ".lovable/system.md": "ed4d97755ba5d4150ab083e8609d7282",
       "README.md": "d19675c449605f23c7cfa133c69b398b",
@@ -27,7 +27,8 @@
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
       "package.json": "5f8e34f695f7133be9ac499c3edcd93f",
       "public/favicon.ico": "9f504444f85a5af2eef9264b02ae40be",
-      "roadmap.md": "014d1fd3534b90977f1cacbbd389e00e",
+      "roadmap.md": "03c4ff61139e14008c9a4d1882df8684",
+      "src/assets/logos/atoll-logo.png": "a229369f3e1e0cfbdcd536c9b5ec2aec",
       "src/components/ui/avatar.tsx": "f96cbac02ce2948061ca38dcf6d1b019",
       "src/components/ui/badge.tsx": "341d4392cf2315b7f4b483d7c4554953",
       "src/components/ui/button.tsx": "30f9871ae0f0cff9dd1930c5157949c3",
@@ -44,11 +45,12 @@
       "src/components/ui/schedule-item.tsx": "087cc0a3de36d6445d1d846d404e7aed",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
       "src/components/ui/speaker-card.tsx": "27248220f77a6101735570cb82bda21d",
+      "src/components/ui/sponsor-card.tsx": "43ec98454f0d8b9d5ae790557610b06b",
       "src/components/ui/stat.tsx": "72b0da6d313da436ba2f884dd076860d",
       "src/components/ui/ticket-card.tsx": "b914a71c0f793143affaa6cc4b2bfe3e",
       "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
       "src/index.css": "f16852e6633ab820601a111071703373",
-      "src/index.ts": "3cd1cedeeb00d63f08a29dfc2c8b2598",
+      "src/index.ts": "c4a2e72ddaaba17db1e80be1fc58842e",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -56,8 +58,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
-      "src/routes/index.tsx": "553392e5edc3319642873c68a95337ac",
-      "src/routes/style-guide.tsx": "8483c402d80f0a578ef6fa6ed27b1e90",
+      "src/routes/index.tsx": "85b57052260e2cd8f7a8dc6ed5d97d11",
+      "src/routes/style-guide.tsx": "85ccd9e941a0bda081344865af981649",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -1157,21 +1159,14 @@
       "name": "SponsorCard",
       "file": "src/components/ui/sponsor-card",
       "import_path": "",
-      "usage": "Use to present sponsor logos in a consistent, responsive grid. Choose highlight only for sponsors that need stronger visual prominence.",
-      "examples": [
-        {
-          "label": "Highlighted sponsor",
-          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" />"
-        }
-      ],
-      "antipatterns": [
-        "Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces."
-      ],
       "props": [
         {
           "name": "variant",
           "type": "enum",
-          "values": ["default", "highlight"],
+          "values": [
+            "default",
+            "highlight"
+          ],
           "default": "default"
         },
         {
@@ -1188,6 +1183,16 @@
           "name": "href",
           "type": "string"
         }
+      ],
+      "usage": "Use to present sponsor logos in a consistent, responsive grid. Choose highlight only for sponsors that need stronger visual prominence.",
+      "examples": [
+        {
+          "label": "Highlighted sponsor",
+          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" /\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces."
       ]
     },
     {
@@ -1526,6 +1531,13 @@
       "name": "WhatsAppIcon",
       "file": "src/components/ui/social-icons",
       "import_path": ""
+    }
+  ],
+  "assets": [
+    {
+      "file": "src/assets/logos/atoll-logo.png",
+      "kind": "logo",
+      "format": "png"
     }
   ]
 }

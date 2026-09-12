@@ -347,6 +347,34 @@ import { SpeakerCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ce
 | `topics` | any | `—` |
 | `action` | any | `—` |
 
+### SponsorCard
+
+```ts
+import { SponsorCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+Use to present sponsor logos in a consistent, responsive grid. Choose highlight only for sponsors that need stronger visual prominence.
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `variant` | default · highlight | `default` |
+| `logoSrc` | string | `—` |
+| `name` | string | `—` |
+| `href` | string | `—` |
+
+**Examples:**
+
+_Highlighted sponsor_
+```tsx
+<SponsorCard logoSrc={atollLogo} name="ATOLL by EUTIMA" variant="highlight" />
+```
+
+**Avoid:**
+
+- Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces.
+
 ### Stat
 
 ```ts

@@ -29,7 +29,10 @@ export const Stat = React.forwardRef<HTMLDivElement, StatProps>(
       >
         {value}
       </span>
-      <span className="text-caption text-muted-foreground">{label}</span>
+      <span className={cn("text-caption text-muted-foreground", align === "center" && "text-center")}>
+        {label}
+      </span>
+
     </div>
   ),
 );

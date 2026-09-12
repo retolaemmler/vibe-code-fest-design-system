@@ -3,7 +3,9 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Avatar } from "./avatar";
 import { Badge } from "./badge";
+import { Button } from "./button";
 import { Card, type CardProps } from "./card";
+import { Icon } from "./icon";
 import { Heading, Text } from "./typography";
 
 export interface SpeakerCardProps extends Omit<CardProps, "children"> {
@@ -12,6 +14,8 @@ export interface SpeakerCardProps extends Omit<CardProps, "children"> {
   company?: string;
   photoUrl?: string;
   topics?: string[];
+  /** Optional LinkedIn profile URL. When provided, a bubble icon button is placed on the avatar. */
+  linkedinHref?: string;
   /** Optional bottom action, typically a Button with variant="secondary". */
   action?: React.ReactNode;
 }

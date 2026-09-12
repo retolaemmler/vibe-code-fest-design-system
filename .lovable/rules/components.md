@@ -345,6 +345,7 @@ import { SpeakerCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ce
 | `company` | string | `—` |
 | `photoUrl` | string | `—` |
 | `topics` | any | `—` |
+| `action` | any | `—` |
 
 ### Stat
 

@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.7.0",
+    "version": "1.8.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -42,7 +42,7 @@
       "src/components/ui/navbar.tsx": "e479f37f7ab4335abe0e8763de01040b",
       "src/components/ui/schedule-item.tsx": "087cc0a3de36d6445d1d846d404e7aed",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
-      "src/components/ui/speaker-card.tsx": "e3d99ce3aa8a868d5c35b54addf4dab3",
+      "src/components/ui/speaker-card.tsx": "27248220f77a6101735570cb82bda21d",
       "src/components/ui/stat.tsx": "72b0da6d313da436ba2f884dd076860d",
       "src/components/ui/ticket-card.tsx": "b914a71c0f793143affaa6cc4b2bfe3e",
       "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
@@ -55,8 +55,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
-      "src/routes/index.tsx": "7a2b4986da9ce8a7fef95d42ed23b8f0",
-      "src/routes/style-guide.tsx": "080b220647c35eae356ddec908104af0",
+      "src/routes/index.tsx": "553392e5edc3319642873c68a95337ac",
+      "src/routes/style-guide.tsx": "8483c402d80f0a578ef6fa6ed27b1e90",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -1144,6 +1144,10 @@
         },
         {
           "name": "topics",
+          "type": "any"
+        },
+        {
+          "name": "action",
           "type": "any"
         }
       ]

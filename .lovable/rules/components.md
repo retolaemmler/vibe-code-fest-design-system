@@ -214,7 +214,7 @@ import { Icon } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab79
 |---|---|---|
 | `size` | xs · sm · md · lg · xl | `sm` |
 | `tone` | current · default · muted · brand · info · success · warning · destructive | `current` |
-| `name` | arrowRight · arrowUpRight · calendar · check · chevronDown · chevronRight · clock · code · externalLink · globe · link · spinner · info · mail · moon · mapPin · menu · mic · minus · plus · search · send · sparkles · share · star · sun · ticket · warning · users · video · close | `—` |
+| `name` | arrowRight · arrowUpRight · calendar · check · chevronDown · chevronRight · clock · code · externalLink · globe · link · spinner · info · instagram · linkedin · mail · moon · mapPin · menu · mic · minus · plus · search · send · sparkles · share · star · sun · ticket · warning · users · video · whatsapp · close | `—` |
 | `label` | string | `—` |
 
 ### Input

@@ -233,6 +233,12 @@ import { Input } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7
 | `error` | string | `—` |
 | `hint` | string | `—` |
 
+### InstagramIcon
+
+```ts
+import { InstagramIcon } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
 ### Link
 
 ```ts
@@ -245,6 +251,12 @@ import { Link } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab79
 |---|---|---|
 | `variant` | inline · nav · quiet | `inline` |
 | `active` | true · false | `false` |
+
+### LinkedInIcon
+
+```ts
+import { LinkedInIcon } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
 
 ### Navbar
 
@@ -399,5 +411,11 @@ import { TicketPrice } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ce
 
 ```ts
 import { TicketTitle } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+### WhatsAppIcon
+
+```ts
+import { WhatsAppIcon } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 

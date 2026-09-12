@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,8 +12,8 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "01e5022514702e321dcbcae2b69fb908eb362e34ddd4942852a794c8e2ad7db1",
-      ".dsignore": "3d148fa40816def80be7d6bb088faa24",
+      "#enrichment": "9e23f86ca496f2b947f849bce93ffdae050f1451c183b76d592a8a585cf860d1",
+      ".dsignore": "c5928345fda053d58aba3720f63a8a91",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
       ".lovable/plan/core-components-for-the-vibe-code-fest-design-system-2026-09-11.md": "b09001bded226b7ee979a67cd10f531f",
@@ -34,7 +34,7 @@
       "src/components/ui/cta-panel.tsx": "bbd1c3cc24aa1bc644e2b4a3e47d4a47",
       "src/components/ui/faq.tsx": "c46e3d4ebff6749c734586678ac25477",
       "src/components/ui/feature-card.tsx": "52bea2d5dfc6a1b664a54e26f2f689fd",
-      "src/components/ui/footer.tsx": "da671dcff68b63db415535d1f6e2ef87",
+      "src/components/ui/footer.tsx": "42057d44e50fbbe6e5d8da2e5527c641",
       "src/components/ui/icon.tsx": "cdea6fa2dda2271cea7e3d58148c47d9",
       "src/components/ui/input.tsx": "2c31a0332b4ef52532f013917c5a1050",
       "src/components/ui/layout.tsx": "c4739b75b1b4b44fc7d6ea723fc751d6",
@@ -46,8 +46,8 @@
       "src/components/ui/stat.tsx": "72b0da6d313da436ba2f884dd076860d",
       "src/components/ui/ticket-card.tsx": "b914a71c0f793143affaa6cc4b2bfe3e",
       "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
-      "src/index.css": "9d4f6f3808854d3e00551865bf36cf86",
-      "src/index.ts": "464e25e429750de2f03393eeeae06680",
+      "src/index.css": "f16852e6633ab820601a111071703373",
+      "src/index.ts": "3cd1cedeeb00d63f08a29dfc2c8b2598",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -57,7 +57,7 @@
       "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
       "src/routes/index.tsx": "7a2b4986da9ce8a7fef95d42ed23b8f0",
       "src/routes/style-guide.tsx": "080b220647c35eae356ddec908104af0",
-      "src/styles.css": "2dc2c7d36261a53a8bc42173c3bd20da",
+      "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
       "wrangler.jsonc": "680b897d48e44bcc65fe437c29b38f3b"
@@ -1468,6 +1468,21 @@
     {
       "name": "TicketPrice",
       "file": "src/components/ui/ticket-card",
+      "import_path": ""
+    },
+    {
+      "name": "InstagramIcon",
+      "file": "src/components/ui/social-icons",
+      "import_path": ""
+    },
+    {
+      "name": "LinkedInIcon",
+      "file": "src/components/ui/social-icons",
+      "import_path": ""
+    },
+    {
+      "name": "WhatsAppIcon",
+      "file": "src/components/ui/social-icons",
       "import_path": ""
     }
   ]

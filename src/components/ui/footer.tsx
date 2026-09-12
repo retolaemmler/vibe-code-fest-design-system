@@ -29,7 +29,7 @@ export interface FooterLink {
 }
 
 export interface FooterLinkColumn {
-  title: string;
+  title?: string;
   links: FooterLink[];
 }
 
@@ -64,11 +64,8 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
           aria-label="Footer navigation"
           className="grid min-w-0 grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3"
         >
-          {columns.map((column) => (
-            <div key={column.title} className="flex min-w-0 flex-col items-start gap-2">
-              <span className="text-caption font-semibold text-foreground">
-                {column.title}
-              </span>
+          {columns.map((column, index) => (
+            <div key={column.title ?? `column-${index}`} className="flex min-w-0 flex-col items-start gap-2">
               {column.links.map((link) => (
                 <Link key={`${column.title}-${link.label}`} variant="quiet" href={link.href}>
                   {link.label}

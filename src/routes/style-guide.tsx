@@ -974,6 +974,7 @@ function StyleGuide() {
                       photoUrl="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face"
                       topics={["Performance", "DX"]}
                       variant={variant}
+                      action={<Button variant="secondary" size="sm">View profile</Button>}
                     />
                     <TokenName>{`variant="${variant}"`}</TokenName>
                   </div>

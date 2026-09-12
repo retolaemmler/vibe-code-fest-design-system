@@ -12,11 +12,13 @@ export interface SpeakerCardProps extends Omit<CardProps, "children"> {
   company?: string;
   photoUrl?: string;
   topics?: string[];
+  /** Optional bottom action, typically a Button with variant="secondary". */
+  action?: React.ReactNode;
 }
 
 export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
   (
-    { className, name, role, company, photoUrl, topics, variant = "outline", ...props },
+    { className, name, role, company, photoUrl, topics, action, variant = "outline", ...props },
     ref,
   ) => (
     <Card
@@ -45,6 +47,7 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
           ))}
         </div>
       )}
+      {action && <div className="mt-auto pt-2">{action}</div>}
     </Card>
   ),
 );

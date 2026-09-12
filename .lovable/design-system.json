@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.11.0",
+    "version": "1.12.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,7 +12,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "90e6bef09c73a1614c2d0e34786d8cf4cafdd304b6690f55f3712336d4073c68",
+      "#enrichment": "fd3a7935d77a2af03b9f1e77da078a0903a8d9ef453ac341bbdd00c10aef71fb",
       ".dsignore": "c5928345fda053d58aba3720f63a8a91",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -44,7 +44,7 @@
       "src/components/ui/navbar.tsx": "e479f37f7ab4335abe0e8763de01040b",
       "src/components/ui/schedule-item.tsx": "087cc0a3de36d6445d1d846d404e7aed",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
-      "src/components/ui/speaker-card.tsx": "27248220f77a6101735570cb82bda21d",
+      "src/components/ui/speaker-card.tsx": "0e546c02788b2f2ed4373e26245eea03",
       "src/components/ui/sponsor-card.tsx": "2b0612f987475a4fb19ae927679821d7",
       "src/components/ui/stat.tsx": "7c627c52ead55d4d6a2edac6ecad267b",
       "src/components/ui/ticket-card.tsx": "b914a71c0f793143affaa6cc4b2bfe3e",
@@ -58,8 +58,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
-      "src/routes/index.tsx": "a5a3ee4f570759bf1e349a352da43b10",
-      "src/routes/style-guide.tsx": "7f9cdaa8572c7c900c730198cfea3d1b",
+      "src/routes/index.tsx": "8de355bd2089056d8cad9dba1f86bbd0",
+      "src/routes/style-guide.tsx": "6dc5309147b0b4716772aae746fbeccf",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -1147,21 +1147,11 @@
       "name": "SpeakerCard",
       "file": "src/components/ui/speaker-card",
       "import_path": "",
-      "usage": "Use to introduce a speaker with their photo, role, company and topic tags. Pass linkedinHref to add a bubble LinkedIn action on the avatar; use the action slot for a secondary bottom button such as \"View profile\".",
-      "examples": [
-        {
-          "label": "Speaker with LinkedIn bubble",
-          "code": "<SpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={<Button variant=\"secondary\" size=\"sm\">View profile</Button>}\n/>"
-        }
-      ],
-      "antipatterns": [
-        "Do not add extra social icons below the card; the avatar bubble is the single social action.",
-        "Do not use the action slot for the LinkedIn link; the bubble button is reserved for that."
-      ],
       "props": [
         {
           "name": "name",
           "type": "string",
+          "default": "linkedin",
           "required": true
         },
         {
@@ -1188,6 +1178,17 @@
           "name": "action",
           "type": "any"
         }
+      ],
+      "usage": "Use to introduce a speaker with their photo, role, company and topic tags. Pass linkedinHref to add a bubble LinkedIn action on the avatar; use the action slot for a secondary bottom button such as \"View profile\".",
+      "examples": [
+        {
+          "label": "Speaker with LinkedIn bubble",
+          "code": "\u003cSpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={\u003cButton variant=\"secondary\" size=\"sm\"\u003eView profile\u003c/Button\u003e}\n/\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not add extra social icons below the card; the avatar bubble is the single social action.",
+        "Do not use the action slot for the LinkedIn link; the bubble button is reserved for that."
       ]
     },
     {

@@ -336,16 +336,39 @@ import { Section } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1ba
 import { SpeakerCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
+Use to introduce a speaker with their photo, role, company and topic tags. Pass linkedinHref to add a bubble LinkedIn action on the avatar; use the action slot for a secondary bottom button such as "View profile".
+
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
-| `name` | string | `—` |
+| `name` | string | `linkedin` |
 | `role` | string | `—` |
 | `company` | string | `—` |
 | `photoUrl` | string | `—` |
 | `topics` | any | `—` |
+| `linkedinHref` | string | `—` |
 | `action` | any | `—` |
+
+**Examples:**
+
+_Speaker with LinkedIn bubble_
+```tsx
+<SpeakerCard
+  name="Ada Mwangi"
+  role="Staff Engineer"
+  company="Northwind"
+  photoUrl="https://example.com/ada.jpg"
+  topics={['Performance', 'DX']}
+  linkedinHref="https://linkedin.com/in/ada-mwangi"
+  action={<Button variant="secondary" size="sm">View profile</Button>}
+/>
+```
+
+**Avoid:**
+
+- Do not add extra social icons below the card; the avatar bubble is the single social action.
+- Do not use the action slot for the LinkedIn link; the bubble button is reserved for that.
 
 ### SponsorCard
 

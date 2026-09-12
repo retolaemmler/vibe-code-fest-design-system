@@ -80,3 +80,4 @@ export {
   ticketCardVariants,
   type TicketCardProps,
 } from "./components/ui/ticket-card";
+export { InstagramIcon, LinkedInIcon, WhatsAppIcon } from "./components/ui/social-icons";

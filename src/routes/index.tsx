@@ -387,11 +387,16 @@ function Showcase() {
         <Container className="flex flex-col gap-8">
           <Heading level="h2">Sponsors</Heading>
           <div className="grid gap-6 sm:grid-cols-2">
-            <SponsorCard logoSrc={atollLogo} name="ATOLL by EUTIMA" />
+            <SponsorCard
+              logoSrc={atollLogo}
+              name="ATOLL by EUTIMA"
+              href="https://atoll-by-eutima.example.com"
+            />
             <SponsorCard
               logoSrc={atollLogo}
               name="ATOLL by EUTIMA"
               variant="highlight"
+              href="https://atoll-by-eutima.example.com"
             />
           </div>
         </Container>

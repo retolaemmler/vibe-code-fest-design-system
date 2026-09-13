@@ -33,7 +33,7 @@ export const scheduleMarkerVariants = cva(
       position: {
         titleSm: "top-14 -translate-y-1/2",
         titleMd: "top-16 -translate-y-1/2",
-        end: "bottom-3",
+        end: "bottom-7 sm:bottom-3",
       },
     },
     defaultVariants: { tone: "primary", position: "titleMd" },
@@ -169,7 +169,7 @@ export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderPro
 ScheduleHeader.displayName = "ScheduleHeader";
 
 export const scheduleCategoryVariants = cva(
-  "relative flex flex-col gap-6 pb-16 last:pb-0 last:[&>[data-schedule-line]]:bottom-8",
+  "relative flex flex-col gap-6 pb-16 last:pb-0 last:[&>[data-schedule-line]]:bottom-12 sm:last:[&>[data-schedule-line]]:bottom-8",
 );
 
 export interface ScheduleCategoryProps

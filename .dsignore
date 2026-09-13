@@ -5,3 +5,4 @@ src/routes/
 src/mockupPreviewPlugin.ts
 vite.config.ts
 roadmap.md
+src/styles.css

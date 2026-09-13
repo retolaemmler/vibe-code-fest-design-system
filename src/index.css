@@ -86,11 +86,10 @@
 
   /* --- Dark sections -------------------------------------------------------
      Full-bleed alternate bands (CTA, sponsors, footer) that stay dark even
-     in light mode. Uses the primary cobalt hue (224°) at the same saturation
-     as --primary, darkened so white text passes contrast and the band feels
-     harmoniously tied to the primary action colour.
+     in light mode. This quieter navy sits between a neutral surface and the
+     vivid brand blue, so both pink and blue gradient stops remain distinct.
    ------------------------------------------------------------------------ */
-  --dark-section: 224 82% 18%;
+  --dark-section: 228 56% 16%;
   --dark-section-foreground: 0 0% 100%;
 
   /* --- Glass / elevation surfaces ---------------------------------------- */
@@ -238,7 +237,7 @@
   --ring: 224 88% 68%;
 
   /* --- Dark sections --------------------------------------------------------- */
-  --dark-section: 224 88% 15%;
+  --dark-section: 228 60% 13%;
   --dark-section-foreground: 0 0% 100%;
 
   /* --- Glass / elevation ----------------------------------------------------- */

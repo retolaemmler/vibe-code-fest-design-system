@@ -7,3 +7,5 @@
 - [x] Add default and highlighted SponsorCard variants with the supplied logo
 - [x] Rework Schedule into a four-category timeline based on Daryna VCF Playground
 - [x] Keep every solid timeline marker consistent within its category
+- [x] Harmonize the dark-section surface with the pink-to-blue gradient
+- [x] Increase schedule time prominence for faster scanning

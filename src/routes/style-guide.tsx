@@ -1137,12 +1137,17 @@ function StyleGuide() {
                     { label: "Legal Notice & Contact", href: "#components" },
                     { label: "Internal", href: "#components" },
                   ]}
+                  socials={[
+                    { name: "instagram", href: "https://instagram.com", label: "Instagram" },
+                    { name: "whatsapp", href: "https://wa.me", label: "WhatsApp" },
+                  ]}
                   newsletterHref="#components"
                 />
               </div>
               <Caption>
-                Footer layout: brand on the left, centred tagline, newsletter
-                action on the right, then a horizontal legal link row.
+                Footer layout: brand on the left, centred tagline, social
+                actions + newsletter on the right, then a centred legal link
+                row.
               </Caption>
             </div>
           </Block>

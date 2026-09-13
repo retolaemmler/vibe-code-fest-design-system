@@ -10,3 +10,4 @@
 - [x] Harmonize the dark-section surface with the pink-to-blue gradient
 - [x] Increase schedule time prominence for faster scanning
 - [x] Align the last timeline marker with the end of the spine
+- [x] Color each timeline section and blend adjacent colors in category header circles

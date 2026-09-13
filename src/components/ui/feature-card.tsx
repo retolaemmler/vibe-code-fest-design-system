@@ -1,9 +1,9 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils";
-import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { Icon, type IconName } from "@/components/ui/icon";
+import { cn } from "../../lib/utils";
+import { Card, CardDescription, CardTitle } from "./card";
+import { Icon, type IconName } from "./icon";
 
 export const featureMedallionVariants = cva(
   "flex shrink-0 items-center justify-center rounded-pill",

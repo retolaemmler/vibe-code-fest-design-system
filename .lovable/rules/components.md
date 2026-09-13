@@ -376,7 +376,7 @@ _Share category_
 import { ScheduleItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Shows a timed programme entry on a glassy or solid surface. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.
+Shows a timed programme entry on a glassy or solid surface. The prominent time label automatically follows its ScheduleCategory marker hue with a contrast-safe text tone. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.
 
 **Props:**
 
@@ -405,6 +405,7 @@ _Lunch without marker_
 **Avoid:**
 
 - Do not add a marker to breaks or lunch.
+- Do not override the time colour; it is inherited from the category and adjusted for readable contrast.
 - Do not apply one-off glass, shadow, or marker colours through className.
 
 ### Section

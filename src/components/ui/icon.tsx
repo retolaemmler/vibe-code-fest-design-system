@@ -11,6 +11,7 @@ import {
   Code2,
   ExternalLink,
   Globe,
+  Heart,
   Link2,
   Loader2,
   Info,

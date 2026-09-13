@@ -1,6 +1,6 @@
 # Vibe design system — always-on rules
 
-A token-driven system for the Vibe Code Fest site: bold gradient brand accent,
+A token-driven system for the Vibe Code Fest site: bold pink-to-blue gradient brand accent,
 calm neutral surfaces, technical-but-friendly voice (Geist Sans / Geist Mono).
 
 ## Hard constraints
@@ -45,7 +45,7 @@ Every shadow in the system is one of these tokens. Never write a raw
 
 Use `--dark-section` / `bg-dark-section` for full-bleed alternate bands that
 must feel heavy and branded: sponsor strips, large CTAs, footer backgrounds.
-It is derived from the `#1E3CB9` hue and stays dark in both light and dark
+It uses the same cobalt-blue hue as `--primary` and stays dark in both light and dark
 mode. Always pair it with `--dark-section-foreground` (white) and the gradient
 or `secondary` button variants; never place default body text (`text-foreground`)
 straight on it.

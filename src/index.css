@@ -14,7 +14,7 @@
       back to the light value.
    3. Semantic names only. `--primary`, not `--purple-500`. A pair is always
       `--x` (surface) + `--x-foreground` (content that sits on it).
-   4. Raw palette anchors (`--brand-pink`, `--brand-purple`) exist solely to be
+   4. Raw palette anchors (`--brand-pink`, `--brand-blue`) exist solely to be
       referenced by semantic tokens and gradients — never use them directly in
       components.
    5. All radii derive from `--radius` with calc(). Change `--radius` and the
@@ -42,7 +42,7 @@
 :root {
   /* --- Raw brand anchors (referenced by semantic tokens only) ------------ */
   --brand-pink: 330 81% 60%;
-  --brand-purple: 271 91% 65%;
+  --brand-blue: 224 82% 55%;
 
   /* --- Core surfaces ----------------------------------------------------- */
   --background: 0 0% 100%;
@@ -53,10 +53,10 @@
   --popover-foreground: 60 3% 11%;
 
   /* --- Brand / interaction ----------------------------------------------- */
-  --primary: 271 91% 65%;
+  --primary: 224 82% 55%;
   --primary-foreground: 0 0% 100%;
-  --primary-hover: 271 84% 58%;
-  --primary-subtle: 271 91% 96%;
+  --primary-hover: 224 78% 48%;
+  --primary-subtle: 224 90% 96%;
   --secondary: 60 5% 96%;
   --secondary-foreground: 60 3% 11%;
   --muted: 60 5% 96%;
@@ -82,19 +82,19 @@
   /* --- Lines, fields, focus ---------------------------------------------- */
   --border: 240 6% 90%;
   --input: 240 6% 90%;
-  --ring: 271 91% 65%;
+  --ring: 224 82% 55%;
 
   /* --- Dark sections -------------------------------------------------------
      Full-bleed alternate bands (CTA, sponsors, footer) that stay dark even
      in light mode. Derived from the #1E3CB9 hue (228°), desaturated and
      darkened so white text passes contrast.
   ------------------------------------------------------------------------ */
-  --dark-section: 228 60% 18%;
+  --dark-section: 224 45% 18%;
   --dark-section-foreground: 0 0% 100%;
 
   /* --- Glass / elevation surfaces ---------------------------------------- */
   --surface-glass: 0 0% 100%;
-  --shadow-color: 271 40% 20%;
+  --shadow-color: 224 40% 20%;
 
 
   /* --- Radius (single source of truth) ------------------------------------ */
@@ -104,12 +104,12 @@
   --gradient-primary: linear-gradient(
     135deg,
     hsl(var(--brand-pink)) 0%,
-    hsl(var(--brand-purple)) 100%
+    hsl(var(--brand-blue)) 100%
   );
   --gradient-primary-hover: linear-gradient(
     135deg,
     hsl(var(--brand-pink) / 0.9) 0%,
-    hsl(var(--brand-purple) / 0.9) 100%
+    hsl(var(--brand-blue) / 0.9) 100%
   );
   --gradient-surface: linear-gradient(
     180deg,
@@ -132,7 +132,7 @@
     0 2px 6px hsl(var(--shadow-color) / 0.06);
   --shadow-overlay: 0 24px 56px hsl(var(--shadow-color) / 0.16),
     0 4px 12px hsl(var(--shadow-color) / 0.08);
-  --shadow-glow: 0 12px 40px hsl(var(--brand-purple) / 0.28);
+  --shadow-glow: 0 12px 40px hsl(var(--brand-blue) / 0.28);
   --blur-surface: 12px;
 
   /* --- Motion -------------------------------------------------------------- */
@@ -194,7 +194,7 @@
 .dark {
   /* --- Raw brand anchors --------------------------------------------------- */
   --brand-pink: 330 81% 66%;
-  --brand-purple: 271 91% 72%;
+  --brand-blue: 224 88% 68%;
 
   /* --- Core surfaces ------------------------------------------------------- */
   --background: 60 3% 7%;
@@ -205,10 +205,10 @@
   --popover-foreground: 60 9% 98%;
 
   /* --- Brand / interaction ------------------------------------------------- */
-  --primary: 271 91% 72%;
+  --primary: 224 88% 68%;
   --primary-foreground: 60 3% 7%;
-  --primary-hover: 271 91% 78%;
-  --primary-subtle: 271 40% 18%;
+  --primary-hover: 224 90% 74%;
+  --primary-subtle: 224 48% 18%;
   --secondary: 60 3% 15%;
   --secondary-foreground: 60 9% 98%;
   --muted: 60 3% 15%;
@@ -234,10 +234,10 @@
   /* --- Lines, fields, focus -------------------------------------------------- */
   --border: 60 3% 20%;
   --input: 60 3% 20%;
-  --ring: 271 91% 72%;
+  --ring: 224 88% 68%;
 
   /* --- Dark sections --------------------------------------------------------- */
-  --dark-section: 228 55% 16%;
+  --dark-section: 224 50% 15%;
   --dark-section-foreground: 0 0% 100%;
 
   /* --- Glass / elevation ----------------------------------------------------- */
@@ -252,12 +252,12 @@
   --gradient-primary: linear-gradient(
     135deg,
     hsl(var(--brand-pink)) 0%,
-    hsl(var(--brand-purple)) 100%
+    hsl(var(--brand-blue)) 100%
   );
   --gradient-primary-hover: linear-gradient(
     135deg,
     hsl(var(--brand-pink) / 0.9) 0%,
-    hsl(var(--brand-purple) / 0.9) 100%
+    hsl(var(--brand-blue) / 0.9) 100%
   );
   --gradient-surface: linear-gradient(
     180deg,
@@ -273,7 +273,7 @@
     0 2px 6px hsl(var(--shadow-color) / 0.5);
   --shadow-overlay: 0 24px 56px hsl(var(--shadow-color) / 0.7),
     0 4px 12px hsl(var(--shadow-color) / 0.6);
-  --shadow-glow: 0 12px 40px hsl(var(--brand-purple) / 0.35);
+  --shadow-glow: 0 12px 40px hsl(var(--brand-blue) / 0.35);
   --blur-surface: 12px;
 
   /* --- Motion --------------------------------------------------------------------- */

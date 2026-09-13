@@ -173,13 +173,45 @@ import { FeatureCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ce
 | `title` | string | `—` |
 | `description` | string | `—` |
 
+### Fonts
+
+```ts
+import { Fonts } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+Mount once inside the consumer app shell, ideally in <head>, to load the Geist Sans and Geist Mono brand fonts required by the design system.
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `children` | any | `—` |
+
+**Examples:**
+
+_Inside a TanStack Start root shell_
+```tsx
+<html lang="en">
+  <head>
+    <HeadContent />
+    <Fonts />
+  </head>
+  <body>{children}</body>
+</html>
+```
+
+**Avoid:**
+
+- Do not render Fonts more than once per page; duplicate link tags are harmless but wasteful.
+- Do not skip Fonts when using components that rely on the Geist type scale; fallback fonts will break the intended measure and weight.
+
 ### Footer
 
 ```ts
 import { Footer } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Use at the end of public pages for brand context, three compact navigation groups, and an icon-only newsletter action opposite the brand mark.
+Use at the end of public pages for a stable three-part top row (brand left, centred tagline, social actions + newsletter action right), followed by a divider and a centred horizontal legal link row.
 
 **Props:**
 
@@ -187,8 +219,9 @@ Use at the end of public pages for brand context, three compact navigation group
 |---|---|---|
 | `surface` | default · muted · card | `default` |
 | `brand` | any | `—` |
-| `note` | any | `—` |
-| `columns` | any | `—` |
+| `center` | any | `—` |
+| `links` | any | `—` |
+| `socials` | any | `—` |
 | `newsletterHref` | string | `—` |
 | `onNewsletterClick` | any | `—` |
 
@@ -196,12 +229,28 @@ Use at the end of public pages for brand context, three compact navigation group
 
 _Event footer_
 ```tsx
-<Footer brand={<Logo />} note="Zurich · 2026" columns={columns} newsletterHref="/newsletter" />
+<Footer
+  brand={<Logo />}
+  center={<span>Vibe coded with <Icon name="heart" /> in Zurich</span>}
+  links={[
+    { label: 'Terms & Conditions', href: '/terms' },
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Legal Notice & Contact', href: '/contact' },
+    { label: 'Internal', href: '/internal' },
+  ]}
+  socials={[
+    { name: 'instagram', href: 'https://instagram.com', label: 'Instagram' },
+    { name: 'whatsapp', href: 'https://wa.me', label: 'WhatsApp' },
+  ]}
+  newsletterHref="/newsletter"
+/>
 ```
 
 **Avoid:**
 
-- Do not pass ungrouped links or replace the newsletter action with a one-off button style.
+- Do not pass multi-column link groups; use a single flat links array for the bottom row.
+- Do not replace the newsletter action with a one-off button style.
+- Do not add extra labels to the social buttons; they must remain icon-only.
 
 ### Heading
 
@@ -229,7 +278,7 @@ import { Icon } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab79
 |---|---|---|
 | `size` | xs · sm · md · lg · xl | `sm` |
 | `tone` | current · default · muted · brand · info · success · warning · destructive | `current` |
-| `name` | arrowRight · arrowUpRight · calendar · check · chevronDown · chevronRight · clock · code · externalLink · globe · link · spinner · info · instagram · linkedin · mail · moon · mapPin · menu · mic · minus · plus · search · send · sparkles · share · star · sun · ticket · warning · users · video · whatsapp · close | `—` |
+| `name` | arrowRight · arrowUpRight · calendar · check · chevronDown · chevronRight · clock · code · externalLink · globe · heart · link · spinner · info · instagram · linkedin · mail · moon · mapPin · menu · mic · minus · plus · search · send · sparkles · share · star · sun · ticket · warning · users · video · whatsapp · close | `—` |
 | `label` | string | `—` |
 
 ### Input

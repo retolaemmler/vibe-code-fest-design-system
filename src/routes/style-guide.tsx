@@ -1137,6 +1137,10 @@ function StyleGuide() {
                     { label: "Legal Notice & Contact", href: "#components" },
                     { label: "Internal", href: "#components" },
                   ]}
+                  socials={[
+                    { name: "instagram", href: "https://instagram.com", label: "Instagram" },
+                    { name: "whatsapp", href: "https://wa.me", label: "WhatsApp" },
+                  ]}
                   newsletterHref="#components"
                 />
               </div>

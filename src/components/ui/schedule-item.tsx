@@ -31,11 +31,12 @@ export const scheduleMarkerVariants = cva(
         warning: "bg-warning text-warning-foreground",
       },
       position: {
-        center: "top-1/2 -translate-y-1/2",
-        end: "bottom-0",
+        titleSm: "top-14 -translate-y-1/2",
+        titleMd: "top-16 -translate-y-1/2",
+        end: "bottom-7 sm:bottom-3",
       },
     },
-    defaultVariants: { tone: "primary", position: "center" },
+    defaultVariants: { tone: "primary", position: "titleMd" },
   },
 );
 
@@ -110,7 +111,10 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
       <div className="relative">
         {markerIcon ? (
           <span
-            className={scheduleMarkerVariants({ tone: markerTone, position: isLast ? "end" : "center" })}
+            className={scheduleMarkerVariants({
+              tone: markerTone,
+              position: isLast ? "end" : padding === "sm" ? "titleSm" : "titleMd",
+            })}
             aria-hidden="true"
           >
             <Icon name={markerIcon} size="sm" />
@@ -124,7 +128,7 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
               <p className={scheduleTimeVariants({ tone: markerTone })}>{time}</p>
-              <p className="text-body font-medium text-foreground">{title}</p>
+              <p className="text-h3 font-semibold text-foreground">{title}</p>
               {speaker ? <p className="text-small text-muted-foreground">{speaker}</p> : null}
             </div>
             {track ? <Badge variant="neutral" className="self-start sm:self-center">{track}</Badge> : null}
@@ -165,7 +169,7 @@ export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderPro
 ScheduleHeader.displayName = "ScheduleHeader";
 
 export const scheduleCategoryVariants = cva(
-  "relative flex flex-col gap-6 pb-16 last:pb-0 last:[&>[data-schedule-line]]:bottom-0",
+  "relative flex flex-col gap-6 pb-16 last:pb-0 last:[&>[data-schedule-line]]:bottom-12 sm:last:[&>[data-schedule-line]]:bottom-8",
 );
 
 export interface ScheduleCategoryProps

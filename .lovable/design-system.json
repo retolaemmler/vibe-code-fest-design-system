@@ -1436,7 +1436,7 @@
           "type": "any"
         }
       ],
-      "usage": "Shows a timed programme entry on a glassy or solid surface. The prominent time label automatically follows its ScheduleCategory marker hue with a contrast-safe text tone. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.",
+      "usage": "Shows a timed programme entry on a glassy or solid surface. Its enlarged title aligns with the marker icon, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.",
       "examples": [
         {
           "label": "Talk with marker",

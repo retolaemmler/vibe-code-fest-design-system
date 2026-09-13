@@ -79,6 +79,16 @@
   --warning-foreground: 60 3% 11%;
   --warning-subtle: 48 96% 94%;
 
+  /* --- Schedule time text -------------------------------------------------
+     Hue-matched to timeline markers, with darker light-theme values so large
+     time labels remain readable on glass and card surfaces.
+   ------------------------------------------------------------------------ */
+  --schedule-time-primary: 224 82% 45%;
+  --schedule-time-accent: 330 72% 42%;
+  --schedule-time-info: 217 78% 43%;
+  --schedule-time-success: 142 72% 30%;
+  --schedule-time-warning: 38 92% 30%;
+
   /* --- Lines, fields, focus ---------------------------------------------- */
   --border: 240 6% 90%;
   --input: 240 6% 90%;
@@ -251,6 +261,13 @@
   --warning-foreground: 60 3% 7%;
   --warning-subtle: 38 45% 16%;
 
+  /* --- Schedule time text --------------------------------------------------- */
+  --schedule-time-primary: 224 88% 72%;
+  --schedule-time-accent: 330 81% 72%;
+  --schedule-time-info: 217 91% 74%;
+  --schedule-time-success: 142 62% 66%;
+  --schedule-time-warning: 38 92% 68%;
+
   /* --- Lines, fields, focus -------------------------------------------------- */
   --border: 60 3% 20%;
   --input: 60 3% 20%;
@@ -405,6 +422,11 @@
   --color-warning: hsl(var(--warning));
   --color-warning-foreground: hsl(var(--warning-foreground));
   --color-warning-subtle: hsl(var(--warning-subtle));
+  --color-schedule-time-primary: hsl(var(--schedule-time-primary));
+  --color-schedule-time-accent: hsl(var(--schedule-time-accent));
+  --color-schedule-time-info: hsl(var(--schedule-time-info));
+  --color-schedule-time-success: hsl(var(--schedule-time-success));
+  --color-schedule-time-warning: hsl(var(--schedule-time-warning));
 
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));

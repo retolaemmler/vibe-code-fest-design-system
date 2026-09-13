@@ -58,6 +58,7 @@ export {
   scheduleCategoryVariants,
   type ScheduleCategoryProps,
   scheduleLineVariants,
+  scheduleTimeVariants,
   ScheduleItem,
   scheduleItemVariants,
   scheduleMarkerVariants,

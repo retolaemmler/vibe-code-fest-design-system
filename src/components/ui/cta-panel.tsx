@@ -37,7 +37,7 @@ export const CtaPanel = React.forwardRef<HTMLDivElement, CtaPanelProps>(
         </CardDescription>
       ) : null}
       <Button
-        variant="secondary"
+        variant="muted"
         size="lg"
         asChild={Boolean(actionHref)}
         onClick={onAction}

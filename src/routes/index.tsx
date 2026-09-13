@@ -114,8 +114,8 @@ function Showcase() {
               Primary action
               <Icon name="arrowRight" />
             </Button>
-            <Button variant="outline" size="lg">
-              Secondary
+            <Button variant="muted" size="lg">
+              Muted
             </Button>
           </div>
 
@@ -172,7 +172,7 @@ function Showcase() {
           <Row title="Variants">
             <Button variant="gradient">Gradient</Button>
             <Button variant="solid">Solid</Button>
-            <Button variant="outline">Outline</Button>
+            <Button variant="secondary">Secondary</Button>
             <Button variant="ghost">Ghost</Button>
             <Button variant="link">Link</Button>
             <Button variant="destructive">Destructive</Button>
@@ -189,8 +189,8 @@ function Showcase() {
             <Button variant="gradient" disabled>
               Gradient
             </Button>
-            <Button variant="outline" disabled>
-              Outline
+            <Button variant="secondary" disabled>
+              Secondary
             </Button>
           </Row>
 

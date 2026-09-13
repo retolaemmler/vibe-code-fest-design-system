@@ -723,7 +723,7 @@
           "values": [
             "gradient",
             "solid",
-            "outline",
+            "muted",
             "secondary",
             "ghost",
             "link",

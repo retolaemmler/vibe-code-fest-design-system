@@ -1145,8 +1145,9 @@ function StyleGuide() {
                 />
               </div>
               <Caption>
-                Footer layout: brand on the left, centred tagline, newsletter
-                action on the right, then a horizontal legal link row.
+                Footer layout: brand on the left, centred tagline, social
+                actions + newsletter on the right, then a centred legal link
+                row.
               </Caption>
             </div>
           </Block>

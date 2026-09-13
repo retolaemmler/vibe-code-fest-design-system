@@ -1135,6 +1135,15 @@
           "default": "circle"
         },
         {
+          "name": "ring",
+          "type": "enum",
+          "values": [
+            "none",
+            "gradient"
+          ],
+          "default": "none"
+        },
+        {
           "name": "src",
           "type": "string"
         },

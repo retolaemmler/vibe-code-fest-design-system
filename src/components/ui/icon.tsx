@@ -56,6 +56,7 @@ export const icons = {
   code: Code2,
   externalLink: ExternalLink,
   globe: Globe,
+  heart: Heart,
   link: Link2,
   spinner: Loader2,
   info: Info,

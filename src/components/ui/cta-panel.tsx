@@ -41,7 +41,7 @@ export const CtaPanel = React.forwardRef<HTMLDivElement, CtaPanelProps>(
         size="lg"
         asChild={Boolean(actionHref)}
         onClick={onAction}
-        className="mt-2"
+        className="mt-2 self-center"
       >
         {actionHref ? <a href={actionHref}>{actionLabel}</a> : actionLabel}
       </Button>

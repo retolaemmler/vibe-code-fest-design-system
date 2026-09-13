@@ -1730,6 +1730,29 @@
       "name": "WhatsAppIcon",
       "file": "src/components/ui/social-icons",
       "import_path": ""
+    },
+    {
+      "name": "Fonts",
+      "file": "src/components/ui/fonts",
+      "import_path": "",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true
+        }
+      ],
+      "usage": "Mount once inside the consumer app shell, ideally in <head>, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
+      "examples": [
+        {
+          "label": "Inside a TanStack Start root shell",
+          "code": "<html lang=\"en\">\n  <head>\n    <HeadContent />\n    <Fonts />\n  </head>\n  <body>{children}</body>\n</html>"
+        }
+      ],
+      "antipatterns": [
+        "Do not render Fonts more than once per page; duplicate link tags are harmless but wasteful.",
+        "Do not skip Fonts when using components that rely on the Geist type scale; fallback fonts will break the intended measure and weight."
+      ]
     }
   ],
   "assets": [

@@ -34,7 +34,7 @@ export interface FooterProps
   center?: React.ReactNode;
   /** Bottom-row legal or secondary links, rendered horizontally and centred. */
   links: FooterLink[];
-  /** Icon-only secondary actions rendered to the left of the newsletter button. */
+  /** Icon-only secondary actions rendered on the right edge of the links row. */
   socials?: FooterSocial[];
   newsletterHref?: string;
   onNewsletterClick?: React.MouseEventHandler<HTMLButtonElement>;

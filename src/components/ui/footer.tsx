@@ -52,7 +52,35 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
           {center ? (
             <div className="order-first text-center md:order-none">{center}</div>
           ) : null}
-          <div className="flex items-center gap-2">
+          {newsletterHref ? (
+            <Button asChild variant="gradient" size="sm" iconStart="mail">
+              <a href={newsletterHref}>Subscribe to newsletter</a>
+            </Button>
+          ) : (
+            <Button
+              variant="gradient"
+              size="sm"
+              iconStart="mail"
+              onClick={onNewsletterClick}
+            >
+              Subscribe to newsletter
+            </Button>
+          )}
+        </div>
+        <hr className="w-full border-t border-border" />
+        <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
+          <div aria-hidden="true" className="hidden md:block" />
+          <nav
+            aria-label="Footer links"
+            className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"
+          >
+            {links.map((link) => (
+              <Link key={link.label} variant="quiet" href={link.href}>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="flex items-center justify-center gap-2 md:justify-end">
             {socials?.map((social) => (
               <Button
                 key={social.name}
@@ -70,33 +98,8 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 />
               </Button>
             ))}
-            {newsletterHref ? (
-              <Button asChild variant="gradient" size="sm" iconStart="mail">
-                <a href={newsletterHref}>Subscribe to newsletter</a>
-              </Button>
-            ) : (
-              <Button
-                variant="gradient"
-                size="sm"
-                iconStart="mail"
-                onClick={onNewsletterClick}
-              >
-                Subscribe to newsletter
-              </Button>
-            )}
           </div>
         </div>
-        <hr className="w-full border-t border-border" />
-        <nav
-          aria-label="Footer links"
-          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"
-        >
-          {links.map((link) => (
-            <Link key={link.label} variant="quiet" href={link.href}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
       </Container>
     </footer>
   ),

@@ -39,16 +39,30 @@ import { Badge } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7
 import { Button } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
+Use for clear actions with named visual hierarchy. Reserve the muted variant exclusively for gradient backgrounds, including CtaPanel; its label renders in --primary blue. Use gradient, solid, or secondary on cards and plain surfaces.
+
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
-| `variant` | gradient · solid · outline · secondary · ghost · link · destructive | `solid` |
+| `variant` | gradient · solid · muted · secondary · ghost · link · destructive | `solid` |
 | `size` | sm · md · lg · icon | `md` |
 | `asChild` | boolean | `false` |
 | `loading` | boolean | `false` |
 | `iconStart` | any | `—` |
 | `iconEnd` | any | `—` |
+
+**Examples:**
+
+_Muted action on a gradient panel_
+```tsx
+<div className="bg-gradient-primary"><Button variant="muted">Get tickets</Button></div>
+```
+
+**Avoid:**
+
+- Do not use the muted variant on plain, card, or dark-section backgrounds.
+- Do not recreate button appearances with one-off className color or border overrides.
 
 ### Card
 

@@ -1141,8 +1141,8 @@ function StyleGuide() {
                 />
               </div>
               <Caption>
-                Footer columns: three groups with two links each · icon-only
-                newsletter button sits opposite the brand mark
+                Footer layout: brand on the left, centred tagline, newsletter
+                action on the right, then a horizontal legal link row.
               </Caption>
             </div>
           </Block>

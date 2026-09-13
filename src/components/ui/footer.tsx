@@ -18,6 +18,12 @@ export interface FooterLink {
   href: string;
 }
 
+export interface FooterSocial {
+  name: "instagram" | "whatsapp";
+  href: string;
+  label: string;
+}
+
 export interface FooterProps
   extends React.HTMLAttributes<HTMLElement>,
     VariantProps<typeof footerVariants> {
@@ -25,15 +31,17 @@ export interface FooterProps
   brand?: React.ReactNode;
   /** Optional centred content, e.g. a tagline with an icon. */
   center?: React.ReactNode;
-  /** Bottom-row legal or secondary links, rendered horizontally. */
+  /** Bottom-row legal or secondary links, rendered horizontally and centred. */
   links: FooterLink[];
+  /** Icon-only secondary actions rendered to the left of the newsletter button. */
+  socials?: FooterSocial[];
   newsletterHref?: string;
   onNewsletterClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export const Footer = React.forwardRef<HTMLElement, FooterProps>(
   (
-    { className, surface, brand, center, links, newsletterHref, onNewsletterClick, ...props },
+    { className, surface, brand, center, links, socials, newsletterHref, onNewsletterClick, ...props },
     ref,
   ) => (
     <footer ref={ref} className={cn(footerVariants({ surface }), className)} {...props}>
@@ -43,25 +51,41 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
           {center ? (
             <div className="order-first text-center md:order-none">{center}</div>
           ) : null}
-          {newsletterHref ? (
-            <Button asChild variant="gradient" size="sm" iconStart="mail">
-              <a href={newsletterHref}>Subscribe to newsletter</a>
-            </Button>
-          ) : (
-            <Button
-              variant="gradient"
-              size="sm"
-              iconStart="mail"
-              onClick={onNewsletterClick}
-            >
-              Subscribe to newsletter
-            </Button>
-          )}
+          <div className="flex items-center gap-2">
+            {socials?.map((social) => (
+              <Button
+                key={social.name}
+                asChild
+                variant="secondary"
+                size="icon"
+                aria-label={social.label}
+              >
+                <a href={social.href} target="_blank" rel="noopener noreferrer">
+                  <span className="sr-only">{social.label}</span>
+                  <Icon name={social.name} size="sm" />
+                </a>
+              </Button>
+            ))}
+            {newsletterHref ? (
+              <Button asChild variant="gradient" size="sm" iconStart="mail">
+                <a href={newsletterHref}>Subscribe to newsletter</a>
+              </Button>
+            ) : (
+              <Button
+                variant="gradient"
+                size="sm"
+                iconStart="mail"
+                onClick={onNewsletterClick}
+              >
+                Subscribe to newsletter
+              </Button>
+            )}
+          </div>
         </div>
         <hr className="w-full border-t border-border" />
         <nav
           aria-label="Footer links"
-          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 md:justify-start"
+          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2"
         >
           {links.map((link) => (
             <Link key={link.label} variant="quiet" href={link.href}>

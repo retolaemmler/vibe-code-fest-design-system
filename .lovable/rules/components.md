@@ -279,11 +279,52 @@ import { Navbar } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab
 import { Schedule } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
+Use as the outer frame for an event programme. It provides the continuous gradient timeline and either a dark branded or default page surface.
+
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
+| `surface` | dark · default | `dark` |
 | `children` | any | `—` |
+
+**Examples:**
+
+_Dark event timeline_
+```tsx
+<Schedule><ScheduleCategory>...</ScheduleCategory></Schedule>
+```
+
+**Avoid:**
+
+- Do not draw a second timeline line inside categories.
+- Do not place ScheduleItem outside a ScheduleCategory.
+
+### ScheduleCategory
+
+```ts
+import { ScheduleCategory } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+Groups one category header and its schedule items. Its markerTone applies one consistent solid colour to every marked item in that category.
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `markerTone` | any | `primary` |
+
+**Examples:**
+
+_Community category_
+```tsx
+<ScheduleCategory markerTone="info"><ScheduleHeader icon="share" title="SHARE" /><ScheduleItem time="11:00" title="Community talk" markerIcon="mic" /></ScheduleCategory>
+```
+
+**Avoid:**
+
+- Do not use a category without a ScheduleHeader.
+- Do not set marker colours item by item; choose markerTone once on ScheduleCategory.
 
 ### ScheduleHeader
 
@@ -291,15 +332,26 @@ import { Schedule } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1b
 import { ScheduleHeader } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
+Starts a timeline category with the shared gradient medallion, category heading, and optional supporting text.
+
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
-| `tone` | default · brand · accent · info · success · warning · destructive | `default` |
-| `layout` | card · flush | `card` |
 | `icon` | any | `—` |
 | `title` | string | `—` |
 | `subtext` | string | `—` |
+
+**Examples:**
+
+_Share category_
+```tsx
+<ScheduleHeader icon="share" title="SHARE" subtext="Interactive sessions led by the community." />
+```
+
+**Avoid:**
+
+- Do not replace the gradient medallion with a one-off icon style.
 
 ### ScheduleItem
 
@@ -307,15 +359,36 @@ import { ScheduleHeader } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b
 import { ScheduleItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
+Shows a timed programme entry on a glassy or solid surface. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.
+
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
-| `variant` | list · boxed · grouped | `list` |
+| `variant` | glass · solid | `glass` |
+| `padding` | sm · md | `md` |
 | `time` | string | `—` |
 | `title` | string | `—` |
 | `speaker` | string | `—` |
 | `track` | string | `—` |
+| `markerIcon` | any | `—` |
+
+**Examples:**
+
+_Talk with marker_
+```tsx
+<ScheduleItem time="11:00–11:25" title="Community talk" markerIcon="mic" />
+```
+
+_Lunch without marker_
+```tsx
+<ScheduleItem time="12:30" title="Lunch" />
+```
+
+**Avoid:**
+
+- Do not add a marker to breaks or lunch.
+- Do not apply one-off glass, shadow, or marker colours through className.
 
 ### Section
 

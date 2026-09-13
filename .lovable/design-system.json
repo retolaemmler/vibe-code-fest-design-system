@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.13.0",
+    "version": "1.14.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,11 +12,12 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "033a3b761806934ee8d036a85ed160f13086e26d40ca386ae2d4d9c4b98da796",
+      "#enrichment": "91ed7eacf71f87f619b379bf2b93e7be7f3e3c25ae32f7cce9f05b3258f26ae7",
       ".dsignore": "c5928345fda053d58aba3720f63a8a91",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
       ".lovable/plan/core-components-for-the-vibe-code-fest-design-system-2026-09-11.md": "b09001bded226b7ee979a67cd10f531f",
+      ".lovable/plan/four-category-schedule-timeline-2026-09-13.md": "fd6682cc097c7e7fe329c1a9afd78fc1",
       ".lovable/plan/responsive-three-column-footer-2026-09-11.md": "7d8d7b2cd7461b26257035153711ab44",
       ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
@@ -27,7 +28,7 @@
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
       "package.json": "5f8e34f695f7133be9ac499c3edcd93f",
       "public/favicon.ico": "9f504444f85a5af2eef9264b02ae40be",
-      "roadmap.md": "d58df9e54399511564496a46648c42ec",
+      "roadmap.md": "ec089b124d8582e3a1c654b71ec03958",
       "src/assets/logos/atoll-logo.png": "a229369f3e1e0cfbdcd536c9b5ec2aec",
       "src/components/ui/avatar.tsx": "f96cbac02ce2948061ca38dcf6d1b019",
       "src/components/ui/badge.tsx": "341d4392cf2315b7f4b483d7c4554953",
@@ -42,15 +43,15 @@
       "src/components/ui/layout.tsx": "c4739b75b1b4b44fc7d6ea723fc751d6",
       "src/components/ui/link.tsx": "e2a15c13fc3d8a3a817c95a5b790d435",
       "src/components/ui/navbar.tsx": "e479f37f7ab4335abe0e8763de01040b",
-      "src/components/ui/schedule-item.tsx": "087cc0a3de36d6445d1d846d404e7aed",
+      "src/components/ui/schedule-item.tsx": "505957d2bae6f4950f878616a48df159",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
       "src/components/ui/speaker-card.tsx": "0e546c02788b2f2ed4373e26245eea03",
       "src/components/ui/sponsor-card.tsx": "2b0612f987475a4fb19ae927679821d7",
       "src/components/ui/stat.tsx": "7c627c52ead55d4d6a2edac6ecad267b",
       "src/components/ui/ticket-card.tsx": "b914a71c0f793143affaa6cc4b2bfe3e",
       "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
-      "src/index.css": "bb134286e5ef95db83334c935325bcdc",
-      "src/index.ts": "c4a2e72ddaaba17db1e80be1fc58842e",
+      "src/index.css": "799c87f6ecadb0c736907ff69d3c42f0",
+      "src/index.ts": "f699e9c403ff34697657b1b08402939b",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -58,8 +59,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
-      "src/routes/index.tsx": "8de355bd2089056d8cad9dba1f86bbd0",
-      "src/routes/style-guide.tsx": "6dc5309147b0b4716772aae746fbeccf",
+      "src/routes/index.tsx": "eb57300186a5c8786c9ab1fd497a383b",
+      "src/routes/style-guide.tsx": "ad7c2b9adddef5bd97e5474c72807b99",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -241,7 +242,7 @@
       },
       {
         "name": "--dark-section",
-        "raw": "224 82% 18%",
+        "raw": "228 56% 16%",
         "source": "src/index.css"
       },
       {
@@ -1183,7 +1184,7 @@
       "examples": [
         {
           "label": "Speaker with LinkedIn bubble",
-          "code": "<SpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={<Button variant=\"secondary\" size=\"sm\">View profile</Button>}\n/>"
+          "code": "\u003cSpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={\u003cButton variant=\"secondary\" size=\"sm\"\u003eView profile\u003c/Button\u003e}\n/\u003e"
         }
       ],
       "antipatterns": [
@@ -1224,16 +1225,164 @@
       "examples": [
         {
           "label": "Default sponsor card",
-          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" />"
+          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
         },
         {
           "label": "Highlighted sponsor card",
-          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" />"
+          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
         }
       ],
       "antipatterns": [
         "Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces.",
         "Do not add extra hover transitions or shadows at the call site; elevation and motion are built into the component when href is provided."
+      ]
+    },
+    {
+      "name": "Schedule",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "surface",
+          "type": "enum",
+          "values": [
+            "dark",
+            "default"
+          ],
+          "default": "dark"
+        },
+        {
+          "name": "children",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "usage": "Use as the outer frame for an event programme. It provides the continuous gradient timeline and either a dark branded or default page surface.",
+      "examples": [
+        {
+          "label": "Dark event timeline",
+          "code": "\u003cSchedule\u003e\u003cScheduleCategory\u003e...\u003c/ScheduleCategory\u003e\u003c/Schedule\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not draw a second timeline line inside categories.",
+        "Do not place ScheduleItem outside a ScheduleCategory."
+      ]
+    },
+    {
+      "name": "ScheduleCategory",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "markerTone",
+          "type": "any",
+          "default": "primary"
+        }
+      ],
+      "usage": "Groups one category header and its schedule items. Its markerTone applies one consistent solid colour to every marked item in that category.",
+      "examples": [
+        {
+          "label": "Community category",
+          "code": "\u003cScheduleCategory markerTone=\"info\"\u003e\u003cScheduleHeader icon=\"share\" title=\"SHARE\" /\u003e\u003cScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /\u003e\u003c/ScheduleCategory\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not use a category without a ScheduleHeader.",
+        "Do not set marker colours item by item; choose markerTone once on ScheduleCategory."
+      ]
+    },
+    {
+      "name": "ScheduleItem",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "glass",
+            "solid"
+          ],
+          "default": "glass"
+        },
+        {
+          "name": "padding",
+          "type": "enum",
+          "values": [
+            "sm",
+            "md"
+          ],
+          "default": "md"
+        },
+        {
+          "name": "time",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "speaker",
+          "type": "string"
+        },
+        {
+          "name": "track",
+          "type": "string"
+        },
+        {
+          "name": "markerIcon",
+          "type": "any"
+        }
+      ],
+      "usage": "Shows a timed programme entry on a glassy or solid surface. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.",
+      "examples": [
+        {
+          "label": "Talk with marker",
+          "code": "\u003cScheduleItem time=\"11:00–11:25\" title=\"Community talk\" markerIcon=\"mic\" /\u003e"
+        },
+        {
+          "label": "Lunch without marker",
+          "code": "\u003cScheduleItem time=\"12:30\" title=\"Lunch\" /\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not add a marker to breaks or lunch.",
+        "Do not apply one-off glass, shadow, or marker colours through className."
+      ]
+    },
+    {
+      "name": "ScheduleHeader",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "icon",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "subtext",
+          "type": "string"
+        }
+      ],
+      "usage": "Starts a timeline category with the shared gradient medallion, category heading, and optional supporting text.",
+      "examples": [
+        {
+          "label": "Share category",
+          "code": "\u003cScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" /\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not replace the gradient medallion with a one-off icon style."
       ]
     },
     {
@@ -1366,7 +1515,7 @@
       "examples": [
         {
           "label": "Event footer",
-          "code": "<Footer brand={<Logo />} note=\"Zurich \u00b7 2026\" columns={columns} newsletterHref=\"/newsletter\" />"
+          "code": "\u003cFooter brand={\u003cLogo /\u003e} note=\"Zurich · 2026\" columns={columns} newsletterHref=\"/newsletter\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1481,161 +1630,6 @@
       "name": "WhatsAppIcon",
       "file": "src/components/ui/social-icons",
       "import_path": ""
-    },
-    {
-      "name": "Schedule",
-      "file": "src/components/ui/schedule-item",
-      "import_path": "",
-      "props": [
-        {
-          "name": "surface",
-          "type": "enum",
-          "values": [
-            "dark",
-            "default"
-          ],
-          "default": "dark"
-        },
-        {
-          "name": "children",
-          "type": "any",
-          "required": true
-        }
-      ],
-      "usage": "Use as the outer frame for an event programme. It provides the continuous gradient timeline and either a dark branded or default page surface.",
-      "examples": [
-        {
-          "label": "Dark event timeline",
-          "code": "<Schedule><ScheduleCategory>...</ScheduleCategory></Schedule>"
-        }
-      ],
-      "antipatterns": [
-        "Do not draw a second timeline line inside categories.",
-        "Do not place ScheduleItem outside a ScheduleCategory."
-      ]
-    },
-    {
-      "name": "ScheduleCategory",
-      "file": "src/components/ui/schedule-item",
-      "import_path": "",
-      "props": [
-        {
-          "name": "markerTone",
-          "type": "enum",
-          "values": [
-            "primary",
-            "accent",
-            "info",
-            "success",
-            "warning"
-          ],
-          "default": "primary"
-        }
-      ],
-      "usage": "Groups one category header and its schedule items. Its markerTone applies one consistent solid colour to every marked item in that category.",
-      "examples": [
-        {
-          "label": "Community category",
-          "code": "<ScheduleCategory markerTone=\"info\"><ScheduleHeader icon=\"share\" title=\"SHARE\" /><ScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /></ScheduleCategory>"
-        }
-      ],
-      "antipatterns": [
-        "Do not use a category without a ScheduleHeader.",
-        "Do not set marker colours item by item; choose markerTone once on ScheduleCategory."
-      ]
-    },
-    {
-      "name": "ScheduleHeader",
-      "file": "src/components/ui/schedule-item",
-      "import_path": "",
-      "props": [
-        {
-          "name": "icon",
-          "type": "any",
-          "required": true
-        },
-        {
-          "name": "title",
-          "type": "string",
-          "required": true
-        },
-        {
-          "name": "subtext",
-          "type": "string"
-        }
-      ],
-      "usage": "Starts a timeline category with the shared gradient medallion, category heading, and optional supporting text.",
-      "examples": [
-        {
-          "label": "Share category",
-          "code": "<ScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" />"
-        }
-      ],
-      "antipatterns": [
-        "Do not replace the gradient medallion with a one-off icon style."
-      ]
-    },
-    {
-      "name": "ScheduleItem",
-      "file": "src/components/ui/schedule-item",
-      "import_path": "",
-      "props": [
-        {
-          "name": "variant",
-          "type": "enum",
-          "values": [
-            "glass",
-            "solid"
-          ],
-          "default": "glass"
-        },
-        {
-          "name": "padding",
-          "type": "enum",
-          "values": [
-            "sm",
-            "md"
-          ],
-          "default": "md"
-        },
-        {
-          "name": "time",
-          "type": "string",
-          "required": true
-        },
-        {
-          "name": "title",
-          "type": "string",
-          "required": true
-        },
-        {
-          "name": "speaker",
-          "type": "string"
-        },
-        {
-          "name": "track",
-          "type": "string"
-        },
-        {
-          "name": "markerIcon",
-          "type": "any"
-        }
-      ],
-      "usage": "Shows a timed programme entry on a glassy or solid surface. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.",
-      "examples": [
-        {
-          "label": "Talk with marker",
-          "code": "<ScheduleItem time=\"11:00\u201311:25\" title=\"Community talk\" markerIcon=\"mic\" />"
-        },
-        {
-          "label": "Lunch without marker",
-          "code": "<ScheduleItem time=\"12:30\" title=\"Lunch\" />"
-        }
-      ],
-      "antipatterns": [
-        "Do not add a marker to breaks or lunch.",
-        "Do not apply one-off glass, shadow, or marker colours through className."
-      ]
     }
   ],
   "assets": [

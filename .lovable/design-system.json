@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.12.0",
+    "version": "1.13.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,7 +12,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "fd3a7935d77a2af03b9f1e77da078a0903a8d9ef453ac341bbdd00c10aef71fb",
+      "#enrichment": "033a3b761806934ee8d036a85ed160f13086e26d40ca386ae2d4d9c4b98da796",
       ".dsignore": "c5928345fda053d58aba3720f63a8a91",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -20,14 +20,14 @@
       ".lovable/plan/responsive-three-column-footer-2026-09-11.md": "7d8d7b2cd7461b26257035153711ab44",
       ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
-      ".lovable/system.md": "af0b16b2e72f0688a737fd229b6105df",
+      ".lovable/system.md": "d49207a687340751d644227d5639639e",
       "README.md": "546e5b1f850a58d461165943ea376d15",
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
       "package.json": "5f8e34f695f7133be9ac499c3edcd93f",
       "public/favicon.ico": "9f504444f85a5af2eef9264b02ae40be",
-      "roadmap.md": "03c4ff61139e14008c9a4d1882df8684",
+      "roadmap.md": "d58df9e54399511564496a46648c42ec",
       "src/assets/logos/atoll-logo.png": "a229369f3e1e0cfbdcd536c9b5ec2aec",
       "src/components/ui/avatar.tsx": "f96cbac02ce2948061ca38dcf6d1b019",
       "src/components/ui/badge.tsx": "341d4392cf2315b7f4b483d7c4554953",
@@ -49,7 +49,7 @@
       "src/components/ui/stat.tsx": "7c627c52ead55d4d6a2edac6ecad267b",
       "src/components/ui/ticket-card.tsx": "b914a71c0f793143affaa6cc4b2bfe3e",
       "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
-      "src/index.css": "7309868844e3dbd96aff0f388a8ab7db",
+      "src/index.css": "bb134286e5ef95db83334c935325bcdc",
       "src/index.ts": "c4a2e72ddaaba17db1e80be1fc58842e",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
@@ -75,8 +75,8 @@
         "source": "src/index.css"
       },
       {
-        "name": "--brand-purple",
-        "raw": "271 91% 65%",
+        "name": "--brand-blue",
+        "raw": "224 82% 55%",
         "source": "src/index.css"
       },
       {
@@ -111,7 +111,7 @@
       },
       {
         "name": "--primary",
-        "raw": "271 91% 65%",
+        "raw": "224 82% 55%",
         "source": "src/index.css"
       },
       {
@@ -121,12 +121,12 @@
       },
       {
         "name": "--primary-hover",
-        "raw": "271 84% 58%",
+        "raw": "224 78% 48%",
         "source": "src/index.css"
       },
       {
         "name": "--primary-subtle",
-        "raw": "271 91% 96%",
+        "raw": "224 90% 96%",
         "source": "src/index.css"
       },
       {
@@ -236,12 +236,12 @@
       },
       {
         "name": "--ring",
-        "raw": "271 91% 65%",
+        "raw": "224 82% 55%",
         "source": "src/index.css"
       },
       {
         "name": "--dark-section",
-        "raw": "228 60% 18%",
+        "raw": "224 82% 18%",
         "source": "src/index.css"
       },
       {
@@ -256,12 +256,12 @@
       },
       {
         "name": "--gradient-primary",
-        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink)) 0%,\n    hsl(var(--brand-purple)) 100%\n  )",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink)) 0%,\n    hsl(var(--brand-blue)) 100%\n  )",
         "source": "src/index.css"
       },
       {
         "name": "--gradient-primary-hover",
-        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink) / 0.9) 0%,\n    hsl(var(--brand-purple) / 0.9) 100%\n  )",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink) / 0.9) 0%,\n    hsl(var(--brand-blue) / 0.9) 100%\n  )",
         "source": "src/index.css"
       },
       {
@@ -617,7 +617,7 @@
     "shadow": [
       {
         "name": "--shadow-color",
-        "raw": "271 40% 20%",
+        "raw": "224 40% 20%",
         "source": "src/index.css"
       },
       {
@@ -642,7 +642,7 @@
       },
       {
         "name": "--shadow-glow",
-        "raw": "0 12px 40px hsl(var(--brand-purple) / 0.28)",
+        "raw": "0 12px 40px hsl(var(--brand-blue) / 0.28)",
         "source": "src/index.css"
       }
     ],

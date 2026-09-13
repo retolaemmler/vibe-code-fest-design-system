@@ -9,7 +9,7 @@ Apply with any color utility: `bg-<name>`, `text-<name>`, `border-<name>`, `ring
 | Name | CSS variable |
 |---|---|
 | `brand-pink` | `--brand-pink` |
-| `brand-purple` | `--brand-purple` |
+| `brand-blue` | `--brand-blue` |
 | `gradient-primary` | `--gradient-primary` |
 | `gradient-primary-hover` | `--gradient-primary-hover` |
 | `background` | `--color-background` |

@@ -376,7 +376,7 @@ _Share category_
 import { ScheduleItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Shows a timed programme entry on a glassy or solid surface. The prominent time label automatically follows its ScheduleCategory marker hue with a contrast-safe text tone. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.
+Shows a timed programme entry on a glassy or solid surface. Its enlarged title aligns with the marker icon, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.
 
 **Props:**
 

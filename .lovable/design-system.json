@@ -1602,6 +1602,11 @@
           "required": true
         },
         {
+          "name": "socials",
+          "type": "array",
+          "description": "Icon-only secondary actions rendered to the left of the newsletter button. Each item needs name (instagram or whatsapp), href and label."
+        },
+        {
           "name": "newsletterHref",
           "type": "string"
         },
@@ -1610,16 +1615,17 @@
           "type": "any"
         }
       ],
-      "usage": "Use at the end of public pages for a stable three-part top row (brand left, centred tagline, newsletter action right), followed by a divider and a horizontal legal link row.",
+      "usage": "Use at the end of public pages for a stable three-part top row (brand left, centred tagline, social actions + newsletter action right), followed by a divider and a centred horizontal legal link row.",
       "examples": [
         {
           "label": "Event footer",
-          "code": "\u003cFooter\n  brand={\u003cLogo /\u003e}\n  center={\u003cspan\u003eVibe coded with \u003cIcon name=\"heart\" /\u003e in Zurich\u003c/span\u003e}\n  links={[\n    { label: 'Terms \u0026 Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice \u0026 Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/\u003e"
+          "code": "\u003cFooter\n  brand={\u003cLogo /\u003e}\n  center={\u003cspan\u003eVibe coded with \u003cIcon name=\"heart\" /\u003e in Zurich\u003c/span\u003e}\n  links={[\n    { label: 'Terms \u0026 Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice \u0026 Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  socials={[\n    { name: 'instagram', href: 'https://instagram.com', label: 'Instagram' },\n    { name: 'whatsapp', href: 'https://wa.me', label: 'WhatsApp' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/\u003e"
         }
       ],
       "antipatterns": [
         "Do not pass multi-column link groups; use a single flat links array for the bottom row.",
-        "Do not replace the newsletter action with a one-off button style."
+        "Do not replace the newsletter action with a one-off button style.",
+        "Do not add extra labels to the social buttons; they must remain icon-only."
       ]
     },
     {

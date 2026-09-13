@@ -84,6 +84,20 @@ Pick the Button variant from the surface it sits on, not from personal taste.
 - **Never use `ghost` or `link` for primary actions** inside cards or CTAs.
   Reserve them for tertiary actions, footer links, and inline text controls.
 
+## Footer layout
+
+The `Footer` component is a fixed three-part pattern:
+
+1. **Top row** — brand mark on the far left, centred tagline or meta content,
+   and the newsletter action on the far right.
+2. **Divider** — a full-width `border-border` rule.
+3. **Bottom row** — a single horizontal list of legal/secondary links, rendered
+   with `Link variant="quiet"`.
+
+Pass links as a flat `links` array, not grouped columns. Keep the newsletter
+button as `variant="gradient"` with `iconStart="mail"` so it matches the brand
+action pattern used in the navbar.
+
 ## Font loading
 
 The type tokens reference **Geist Sans** (`--font-sans`) and **Geist Mono**

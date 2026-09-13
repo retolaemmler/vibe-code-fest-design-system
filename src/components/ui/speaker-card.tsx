@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { Avatar } from "./avatar";
 import { Badge } from "./badge";
 import { Button } from "./button";

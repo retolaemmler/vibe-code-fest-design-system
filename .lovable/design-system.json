@@ -1604,7 +1604,7 @@
         {
           "name": "socials",
           "type": "array",
-          "description": "Icon-only secondary actions rendered to the left of the newsletter button. Each item needs name (instagram or whatsapp), href and label."
+          "description": "Icon-only secondary actions rendered on the right edge of the links row. Each item needs name (instagram or whatsapp), href and label."
         },
         {
           "name": "newsletterHref",
@@ -1615,7 +1615,7 @@
           "type": "any"
         }
       ],
-      "usage": "Use at the end of public pages for a stable three-part top row (brand left, centred tagline, social actions + newsletter action right), followed by a divider and a centred horizontal legal link row.",
+      "usage": "Use at the end of public pages for a stable three-part layout: top row (brand left, centred tagline, newsletter action right), divider, and bottom row (centred legal links with social actions aligned to the right edge).",
       "examples": [
         {
           "label": "Event footer",

@@ -58,8 +58,9 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 key={social.name}
                 asChild
                 variant="secondary"
-                size="icon"
+                size="sm"
                 iconStart={social.name}
+                className="size-8 px-0"
               >
                 <a
                   href={social.href}

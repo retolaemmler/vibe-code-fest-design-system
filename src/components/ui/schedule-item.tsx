@@ -21,7 +21,7 @@ export const scheduleItemVariants = cva(
 );
 
 export const scheduleMarkerVariants = cva(
-  "absolute left-6 top-1/2 z-20 flex size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-dark-section",
+  "absolute left-6 z-20 flex size-10 -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-dark-section",
   {
     variants: {
       tone: {
@@ -31,8 +31,12 @@ export const scheduleMarkerVariants = cva(
         success: "bg-success text-success-foreground",
         warning: "bg-warning text-warning-foreground",
       },
+      position: {
+        center: "top-1/2 -translate-y-1/2",
+        end: "bottom-0",
+      },
     },
-    defaultVariants: { tone: "primary" },
+    defaultVariants: { tone: "primary", position: "center" },
   },
 );
 
@@ -53,10 +57,14 @@ export interface ScheduleItemProps
 export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
   ({ className, variant, padding, time, title, speaker, track, markerIcon, ...props }, ref) => {
     const markerTone = React.useContext(ScheduleMarkerToneContext);
+    const isLast = (props as Record<string, unknown>)["data-schedule-last"] === "true";
     return (
       <div className="relative">
         {markerIcon ? (
-          <span className={scheduleMarkerVariants({ tone: markerTone })} aria-hidden="true">
+          <span
+            className={scheduleMarkerVariants({ tone: markerTone, position: isLast ? "end" : "center" })}
+            aria-hidden="true"
+          >
             <Icon name={markerIcon} size="sm" />
           </span>
         ) : null}
@@ -146,15 +154,59 @@ export interface ScheduleProps
   children: React.ReactNode;
 }
 
+function isScheduleItemElement(node: React.ReactNode): node is React.ReactElement<ScheduleItemProps> {
+  return React.isValidElement(node) && node.type === ScheduleItem;
+}
+
+function findLastMarkedItemPath(
+  nodes: React.ReactNode,
+  path: number[] = [],
+): number[] | null {
+  const arr = React.Children.toArray(nodes);
+  let result: number[] | null = null;
+  arr.forEach((child, index) => {
+    if (!React.isValidElement<{ children?: React.ReactNode }>(child)) return;
+    const childPath = [...path, index];
+    if (isScheduleItemElement(child) && child.props.markerIcon) {
+      result = childPath;
+    }
+    const nested = findLastMarkedItemPath(child.props.children, childPath);
+    if (nested) result = nested;
+  });
+  return result;
+}
+
+function cloneWithLastMarker(nodes: React.ReactNode, targetPath: number[], depth = 0): React.ReactNode {
+  const arr = React.Children.toArray(nodes);
+  return arr.map((child, index) => {
+    if (!React.isValidElement<{ children?: React.ReactNode }>(child)) return child;
+    if (depth === targetPath.length - 1 && index === targetPath[depth]) {
+      return React.cloneElement(child, { "data-schedule-last": "true" } as Record<string, unknown>);
+    }
+    if (depth < targetPath.length - 1 && index === targetPath[depth]) {
+      return React.cloneElement(child, {
+        children: cloneWithLastMarker(child.props.children, targetPath, depth + 1),
+      } as Record<string, unknown>);
+    }
+    return child;
+  });
+}
+
 export const Schedule = React.forwardRef<HTMLDivElement, ScheduleProps>(
-  ({ className, children, surface, ...props }, ref) => (
-    <div ref={ref} className={cn(scheduleVariants({ surface }), className)} {...props}>
-      <div
-        aria-hidden="true"
-        className="absolute bottom-10 left-10 top-10 z-0 w-1 -translate-x-1/2 bg-gradient-primary opacity-80 sm:left-12"
-      />
-      <div className="relative z-10">{children}</div>
-    </div>
-  ),
+  ({ className, children, surface, ...props }, ref) => {
+    const lastMarkedPath = React.useMemo(() => findLastMarkedItemPath(children), [children]);
+    const timelineChildren = lastMarkedPath
+      ? cloneWithLastMarker(children, lastMarkedPath)
+      : children;
+    return (
+      <div ref={ref} className={cn(scheduleVariants({ surface }), className)} {...props}>
+        <div
+          aria-hidden="true"
+          className="absolute bottom-8 left-10 top-10 z-0 w-1 -translate-x-1/2 bg-gradient-primary opacity-80 sm:left-12"
+        />
+        <div className="relative z-10">{timelineChildren}</div>
+      </div>
+    );
+  },
 );
 Schedule.displayName = "Schedule";

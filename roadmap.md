@@ -9,3 +9,4 @@
 - [x] Keep every solid timeline marker consistent within its category
 - [x] Harmonize the dark-section surface with the pink-to-blue gradient
 - [x] Increase schedule time prominence for faster scanning
+- [x] Align the last timeline marker with the end of the spine

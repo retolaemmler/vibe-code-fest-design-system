@@ -1183,7 +1183,7 @@
       "examples": [
         {
           "label": "Speaker with LinkedIn bubble",
-          "code": "\u003cSpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={\u003cButton variant=\"secondary\" size=\"sm\"\u003eView profile\u003c/Button\u003e}\n/\u003e"
+          "code": "<SpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={<Button variant=\"secondary\" size=\"sm\">View profile</Button>}\n/>"
         }
       ],
       "antipatterns": [
@@ -1224,107 +1224,16 @@
       "examples": [
         {
           "label": "Default sponsor card",
-          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
+          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" />"
         },
         {
           "label": "Highlighted sponsor card",
-          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
+          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" />"
         }
       ],
       "antipatterns": [
         "Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces.",
         "Do not add extra hover transitions or shadows at the call site; elevation and motion are built into the component when href is provided."
-      ]
-    },
-    {
-      "name": "Schedule",
-      "file": "src/components/ui/schedule-item",
-      "import_path": "",
-      "props": [
-        {
-          "name": "children",
-          "type": "any",
-          "required": true
-        }
-      ]
-    },
-    {
-      "name": "ScheduleItem",
-      "file": "src/components/ui/schedule-item",
-      "import_path": "",
-      "props": [
-        {
-          "name": "variant",
-          "type": "enum",
-          "values": [
-            "list",
-            "boxed",
-            "grouped"
-          ],
-          "default": "list"
-        },
-        {
-          "name": "time",
-          "type": "string",
-          "required": true
-        },
-        {
-          "name": "title",
-          "type": "string",
-          "required": true
-        },
-        {
-          "name": "speaker",
-          "type": "string"
-        },
-        {
-          "name": "track",
-          "type": "string"
-        }
-      ]
-    },
-    {
-      "name": "ScheduleHeader",
-      "file": "src/components/ui/schedule-item",
-      "import_path": "",
-      "props": [
-        {
-          "name": "tone",
-          "type": "enum",
-          "values": [
-            "default",
-            "brand",
-            "accent",
-            "info",
-            "success",
-            "warning",
-            "destructive"
-          ],
-          "default": "default"
-        },
-        {
-          "name": "layout",
-          "type": "enum",
-          "values": [
-            "card",
-            "flush"
-          ],
-          "default": "card"
-        },
-        {
-          "name": "icon",
-          "type": "any",
-          "required": true
-        },
-        {
-          "name": "title",
-          "type": "string",
-          "required": true
-        },
-        {
-          "name": "subtext",
-          "type": "string"
-        }
       ]
     },
     {
@@ -1457,7 +1366,7 @@
       "examples": [
         {
           "label": "Event footer",
-          "code": "\u003cFooter brand={\u003cLogo /\u003e} note=\"Zurich · 2026\" columns={columns} newsletterHref=\"/newsletter\" /\u003e"
+          "code": "<Footer brand={<Logo />} note=\"Zurich \u00b7 2026\" columns={columns} newsletterHref=\"/newsletter\" />"
         }
       ],
       "antipatterns": [
@@ -1572,6 +1481,161 @@
       "name": "WhatsAppIcon",
       "file": "src/components/ui/social-icons",
       "import_path": ""
+    },
+    {
+      "name": "Schedule",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "surface",
+          "type": "enum",
+          "values": [
+            "dark",
+            "default"
+          ],
+          "default": "dark"
+        },
+        {
+          "name": "children",
+          "type": "any",
+          "required": true
+        }
+      ],
+      "usage": "Use as the outer frame for an event programme. It provides the continuous gradient timeline and either a dark branded or default page surface.",
+      "examples": [
+        {
+          "label": "Dark event timeline",
+          "code": "<Schedule><ScheduleCategory>...</ScheduleCategory></Schedule>"
+        }
+      ],
+      "antipatterns": [
+        "Do not draw a second timeline line inside categories.",
+        "Do not place ScheduleItem outside a ScheduleCategory."
+      ]
+    },
+    {
+      "name": "ScheduleCategory",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "markerTone",
+          "type": "enum",
+          "values": [
+            "primary",
+            "accent",
+            "info",
+            "success",
+            "warning"
+          ],
+          "default": "primary"
+        }
+      ],
+      "usage": "Groups one category header and its schedule items. Its markerTone applies one consistent solid colour to every marked item in that category.",
+      "examples": [
+        {
+          "label": "Community category",
+          "code": "<ScheduleCategory markerTone=\"info\"><ScheduleHeader icon=\"share\" title=\"SHARE\" /><ScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /></ScheduleCategory>"
+        }
+      ],
+      "antipatterns": [
+        "Do not use a category without a ScheduleHeader.",
+        "Do not set marker colours item by item; choose markerTone once on ScheduleCategory."
+      ]
+    },
+    {
+      "name": "ScheduleHeader",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "icon",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "subtext",
+          "type": "string"
+        }
+      ],
+      "usage": "Starts a timeline category with the shared gradient medallion, category heading, and optional supporting text.",
+      "examples": [
+        {
+          "label": "Share category",
+          "code": "<ScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" />"
+        }
+      ],
+      "antipatterns": [
+        "Do not replace the gradient medallion with a one-off icon style."
+      ]
+    },
+    {
+      "name": "ScheduleItem",
+      "file": "src/components/ui/schedule-item",
+      "import_path": "",
+      "props": [
+        {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "glass",
+            "solid"
+          ],
+          "default": "glass"
+        },
+        {
+          "name": "padding",
+          "type": "enum",
+          "values": [
+            "sm",
+            "md"
+          ],
+          "default": "md"
+        },
+        {
+          "name": "time",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "speaker",
+          "type": "string"
+        },
+        {
+          "name": "track",
+          "type": "string"
+        },
+        {
+          "name": "markerIcon",
+          "type": "any"
+        }
+      ],
+      "usage": "Shows a timed programme entry on a glassy or solid surface. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.",
+      "examples": [
+        {
+          "label": "Talk with marker",
+          "code": "<ScheduleItem time=\"11:00\u201311:25\" title=\"Community talk\" markerIcon=\"mic\" />"
+        },
+        {
+          "label": "Lunch without marker",
+          "code": "<ScheduleItem time=\"12:30\" title=\"Lunch\" />"
+        }
+      ],
+      "antipatterns": [
+        "Do not add a marker to breaks or lunch.",
+        "Do not apply one-off glass, shadow, or marker colours through className."
+      ]
     }
   ],
   "assets": [

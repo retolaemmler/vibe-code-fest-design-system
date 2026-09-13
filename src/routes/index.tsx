@@ -16,7 +16,7 @@ import { Footer } from "@/components/ui/footer";
 import { Container, Section } from "@/components/ui/layout";
 import { Link } from "@/components/ui/link";
 import { Navbar } from "@/components/ui/navbar";
-import { Schedule, ScheduleHeader, ScheduleItem } from "@/components/ui/schedule-item";
+import { Schedule, ScheduleCategory, ScheduleHeader, ScheduleItem } from "@/components/ui/schedule-item";
 import { SpeakerCard } from "@/components/ui/speaker-card";
 import { SponsorCard } from "@/components/ui/sponsor-card";
 import { Stat } from "@/components/ui/stat";
@@ -341,30 +341,44 @@ function Showcase() {
 
           <Heading level="h2">Schedule</Heading>
           <Schedule>
-            <ScheduleHeader
-              icon="share"
-              title="SHARE — Community Sessions"
-              subtext="Interactive sessions led by you, the community. Share your knowledge, learn from peers, and dive deep into topics that matter most."
-              tone="brand"
-              layout="flush"
-            />
-            <div className="flex flex-col">
-              <ScheduleItem variant="grouped" time="09:00" title="Doors & coffee" track="All" />
+            <ScheduleCategory markerTone="accent">
+              <ScheduleHeader icon="sparkles" title="SPARK" subtext="An inspiring opening to ignite creativity and set the tone for the day." />
+              <div className="grid gap-3">
+                <ScheduleItem time="10:00" title="Arrival & coffee" />
+                <ScheduleItem time="10:30–11:00" title="Keynote & fireside chat" speaker="Speakers and topics to be announced" markerIcon="mic" />
+              </div>
+            </ScheduleCategory>
+            <ScheduleCategory markerTone="info">
+              <ScheduleHeader icon="share" title="SHARE" subtext="Interactive sessions led by you, the community." />
+              <div className="grid gap-3">
               <ScheduleItem
-                variant="grouped"
-                time="10:00"
-                title="Designing with tokens, not pixels"
-                speaker="Nora Keller"
-                track="Main stage"
+                  time="11:00–11:25"
+                  title="Community talk"
+                  speaker="Speakers and topics to be announced"
+                  markerIcon="mic"
               />
+                <ScheduleItem time="12:30" title="Lunch" />
+              </div>
+            </ScheduleCategory>
+            <ScheduleCategory markerTone="success">
+              <ScheduleHeader icon="code" title="BUILD" subtext="Turn ideas into working products alongside mentors and peers." />
+              <div className="grid gap-3">
               <ScheduleItem
-                variant="grouped"
-                time="11:30"
-                title="Shipping AI features fast"
-                speaker="Luca Bianchi"
-                track="Workshop"
+                  time="15:00–18:15"
+                  title="Hackathon"
+                  speaker="Build, test, and ship your idea"
+                  markerIcon="code"
               />
-            </div>
+                <ScheduleItem time="18:15" title="Pizza break" />
+              </div>
+            </ScheduleCategory>
+            <ScheduleCategory markerTone="warning">
+              <ScheduleHeader icon="star" title="CELEBRATE" subtext="Share the results, recognise the winners, and close the day together." />
+              <div className="grid gap-3">
+                <ScheduleItem time="19:30" title="Top five app pitches" speaker="Community voting and winner selection" markerIcon="star" />
+                <ScheduleItem time="20:00–22:00" title="Awards and celebration" markerIcon="users" />
+              </div>
+            </ScheduleCategory>
           </Schedule>
 
           <Heading level="h2">FAQ</Heading>

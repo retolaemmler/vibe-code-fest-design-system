@@ -3,23 +3,41 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 import { Badge } from "./badge";
-import { Heading, Text } from "./typography";
-import { Icon, type IconName } from "./icon";
 import { featureMedallionVariants } from "./feature-card";
+import { Icon, type IconName } from "./icon";
 
 export const scheduleItemVariants = cva(
-  "flex flex-col gap-2 border-border py-5 sm:flex-row sm:items-baseline sm:gap-6",
+  "ml-16 rounded-card text-card-foreground shadow-raised",
   {
     variants: {
       variant: {
-        list: "border-b last:border-b-0",
-        boxed: "rounded-card border bg-card px-5",
-        grouped: "border-b last:border-b-0 px-5",
+        glass: "surface-glass",
+        solid: "border border-border/60 bg-card",
       },
+      padding: { sm: "p-4", md: "p-5" },
     },
-    defaultVariants: { variant: "list" },
+    defaultVariants: { variant: "glass", padding: "md" },
   },
 );
+
+export const scheduleMarkerVariants = cva(
+  "absolute left-6 top-1/2 z-20 flex size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-dark-section",
+  {
+    variants: {
+      tone: {
+        primary: "bg-primary text-primary-foreground",
+        accent: "bg-accent text-accent-foreground",
+        info: "bg-info text-info-foreground",
+        success: "bg-success text-success-foreground",
+        warning: "bg-warning text-warning-foreground",
+      },
+    },
+    defaultVariants: { tone: "primary" },
+  },
+);
+
+type ScheduleMarkerTone = NonNullable<VariantProps<typeof scheduleMarkerVariants>["tone"]>;
+const ScheduleMarkerToneContext = React.createContext<ScheduleMarkerTone>("primary");
 
 export interface ScheduleItemProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -28,64 +46,41 @@ export interface ScheduleItemProps
   title: string;
   speaker?: string;
   track?: string;
+  /** Adds a solid circular node. Omit it for breaks, lunch, and passive moments. */
+  markerIcon?: IconName;
 }
 
 export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
-  ({ className, variant, time, title, speaker, track, ...props }, ref) => (
-    <div ref={ref} className={cn(scheduleItemVariants({ variant }), className)} {...props}>
-      <Text as="span" size="small" family="mono" tone="primary" className="sm:w-24">
-        {time}
-      </Text>
-      <div className="flex flex-1 flex-col gap-1">
-        <Text as="span" className="font-medium">
-          {title}
-        </Text>
-        {speaker && (
-          <Text as="span" size="small" tone="muted">
-            {speaker}
-          </Text>
-        )}
+  ({ className, variant, padding, time, title, speaker, track, markerIcon, ...props }, ref) => {
+    const markerTone = React.useContext(ScheduleMarkerToneContext);
+    return (
+      <div className="relative">
+        {markerIcon ? (
+          <span className={scheduleMarkerVariants({ tone: markerTone })} aria-hidden="true">
+            <Icon name={markerIcon} size="sm" />
+          </span>
+        ) : null}
+        <div
+          ref={ref}
+          className={cn(scheduleItemVariants({ variant, padding }), className)}
+          {...props}
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="min-w-0">
+              <p className="text-caption font-mono text-primary">{time}</p>
+              <p className="text-body font-medium text-foreground">{title}</p>
+              {speaker ? <p className="text-small text-muted-foreground">{speaker}</p> : null}
+            </div>
+            {track ? <Badge variant="neutral" className="self-start sm:self-center">{track}</Badge> : null}
+          </div>
+        </div>
       </div>
-      {track && <Badge variant="neutral">{track}</Badge>}
-    </div>
-  ),
+    );
+  },
 );
 ScheduleItem.displayName = "ScheduleItem";
 
-export const scheduleHeaderVariants = cva(
-  "flex items-start gap-4 p-5",
-  {
-    variants: {
-      tone: {
-        default: "border-border bg-card",
-        brand: "border-primary/20 bg-primary-subtle",
-        accent: "border-accent/20 bg-accent-subtle",
-        info: "border-info/20 bg-info-subtle",
-        success: "border-success/20 bg-success-subtle",
-        warning: "border-warning/20 bg-warning-subtle",
-        destructive: "border-destructive/20 bg-destructive-subtle",
-      },
-      layout: {
-        card: "rounded-card border",
-        flush: "rounded-none border-x-0 border-t-0 border-b border-border",
-      },
-    },
-    defaultVariants: { tone: "default", layout: "card" },
-  },
-);
-
-const headerTitleTone = {
-  default: "foreground",
-  brand: "primary",
-  accent: "accent",
-  info: "info",
-  success: "success",
-  warning: "warning-foreground",
-  destructive: "destructive",
-} as const satisfies Record<
-  NonNullable<VariantProps<typeof scheduleHeaderVariants>["tone"]>,
-  string
->;
+export const scheduleHeaderVariants = cva("relative z-10 flex items-start gap-4");
 
 export interface ScheduleHeaderProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -96,55 +91,69 @@ export interface ScheduleHeaderProps
 }
 
 export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderProps>(
-  ({ className, tone, layout, icon, title, subtext, ...props }, ref) => {
-    const toneKey = tone ?? "default";
-    const medallionTone =
-      toneKey === "default" || toneKey === "brand" ? "gradient" : toneKey;
-    return (
-      <div
-        ref={ref}
-        className={cn(scheduleHeaderVariants({ tone, layout }), className)}
-        {...props}
+  ({ className, icon, title, subtext, ...props }, ref) => (
+    <div ref={ref} className={cn(scheduleHeaderVariants(), className)} {...props}>
+      <span
+        className={cn(
+          featureMedallionVariants({ tone: "gradient", size: "md" }),
+          "ring-4 ring-dark-section",
+        )}
       >
-        <span className={featureMedallionVariants({ tone: medallionTone, size: "sm" })}>
-          <Icon name={icon} size="sm" />
-        </span>
-        <div className="flex flex-col gap-1">
-          <Heading
-            level="h3"
-            as="h3"
-            className={cn(`text-${headerTitleTone[toneKey]}`)}
-          >
-            {title}
-          </Heading>
-          {subtext && (
-            <Text size="small" tone="muted">
-              {subtext}
-            </Text>
-          )}
-        </div>
+        <Icon name={icon} size="md" />
+      </span>
+      <div className="min-w-0 flex-1 pt-1">
+        <h3 className="text-h3 text-current">{title}</h3>
+        {subtext ? <p className="mt-1 text-small text-current opacity-70">{subtext}</p> : null}
       </div>
-    );
-  },
+    </div>
+  ),
 );
 ScheduleHeader.displayName = "ScheduleHeader";
 
+export const scheduleCategoryVariants = cva("relative flex flex-col gap-6 pb-16 last:pb-0");
+
+export interface ScheduleCategoryProps
+  extends React.HTMLAttributes<HTMLElement>,
+    VariantProps<typeof scheduleCategoryVariants> {
+  /** Sets one consistent solid marker colour for every marked item in this category. */
+  markerTone?: ScheduleMarkerTone;
+}
+
+export const ScheduleCategory = React.forwardRef<HTMLElement, ScheduleCategoryProps>(
+  ({ className, markerTone = "primary", children, ...props }, ref) => (
+    <ScheduleMarkerToneContext.Provider value={markerTone}>
+      <section ref={ref} className={cn(scheduleCategoryVariants(), className)} {...props}>
+        {children}
+      </section>
+    </ScheduleMarkerToneContext.Provider>
+  ),
+);
+ScheduleCategory.displayName = "ScheduleCategory";
+
+export const scheduleVariants = cva("relative isolate overflow-hidden rounded-lg px-4 py-8 sm:px-6", {
+  variants: {
+    surface: {
+      dark: "bg-dark-section text-dark-section-foreground",
+      default: "bg-background text-foreground",
+    },
+  },
+  defaultVariants: { surface: "dark" },
+});
+
 export interface ScheduleProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof scheduleVariants> {
   children: React.ReactNode;
 }
 
 export const Schedule = React.forwardRef<HTMLDivElement, ScheduleProps>(
-  ({ className, children, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cn(
-        "overflow-hidden rounded-card border border-border bg-card shadow-raised",
-        className,
-      )}
-      {...props}
-    >
-      {children}
+  ({ className, children, surface, ...props }, ref) => (
+    <div ref={ref} className={cn(scheduleVariants({ surface }), className)} {...props}>
+      <div
+        aria-hidden="true"
+        className="absolute bottom-10 left-10 top-10 z-0 w-1 -translate-x-1/2 bg-gradient-primary opacity-80 sm:left-12"
+      />
+      <div className="relative z-10">{children}</div>
     </div>
   ),
 );

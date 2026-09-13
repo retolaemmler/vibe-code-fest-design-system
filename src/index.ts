@@ -52,9 +52,14 @@ export {
 } from "./components/ui/sponsor-card";
 export {
   Schedule,
+  scheduleVariants,
   type ScheduleProps,
+  ScheduleCategory,
+  scheduleCategoryVariants,
+  type ScheduleCategoryProps,
   ScheduleItem,
   scheduleItemVariants,
+  scheduleMarkerVariants,
   type ScheduleItemProps,
   ScheduleHeader,
   scheduleHeaderVariants,

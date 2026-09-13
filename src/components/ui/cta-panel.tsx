@@ -27,7 +27,7 @@ export const CtaPanel = React.forwardRef<HTMLDivElement, CtaPanelProps>(
       ref={ref}
       variant="gradient"
       padding="lg"
-      className={cn("flex flex-col items-start gap-4", className)}
+      className={cn("flex flex-col items-center gap-4 text-center", className)}
       {...props}
     >
       <CardTitle className="text-h2 text-primary-foreground">{title}</CardTitle>

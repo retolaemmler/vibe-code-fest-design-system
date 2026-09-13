@@ -67,7 +67,7 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
         >
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
-              <p className="text-caption font-mono text-primary">{time}</p>
+              <p className="text-small font-mono font-semibold text-primary">{time}</p>
               <p className="text-body font-medium text-foreground">{title}</p>
               {speaker ? <p className="text-small text-muted-foreground">{speaker}</p> : null}
             </div>

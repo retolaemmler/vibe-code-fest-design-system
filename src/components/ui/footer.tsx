@@ -59,12 +59,14 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 asChild
                 variant="secondary"
                 size="icon"
-                aria-label={social.label}
+                iconStart={social.name}
               >
-                <a href={social.href} target="_blank" rel="noopener noreferrer">
-                  <span className="sr-only">{social.label}</span>
-                  <Icon name={social.name} size="sm" />
-                </a>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                />
               </Button>
             ))}
             {newsletterHref ? (

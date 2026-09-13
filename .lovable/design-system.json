@@ -1261,7 +1261,7 @@
       "examples": [
         {
           "label": "Dark event timeline",
-          "code": "\u003cSchedule\u003e\u003cScheduleCategory markerTone=\"accent\" headerTransition=\"accentInfo\"\u003e...\u003c/ScheduleCategory\u003e\u003c/Schedule\u003e"
+          "code": "\u003cSchedule\u003e\u003cScheduleCategory markerTone=\"accent\" headerTransition=\"primaryAccent\"\u003e...\u003c/ScheduleCategory\u003e\u003c/Schedule\u003e"
         }
       ],
       "antipatterns": [
@@ -1290,25 +1290,25 @@
           "name": "headerTransition",
           "type": "enum",
           "values": [
+            "primaryAccent",
             "accentInfo",
             "infoSuccess",
-            "successWarning",
-            "warningPrimary"
+            "successWarning"
           ],
-          "default": "warningPrimary"
+          "default": "primaryAccent"
         }
       ],
-      "usage": "Groups one category header and its schedule items. markerTone applies one solid colour to the category spine and all marked items; headerTransition blends that colour into the following category colour.",
+      "usage": "Groups one category header and its schedule items. markerTone applies one solid colour to the category spine and all marked items; headerTransition blends the previous line colour into this category's line colour.",
       "examples": [
         {
           "label": "Community category",
-          "code": "\u003cScheduleCategory markerTone=\"info\" headerTransition=\"infoSuccess\"\u003e\u003cScheduleHeader icon=\"share\" title=\"SHARE\" /\u003e\u003cScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /\u003e\u003c/ScheduleCategory\u003e"
+          "code": "\u003cScheduleCategory markerTone=\"info\" headerTransition=\"accentInfo\"\u003e\u003cScheduleHeader icon=\"share\" title=\"SHARE\" /\u003e\u003cScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /\u003e\u003c/ScheduleCategory\u003e"
         }
       ],
       "antipatterns": [
         "Do not use a category without a ScheduleHeader.",
         "Do not set marker or line colours item by item; choose markerTone once on ScheduleCategory.",
-        "Do not use an unrelated headerTransition; it should end in the following category's markerTone."
+        "Do not use an unrelated headerTransition; it should begin with the preceding category and end in this category's markerTone."
       ]
     },
     {

@@ -63,20 +63,20 @@ export const scheduleHeaderMedallionVariants = cva(
   {
     variants: {
       transition: {
+        primaryAccent: "bg-gradient-primary-accent",
         accentInfo: "bg-gradient-accent-info",
         infoSuccess: "bg-gradient-info-success",
         successWarning: "bg-gradient-success-warning",
-        warningPrimary: "bg-gradient-warning-primary",
       },
     },
-    defaultVariants: { transition: "warningPrimary" },
+    defaultVariants: { transition: "primaryAccent" },
   },
 );
 
 type ScheduleHeaderTransition = NonNullable<
   VariantProps<typeof scheduleHeaderMedallionVariants>["transition"]
 >;
-const ScheduleHeaderTransitionContext = React.createContext<ScheduleHeaderTransition>("warningPrimary");
+const ScheduleHeaderTransitionContext = React.createContext<ScheduleHeaderTransition>("primaryAccent");
 
 export interface ScheduleItemProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -160,12 +160,12 @@ export interface ScheduleCategoryProps
     VariantProps<typeof scheduleCategoryVariants> {
   /** Sets one consistent solid colour for this category's spine and marked items. */
   markerTone?: ScheduleMarkerTone;
-  /** Blends this category's header circle into the following category colour. */
+  /** Blends the line colour above the header into this category's line colour below it. */
   headerTransition?: ScheduleHeaderTransition;
 }
 
 export const ScheduleCategory = React.forwardRef<HTMLElement, ScheduleCategoryProps>(
-  ({ className, markerTone = "primary", headerTransition = "warningPrimary", children, ...props }, ref) => (
+  ({ className, markerTone = "primary", headerTransition = "primaryAccent", children, ...props }, ref) => (
     <ScheduleMarkerToneContext.Provider value={markerTone}>
       <ScheduleHeaderTransitionContext.Provider value={headerTransition}>
         <section ref={ref} className={cn(scheduleCategoryVariants(), className)} {...props}>

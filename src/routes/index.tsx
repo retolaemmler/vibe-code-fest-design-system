@@ -341,14 +341,14 @@ function Showcase() {
 
           <Heading level="h2">Schedule</Heading>
           <Schedule>
-            <ScheduleCategory markerTone="accent" headerTransition="accentInfo">
+            <ScheduleCategory markerTone="accent" headerTransition="primaryAccent">
               <ScheduleHeader icon="sparkles" title="SPARK" subtext="An inspiring opening to ignite creativity and set the tone for the day." />
               <div className="grid gap-3">
                 <ScheduleItem time="10:00" title="Arrival & coffee" />
                 <ScheduleItem time="10:30–11:00" title="Keynote & fireside chat" speaker="Speakers and topics to be announced" markerIcon="mic" />
               </div>
             </ScheduleCategory>
-            <ScheduleCategory markerTone="info" headerTransition="infoSuccess">
+            <ScheduleCategory markerTone="info" headerTransition="accentInfo">
               <ScheduleHeader icon="share" title="SHARE" subtext="Interactive sessions led by you, the community." />
               <div className="grid gap-3">
               <ScheduleItem
@@ -360,7 +360,7 @@ function Showcase() {
                 <ScheduleItem time="12:30" title="Lunch" />
               </div>
             </ScheduleCategory>
-            <ScheduleCategory markerTone="success" headerTransition="successWarning">
+            <ScheduleCategory markerTone="success" headerTransition="infoSuccess">
               <ScheduleHeader icon="code" title="BUILD" subtext="Turn ideas into working products alongside mentors and peers." />
               <div className="grid gap-3">
               <ScheduleItem
@@ -372,7 +372,7 @@ function Showcase() {
                 <ScheduleItem time="18:15" title="Pizza break" />
               </div>
             </ScheduleCategory>
-            <ScheduleCategory markerTone="warning" headerTransition="warningPrimary">
+            <ScheduleCategory markerTone="warning" headerTransition="successWarning">
               <ScheduleHeader icon="star" title="CELEBRATE" subtext="Share the results, recognise the winners, and close the day together." />
               <div className="grid gap-3">
                 <ScheduleItem time="19:30" title="Top five app pitches" speaker="Community voting and winner selection" markerIcon="star" />

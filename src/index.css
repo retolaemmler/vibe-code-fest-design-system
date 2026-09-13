@@ -126,10 +126,10 @@
     hsl(var(--success)) 0%,
     hsl(var(--warning)) 100%
   );
-  --gradient-warning-primary: linear-gradient(
+  --gradient-primary-accent: linear-gradient(
     135deg,
-    hsl(var(--warning)) 0%,
-    hsl(var(--primary)) 100%
+    hsl(var(--primary)) 0%,
+    hsl(var(--accent)) 100%
   );
   --gradient-surface: linear-gradient(
     180deg,
@@ -294,10 +294,10 @@
     hsl(var(--success)) 0%,
     hsl(var(--warning)) 100%
   );
-  --gradient-warning-primary: linear-gradient(
+  --gradient-primary-accent: linear-gradient(
     135deg,
-    hsl(var(--warning)) 0%,
-    hsl(var(--primary)) 100%
+    hsl(var(--primary)) 0%,
+    hsl(var(--accent)) 100%
   );
   --gradient-surface: linear-gradient(
     180deg,
@@ -501,8 +501,8 @@
 @utility bg-gradient-success-warning {
   background-image: var(--gradient-success-warning);
 }
-@utility bg-gradient-warning-primary {
-  background-image: var(--gradient-warning-primary);
+@utility bg-gradient-primary-accent {
+  background-image: var(--gradient-primary-accent);
 }
 @utility bg-gradient-surface {
   background-image: var(--gradient-surface);

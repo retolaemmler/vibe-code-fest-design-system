@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.23.0",
+    "version": "1.22.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,7 +12,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "1dfc5920e30e33f728c8f12e9acf4e37bb60584d2c6847f69df0d25f40080225",
+      "#enrichment": "b0d15afe9b0bc62bfb0f9b1ac52d07797b49a51acac65a6d3d193196038be5a7",
       ".dsignore": "c5928345fda053d58aba3720f63a8a91",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -23,7 +23,7 @@
       ".lovable/plan/section-colored-schedule-timeline-2026-09-13.md": "e9a775136da1991d36a18e86a357c909",
       ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
-      ".lovable/system.md": "3ce7423e35a34d17f3a34d3e9890a067",
+      ".lovable/system.md": "fe3eb54f9d96652c590a09475da2d22e",
       "README.md": "546e5b1f850a58d461165943ea376d15",
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
@@ -39,9 +39,8 @@
       "src/components/ui/cta-panel.tsx": "85bdee9516cc374086515f0ef3a36ac3",
       "src/components/ui/faq.tsx": "e28571b15b9eb6f6eff783839901644a",
       "src/components/ui/feature-card.tsx": "b99e10edcf034c58f8e97f6390a1e60c",
-      "src/components/ui/fonts.tsx": "8b0c5ef8153eedbaebd1678ba3dc23ed",
-      "src/components/ui/footer.tsx": "afae3099a858b35b3bfd0a13db28f448",
-      "src/components/ui/icon.tsx": "dfe998e949dc12f7bcf0b3352c4a65ba",
+      "src/components/ui/footer.tsx": "b696a3dc70a3d147e61f11f6e9c01486",
+      "src/components/ui/icon.tsx": "314ce6e276b96687df032e25e1e332aa",
       "src/components/ui/input.tsx": "b537a884917f0b514545ea164abd4fd4",
       "src/components/ui/layout.tsx": "87221df44334e5e3547f09f0ab9a3005",
       "src/components/ui/link.tsx": "307f2c0b5f03a3d4e887409ab6a7b08c",
@@ -54,16 +53,16 @@
       "src/components/ui/ticket-card.tsx": "045e9ef41ad815e6708d9d860ae85cbe",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
       "src/index.css": "bcb62a76e09ea71336d7f5d4aaa941d4",
-      "src/index.ts": "e1e9d83ac213dcc28b1877d6bca35038",
+      "src/index.ts": "f3c57bb3224f0fbbe333217d705fc1eb",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
       "src/router.tsx": "8f905e713b0eba7fa8148b7995a708c9",
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
-      "src/routes/__root.tsx": "b38a2da025f6b15d10f1b034c7b7579d",
-      "src/routes/index.tsx": "91eb605a9b3ee9d07497b980982037f0",
-      "src/routes/style-guide.tsx": "5205dcc145ccb6ff2282917cffd94923",
+      "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
+      "src/routes/index.tsx": "b548eb92af34611f40c491c0e952b6df",
+      "src/routes/style-guide.tsx": "7cb684f2ab4866de12a6ab75a02d9e65",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -765,28 +764,6 @@
   },
   "components": [
     {
-      "name": "Fonts",
-      "file": "src/components/ui/fonts",
-      "import_path": "",
-      "props": [
-        {
-          "name": "children",
-          "type": "any"
-        }
-      ],
-      "usage": "Mount once inside the consumer app shell, ideally in \u003chead\u003e, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
-      "examples": [
-        {
-          "label": "Inside a TanStack Start root shell",
-          "code": "\u003chtml lang=\"en\"\u003e\n  \u003chead\u003e\n    \u003cHeadContent /\u003e\n    \u003cFonts /\u003e\n  \u003c/head\u003e\n  \u003cbody\u003e{children}\u003c/body\u003e\n\u003c/html\u003e"
-        }
-      ],
-      "antipatterns": [
-        "Do not render Fonts more than once per page; duplicate link tags are harmless but wasteful.",
-        "Do not skip Fonts when using components that rely on the Geist type scale; fallback fonts will break the intended measure and weight."
-      ]
-    },
-    {
       "name": "Button",
       "file": "src/components/ui/button",
       "import_path": "",
@@ -1144,7 +1121,6 @@
             "code",
             "externalLink",
             "globe",
-            "heart",
             "link",
             "spinner",
             "info",
@@ -1627,7 +1603,8 @@
         },
         {
           "name": "socials",
-          "type": "any"
+          "type": "array",
+          "description": "Icon-only secondary actions rendered on the right edge of the links row. Each item needs name (instagram or whatsapp), href and label."
         },
         {
           "name": "newsletterHref",
@@ -1638,7 +1615,7 @@
           "type": "any"
         }
       ],
-      "usage": "Use at the end of public pages for a stable three-part top row (brand left, centred tagline, social actions + newsletter action right), followed by a divider and a centred horizontal legal link row.",
+      "usage": "Use at the end of public pages for a stable three-part layout: top row (brand left, centred tagline, newsletter action right), divider, and bottom row (centred legal links with social actions aligned to the right edge).",
       "examples": [
         {
           "label": "Event footer",
@@ -1759,6 +1736,29 @@
       "name": "WhatsAppIcon",
       "file": "src/components/ui/social-icons",
       "import_path": ""
+    },
+    {
+      "name": "Fonts",
+      "file": "src/components/ui/fonts",
+      "import_path": "",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true
+        }
+      ],
+      "usage": "Mount once inside the consumer app shell, ideally in <head>, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
+      "examples": [
+        {
+          "label": "Inside a TanStack Start root shell",
+          "code": "<html lang=\"en\">\n  <head>\n    <HeadContent />\n    <Fonts />\n  </head>\n  <body>{children}</body>\n</html>"
+        }
+      ],
+      "antipatterns": [
+        "Do not render Fonts more than once per page; duplicate link tags are harmless but wasteful.",
+        "Do not skip Fonts when using components that rely on the Geist type scale; fallback fonts will break the intended measure and weight."
+      ]
     }
   ],
   "assets": [

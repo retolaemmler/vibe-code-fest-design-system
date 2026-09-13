@@ -89,10 +89,11 @@ Pick the Button variant from the surface it sits on, not from personal taste.
 The `Footer` component is a fixed three-part pattern:
 
 1. **Top row** — brand mark on the far left, centred tagline or meta content,
-   social icon-only secondary buttons, and the newsletter action on the far right.
+   and the newsletter action on the far right.
 2. **Divider** — a full-width `border-border` rule.
 3. **Bottom row** — a single centred horizontal list of legal/secondary links,
-   rendered with `Link variant="quiet"`.
+   rendered with `Link variant="quiet"`, with icon-only social actions aligned
+   to the right edge of the same row.
 
 Pass links as a flat `links` array, not grouped columns. Keep the newsletter
 button as `variant="gradient"` with `iconStart="mail"` so it matches the brand

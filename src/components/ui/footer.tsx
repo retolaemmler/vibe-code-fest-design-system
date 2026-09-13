@@ -4,6 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 import { Button } from "./button";
 import { Container } from "./layout";
+import { Icon } from "./icon";
 import { Link } from "./link";
 
 export const footerVariants = cva("w-full border-t border-border", {

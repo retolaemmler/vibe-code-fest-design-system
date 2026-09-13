@@ -86,10 +86,11 @@
 
   /* --- Dark sections -------------------------------------------------------
      Full-bleed alternate bands (CTA, sponsors, footer) that stay dark even
-     in light mode. Uses the primary cobalt hue (224°), desaturated and
-     darkened so white text passes contrast.
-  ------------------------------------------------------------------------ */
-  --dark-section: 224 45% 18%;
+     in light mode. Uses the primary cobalt hue (224°) at the same saturation
+     as --primary, darkened so white text passes contrast and the band feels
+     harmoniously tied to the primary action colour.
+   ------------------------------------------------------------------------ */
+  --dark-section: 224 82% 18%;
   --dark-section-foreground: 0 0% 100%;
 
   /* --- Glass / elevation surfaces ---------------------------------------- */
@@ -237,7 +238,7 @@
   --ring: 224 88% 68%;
 
   /* --- Dark sections --------------------------------------------------------- */
-  --dark-section: 224 50% 15%;
+  --dark-section: 224 88% 15%;
   --dark-section-foreground: 0 0% 100%;
 
   /* --- Glass / elevation ----------------------------------------------------- */

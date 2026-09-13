@@ -1126,26 +1126,16 @@ function StyleGuide() {
                 <Footer
                   surface="muted"
                   brand={<span className="text-h3 text-gradient-primary">Vibe</span>}
-                  note="Zurich · 2026"
-                  columns={[
-                    {
-                      links: [
-                        { label: "Schedule", href: "#components" },
-                        { label: "Speakers", href: "#components" },
-                      ],
-                    },
-                    {
-                      links: [
-                        { label: "Tickets", href: "#components" },
-                        { label: "Venue", href: "#components" },
-                      ],
-                    },
-                    {
-                      links: [
-                        { label: "Code of conduct", href: "#components" },
-                        { label: "Contact", href: "#components" },
-                      ],
-                    },
+                  center={
+                    <span className="flex items-center gap-1 text-small text-muted-foreground">
+                      Vibe coded with <Icon name="heart" size="xs" className="text-destructive" aria-label="love" /> in Zurich
+                    </span>
+                  }
+                  links={[
+                    { label: "Terms & Conditions", href: "#components" },
+                    { label: "Privacy Policy", href: "#components" },
+                    { label: "Legal Notice & Contact", href: "#components" },
+                    { label: "Internal", href: "#components" },
                   ]}
                   newsletterHref="#components"
                 />

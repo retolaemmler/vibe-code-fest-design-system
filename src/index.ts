@@ -75,7 +75,6 @@ export {
   Footer,
   footerVariants,
   type FooterLink,
-  type FooterLinkColumn,
   type FooterProps,
 } from "./components/ui/footer";
 export {

@@ -212,7 +212,7 @@ const COLOR_GROUPS: { group: string; blurb: string; swatches: Swatch[] }[] = [
   {
     group: "Interactive",
     blurb:
-      "Anything a person can act on. The pink-to-purple gradient is the brand's primary action; the flat primary is its calm sibling for dense UI.",
+      "Anything a person can act on. The pink-to-blue gradient is the brand's primary action; the flat primary is its calm sibling for dense UI.",
     swatches: [
       { token: "primary", usage: "The main action, active nav state and key numbers." },
       { token: "primary-hover", usage: "Hover and pressed state of a primary control." },

@@ -102,16 +102,26 @@ action pattern used in the navbar.
 
 The type tokens reference **Geist Sans** (`--font-sans`) and **Geist Mono**
 (`--font-mono`). The design-system CSS does not embed or fetch font files, so
-consumers must load both families in their own app shell:
+consumers must load both families in their own app shell.
 
-- Add a `<link>` to Google Fonts (or self-host the files) in the consumer's root
-  HTML / root route `<head>`.
-- Load both **Geist** and **Geist Mono** weights 400, 500, 600 and 700.
+Use the exported `Fonts` component:
+
+```tsx
+import { Fonts } from "@/design-system/vibe";
+
+// Inside your root <head>
+<head>
+  <Fonts />
+</head>
+```
+
+- Mount `Fonts` once per page, ideally inside `<head>`.
+- It loads **Geist** and **Geist Mono** weights 100–900 from Google Fonts with
+  the required preconnect hints.
 - If the fonts fail to load, the CSS fallback stack (`system-ui` for sans,
   `ui-monospace` for mono) keeps the UI readable.
 
-The showcase app loads Geist via `src/routes/__root.tsx` — use that as a
-reference, but do not rely on the showcase route itself in a consumer project.
+The showcase app dogfoods the same component in `src/routes/__root.tsx`.
 
 See `.lovable/rules/design-tokens.md` for the token tables and
 `.lovable/rules/components.md` for the component catalogue.

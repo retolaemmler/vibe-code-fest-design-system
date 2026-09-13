@@ -12,3 +12,4 @@
 - [x] Align the last timeline marker with the end of the spine
 - [x] Color each timeline section and blend adjacent colors in category header circles
 - [x] Replace the outline Button with a gradient-surface-only muted variant
+- [x] Match enlarged schedule times to each category with contrast-safe tones

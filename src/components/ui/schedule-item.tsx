@@ -58,6 +58,19 @@ export const scheduleLineVariants = cva(
   },
 );
 
+export const scheduleTimeVariants = cva("text-h3 font-mono", {
+  variants: {
+    tone: {
+      primary: "text-schedule-time-primary",
+      accent: "text-schedule-time-accent",
+      info: "text-schedule-time-info",
+      success: "text-schedule-time-success",
+      warning: "text-schedule-time-warning",
+    },
+  },
+  defaultVariants: { tone: "primary" },
+});
+
 export const scheduleHeaderMedallionVariants = cva(
   "flex size-12 shrink-0 items-center justify-center rounded-pill text-primary-foreground shadow-raised ring-4 ring-dark-section",
   {
@@ -110,7 +123,7 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
         >
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
-              <p className="text-small font-mono font-semibold text-primary">{time}</p>
+              <p className={scheduleTimeVariants({ tone: markerTone })}>{time}</p>
               <p className="text-body font-medium text-foreground">{title}</p>
               {speaker ? <p className="text-small text-muted-foreground">{speaker}</p> : null}
             </div>

@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { cn } from "@/lib/utils";
-import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { cn } from "../../lib/utils";
+import { Card, CardDescription, CardTitle } from "./card";
+import { Button } from "./button";
 
 export interface CtaPanelProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {

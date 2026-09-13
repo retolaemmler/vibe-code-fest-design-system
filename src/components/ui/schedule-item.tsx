@@ -36,6 +36,9 @@ export const scheduleMarkerVariants = cva(
   },
 );
 
+type ScheduleMarkerTone = NonNullable<VariantProps<typeof scheduleMarkerVariants>["tone"]>;
+const ScheduleMarkerToneContext = React.createContext<ScheduleMarkerTone>("primary");
+
 export interface ScheduleItemProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof scheduleItemVariants> {
@@ -45,33 +48,35 @@ export interface ScheduleItemProps
   track?: string;
   /** Adds a solid circular node. Omit it for breaks, lunch, and passive moments. */
   markerIcon?: IconName;
-  markerTone?: NonNullable<VariantProps<typeof scheduleMarkerVariants>["tone"]>;
 }
 
 export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
-  ({ className, variant, padding, time, title, speaker, track, markerIcon, markerTone, ...props }, ref) => (
-    <div className="relative">
-      {markerIcon ? (
-        <span className={scheduleMarkerVariants({ tone: markerTone })} aria-hidden="true">
-          <Icon name={markerIcon} size="sm" />
-        </span>
-      ) : null}
-      <div
-        ref={ref}
-        className={cn(scheduleItemVariants({ variant, padding }), className)}
-        {...props}
-      >
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div className="min-w-0">
-            <p className="text-caption font-mono text-primary">{time}</p>
-            <p className="text-body font-medium text-foreground">{title}</p>
-            {speaker ? <p className="text-small text-muted-foreground">{speaker}</p> : null}
+  ({ className, variant, padding, time, title, speaker, track, markerIcon, ...props }, ref) => {
+    const markerTone = React.useContext(ScheduleMarkerToneContext);
+    return (
+      <div className="relative">
+        {markerIcon ? (
+          <span className={scheduleMarkerVariants({ tone: markerTone })} aria-hidden="true">
+            <Icon name={markerIcon} size="sm" />
+          </span>
+        ) : null}
+        <div
+          ref={ref}
+          className={cn(scheduleItemVariants({ variant, padding }), className)}
+          {...props}
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="min-w-0">
+              <p className="text-caption font-mono text-primary">{time}</p>
+              <p className="text-body font-medium text-foreground">{title}</p>
+              {speaker ? <p className="text-small text-muted-foreground">{speaker}</p> : null}
+            </div>
+            {track ? <Badge variant="neutral" className="self-start sm:self-center">{track}</Badge> : null}
           </div>
-          {track ? <Badge variant="neutral" className="self-start sm:self-center">{track}</Badge> : null}
         </div>
       </div>
-    </div>
-  ),
+    );
+  },
 );
 ScheduleItem.displayName = "ScheduleItem";
 
@@ -109,11 +114,18 @@ export const scheduleCategoryVariants = cva("relative flex flex-col gap-6 pb-16 
 
 export interface ScheduleCategoryProps
   extends React.HTMLAttributes<HTMLElement>,
-    VariantProps<typeof scheduleCategoryVariants> {}
+    VariantProps<typeof scheduleCategoryVariants> {
+  /** Sets one consistent solid marker colour for every marked item in this category. */
+  markerTone?: ScheduleMarkerTone;
+}
 
 export const ScheduleCategory = React.forwardRef<HTMLElement, ScheduleCategoryProps>(
-  ({ className, ...props }, ref) => (
-    <section ref={ref} className={cn(scheduleCategoryVariants(), className)} {...props} />
+  ({ className, markerTone = "primary", children, ...props }, ref) => (
+    <ScheduleMarkerToneContext.Provider value={markerTone}>
+      <section ref={ref} className={cn(scheduleCategoryVariants(), className)} {...props}>
+        {children}
+      </section>
+    </ScheduleMarkerToneContext.Provider>
   ),
 );
 ScheduleCategory.displayName = "ScheduleCategory";

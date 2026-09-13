@@ -341,14 +341,14 @@ function Showcase() {
 
           <Heading level="h2">Schedule</Heading>
           <Schedule>
-            <ScheduleCategory>
+            <ScheduleCategory markerTone="accent">
               <ScheduleHeader icon="sparkles" title="SPARK" subtext="An inspiring opening to ignite creativity and set the tone for the day." />
               <div className="grid gap-3">
                 <ScheduleItem time="10:00" title="Arrival & coffee" />
-                <ScheduleItem time="10:30–11:00" title="Keynote & fireside chat" speaker="Speakers and topics to be announced" markerIcon="mic" markerTone="accent" />
+                <ScheduleItem time="10:30–11:00" title="Keynote & fireside chat" speaker="Speakers and topics to be announced" markerIcon="mic" />
               </div>
             </ScheduleCategory>
-            <ScheduleCategory>
+            <ScheduleCategory markerTone="info">
               <ScheduleHeader icon="share" title="SHARE" subtext="Interactive sessions led by you, the community." />
               <div className="grid gap-3">
               <ScheduleItem
@@ -356,12 +356,11 @@ function Showcase() {
                   title="Community talk"
                   speaker="Speakers and topics to be announced"
                   markerIcon="mic"
-                  markerTone="info"
               />
                 <ScheduleItem time="12:30" title="Lunch" />
               </div>
             </ScheduleCategory>
-            <ScheduleCategory>
+            <ScheduleCategory markerTone="success">
               <ScheduleHeader icon="code" title="BUILD" subtext="Turn ideas into working products alongside mentors and peers." />
               <div className="grid gap-3">
               <ScheduleItem
@@ -369,16 +368,15 @@ function Showcase() {
                   title="Hackathon"
                   speaker="Build, test, and ship your idea"
                   markerIcon="code"
-                  markerTone="success"
               />
                 <ScheduleItem time="18:15" title="Pizza break" />
               </div>
             </ScheduleCategory>
-            <ScheduleCategory>
+            <ScheduleCategory markerTone="warning">
               <ScheduleHeader icon="star" title="CELEBRATE" subtext="Share the results, recognise the winners, and close the day together." />
               <div className="grid gap-3">
-                <ScheduleItem time="19:30" title="Top five app pitches" speaker="Community voting and winner selection" markerIcon="star" markerTone="warning" />
-                <ScheduleItem time="20:00–22:00" title="Awards and celebration" markerIcon="users" markerTone="primary" />
+                <ScheduleItem time="19:30" title="Top five app pitches" speaker="Community voting and winner selection" markerIcon="star" />
+                <ScheduleItem time="20:00–22:00" title="Awards and celebration" markerIcon="users" />
               </div>
             </ScheduleCategory>
           </Schedule>

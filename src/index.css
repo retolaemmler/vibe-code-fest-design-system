@@ -86,7 +86,7 @@
 
   /* --- Dark sections -------------------------------------------------------
      Full-bleed alternate bands (CTA, sponsors, footer) that stay dark even
-     in light mode. Derived from the #1E3CB9 hue (228°), desaturated and
+     in light mode. Uses the primary cobalt hue (224°), desaturated and
      darkened so white text passes contrast.
   ------------------------------------------------------------------------ */
   --dark-section: 224 45% 18%;

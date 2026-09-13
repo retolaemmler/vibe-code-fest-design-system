@@ -962,6 +962,14 @@ function StyleGuide() {
                     <Avatar name="Nora Keller" size={size} />
                   </Spec>
                 ))}
+                <Spec label='ring="gradient"'>
+                  <Avatar
+                    name="Nora Keller"
+                    size="lg"
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face"
+                    ring="gradient"
+                  />
+                </Spec>
               </div>
             </div>
 

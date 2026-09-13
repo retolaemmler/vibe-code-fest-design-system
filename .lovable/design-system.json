@@ -1593,11 +1593,11 @@
           "type": "any"
         },
         {
-          "name": "note",
+          "name": "center",
           "type": "any"
         },
         {
-          "name": "columns",
+          "name": "links",
           "type": "any",
           "required": true
         },
@@ -1610,15 +1610,16 @@
           "type": "any"
         }
       ],
-      "usage": "Use at the end of public pages for brand context, three compact navigation groups, and an icon-only newsletter action opposite the brand mark.",
+      "usage": "Use at the end of public pages for a stable three-part top row (brand left, centred tagline, newsletter action right), followed by a divider and a horizontal legal link row.",
       "examples": [
         {
           "label": "Event footer",
-          "code": "\u003cFooter brand={\u003cLogo /\u003e} note=\"Zurich · 2026\" columns={columns} newsletterHref=\"/newsletter\" /\u003e"
+          "code": "\u003cFooter\n  brand={\u003cLogo /\u003e}\n  center={\u003cspan\u003eVibe coded with \u003cIcon name=\"heart\" /\u003e in Zurich\u003c/span\u003e}\n  links={[\n    { label: 'Terms \u0026 Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice \u0026 Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/\u003e"
         }
       ],
       "antipatterns": [
-        "Do not pass ungrouped links or replace the newsletter action with a one-off button style."
+        "Do not pass multi-column link groups; use a single flat links array for the bottom row.",
+        "Do not replace the newsletter action with a one-off button style."
       ]
     },
     {
@@ -1729,6 +1730,29 @@
       "name": "WhatsAppIcon",
       "file": "src/components/ui/social-icons",
       "import_path": ""
+    },
+    {
+      "name": "Fonts",
+      "file": "src/components/ui/fonts",
+      "import_path": "",
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "optional": true
+        }
+      ],
+      "usage": "Mount once inside the consumer app shell, ideally in <head>, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
+      "examples": [
+        {
+          "label": "Inside a TanStack Start root shell",
+          "code": "<html lang=\"en\">\n  <head>\n    <HeadContent />\n    <Fonts />\n  </head>\n  <body>{children}</body>\n</html>"
+        }
+      ],
+      "antipatterns": [
+        "Do not render Fonts more than once per page; duplicate link tags are harmless but wasteful.",
+        "Do not skip Fonts when using components that rely on the Geist type scale; fallback fonts will break the intended measure and weight."
+      ]
     }
   ],
   "assets": [

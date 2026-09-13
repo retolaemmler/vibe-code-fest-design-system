@@ -422,26 +422,16 @@ function Showcase() {
       <Footer
         surface="muted"
         brand={<span className="text-h3 text-gradient-primary">Vibe</span>}
-        note="Design system showcase"
-        columns={[
-          {
-            links: [
-              { label: "Buttons", href: "#buttons" },
-              { label: "Cards", href: "#cards" },
-            ],
-          },
-          {
-            links: [
-              { label: "Schedule", href: "#event" },
-              { label: "Speakers", href: "#event" },
-            ],
-          },
-          {
-            links: [
-              { label: "Style guide", href: "/style-guide" },
-              { label: "Contact", href: "mailto:hello@vibecodefest.ch" },
-            ],
-          },
+        center={
+          <span className="flex items-center gap-1 text-small text-muted-foreground">
+            Vibe coded with <Icon name="heart" size="xs" className="text-destructive" aria-label="love" /> in Zurich
+          </span>
+        }
+        links={[
+          { label: "Terms & Conditions", href: "#" },
+          { label: "Privacy Policy", href: "#" },
+          { label: "Legal Notice & Contact", href: "#" },
+          { label: "Internal", href: "#" },
         ]}
         newsletterHref="mailto:hello@vibecodefest.ch?subject=Newsletter"
       />

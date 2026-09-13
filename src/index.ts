@@ -1,6 +1,8 @@
 // Side-effect import: consumers get the design tokens by importing the library.
 import "./index.css";
 
+export { Fonts, type FontsProps } from "./components/ui/fonts";
+
 export { cn } from "./lib/utils";
 
 export { Button, buttonVariants, type ButtonProps } from "./components/ui/button";
@@ -75,7 +77,6 @@ export {
   Footer,
   footerVariants,
   type FooterLink,
-  type FooterLinkColumn,
   type FooterProps,
 } from "./components/ui/footer";
 export {

@@ -165,7 +165,7 @@ function findLastMarkedItemPath(
   const arr = React.Children.toArray(nodes);
   let result: number[] | null = null;
   arr.forEach((child, index) => {
-    if (!React.isValidElement(child)) return;
+    if (!React.isValidElement<{ children?: React.ReactNode }>(child)) return;
     const childPath = [...path, index];
     if (isScheduleItemElement(child) && child.props.markerIcon) {
       result = childPath;
@@ -179,7 +179,7 @@ function findLastMarkedItemPath(
 function cloneWithLastMarker(nodes: React.ReactNode, targetPath: number[], depth = 0): React.ReactNode {
   const arr = React.Children.toArray(nodes);
   return arr.map((child, index) => {
-    if (!React.isValidElement(child)) return child;
+    if (!React.isValidElement<{ children?: React.ReactNode }>(child)) return child;
     if (depth === targetPath.length - 1 && index === targetPath[depth]) {
       return React.cloneElement(child, { "data-schedule-last": "true" } as Record<string, unknown>);
     }

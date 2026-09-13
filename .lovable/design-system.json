@@ -1518,16 +1518,30 @@
       "name": "ScheduleCategory",
       "file": "src/components/ui/schedule-item",
       "import_path": "",
-      "props": [],
-      "usage": "Groups one category header and its schedule items while preserving timeline spacing and continuity.",
+      "props": [
+        {
+          "name": "markerTone",
+          "type": "enum",
+          "values": [
+            "primary",
+            "accent",
+            "info",
+            "success",
+            "warning"
+          ],
+          "default": "primary"
+        }
+      ],
+      "usage": "Groups one category header and its schedule items. Its markerTone applies one consistent solid colour to every marked item in that category.",
       "examples": [
         {
           "label": "Community category",
-          "code": "<ScheduleCategory><ScheduleHeader icon=\"share\" title=\"SHARE\" /><ScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /></ScheduleCategory>"
+          "code": "<ScheduleCategory markerTone=\"info\"><ScheduleHeader icon=\"share\" title=\"SHARE\" /><ScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /></ScheduleCategory>"
         }
       ],
       "antipatterns": [
-        "Do not use a category without a ScheduleHeader."
+        "Do not use a category without a ScheduleHeader.",
+        "Do not set marker colours item by item; choose markerTone once on ScheduleCategory."
       ]
     },
     {
@@ -1605,25 +1619,13 @@
         {
           "name": "markerIcon",
           "type": "any"
-        },
-        {
-          "name": "markerTone",
-          "type": "enum",
-          "values": [
-            "primary",
-            "accent",
-            "info",
-            "success",
-            "warning"
-          ],
-          "default": "primary"
         }
       ],
       "usage": "Shows a timed programme entry on a glassy or solid surface. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.",
       "examples": [
         {
           "label": "Talk with marker",
-          "code": "<ScheduleItem time=\"11:00\u201311:25\" title=\"Community talk\" markerIcon=\"mic\" markerTone=\"info\" />"
+          "code": "<ScheduleItem time=\"11:00\u201311:25\" title=\"Community talk\" markerIcon=\"mic\" />"
         },
         {
           "label": "Lunch without marker",

@@ -279,7 +279,7 @@ import { Navbar } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab
 import { Schedule } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Use as the outer frame for an event programme. It provides the continuous gradient timeline and either a dark branded or default page surface.
+Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline on either a dark branded or default page surface.
 
 **Props:**
 
@@ -292,12 +292,12 @@ Use as the outer frame for an event programme. It provides the continuous gradie
 
 _Dark event timeline_
 ```tsx
-<Schedule><ScheduleCategory>...</ScheduleCategory></Schedule>
+<Schedule><ScheduleCategory markerTone="accent" headerTransition="primaryAccent">...</ScheduleCategory></Schedule>
 ```
 
 **Avoid:**
 
-- Do not draw a second timeline line inside categories.
+- Do not draw a separate timeline line; ScheduleCategory renders its connected segment.
 - Do not place ScheduleItem outside a ScheduleCategory.
 
 ### ScheduleCategory
@@ -306,25 +306,27 @@ _Dark event timeline_
 import { ScheduleCategory } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Groups one category header and its schedule items. Its markerTone applies one consistent solid colour to every marked item in that category.
+Groups one category header and its schedule items. markerTone applies one solid colour to the category spine and all marked items; headerTransition blends the previous line colour into this category's line colour.
 
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
 | `markerTone` | any | `primary` |
+| `headerTransition` | any | `primaryAccent` |
 
 **Examples:**
 
 _Community category_
 ```tsx
-<ScheduleCategory markerTone="info"><ScheduleHeader icon="share" title="SHARE" /><ScheduleItem time="11:00" title="Community talk" markerIcon="mic" /></ScheduleCategory>
+<ScheduleCategory markerTone="info" headerTransition="accentInfo"><ScheduleHeader icon="share" title="SHARE" /><ScheduleItem time="11:00" title="Community talk" markerIcon="mic" /></ScheduleCategory>
 ```
 
 **Avoid:**
 
 - Do not use a category without a ScheduleHeader.
-- Do not set marker colours item by item; choose markerTone once on ScheduleCategory.
+- Do not set marker or line colours item by item; choose markerTone once on ScheduleCategory.
+- Do not use an unrelated headerTransition; it should begin with the preceding category and end in this category's markerTone.
 
 ### ScheduleHeader
 
@@ -332,7 +334,7 @@ _Community category_
 import { ScheduleHeader } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Starts a timeline category with the shared gradient medallion, category heading, and optional supporting text.
+Starts a timeline category with a token-backed medallion that transitions between adjacent category colours, plus a heading and optional supporting text.
 
 **Props:**
 
@@ -351,7 +353,7 @@ _Share category_
 
 **Avoid:**
 
-- Do not replace the gradient medallion with a one-off icon style.
+- Do not style the medallion directly; set headerTransition on the surrounding ScheduleCategory.
 
 ### ScheduleItem
 

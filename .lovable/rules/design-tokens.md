@@ -12,6 +12,8 @@ Apply with any color utility: `bg-<name>`, `text-<name>`, `border-<name>`, `ring
 | `brand-blue` | `--brand-blue` |
 | `gradient-primary` | `--gradient-primary` |
 | `gradient-primary-hover` | `--gradient-primary-hover` |
+| `gradient-accent-info` | `--gradient-accent-info` |
+| `gradient-primary-accent` | `--gradient-primary-accent` |
 | `background` | `--color-background` |
 | `foreground` | `--color-foreground` |
 | `card` | `--color-card` |
@@ -115,6 +117,8 @@ Reference via `var(--name)` in inline styles or CSS.
 
 | CSS variable |
 |---|
+| `--gradient-info-success` |
+| `--gradient-success-warning` |
 | `--gradient-surface` |
 | `--blur-surface` |
 | `--duration-fast` |

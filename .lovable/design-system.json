@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.16.0",
+    "version": "1.17.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -12,14 +12,14 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "91ed7eacf71f87f619b379bf2b93e7be7f3e3c25ae32f7cce9f05b3258f26ae7",
+      "#enrichment": "1bd53897e9f3c05e6f3d10fc4b8b03fa00527438724e491bf65c39f61ab58b65",
       ".dsignore": "c5928345fda053d58aba3720f63a8a91",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
-      ".lovable/plan.md": "e9a775136da1991d36a18e86a357c909",
       ".lovable/plan/core-components-for-the-vibe-code-fest-design-system-2026-09-11.md": "b09001bded226b7ee979a67cd10f531f",
       ".lovable/plan/four-category-schedule-timeline-2026-09-13.md": "fd6682cc097c7e7fe329c1a9afd78fc1",
       ".lovable/plan/responsive-three-column-footer-2026-09-11.md": "7d8d7b2cd7461b26257035153711ab44",
+      ".lovable/plan/section-colored-schedule-timeline-2026-09-13.md": "e9a775136da1991d36a18e86a357c909",
       ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
       ".lovable/system.md": "d49207a687340751d644227d5639639e",
@@ -29,30 +29,30 @@
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
       "package.json": "5f8e34f695f7133be9ac499c3edcd93f",
       "public/favicon.ico": "9f504444f85a5af2eef9264b02ae40be",
-      "roadmap.md": "569fe5a5ddbb1154756051d91303dd0c",
+      "roadmap.md": "08fcbaa556e1500a73d571953c32a9e8",
       "src/assets/logos/atoll-logo.png": "a229369f3e1e0cfbdcd536c9b5ec2aec",
       "src/components/ui/avatar.tsx": "f96cbac02ce2948061ca38dcf6d1b019",
       "src/components/ui/badge.tsx": "341d4392cf2315b7f4b483d7c4554953",
-      "src/components/ui/button.tsx": "30f9871ae0f0cff9dd1930c5157949c3",
+      "src/components/ui/button.tsx": "79f481efe9713d4d09f68f81a32a05d5",
       "src/components/ui/card.tsx": "6df11903d6ed500da6bca03d97b91dd2",
-      "src/components/ui/cta-panel.tsx": "bbd1c3cc24aa1bc644e2b4a3e47d4a47",
-      "src/components/ui/faq.tsx": "c46e3d4ebff6749c734586678ac25477",
-      "src/components/ui/feature-card.tsx": "52bea2d5dfc6a1b664a54e26f2f689fd",
-      "src/components/ui/footer.tsx": "42057d44e50fbbe6e5d8da2e5527c641",
-      "src/components/ui/icon.tsx": "cdea6fa2dda2271cea7e3d58148c47d9",
+      "src/components/ui/cta-panel.tsx": "6d532d182ae9b822ced41579e30a0b64",
+      "src/components/ui/faq.tsx": "e28571b15b9eb6f6eff783839901644a",
+      "src/components/ui/feature-card.tsx": "b99e10edcf034c58f8e97f6390a1e60c",
+      "src/components/ui/footer.tsx": "b696a3dc70a3d147e61f11f6e9c01486",
+      "src/components/ui/icon.tsx": "314ce6e276b96687df032e25e1e332aa",
       "src/components/ui/input.tsx": "2c31a0332b4ef52532f013917c5a1050",
       "src/components/ui/layout.tsx": "c4739b75b1b4b44fc7d6ea723fc751d6",
       "src/components/ui/link.tsx": "e2a15c13fc3d8a3a817c95a5b790d435",
       "src/components/ui/navbar.tsx": "e479f37f7ab4335abe0e8763de01040b",
-      "src/components/ui/schedule-item.tsx": "a235dc9fe70c077b7d57b5c998edf0ac",
+      "src/components/ui/schedule-item.tsx": "cd9ec4e302634c63a118084866c3b3d1",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
       "src/components/ui/speaker-card.tsx": "0e546c02788b2f2ed4373e26245eea03",
       "src/components/ui/sponsor-card.tsx": "2b0612f987475a4fb19ae927679821d7",
       "src/components/ui/stat.tsx": "7c627c52ead55d4d6a2edac6ecad267b",
       "src/components/ui/ticket-card.tsx": "b914a71c0f793143affaa6cc4b2bfe3e",
-      "src/components/ui/typography.tsx": "9a463abc29932c6ae152066b5668096b",
-      "src/index.css": "799c87f6ecadb0c736907ff69d3c42f0",
-      "src/index.ts": "f699e9c403ff34697657b1b08402939b",
+      "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
+      "src/index.css": "a68770580066adb3a3518c194ab39e12",
+      "src/index.ts": "d11c8cee9c4c97eacc3bf5bd863faf22",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -60,8 +60,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "e02cdd0db82a9a7c5d386b22838fe1c9",
-      "src/routes/index.tsx": "eb57300186a5c8786c9ab1fd497a383b",
-      "src/routes/style-guide.tsx": "ad7c2b9adddef5bd97e5474c72807b99",
+      "src/routes/index.tsx": "ed1bd539ead3960d89301398b0e37b04",
+      "src/routes/style-guide.tsx": "d0964de35299638186618786597e070b",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -264,6 +264,16 @@
       {
         "name": "--gradient-primary-hover",
         "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink) / 0.9) 0%,\n    hsl(var(--brand-blue) / 0.9) 100%\n  )",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--gradient-accent-info",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--accent)) 0%,\n    hsl(var(--info)) 100%\n  )",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--gradient-primary-accent",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--primary)) 0%,\n    hsl(var(--accent)) 100%\n  )",
         "source": "src/index.css"
       },
       {
@@ -649,6 +659,16 @@
       }
     ],
     "other": [
+      {
+        "name": "--gradient-info-success",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--info)) 0%,\n    hsl(var(--success)) 100%\n  )",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--gradient-success-warning",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--success)) 0%,\n    hsl(var(--warning)) 100%\n  )",
+        "source": "src/index.css"
+      },
       {
         "name": "--gradient-surface",
         "raw": "linear-gradient(\n    180deg,\n    hsl(var(--background)) 0%,\n    hsl(var(--muted)) 100%\n  )",
@@ -1277,25 +1297,12 @@
       "props": [
         {
           "name": "markerTone",
-          "type": "enum",
-          "values": [
-            "primary",
-            "accent",
-            "info",
-            "success",
-            "warning"
-          ],
+          "type": "any",
           "default": "primary"
         },
         {
           "name": "headerTransition",
-          "type": "enum",
-          "values": [
-            "primaryAccent",
-            "accentInfo",
-            "infoSuccess",
-            "successWarning"
-          ],
+          "type": "any",
           "default": "primaryAccent"
         }
       ],

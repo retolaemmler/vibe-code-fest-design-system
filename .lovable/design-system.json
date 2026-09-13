@@ -1257,15 +1257,15 @@
           "required": true
         }
       ],
-      "usage": "Use as the outer frame for an event programme. It provides the continuous gradient timeline and either a dark branded or default page surface.",
+      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline on either a dark branded or default page surface.",
       "examples": [
         {
           "label": "Dark event timeline",
-          "code": "\u003cSchedule\u003e\u003cScheduleCategory\u003e...\u003c/ScheduleCategory\u003e\u003c/Schedule\u003e"
+          "code": "\u003cSchedule\u003e\u003cScheduleCategory markerTone=\"accent\" headerTransition=\"accentInfo\"\u003e...\u003c/ScheduleCategory\u003e\u003c/Schedule\u003e"
         }
       ],
       "antipatterns": [
-        "Do not draw a second timeline line inside categories.",
+        "Do not draw a separate timeline line; ScheduleCategory renders its connected segment.",
         "Do not place ScheduleItem outside a ScheduleCategory."
       ]
     },
@@ -1276,20 +1276,39 @@
       "props": [
         {
           "name": "markerTone",
-          "type": "any",
+          "type": "enum",
+          "values": [
+            "primary",
+            "accent",
+            "info",
+            "success",
+            "warning"
+          ],
           "default": "primary"
+        },
+        {
+          "name": "headerTransition",
+          "type": "enum",
+          "values": [
+            "accentInfo",
+            "infoSuccess",
+            "successWarning",
+            "warningPrimary"
+          ],
+          "default": "warningPrimary"
         }
       ],
-      "usage": "Groups one category header and its schedule items. Its markerTone applies one consistent solid colour to every marked item in that category.",
+      "usage": "Groups one category header and its schedule items. markerTone applies one solid colour to the category spine and all marked items; headerTransition blends that colour into the following category colour.",
       "examples": [
         {
           "label": "Community category",
-          "code": "\u003cScheduleCategory markerTone=\"info\"\u003e\u003cScheduleHeader icon=\"share\" title=\"SHARE\" /\u003e\u003cScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /\u003e\u003c/ScheduleCategory\u003e"
+          "code": "\u003cScheduleCategory markerTone=\"info\" headerTransition=\"infoSuccess\"\u003e\u003cScheduleHeader icon=\"share\" title=\"SHARE\" /\u003e\u003cScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /\u003e\u003c/ScheduleCategory\u003e"
         }
       ],
       "antipatterns": [
         "Do not use a category without a ScheduleHeader.",
-        "Do not set marker colours item by item; choose markerTone once on ScheduleCategory."
+        "Do not set marker or line colours item by item; choose markerTone once on ScheduleCategory.",
+        "Do not use an unrelated headerTransition; it should end in the following category's markerTone."
       ]
     },
     {
@@ -1374,7 +1393,7 @@
           "type": "string"
         }
       ],
-      "usage": "Starts a timeline category with the shared gradient medallion, category heading, and optional supporting text.",
+      "usage": "Starts a timeline category with a token-backed medallion that transitions between adjacent category colours, plus a heading and optional supporting text.",
       "examples": [
         {
           "label": "Share category",
@@ -1382,7 +1401,7 @@
         }
       ],
       "antipatterns": [
-        "Do not replace the gradient medallion with a one-off icon style."
+        "Do not style the medallion directly; set headerTransition on the surrounding ScheduleCategory."
       ]
     },
     {

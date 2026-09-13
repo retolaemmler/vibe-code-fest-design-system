@@ -1012,28 +1012,28 @@ function StyleGuide() {
             <div className="flex flex-col gap-4">
               <Heading level="h3">Schedule timeline</Heading>
               <Schedule>
-                <ScheduleCategory markerTone="accent">
+                <ScheduleCategory markerTone="accent" headerTransition="accentInfo">
                   <ScheduleHeader icon="sparkles" title="SPARK" subtext="An inspiring opening to ignite creativity." />
                   <div className="grid gap-3">
                     <ScheduleItem time="10:00" title="Arrival & coffee" />
                     <ScheduleItem time="10:30–11:00" title="Keynote & fireside chat" speaker="Speaker to be announced" markerIcon="mic" />
                   </div>
                 </ScheduleCategory>
-                <ScheduleCategory markerTone="info">
+                <ScheduleCategory markerTone="info" headerTransition="infoSuccess">
                   <ScheduleHeader icon="share" title="SHARE" subtext="Interactive sessions led by the community." />
                   <div className="grid gap-3">
                     <ScheduleItem time="11:00–11:25" title="Community talk" markerIcon="mic" />
                     <ScheduleItem time="12:30" title="Lunch" />
                   </div>
                 </ScheduleCategory>
-                <ScheduleCategory markerTone="success">
+                <ScheduleCategory markerTone="success" headerTransition="successWarning">
                   <ScheduleHeader icon="code" title="BUILD" subtext="Turn ideas into working products." />
                   <div className="grid gap-3">
                     <ScheduleItem time="15:00–18:15" title="Hackathon" markerIcon="code" />
                     <ScheduleItem time="18:15" title="Pizza break" />
                   </div>
                 </ScheduleCategory>
-                <ScheduleCategory markerTone="warning">
+                <ScheduleCategory markerTone="warning" headerTransition="warningPrimary">
                   <ScheduleHeader icon="star" title="CELEBRATE" subtext="Recognise the winners and close the day together." />
                   <div className="grid gap-3">
                     <ScheduleItem time="19:30" title="Top five app pitches" markerIcon="star" />
@@ -1043,7 +1043,7 @@ function StyleGuide() {
               </Schedule>
               <Snippet
                 code={`<Schedule>
-  <ScheduleCategory markerTone="info">
+  <ScheduleCategory markerTone="info" headerTransition="infoSuccess">
     <ScheduleHeader icon="share" title="SHARE" subtext="Community sessions." />
     <ScheduleItem time="11:00" title="Community talk" markerIcon="mic" />
     <ScheduleItem time="12:30" title="Lunch" />

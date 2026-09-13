@@ -3,7 +3,6 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 import { Badge } from "./badge";
-import { featureMedallionVariants } from "./feature-card";
 import { Icon, type IconName } from "./icon";
 
 export const scheduleItemVariants = cva(
@@ -42,6 +41,42 @@ export const scheduleMarkerVariants = cva(
 
 type ScheduleMarkerTone = NonNullable<VariantProps<typeof scheduleMarkerVariants>["tone"]>;
 const ScheduleMarkerToneContext = React.createContext<ScheduleMarkerTone>("primary");
+
+export const scheduleLineVariants = cva(
+  "absolute -bottom-6 left-6 top-6 z-0 w-1 -translate-x-1/2",
+  {
+    variants: {
+      tone: {
+        primary: "bg-primary",
+        accent: "bg-accent",
+        info: "bg-info",
+        success: "bg-success",
+        warning: "bg-warning",
+      },
+    },
+    defaultVariants: { tone: "primary" },
+  },
+);
+
+export const scheduleHeaderMedallionVariants = cva(
+  "flex size-12 shrink-0 items-center justify-center rounded-pill text-primary-foreground shadow-raised ring-4 ring-dark-section",
+  {
+    variants: {
+      transition: {
+        accentInfo: "bg-gradient-accent-info",
+        infoSuccess: "bg-gradient-info-success",
+        successWarning: "bg-gradient-success-warning",
+        warningPrimary: "bg-gradient-warning-primary",
+      },
+    },
+    defaultVariants: { transition: "warningPrimary" },
+  },
+);
+
+type ScheduleHeaderTransition = NonNullable<
+  VariantProps<typeof scheduleHeaderMedallionVariants>["transition"]
+>;
+const ScheduleHeaderTransitionContext = React.createContext<ScheduleHeaderTransition>("warningPrimary");
 
 export interface ScheduleItemProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -99,40 +134,49 @@ export interface ScheduleHeaderProps
 }
 
 export const ScheduleHeader = React.forwardRef<HTMLDivElement, ScheduleHeaderProps>(
-  ({ className, icon, title, subtext, ...props }, ref) => (
-    <div ref={ref} className={cn(scheduleHeaderVariants(), className)} {...props}>
-      <span
-        className={cn(
-          featureMedallionVariants({ tone: "gradient", size: "md" }),
-          "ring-4 ring-dark-section",
-        )}
-      >
-        <Icon name={icon} size="md" />
-      </span>
-      <div className="min-w-0 flex-1 pt-1">
-        <h3 className="text-h3 text-current">{title}</h3>
-        {subtext ? <p className="mt-1 text-small text-current opacity-70">{subtext}</p> : null}
+  ({ className, icon, title, subtext, ...props }, ref) => {
+    const transition = React.useContext(ScheduleHeaderTransitionContext);
+    return (
+      <div ref={ref} className={cn(scheduleHeaderVariants(), className)} {...props}>
+        <span className={scheduleHeaderMedallionVariants({ transition })}>
+          <Icon name={icon} size="md" />
+        </span>
+        <div className="min-w-0 flex-1 pt-1">
+          <h3 className="text-h3 text-current">{title}</h3>
+          {subtext ? <p className="mt-1 text-small text-current opacity-70">{subtext}</p> : null}
+        </div>
       </div>
-    </div>
-  ),
+    );
+  },
 );
 ScheduleHeader.displayName = "ScheduleHeader";
 
-export const scheduleCategoryVariants = cva("relative flex flex-col gap-6 pb-16 last:pb-0");
+export const scheduleCategoryVariants = cva(
+  "relative flex flex-col gap-6 pb-16 last:pb-0 last:[&>[data-schedule-line]]:bottom-0",
+);
 
 export interface ScheduleCategoryProps
   extends React.HTMLAttributes<HTMLElement>,
     VariantProps<typeof scheduleCategoryVariants> {
-  /** Sets one consistent solid marker colour for every marked item in this category. */
+  /** Sets one consistent solid colour for this category's spine and marked items. */
   markerTone?: ScheduleMarkerTone;
+  /** Blends this category's header circle into the following category colour. */
+  headerTransition?: ScheduleHeaderTransition;
 }
 
 export const ScheduleCategory = React.forwardRef<HTMLElement, ScheduleCategoryProps>(
-  ({ className, markerTone = "primary", children, ...props }, ref) => (
+  ({ className, markerTone = "primary", headerTransition = "warningPrimary", children, ...props }, ref) => (
     <ScheduleMarkerToneContext.Provider value={markerTone}>
-      <section ref={ref} className={cn(scheduleCategoryVariants(), className)} {...props}>
-        {children}
-      </section>
+      <ScheduleHeaderTransitionContext.Provider value={headerTransition}>
+        <section ref={ref} className={cn(scheduleCategoryVariants(), className)} {...props}>
+          <span
+            aria-hidden="true"
+            data-schedule-line
+            className={scheduleLineVariants({ tone: markerTone })}
+          />
+          {children}
+        </section>
+      </ScheduleHeaderTransitionContext.Provider>
     </ScheduleMarkerToneContext.Provider>
   ),
 );
@@ -200,10 +244,6 @@ export const Schedule = React.forwardRef<HTMLDivElement, ScheduleProps>(
       : children;
     return (
       <div ref={ref} className={cn(scheduleVariants({ surface }), className)} {...props}>
-        <div
-          aria-hidden="true"
-          className="absolute bottom-8 left-10 top-10 z-0 w-1 -translate-x-1/2 bg-gradient-primary opacity-80 sm:left-12"
-        />
         <div className="relative z-10">{timelineChildren}</div>
       </div>
     );

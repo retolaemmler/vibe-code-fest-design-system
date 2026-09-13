@@ -57,12 +57,14 @@ export {
   ScheduleCategory,
   scheduleCategoryVariants,
   type ScheduleCategoryProps,
+  scheduleLineVariants,
   ScheduleItem,
   scheduleItemVariants,
   scheduleMarkerVariants,
   type ScheduleItemProps,
   ScheduleHeader,
   scheduleHeaderVariants,
+  scheduleHeaderMedallionVariants,
   type ScheduleHeaderProps,
 } from "./components/ui/schedule-item";
 export { Stat, statVariants, type StatProps } from "./components/ui/stat";

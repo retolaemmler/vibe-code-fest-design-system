@@ -433,6 +433,10 @@ function Showcase() {
           { label: "Legal Notice & Contact", href: "#" },
           { label: "Internal", href: "#" },
         ]}
+        socials={[
+          { name: "instagram", href: "https://instagram.com", label: "Instagram" },
+          { name: "whatsapp", href: "https://wa.me", label: "WhatsApp" },
+        ]}
         newsletterHref="mailto:hello@vibecodefest.ch?subject=Newsletter"
       />
     </div>

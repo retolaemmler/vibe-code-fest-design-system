@@ -20,7 +20,7 @@ export const buttonVariants = cva(
         gradient:
           "bg-gradient-primary text-primary-foreground shadow-raised hover:bg-gradient-primary-hover",
         solid: "bg-primary text-primary-foreground hover:bg-primary-hover",
-        muted: "border-0 bg-background text-foreground hover:bg-muted",
+        muted: "border-0 bg-background text-primary hover:bg-muted hover:text-primary-hover",
         secondary:
           "border border-primary bg-background text-primary hover:border-primary-hover hover:bg-primary-subtle",
         ghost: "bg-transparent text-foreground hover:bg-muted",

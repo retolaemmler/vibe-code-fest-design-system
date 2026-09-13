@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 export const sponsorCardVariants = cva(
   "group flex min-h-48 items-center justify-center overflow-hidden rounded-card border p-6 transition-all duration-fast ease-standard",

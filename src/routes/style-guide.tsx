@@ -373,7 +373,7 @@ function StyleGuide() {
         brand={<span className="text-h3 text-gradient-primary">Vibe</span>}
         actions={
           <Button
-            variant="outline"
+            variant="ghost"
             size="sm"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             aria-pressed={theme === "dark"}
@@ -695,7 +695,7 @@ function StyleGuide() {
             <div className="flex flex-col gap-4">
               <Heading level="h3">Button</Heading>
               <StateGrid columns={["Variant", "Default", "Hover (point at it)", "Focus", "Disabled", "Loading"]}>
-                {(["gradient", "solid", "outline", "secondary", "ghost", "link", "destructive"] as const).map(
+                {(["gradient", "solid", "secondary", "ghost", "link", "destructive"] as const).map(
                   (variant) => (
                     <React.Fragment key={variant}>
                       <TokenName>{`variant="${variant}"`}</TokenName>
@@ -719,13 +719,21 @@ function StyleGuide() {
                   ),
                 )}
               </StateGrid>
+              <div className="flex flex-col gap-3 rounded-card bg-gradient-primary p-4 text-primary-foreground">
+                <TokenName>{`variant="muted" · gradient backgrounds only`}</TokenName>
+                <div className="flex flex-wrap gap-3">
+                  <Button variant="muted">Get tickets</Button>
+                  <Button variant="muted" disabled>Get tickets</Button>
+                  <Button variant="muted" loading>Booking</Button>
+                </div>
+              </div>
               <div className="flex flex-wrap items-center gap-3">
                 {(["sm", "md", "lg"] as const).map((size) => (
                   <Button key={size} variant="gradient" size={size}>
                     Size {size}
                   </Button>
                 ))}
-                <Button size="icon" variant="outline" aria-label="Next speaker">
+                <Button size="icon" variant="secondary" aria-label="Next speaker">
                   <Icon name="arrowRight" />
                 </Button>
               </div>

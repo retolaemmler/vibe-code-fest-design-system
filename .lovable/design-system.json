@@ -723,7 +723,7 @@
           "values": [
             "gradient",
             "solid",
-            "outline",
+            "muted",
             "secondary",
             "ghost",
             "link",
@@ -760,6 +760,17 @@
           "name": "iconEnd",
           "type": "any"
         }
+      ],
+      "usage": "Use for clear actions with named visual hierarchy. Reserve the muted variant exclusively for gradient backgrounds, including CtaPanel; use gradient, solid, or secondary on cards and plain surfaces.",
+      "examples": [
+        {
+          "label": "Muted action on a gradient panel",
+          "code": "<div className=\"bg-gradient-primary\"><Button variant=\"muted\">Get tickets</Button></div>"
+        }
+      ],
+      "antipatterns": [
+        "Do not use the muted variant on plain, card, or dark-section backgrounds.",
+        "Do not recreate button appearances with one-off className color or border overrides."
       ]
     },
     {

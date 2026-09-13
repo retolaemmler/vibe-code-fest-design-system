@@ -78,9 +78,9 @@ Pick the Button variant from the surface it sits on, not from personal taste.
 
 - **Inside cards** — use `gradient`, `solid` or `secondary`. These sit on a
   `card` or `elevated` surface and need enough visual weight to feel clickable.
-- **Inside call-to-action panels** — use `secondary`. The CTA panel already has
-  high contrast (gradient background or strong border), so the button should
-  read as an invitation, not another heavy accent.
+- **On gradient backgrounds, including call-to-action panels** — use `muted`.
+  Its quiet, borderless surface keeps the action legible without competing with
+  the gradient. Never use `muted` on plain, card, or dark-section surfaces.
 - **Never use `ghost` or `link` for primary actions** inside cards or CTAs.
   Reserve them for tertiary actions, footer links, and inline text controls.
 

@@ -462,6 +462,27 @@
   --font-mono: var(--font-mono);
 }
 
+/* --- Responsive type scale -------------------------------------------------
+   Below the `md` breakpoint (768px) the named scale steps down so headings fit
+   narrow screens. Only the *-size tokens change; weight / leading / tracking
+   stay identical, and the step-down is deliberately modest (body and small
+   barely move) so text stays comfortably readable on phones. Because the
+   utilities read these variables, every component inherits the mobile scale
+   automatically — never hand-write a `text-sm md:text-base` override.
+   --------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  :root,
+  .dark {
+    --text-display-size: 2.5rem;
+    --text-h1-size: 2rem;
+    --text-h2-size: 1.5rem;
+    --text-h3-size: 1.1875rem;
+    --text-body-size: 0.9375rem;
+    --text-small-size: 0.8125rem;
+    --text-caption-size: 0.75rem;
+  }
+}
+
 /* --- Named type scale utilities: text-display … text-caption -------------- */
 @utility text-display {
   font-size: var(--text-display-size);

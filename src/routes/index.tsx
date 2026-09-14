@@ -122,25 +122,25 @@ function Showcase() {
               pill={<Badge variant="brand" tone="solid">Early bird</Badge>}
             >
               <TicketPrice>
-                <span className="text-h3">89 CHF</span>
+                <span className="text-body font-semibold">89 CHF</span>
               </TicketPrice>
               <TicketRegular label="regular price" price="129 CHF" />
             </TicketCard>
             <TicketCard variant="brand">
               <TicketPrice>
-                <span className="text-h3">149 CHF</span>
+                <span className="text-body font-semibold">149 CHF</span>
               </TicketPrice>
               <TicketRegular label="regular price" price="129 CHF" />
             </TicketCard>
             <TicketCard variant="accent">
               <TicketPrice>
-                <span className="text-h3">199 CHF</span>
+                <span className="text-body font-semibold">199 CHF</span>
               </TicketPrice>
               <TicketRegular label="regular price" price="129 CHF" />
             </TicketCard>
             <TicketCard variant="muted">
               <TicketPrice>
-                <span className="text-h3">49 CHF</span>
+                <span className="text-body font-semibold">49 CHF</span>
               </TicketPrice>
               <TicketRegular label="regular price" price="129 CHF" />
             </TicketCard>

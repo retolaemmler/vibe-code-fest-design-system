@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.27.0",
+    "version": "1.28.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -45,7 +45,7 @@
       "src/components/ui/layout.tsx": "87221df44334e5e3547f09f0ab9a3005",
       "src/components/ui/link.tsx": "307f2c0b5f03a3d4e887409ab6a7b08c",
       "src/components/ui/navbar.tsx": "43c2b4329b83da9e819beae9fc9ed132",
-      "src/components/ui/schedule-item.tsx": "6a931296d38ad039f302c16ddb3b7751",
+      "src/components/ui/schedule-item.tsx": "b1858b32174570aec11ac9d68a7a88f0",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
       "src/components/ui/speaker-card.tsx": "432cb9dba7d2796ab33a22c5a3ac631a",
       "src/components/ui/sponsor-card.tsx": "8b078f47505c49a6a7b4ba02e5d976a7",

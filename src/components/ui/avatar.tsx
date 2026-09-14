@@ -11,6 +11,7 @@ export const avatarVariants = cva(
         sm: "size-10 text-small",
         md: "size-14 text-body",
         lg: "size-20 text-h3",
+        xl: "size-28 text-h2",
       },
       shape: { circle: "rounded-pill", rounded: "rounded-card" },
       ring: {

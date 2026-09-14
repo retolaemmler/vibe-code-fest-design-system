@@ -958,7 +958,7 @@ function StyleGuide() {
             <div className="flex flex-col gap-4">
               <Heading level="h3">Avatar</Heading>
               <div className="flex flex-wrap items-end gap-6">
-                {(["sm", "md", "lg"] as const).map((size) => (
+                {(["sm", "md", "lg", "xl"] as const).map((size) => (
                   <Spec key={size} label={`size="${size}"`}>
                     <Avatar name="Nora Keller" size={size} />
                   </Spec>
@@ -966,7 +966,7 @@ function StyleGuide() {
                 <Spec label='ring="gradient"'>
                   <Avatar
                     name="Nora Keller"
-                    size="lg"
+                    size="xl"
                     src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face"
                     ring="gradient"
                   />

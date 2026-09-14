@@ -69,6 +69,9 @@ export {
   scheduleHeaderVariants,
   scheduleHeaderMedallionVariants,
   type ScheduleHeaderProps,
+  type ScheduleMarkerTone,
+  type ScheduleHeaderTransition,
+  type ScheduleItemAvatar,
 } from "./components/ui/schedule-item";
 export { Stat, statVariants, type StatProps } from "./components/ui/stat";
 export { Faq, FaqItem, FaqTrigger, FaqContent } from "./components/ui/faq";

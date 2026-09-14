@@ -875,42 +875,37 @@ function StyleGuide() {
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {(
                   [
-                    { variant: "default", pill: "Early bird" },
-                    { variant: "brand", pill: "Most popular" },
-                    { variant: "accent", pill: "Limited" },
-                    { variant: "muted", pill: "Student" },
+                    { variant: "default", pill: "Early bird", price: "89 CHF" },
+                    { variant: "brand", pill: "Most popular", price: "149 CHF" },
+                    { variant: "accent", pill: "Limited", price: "199 CHF" },
+                    { variant: "muted", pill: "Student", price: "49 CHF" },
                   ] as const
-                ).map(({ variant, pill }) => (
+                ).map(({ variant, pill, price }) => (
                   <TicketCard
                     key={variant}
                     variant={variant}
                     pill={<Badge variant="brand" tone="solid">{pill}</Badge>}
                   >
-                    <TicketHeader>
-                      <TicketTitle>Regular pass</TicketTitle>
-                      <TicketDescription>
-                        Full day access to all talks.
-                      </TicketDescription>
-                    </TicketHeader>
                     <TicketPrice>
-                      <span className="text-h2">129 CHF</span>
-                      <span className="text-caption opacity-70">incl. VAT</span>
+                      <span className="text-h3">{price}</span>
                     </TicketPrice>
+                    <TicketRegular label="regular price" price="129 CHF" />
                   </TicketCard>
                 ))}
               </div>
               <Text size="small" tone="muted">
                 The tear line and side notches are rendered with a CSS mask, so the
-                ticket works on gradient or image backgrounds too.
+                ticket works on gradient or image backgrounds too. The top area shows
+                the tier price; the bottom area shows the regular-pass comparison.
               </Text>
               <Snippet
                 code={`<TicketCard
   pill={<Badge variant="brand" tone="solid">Early bird</Badge>}
 >
-  <TicketHeader>
-    <TicketTitle>Regular pass</TicketTitle>
-  </TicketHeader>
-  <TicketPrice>129 CHF</TicketPrice>
+  <TicketPrice>
+    <span className="text-h3">89 CHF</span>
+  </TicketPrice>
+  <TicketRegular label="regular price" price="129 CHF" />
 </TicketCard>`}
               />
             </div>

@@ -1723,6 +1723,17 @@
           "name": "pill",
           "type": "any"
         }
+      ],
+      "usage": "Use for ticket tiers and pricing highlights. The price sits at the top of the card in a smaller, tighter format; the bottom area shows the regular-pass comparison price separated by a dashed tear line.",
+      "examples": [
+        {
+          "label": "Early-bird ticket",
+          "code": "\u003cTicketCard pill={\u003cBadge variant=\"brand\" tone=\"solid\"\u003eEarly bird\u003c/Badge\u003e}\u003e\n  \u003cTicketPrice\u003e\u003cspan className=\"text-h3\"\u003e89 CHF\u003c/span\u003e\u003c/TicketPrice\u003e\n  \u003cTicketRegular label=\"regular price\" price=\"129 CHF\" /\u003e\n\u003c/TicketCard\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not place a long description inside the ticket; use the regular-pass comparison area for concise price context only.",
+        "Do not use the ticket card for non-pricing content; use Card instead."
       ]
     },
     {
@@ -1744,6 +1755,32 @@
       "name": "TicketPrice",
       "file": "src/components/ui/ticket-card",
       "import_path": ""
+    },
+    {
+      "name": "TicketRegular",
+      "file": "src/components/ui/ticket-card",
+      "import_path": "",
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "default": "regular price"
+        },
+        {
+          "name": "price",
+          "type": "string"
+        }
+      ],
+      "usage": "Bottom area of a TicketCard. Shows the regular-pass price below the dashed tear line, with a small uppercase label and a tight price value.",
+      "examples": [
+        {
+          "label": "Regular-pass comparison",
+          "code": "\u003cTicketRegular label=\"regular price\" price=\"129 CHF\" /\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not use TicketRegular outside a TicketCard; it relies on the surrounding card styling and tear line."
+      ]
     },
     {
       "name": "InstagramIcon",

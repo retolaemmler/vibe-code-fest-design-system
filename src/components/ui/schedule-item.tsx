@@ -147,7 +147,7 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
               <p className={scheduleTimeVariants({ tone: markerTone })}>{time}</p>
-              <p className="text-h3 font-semibold text-foreground">{title}</p>
+              <p className="text-body font-semibold text-foreground md:text-h3">{title}</p>
               {speaker ? <p className="text-small text-muted-foreground">{speaker}</p> : null}
             </div>
             {track ? <Badge variant="neutral" className="self-start sm:self-center">{track}</Badge> : null}

@@ -887,7 +887,7 @@ function StyleGuide() {
                     pill={<Badge variant="brand" tone="solid">{pill}</Badge>}
                   >
                     <TicketPrice>
-                      <span className="text-h3">{price}</span>
+                      <span className="text-body font-semibold">{price}</span>
                     </TicketPrice>
                     <TicketRegular label="regular price" price="129 CHF" />
                   </TicketCard>
@@ -903,7 +903,7 @@ function StyleGuide() {
   pill={<Badge variant="brand" tone="solid">Early bird</Badge>}
 >
   <TicketPrice>
-    <span className="text-h3">89 CHF</span>
+    <span className="text-body font-semibold">89 CHF</span>
   </TicketPrice>
   <TicketRegular label="regular price" price="129 CHF" />
 </TicketCard>`}

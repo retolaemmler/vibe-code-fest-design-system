@@ -22,10 +22,8 @@ import { SponsorCard } from "@/components/ui/sponsor-card";
 import { Stat } from "@/components/ui/stat";
 import {
   TicketCard,
-  TicketDescription,
-  TicketHeader,
   TicketPrice,
-  TicketTitle,
+  TicketRegular,
 } from "@/components/ui/ticket-card";
 import { Heading, Text } from "@/components/ui/typography";
 import atollLogo from "@/assets/logos/atoll-logo.png";
@@ -123,44 +121,28 @@ function Showcase() {
             <TicketCard
               pill={<Badge variant="brand" tone="solid">Early bird</Badge>}
             >
-              <TicketHeader>
-                <TicketTitle>Regular</TicketTitle>
-                <TicketDescription>Full day, all talks</TicketDescription>
-              </TicketHeader>
               <TicketPrice>
-                <span className="text-h2">89 CHF</span>
-                <span className="text-caption opacity-70">until sold out</span>
+                <span className="text-h3">89 CHF</span>
               </TicketPrice>
+              <TicketRegular label="regular price" price="129 CHF" />
             </TicketCard>
             <TicketCard variant="brand">
-              <TicketHeader>
-                <TicketTitle>VIP</TicketTitle>
-                <TicketDescription>Talks + afterparty</TicketDescription>
-              </TicketHeader>
               <TicketPrice>
-                <span className="text-h2">149 CHF</span>
-                <span className="text-caption opacity-70">best value</span>
+                <span className="text-h3">149 CHF</span>
               </TicketPrice>
+              <TicketRegular label="regular price" price="129 CHF" />
             </TicketCard>
             <TicketCard variant="accent">
-              <TicketHeader>
-                <TicketTitle>Workshop</TicketTitle>
-                <TicketDescription>Hands-on morning</TicketDescription>
-              </TicketHeader>
               <TicketPrice>
-                <span className="text-h2">199 CHF</span>
-                <span className="text-caption opacity-70">12 seats left</span>
+                <span className="text-h3">199 CHF</span>
               </TicketPrice>
+              <TicketRegular label="regular price" price="129 CHF" />
             </TicketCard>
             <TicketCard variant="muted">
-              <TicketHeader>
-                <TicketTitle>Student</TicketTitle>
-                <TicketDescription>Valid student ID</TicketDescription>
-              </TicketHeader>
               <TicketPrice>
-                <span className="text-h2">49 CHF</span>
-                <span className="text-caption opacity-70">limited</span>
+                <span className="text-h3">49 CHF</span>
               </TicketPrice>
+              <TicketRegular label="regular price" price="129 CHF" />
             </TicketCard>
           </div>
         </Container>

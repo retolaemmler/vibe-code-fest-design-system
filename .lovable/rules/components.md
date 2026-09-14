@@ -425,7 +425,7 @@ _Share category_
 import { ScheduleItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Shows a timed programme entry on a glassy or solid surface. Its enlarged title aligns with the marker icon, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.
+Shows a timed programme entry on a glassy or solid surface. Its enlarged title aligns with the marker, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Pass avatar to show the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks, lunch, and other passive moments.
 
 **Props:**
 
@@ -438,10 +438,21 @@ Shows a timed programme entry on a glassy or solid surface. Its enlarged title a
 | `speaker` | string | `—` |
 | `track` | string | `—` |
 | `markerIcon` | any | `—` |
+| `avatar` | any | `—` |
 
 **Examples:**
 
-_Talk with marker_
+_Talk with speaker avatar_
+```tsx
+<ScheduleItem
+  time="11:00–11:25"
+  title="Community talk"
+  speaker="Luca Bianchi"
+  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}
+/>
+```
+
+_Talk with icon marker_
 ```tsx
 <ScheduleItem time="11:00–11:25" title="Community talk" markerIcon="mic" />
 ```

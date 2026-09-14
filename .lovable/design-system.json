@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.26.0",
+    "version": "1.27.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "d330aac7d81b5d14f89f8b1a1d5fba5b300ca89bd549fb2e6e7a447e3780853b",
+      "#enrichment": "c990d6865748413a3749f48d3ca369165ff0ed24048d56fa04f0da7cb018e3c4",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -45,7 +45,7 @@
       "src/components/ui/layout.tsx": "87221df44334e5e3547f09f0ab9a3005",
       "src/components/ui/link.tsx": "307f2c0b5f03a3d4e887409ab6a7b08c",
       "src/components/ui/navbar.tsx": "43c2b4329b83da9e819beae9fc9ed132",
-      "src/components/ui/schedule-item.tsx": "ebb07d4f1f9f4b254ea6202a7f67d0ab",
+      "src/components/ui/schedule-item.tsx": "6a931296d38ad039f302c16ddb3b7751",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
       "src/components/ui/speaker-card.tsx": "432cb9dba7d2796ab33a22c5a3ac631a",
       "src/components/ui/sponsor-card.tsx": "8b078f47505c49a6a7b4ba02e5d976a7",
@@ -61,8 +61,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "b38a2da025f6b15d10f1b034c7b7579d",
-      "src/routes/index.tsx": "46ccd8fbac1d7c277adf0deee15dfcf2",
-      "src/routes/style-guide.tsx": "6b647b9faf06025772dd655a317155a2",
+      "src/routes/index.tsx": "4ee45b8ca828bb193f964512ffe852d8",
+      "src/routes/style-guide.tsx": "7938ddadf7390adabbd52ee67b54048b",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -1461,11 +1461,7 @@
         },
         {
           "name": "avatar",
-          "type": "object",
-          "properties": {
-            "src": { "type": "string" },
-            "name": { "type": "string", "required": true }
-          }
+          "type": "any"
         }
       ],
       "usage": "Shows a timed programme entry on a glassy or solid surface. Its enlarged title aligns with the marker, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Pass avatar to show the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks, lunch, and other passive moments.",

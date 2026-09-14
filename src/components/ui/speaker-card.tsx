@@ -43,7 +43,7 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
       {...props}
     >
       <div className="relative self-start">
-        <Avatar name={name} src={photoUrl} size="lg" shape="circle" ring="gradient" />
+        <Avatar name={name} src={photoUrl} size="xl" shape="circle" ring="gradient" />
         {linkedinHref && (
           <Button
             variant="secondary"

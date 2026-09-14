@@ -9,7 +9,8 @@ import { cn } from "../../lib/utils";
  * Visual recipe:
  * - A small pill sits at the very top edge ("Early bird", "Most popular", etc.).
  * - The body is split by a perforated tear line with semi-circle notches.
- * - The bottom area is reserved for the price as plain text.
+ * - The top area shows the tier price in a smaller, tighter format.
+ * - The bottom area shows the regular-pass comparison price.
  *
  * The notches are rendered with a CSS mask so the card stays usable on
  * gradient, muted or image backgrounds — not only on the default page colour.
@@ -107,10 +108,44 @@ export const TicketPrice = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "relative flex flex-col items-center gap-1 p-6 pt-8 before:absolute before:inset-x-0 before:top-0 before:border-t before:border-dashed before:border-current before:opacity-30",
+      "flex flex-col items-center justify-center p-4 pb-3",
       className,
     )}
     {...props}
   />
 ));
 TicketPrice.displayName = "TicketPrice";
+
+export interface TicketRegularProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  /** Eyebrow label above the regular price. */
+  label?: string;
+  /** The regular-pass price value. */
+  price?: string;
+}
+
+export const TicketRegular = React.forwardRef<
+  HTMLDivElement,
+  TicketRegularProps
+>(({ className, label = "regular price", price, children, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "relative flex flex-col items-center gap-0.5 p-4 pt-3 before:absolute before:left-4 before:right-4 before:top-0 before:border-t before:border-dashed before:border-current before:opacity-30",
+      className,
+    )}
+    {...props}
+  >
+    {children ?? (
+      <>
+        <span className="text-caption uppercase tracking-[0.12em] opacity-70">
+          {label}
+        </span>
+        {price ? (
+          <span className="text-small font-semibold opacity-90">{price}</span>
+        ) : null}
+      </>
+    )}
+  </div>
+));
+TicketRegular.displayName = "TicketRegular";

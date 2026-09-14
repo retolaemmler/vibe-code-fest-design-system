@@ -78,7 +78,12 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
         )}
       </div>
       {topics && topics.length > 0 && (
-        <div className="flex flex-wrap gap-2">
+        <div
+          className={cn(
+            "flex flex-wrap gap-2",
+            variant === "plain" && "justify-center",
+          )}
+        >
           {topics.map((topic) => (
             <Badge key={topic} variant="brand">
               {topic}
@@ -86,7 +91,16 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
           ))}
         </div>
       )}
-      {action && <div className="mt-auto pt-2">{action}</div>}
+      {action && (
+        <div
+          className={cn(
+            "mt-auto pt-2",
+            variant === "plain" && "self-center",
+          )}
+        >
+          {action}
+        </div>
+      )}
     </Card>
   ),
 );

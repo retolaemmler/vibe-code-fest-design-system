@@ -1458,12 +1458,24 @@
         {
           "name": "markerIcon",
           "type": "any"
+        },
+        {
+          "name": "avatar",
+          "type": "object",
+          "properties": {
+            "src": { "type": "string" },
+            "name": { "type": "string", "required": true }
+          }
         }
       ],
-      "usage": "Shows a timed programme entry on a glassy or solid surface. Its enlarged title aligns with the marker icon, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Add markerIcon for active sessions; omit it for breaks, lunch, and other passive moments.",
+      "usage": "Shows a timed programme entry on a glassy or solid surface. Its enlarged title aligns with the marker, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Pass avatar to show the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks, lunch, and other passive moments.",
       "examples": [
         {
-          "label": "Talk with marker",
+          "label": "Talk with speaker avatar",
+          "code": "\u003cScheduleItem\n  time=\"11:00–11:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/\u003e"
+        },
+        {
+          "label": "Talk with icon marker",
           "code": "\u003cScheduleItem time=\"11:00–11:25\" title=\"Community talk\" markerIcon=\"mic\" /\u003e"
         },
         {

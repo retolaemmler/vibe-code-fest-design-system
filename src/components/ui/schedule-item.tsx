@@ -2,8 +2,15 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "../../lib/utils";
+import { Avatar } from "./avatar";
 import { Badge } from "./badge";
 import { Icon, type IconName } from "./icon";
+
+export interface ScheduleItemAvatar {
+  src?: string;
+  /** Describes the person; also used for the image alt text. */
+  name: string;
+}
 
 export const scheduleItemVariants = cva(
   "ml-16 rounded-card text-card-foreground shadow-raised",
@@ -20,7 +27,7 @@ export const scheduleItemVariants = cva(
 );
 
 export const scheduleMarkerVariants = cva(
-  "absolute left-6 z-20 flex size-10 -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-dark-section",
+  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-dark-section",
   {
     variants: {
       tone: {
@@ -35,8 +42,12 @@ export const scheduleMarkerVariants = cva(
         titleMd: "top-16 -translate-y-1/2",
         end: "bottom-7 sm:bottom-3",
       },
+      size: {
+        icon: "size-10",
+        avatar: "size-14",
+      },
     },
-    defaultVariants: { tone: "primary", position: "titleMd" },
+    defaultVariants: { tone: "primary", position: "titleMd", size: "icon" },
   },
 );
 
@@ -99,25 +110,33 @@ export interface ScheduleItemProps
   title: string;
   speaker?: string;
   track?: string;
-  /** Adds a solid circular node. Omit it for breaks, lunch, and passive moments. */
+  /** Adds a solid circular icon node. Omit it for breaks, lunch, and passive moments. */
   markerIcon?: IconName;
+  /** Replaces the icon marker with a speaker avatar (size="md"). */
+  avatar?: ScheduleItemAvatar;
 }
 
 export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
-  ({ className, variant, padding, time, title, speaker, track, markerIcon, ...props }, ref) => {
+  ({ className, variant, padding, time, title, speaker, track, markerIcon, avatar, ...props }, ref) => {
     const markerTone = React.useContext(ScheduleMarkerToneContext);
     const isLast = (props as Record<string, unknown>)["data-schedule-last"] === "true";
+    const hasMarker = markerIcon || avatar;
     return (
       <div className="relative">
-        {markerIcon ? (
+        {hasMarker ? (
           <span
             className={scheduleMarkerVariants({
               tone: markerTone,
               position: isLast ? "end" : padding === "sm" ? "titleSm" : "titleMd",
+              size: avatar ? "avatar" : "icon",
             })}
             aria-hidden="true"
           >
-            <Icon name={markerIcon} size="sm" />
+            {avatar ? (
+              <Avatar size="md" src={avatar.src} name={avatar.name} />
+            ) : (
+              <Icon name={markerIcon!} size="sm" />
+            )}
           </span>
         ) : null}
         <div
@@ -228,7 +247,7 @@ function findLastMarkedItemPath(
   arr.forEach((child, index) => {
     if (!React.isValidElement<{ children?: React.ReactNode }>(child)) return;
     const childPath = [...path, index];
-    if (isScheduleItemElement(child) && child.props.markerIcon) {
+    if (isScheduleItemElement(child) && (child.props.markerIcon || child.props.avatar)) {
       result = childPath;
     }
     const nested = findLastMarkedItemPath(child.props.children, childPath);

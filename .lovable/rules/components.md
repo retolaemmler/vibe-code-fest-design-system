@@ -12,7 +12,7 @@ import { Avatar } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab
 
 | Prop | Type | Default |
 |---|---|---|
-| `size` | sm · md · lg | `md` |
+| `size` | sm · md · lg · xl | `md` |
 | `shape` | circle · rounded | `circle` |
 | `ring` | none · gradient | `none` |
 | `src` | string | `—` |
@@ -580,12 +580,29 @@ import { Text } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab79
 import { TicketCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
+Use for ticket tiers and pricing highlights. The price sits at the top of the card in a smaller, tighter format; the bottom area shows the regular-pass comparison price separated by a dashed tear line.
+
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
 | `variant` | default · brand · accent · muted · outline | `default` |
 | `pill` | any | `—` |
+
+**Examples:**
+
+_Early-bird ticket_
+```tsx
+<TicketCard pill={<Badge variant="brand" tone="solid">Early bird</Badge>}>
+  <TicketPrice><span className="text-h3">89 CHF</span></TicketPrice>
+  <TicketRegular label="regular price" price="129 CHF" />
+</TicketCard>
+```
+
+**Avoid:**
+
+- Do not place a long description inside the ticket; use the regular-pass comparison area for concise price context only.
+- Do not use the ticket card for non-pricing content; use Card instead.
 
 ### TicketDescription
 
@@ -604,6 +621,32 @@ import { TicketHeader } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-c
 ```ts
 import { TicketPrice } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
+
+### TicketRegular
+
+```ts
+import { TicketRegular } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+Bottom area of a TicketCard. Shows the regular-pass price below the dashed tear line, with a small uppercase label and a tight price value.
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `label` | string | `regular price` |
+| `price` | string | `—` |
+
+**Examples:**
+
+_Regular-pass comparison_
+```tsx
+<TicketRegular label="regular price" price="129 CHF" />
+```
+
+**Avoid:**
+
+- Do not use TicketRegular outside a TicketCard; it relies on the surrounding card styling and tear line.
 
 ### TicketTitle
 

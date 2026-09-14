@@ -4,7 +4,7 @@
 
 The design system exports these components — import them from `@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b` and compose them before building anything from scratch:
 
-`Avatar`, `Badge`, `Button`, `CardContent`, `CardDescription`, `CardFooter`, `CardHeader`, `CardTitle`, `Card`, `Container`, `CtaPanel`, `FaqContent`, `FaqItem`, `FaqTrigger`, `Faq`, `FeatureCard`, `Fonts`, `Footer`, `Heading`, `Icon`, `Input`, `InstagramIcon`, `Link`, `LinkedInIcon`, `Navbar`, `ScheduleCategory`, `ScheduleHeader`, `ScheduleItem`, `Schedule`, `Section`, `SpeakerCard`, `SponsorCard`, `Stat`, `Text`, `TicketCard`, `TicketDescription`, `TicketHeader`, `TicketPrice`, `TicketTitle`, `WhatsAppIcon`
+`Avatar`, `Badge`, `Button`, `CardContent`, `CardDescription`, `CardFooter`, `CardHeader`, `CardTitle`, `Card`, `Container`, `CtaPanel`, `FaqContent`, `FaqItem`, `FaqTrigger`, `Faq`, `FeatureCard`, `Fonts`, `Footer`, `Heading`, `Icon`, `Input`, `InstagramIcon`, `Link`, `LinkedInIcon`, `Navbar`, `ScheduleCategory`, `ScheduleHeader`, `ScheduleItem`, `Schedule`, `Section`, `SpeakerCard`, `SponsorCard`, `Stat`, `Text`, `TicketCard`, `TicketDescription`, `TicketHeader`, `TicketPrice`, `TicketRegular`, `TicketTitle`, `WhatsAppIcon`
 
 Per-component details (import stanzas, props, variants, examples) live in `.lovable/rules/libraries/{slug}/components.md` — on disk, not auto-loaded. Read that file or the component source when the name alone isn't enough.
 

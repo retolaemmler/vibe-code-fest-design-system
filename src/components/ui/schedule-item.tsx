@@ -51,7 +51,7 @@ export const scheduleMarkerVariants = cva(
   },
 );
 
-type ScheduleMarkerTone = NonNullable<VariantProps<typeof scheduleMarkerVariants>["tone"]>;
+export type ScheduleMarkerTone = NonNullable<VariantProps<typeof scheduleMarkerVariants>["tone"]>;
 const ScheduleMarkerToneContext = React.createContext<ScheduleMarkerTone>("primary");
 
 export const scheduleLineVariants = cva(
@@ -98,7 +98,7 @@ export const scheduleHeaderMedallionVariants = cva(
   },
 );
 
-type ScheduleHeaderTransition = NonNullable<
+export type ScheduleHeaderTransition = NonNullable<
   VariantProps<typeof scheduleHeaderMedallionVariants>["transition"]
 >;
 const ScheduleHeaderTransitionContext = React.createContext<ScheduleHeaderTransition>("primaryAccent");

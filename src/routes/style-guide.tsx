@@ -1025,27 +1025,42 @@ function StyleGuide() {
                   <ScheduleHeader icon="sparkles" title="SPARK" subtext="An inspiring opening to ignite creativity." />
                   <div className="grid gap-3">
                     <ScheduleItem time="10:00" title="Arrival & coffee" />
-                    <ScheduleItem time="10:30–11:00" title="Keynote & fireside chat" speaker="Speaker to be announced" markerIcon="mic" />
+                    <ScheduleItem
+                      time="10:30–11:00"
+                      title="Keynote & fireside chat"
+                      speaker="Nora Keller"
+                      avatar={{ src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face", name: "Nora Keller" }}
+                    />
                   </div>
                 </ScheduleCategory>
                 <ScheduleCategory markerTone="info" headerTransition="accentInfo">
                   <ScheduleHeader icon="share" title="SHARE" subtext="Interactive sessions led by the community." />
                   <div className="grid gap-3">
-                    <ScheduleItem time="11:00–11:25" title="Community talk" markerIcon="mic" />
+                    <ScheduleItem
+                      time="11:00–11:25"
+                      title="Community talk"
+                      speaker="Luca Bianchi"
+                      avatar={{ src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face", name: "Luca Bianchi" }}
+                    />
                     <ScheduleItem time="12:30" title="Lunch" />
                   </div>
                 </ScheduleCategory>
                 <ScheduleCategory markerTone="success" headerTransition="infoSuccess">
                   <ScheduleHeader icon="code" title="BUILD" subtext="Turn ideas into working products." />
                   <div className="grid gap-3">
-                    <ScheduleItem time="15:00–18:15" title="Hackathon" markerIcon="code" />
+                    <ScheduleItem
+                      time="15:00–18:15"
+                      title="Hackathon"
+                      speaker="Ada Mwangi"
+                      avatar={{ src: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop&crop=face", name: "Ada Mwangi" }}
+                    />
                     <ScheduleItem time="18:15" title="Pizza break" />
                   </div>
                 </ScheduleCategory>
                 <ScheduleCategory markerTone="warning" headerTransition="successWarning">
                   <ScheduleHeader icon="star" title="CELEBRATE" subtext="Recognise the winners and close the day together." />
                   <div className="grid gap-3">
-                    <ScheduleItem time="19:30" title="Top five app pitches" markerIcon="star" />
+                    <ScheduleItem time="19:30" title="Top five app pitches" speaker="Community voting and winner selection" markerIcon="star" />
                     <ScheduleItem time="20:00–22:00" title="Awards and celebration" markerIcon="users" />
                   </div>
                 </ScheduleCategory>
@@ -1054,7 +1069,11 @@ function StyleGuide() {
                 code={`<Schedule>
   <ScheduleCategory markerTone="info" headerTransition="accentInfo">
     <ScheduleHeader icon="share" title="SHARE" subtext="Community sessions." />
-    <ScheduleItem time="11:00" title="Community talk" markerIcon="mic" />
+    <ScheduleItem
+      time="11:00"
+      title="Community talk"
+      avatar={{ src: "https://example.com/luca.jpg", name: "Luca Bianchi" }}
+    />
     <ScheduleItem time="12:30" title="Lunch" />
   </ScheduleCategory>
 </Schedule>`}

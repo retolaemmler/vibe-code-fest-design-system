@@ -210,7 +210,7 @@
   --text-body-leading: 1.65;
   --text-body-tracking: 0em;
 
-  --text-small-size: 0.875rem;
+  --text-small-size: 0.9375rem;
   --text-small-weight: 400;
   --text-small-leading: 1.55;
   --text-small-tracking: 0em;
@@ -478,7 +478,7 @@
     --text-h2-size: 1.5rem;
     --text-h3-size: 1.1875rem;
     --text-body-size: 0.9375rem;
-    --text-small-size: 0.8125rem;
+    --text-small-size: 0.875rem;
     --text-caption-size: 0.75rem;
   }
 }

@@ -22,10 +22,8 @@ import { SponsorCard } from "@/components/ui/sponsor-card";
 import { Stat } from "@/components/ui/stat";
 import {
   TicketCard,
-  TicketDescription,
-  TicketHeader,
   TicketPrice,
-  TicketTitle,
+  TicketRegular,
 } from "@/components/ui/ticket-card";
 import { Heading, Text } from "@/components/ui/typography";
 import atollLogo from "@/assets/logos/atoll-logo.png";

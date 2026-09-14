@@ -39,10 +39,14 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
     <Card
       ref={ref}
       variant={variant}
-      className={cn("flex flex-col items-start gap-4", className)}
+      className={cn(
+        "flex flex-col gap-4",
+        variant === "plain" ? "items-center" : "items-start",
+        className,
+      )}
       {...props}
     >
-      <div className="relative self-start">
+      <div className={cn("relative", variant === "plain" ? "self-center" : "self-start")}>
         <Avatar name={name} src={photoUrl} size="xl" shape="circle" ring="gradient" />
         {linkedinHref && (
           <Button
@@ -58,7 +62,12 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
           </Button>
         )}
       </div>
-      <div className="flex flex-col gap-1">
+      <div
+        className={cn(
+          "flex flex-col gap-1",
+          variant === "plain" && "items-center text-center",
+        )}
+      >
         <Heading as="h3" level="h3">
           {name}
         </Heading>

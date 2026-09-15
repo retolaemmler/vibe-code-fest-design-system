@@ -773,11 +773,11 @@
           "type": "any"
         }
       ],
-      "usage": "Mount once inside the consumer app shell, ideally in \u003chead\u003e, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
+      "usage": "Mount once inside the consumer app shell, ideally in <head>, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
       "examples": [
         {
           "label": "Inside a TanStack Start root shell",
-          "code": "\u003chtml lang=\"en\"\u003e\n  \u003chead\u003e\n    \u003cHeadContent /\u003e\n    \u003cFonts /\u003e\n  \u003c/head\u003e\n  \u003cbody\u003e{children}\u003c/body\u003e\n\u003c/html\u003e"
+          "code": "<html lang=\"en\">\n  <head>\n    <HeadContent />\n    <Fonts />\n  </head>\n  <body>{children}</body>\n</html>"
         }
       ],
       "antipatterns": [
@@ -838,7 +838,7 @@
       "examples": [
         {
           "label": "Muted action on a gradient panel",
-          "code": "\u003cdiv className=\"bg-gradient-primary\"\u003e\u003cButton variant=\"muted\"\u003eGet tickets\u003c/Button\u003e\u003c/div\u003e"
+          "code": "<div className=\"bg-gradient-primary\"><Button variant=\"muted\">Get tickets</Button></div>"
         }
       ],
       "antipatterns": [
@@ -1300,7 +1300,7 @@
       "examples": [
         {
           "label": "Speaker with LinkedIn bubble",
-          "code": "\u003cSpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={\u003cButton variant=\"secondary\" size=\"sm\"\u003eView profile\u003c/Button\u003e}\n/\u003e"
+          "code": "<SpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={<Button variant=\"secondary\" size=\"sm\">View profile</Button>}\n/>"
         }
       ],
       "antipatterns": [
@@ -1341,11 +1341,11 @@
       "examples": [
         {
           "label": "Default sponsor card",
-          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
+          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" />"
         },
         {
           "label": "Highlighted sponsor card",
-          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
+          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" />"
         }
       ],
       "antipatterns": [
@@ -1377,7 +1377,7 @@
       "examples": [
         {
           "label": "Dark event timeline",
-          "code": "\u003cSchedule\u003e\u003cScheduleCategory markerTone=\"accent\" headerTransition=\"primaryAccent\"\u003e...\u003c/ScheduleCategory\u003e\u003c/Schedule\u003e"
+          "code": "<Schedule><ScheduleCategory markerTone=\"accent\" headerTransition=\"primaryAccent\">...</ScheduleCategory></Schedule>"
         }
       ],
       "antipatterns": [
@@ -1405,7 +1405,7 @@
       "examples": [
         {
           "label": "Community category",
-          "code": "\u003cScheduleCategory markerTone=\"info\" headerTransition=\"accentInfo\"\u003e\u003cScheduleHeader icon=\"share\" title=\"SHARE\" /\u003e\u003cScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /\u003e\u003c/ScheduleCategory\u003e"
+          "code": "<ScheduleCategory markerTone=\"info\" headerTransition=\"accentInfo\"><ScheduleHeader icon=\"share\" title=\"SHARE\" /><ScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /></ScheduleCategory>"
         }
       ],
       "antipatterns": [
@@ -1468,15 +1468,15 @@
       "examples": [
         {
           "label": "Talk with speaker avatar",
-          "code": "\u003cScheduleItem\n  time=\"11:00–11:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/\u003e"
+          "code": "<ScheduleItem\n  time=\"11:00\u201311:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/>"
         },
         {
           "label": "Talk with icon marker",
-          "code": "\u003cScheduleItem time=\"11:00–11:25\" title=\"Community talk\" markerIcon=\"mic\" /\u003e"
+          "code": "<ScheduleItem time=\"11:00\u201311:25\" title=\"Community talk\" markerIcon=\"mic\" />"
         },
         {
           "label": "Lunch without marker",
-          "code": "\u003cScheduleItem time=\"12:30\" title=\"Lunch\" /\u003e"
+          "code": "<ScheduleItem time=\"12:30\" title=\"Lunch\" />"
         }
       ],
       "antipatterns": [
@@ -1509,7 +1509,7 @@
       "examples": [
         {
           "label": "Share category",
-          "code": "\u003cScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" /\u003e"
+          "code": "<ScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" />"
         }
       ],
       "antipatterns": [
@@ -1650,7 +1650,7 @@
       "examples": [
         {
           "label": "Event footer",
-          "code": "\u003cFooter\n  brand={\u003cLogo /\u003e}\n  center={\u003cspan\u003eVibe coded with \u003cIcon name=\"heart\" /\u003e in Zurich\u003c/span\u003e}\n  links={[\n    { label: 'Terms \u0026 Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice \u0026 Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  socials={[\n    { name: 'instagram', href: 'https://instagram.com', label: 'Instagram' },\n    { name: 'whatsapp', href: 'https://wa.me', label: 'WhatsApp' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/\u003e"
+          "code": "<Footer\n  brand={<Logo />}\n  center={<span>Vibe coded with <Icon name=\"heart\" /> in Zurich</span>}\n  links={[\n    { label: 'Terms & Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice & Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  socials={[\n    { name: 'instagram', href: 'https://instagram.com', label: 'Instagram' },\n    { name: 'whatsapp', href: 'https://wa.me', label: 'WhatsApp' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/>"
         }
       ],
       "antipatterns": [
@@ -1720,7 +1720,6 @@
           "type": "enum",
           "values": [
             "default",
-            "brand",
             "accent",
             "muted",
             "outline"
@@ -1736,7 +1735,7 @@
       "examples": [
         {
           "label": "Early-bird ticket",
-          "code": "\u003cTicketCard pill={\u003cBadge variant=\"brand\" tone=\"solid\"\u003eEarly bird\u003c/Badge\u003e}\u003e\n  \u003cTicketPrice\u003e\u003cspan className=\"text-h3\"\u003e89 CHF\u003c/span\u003e\u003c/TicketPrice\u003e\n  \u003cTicketRegular label=\"regular price\" price=\"129 CHF\" /\u003e\n\u003c/TicketCard\u003e"
+          "code": "<TicketCard pill={<Badge variant=\"brand\" tone=\"solid\">Early bird</Badge>}>\n  <TicketPrice><span className=\"text-h3\">89 CHF</span></TicketPrice>\n  <TicketRegular label=\"regular price\" price=\"129 CHF\" />\n</TicketCard>"
         }
       ],
       "antipatterns": [
@@ -1783,7 +1782,7 @@
       "examples": [
         {
           "label": "Regular-pass comparison",
-          "code": "\u003cTicketRegular label=\"regular price\" price=\"129 CHF\" /\u003e"
+          "code": "<TicketRegular label=\"regular price\" price=\"129 CHF\" />"
         }
       ],
       "antipatterns": [

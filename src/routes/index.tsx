@@ -126,12 +126,6 @@ function Showcase() {
               </TicketPrice>
               <TicketRegular label="regular price" price="129 CHF" />
             </TicketCard>
-            <TicketCard variant="brand">
-              <TicketPrice>
-                <span className="text-body font-semibold">149 CHF</span>
-              </TicketPrice>
-              <TicketRegular label="regular price" price="129 CHF" />
-            </TicketCard>
             <TicketCard variant="accent">
               <TicketPrice>
                 <span className="text-body font-semibold">199 CHF</span>

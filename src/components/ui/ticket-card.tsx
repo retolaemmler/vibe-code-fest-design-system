@@ -21,7 +21,6 @@ export const ticketCardVariants = cva(
     variants: {
       variant: {
         default: "border border-border bg-card text-card-foreground shadow-raised",
-        brand: "bg-gradient-primary text-primary-foreground shadow-glow",
         accent: "border border-primary/30 bg-primary-subtle text-primary shadow-raised",
         muted: "border border-border bg-muted text-foreground shadow-raised",
         outline: "border border-border bg-card text-card-foreground shadow-flat",

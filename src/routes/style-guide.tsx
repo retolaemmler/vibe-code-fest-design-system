@@ -876,7 +876,7 @@ function StyleGuide() {
                 {(
                   [
                     { variant: "default", pill: "Early bird", price: "89 CHF" },
-                    { variant: "brand", pill: "Most popular", price: "149 CHF" },
+                    
                     { variant: "accent", pill: "Limited", price: "199 CHF" },
                     { variant: "muted", pill: "Student", price: "49 CHF" },
                   ] as const

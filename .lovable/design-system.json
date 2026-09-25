@@ -289,7 +289,7 @@
       },
       {
         "name": "--gradient-primary-hover",
-        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink) / 0.9) 0%,\n    hsl(var(--brand-blue) / 0.9) 100%\n  )",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink) / 0.9) 0%,\n    hsl(var(--brand-purple) / 0.9) 100%\n  )",
         "source": "src/index.css"
       },
       {
@@ -705,7 +705,7 @@
       },
       {
         "name": "--shadow-glow",
-        "raw": "0 12px 40px hsl(var(--brand-blue) / 0.28)",
+        "raw": "0 12px 40px hsl(var(--brand-purple) / 0.28)",
         "source": "src/index.css"
       }
     ],

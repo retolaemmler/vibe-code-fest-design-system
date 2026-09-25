@@ -14,7 +14,7 @@
       back to the light value.
    3. Semantic names only. `--primary`, not `--purple-500`. A pair is always
       `--x` (surface) + `--x-foreground` (content that sits on it).
-   4. Raw palette anchors (`--brand-pink`, `--brand-blue`) exist solely to be
+   4. Raw palette anchors (`--brand-pink`, `--brand-purple`) exist solely to be
       referenced by semantic tokens and gradients — never use them directly in
       components.
    5. All radii derive from `--radius` with calc(). Change `--radius` and the
@@ -42,7 +42,7 @@
 :root {
   /* --- Raw brand anchors (referenced by semantic tokens only) ------------ */
   --brand-pink: 330 81% 60%;
-  --brand-blue: 224 82% 55%;
+  --brand-purple: 249 60% 51%;
 
   /* --- Core surfaces ----------------------------------------------------- */
   --background: 0 0% 100%;
@@ -53,10 +53,10 @@
   --popover-foreground: 60 3% 11%;
 
   /* --- Brand / interaction ----------------------------------------------- */
-  --primary: 224 82% 55%;
+  --primary: 249 60% 51%;
   --primary-foreground: 0 0% 100%;
-  --primary-hover: 224 78% 48%;
-  --primary-subtle: 224 90% 96%;
+  --primary-hover: 249 60% 44%;
+  --primary-subtle: 249 90% 96%;
   --secondary: 60 5% 96%;
   --secondary-foreground: 60 3% 11%;
   --muted: 60 5% 96%;
@@ -83,7 +83,7 @@
      Hue-matched to timeline markers, with darker light-theme values so large
      time labels remain readable on glass and card surfaces.
    ------------------------------------------------------------------------ */
-  --schedule-time-primary: 224 82% 45%;
+  --schedule-time-primary: 249 60% 42%;
   --schedule-time-accent: 330 72% 42%;
   --schedule-time-info: 217 78% 43%;
   --schedule-time-success: 142 72% 30%;
@@ -92,19 +92,19 @@
   /* --- Lines, fields, focus ---------------------------------------------- */
   --border: 240 6% 90%;
   --input: 240 6% 90%;
-  --ring: 224 82% 55%;
+  --ring: 249 60% 51%;
 
   /* --- Dark sections -------------------------------------------------------
      Full-bleed alternate bands (CTA, sponsors, footer) that stay dark even
      in light mode. This quieter navy sits between a neutral surface and the
-     vivid brand blue, so both pink and blue gradient stops remain distinct.
+     vivid brand purple, so both pink and blue gradient stops remain distinct.
    ------------------------------------------------------------------------ */
-  --dark-section: 228 56% 16%;
+  --dark-section: 249 56% 16%;
   --dark-section-foreground: 0 0% 100%;
 
   /* --- Glass / elevation surfaces ---------------------------------------- */
   --surface-glass: 0 0% 100%;
-  --shadow-color: 224 40% 20%;
+  --shadow-color: 249 40% 20%;
 
 
   /* --- Radius (single source of truth) ------------------------------------ */
@@ -114,12 +114,12 @@
   --gradient-primary: linear-gradient(
     135deg,
     hsl(var(--brand-pink)) 0%,
-    hsl(var(--brand-blue)) 100%
+    hsl(var(--brand-purple)) 100%
   );
   --gradient-primary-hover: linear-gradient(
     135deg,
     hsl(var(--brand-pink) / 0.9) 0%,
-    hsl(var(--brand-blue) / 0.9) 100%
+    hsl(var(--brand-purple) / 0.9) 100%
   );
   --gradient-accent-info: linear-gradient(
     135deg,
@@ -162,7 +162,7 @@
     0 2px 6px hsl(var(--shadow-color) / 0.06);
   --shadow-overlay: 0 24px 56px hsl(var(--shadow-color) / 0.16),
     0 4px 12px hsl(var(--shadow-color) / 0.08);
-  --shadow-glow: 0 12px 40px hsl(var(--brand-blue) / 0.28);
+  --shadow-glow: 0 12px 40px hsl(var(--brand-purple) / 0.28);
   --blur-surface: 12px;
 
   /* --- Motion -------------------------------------------------------------- */
@@ -224,7 +224,7 @@
 .dark {
   /* --- Raw brand anchors --------------------------------------------------- */
   --brand-pink: 330 81% 66%;
-  --brand-blue: 224 88% 68%;
+  --brand-purple: 249 80% 72%;
 
   /* --- Core surfaces ------------------------------------------------------- */
   --background: 60 3% 7%;
@@ -235,10 +235,10 @@
   --popover-foreground: 60 9% 98%;
 
   /* --- Brand / interaction ------------------------------------------------- */
-  --primary: 224 88% 68%;
+  --primary: 249 80% 72%;
   --primary-foreground: 60 3% 7%;
-  --primary-hover: 224 90% 74%;
-  --primary-subtle: 224 48% 18%;
+  --primary-hover: 249 84% 78%;
+  --primary-subtle: 249 48% 18%;
   --secondary: 60 3% 15%;
   --secondary-foreground: 60 9% 98%;
   --muted: 60 3% 15%;
@@ -262,7 +262,7 @@
   --warning-subtle: 38 45% 16%;
 
   /* --- Schedule time text --------------------------------------------------- */
-  --schedule-time-primary: 224 88% 72%;
+  --schedule-time-primary: 249 80% 76%;
   --schedule-time-accent: 330 81% 72%;
   --schedule-time-info: 217 91% 74%;
   --schedule-time-success: 142 62% 66%;
@@ -271,10 +271,10 @@
   /* --- Lines, fields, focus -------------------------------------------------- */
   --border: 60 3% 20%;
   --input: 60 3% 20%;
-  --ring: 224 88% 68%;
+  --ring: 249 80% 72%;
 
   /* --- Dark sections --------------------------------------------------------- */
-  --dark-section: 228 60% 13%;
+  --dark-section: 249 60% 13%;
   --dark-section-foreground: 0 0% 100%;
 
   /* --- Glass / elevation ----------------------------------------------------- */
@@ -289,12 +289,12 @@
   --gradient-primary: linear-gradient(
     135deg,
     hsl(var(--brand-pink)) 0%,
-    hsl(var(--brand-blue)) 100%
+    hsl(var(--brand-purple)) 100%
   );
   --gradient-primary-hover: linear-gradient(
     135deg,
     hsl(var(--brand-pink) / 0.9) 0%,
-    hsl(var(--brand-blue) / 0.9) 100%
+    hsl(var(--brand-purple) / 0.9) 100%
   );
   --gradient-accent-info: linear-gradient(
     135deg,
@@ -330,7 +330,7 @@
     0 2px 6px hsl(var(--shadow-color) / 0.5);
   --shadow-overlay: 0 24px 56px hsl(var(--shadow-color) / 0.7),
     0 4px 12px hsl(var(--shadow-color) / 0.6);
-  --shadow-glow: 0 12px 40px hsl(var(--brand-blue) / 0.35);
+  --shadow-glow: 0 12px 40px hsl(var(--brand-purple) / 0.35);
   --blur-surface: 12px;
 
   /* --- Motion --------------------------------------------------------------------- */

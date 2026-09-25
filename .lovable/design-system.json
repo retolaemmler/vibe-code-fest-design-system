@@ -78,8 +78,8 @@
         "source": "src/index.css"
       },
       {
-        "name": "--brand-blue",
-        "raw": "224 82% 55%",
+        "name": "--brand-purple",
+        "raw": "249 60% 51%",
         "source": "src/index.css"
       },
       {
@@ -114,7 +114,7 @@
       },
       {
         "name": "--primary",
-        "raw": "224 82% 55%",
+        "raw": "249 60% 51%",
         "source": "src/index.css"
       },
       {
@@ -124,12 +124,12 @@
       },
       {
         "name": "--primary-hover",
-        "raw": "224 78% 48%",
+        "raw": "249 60% 44%",
         "source": "src/index.css"
       },
       {
         "name": "--primary-subtle",
-        "raw": "224 90% 96%",
+        "raw": "249 90% 96%",
         "source": "src/index.css"
       },
       {
@@ -229,7 +229,7 @@
       },
       {
         "name": "--schedule-time-primary",
-        "raw": "224 82% 45%",
+        "raw": "249 60% 42%",
         "source": "src/index.css"
       },
       {
@@ -264,12 +264,12 @@
       },
       {
         "name": "--ring",
-        "raw": "224 82% 55%",
+        "raw": "249 60% 51%",
         "source": "src/index.css"
       },
       {
         "name": "--dark-section",
-        "raw": "228 56% 16%",
+        "raw": "249 56% 16%",
         "source": "src/index.css"
       },
       {
@@ -284,7 +284,7 @@
       },
       {
         "name": "--gradient-primary",
-        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink)) 0%,\n    hsl(var(--brand-blue)) 100%\n  )",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--brand-pink)) 0%,\n    hsl(var(--brand-purple)) 100%\n  )",
         "source": "src/index.css"
       },
       {
@@ -680,7 +680,7 @@
     "shadow": [
       {
         "name": "--shadow-color",
-        "raw": "224 40% 20%",
+        "raw": "249 40% 20%",
         "source": "src/index.css"
       },
       {
@@ -834,7 +834,7 @@
           "type": "any"
         }
       ],
-      "usage": "Use for clear actions with named visual hierarchy. Reserve the muted variant exclusively for gradient backgrounds, including CtaPanel; its label renders in --primary blue. Use gradient, solid, or secondary on cards and plain surfaces.",
+      "usage": "Use for clear actions with named visual hierarchy. Reserve the muted variant exclusively for gradient backgrounds, including CtaPanel; its label renders in --primary purple. Use gradient, solid, or secondary on cards and plain surfaces.",
       "examples": [
         {
           "label": "Muted action on a gradient panel",

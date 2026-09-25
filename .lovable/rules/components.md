@@ -39,7 +39,7 @@ import { Badge } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7
 import { Button } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Use for clear actions with named visual hierarchy. Reserve the muted variant exclusively for gradient backgrounds, including CtaPanel; its label renders in --primary blue. Use gradient, solid, or secondary on cards and plain surfaces.
+Use for clear actions with named visual hierarchy. Reserve the muted variant exclusively for gradient backgrounds, including CtaPanel; its label renders in --primary purple. Use gradient, solid, or secondary on cards and plain surfaces.
 
 **Props:**
 
@@ -597,7 +597,7 @@ Use for ticket tiers and pricing highlights. The price sits at the top of the ca
 
 | Prop | Type | Default |
 |---|---|---|
-| `variant` | default · brand · accent · muted · outline | `default` |
+| `variant` | default · accent · muted · outline | `default` |
 | `pill` | any | `—` |
 
 **Examples:**

@@ -99,7 +99,7 @@
      in light mode. This quieter navy sits between a neutral surface and the
      vivid brand purple, so both pink and blue gradient stops remain distinct.
    ------------------------------------------------------------------------ */
-  --dark-section: 249 45% 30%;
+  --dark-section: 249 40% 38%;
   --dark-section-foreground: 0 0% 100%;
 
   /* --- Glass / elevation surfaces ---------------------------------------- */
@@ -274,7 +274,7 @@
   --ring: 249 80% 72%;
 
   /* --- Dark sections --------------------------------------------------------- */
-  --dark-section: 249 50% 27%;
+  --dark-section: 249 44% 32%;
   --dark-section-foreground: 0 0% 100%;
 
   /* --- Glass / elevation ----------------------------------------------------- */

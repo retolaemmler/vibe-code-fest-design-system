@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.31.0",
+    "version": "1.32.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -52,7 +52,7 @@
       "src/components/ui/stat.tsx": "a4963e8607f16f8ba7daf18b83c11147",
       "src/components/ui/ticket-card.tsx": "ecb9af95c143e82604fa83ff7a56b73d",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
-      "src/index.css": "4b292cb97bcb9f98883906820974d179",
+      "src/index.css": "e7b04bc22c08a422f1413d1508656e09",
       "src/index.ts": "0d08ba1f8565e28da89d978b7961c268",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
@@ -269,7 +269,7 @@
       },
       {
         "name": "--dark-section",
-        "raw": "249 56% 16%",
+        "raw": "249 40% 38%",
         "source": "src/index.css"
       },
       {

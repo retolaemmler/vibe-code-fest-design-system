@@ -16,18 +16,21 @@ export const scheduleItemVariants = cva(
   "ml-16 rounded-card text-card-foreground shadow-raised",
   {
     variants: {
-      variant: {
-        glass: "surface-glass",
-        solid: "border border-border/60 bg-card",
+      tone: {
+        primary: "bg-primary-subtle",
+        accent: "bg-accent-subtle",
+        info: "bg-info-subtle",
+        success: "bg-success-subtle",
+        warning: "bg-warning-subtle",
       },
       padding: { sm: "p-4", md: "p-5" },
     },
-    defaultVariants: { variant: "glass", padding: "md" },
+    defaultVariants: { tone: "primary", padding: "md" },
   },
 );
 
 export const scheduleMarkerVariants = cva(
-  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-dark-section",
+  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-background",
   {
     variants: {
       tone: {
@@ -84,7 +87,7 @@ export const scheduleTimeVariants = cva("text-h3 font-mono", {
 });
 
 export const scheduleHeaderMedallionVariants = cva(
-  "flex size-12 shrink-0 items-center justify-center rounded-pill text-primary-foreground shadow-raised ring-4 ring-dark-section",
+  "flex size-12 shrink-0 items-center justify-center rounded-pill text-primary-foreground shadow-raised ring-4 ring-background",
   {
     variants: {
       transition: {
@@ -117,8 +120,8 @@ export interface ScheduleItemProps
 }
 
 export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
-  ({ className, variant, padding, time, title, speaker, track, markerIcon, avatar, ...props }, ref) => {
-    const markerTone = React.useContext(ScheduleMarkerToneContext);
+  ({ className, tone, padding, time, title, speaker, track, markerIcon, avatar, ...props }, ref) => {
+    const categoryTone = React.useContext(ScheduleMarkerToneContext);
     const isLast = (props as Record<string, unknown>)["data-schedule-last"] === "true";
     const hasMarker = markerIcon || avatar;
     return (
@@ -126,7 +129,7 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
         {hasMarker ? (
           <span
             className={scheduleMarkerVariants({
-              tone: markerTone,
+              tone: tone ?? categoryTone,
               position: isLast ? "end" : padding === "sm" ? "titleSm" : "titleMd",
               size: avatar ? "avatar" : "icon",
             })}
@@ -141,12 +144,12 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
         ) : null}
         <div
           ref={ref}
-          className={cn(scheduleItemVariants({ variant, padding }), className)}
+          className={cn(scheduleItemVariants({ tone: tone ?? categoryTone, padding }), className)}
           {...props}
         >
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="min-w-0">
-              <p className={scheduleTimeVariants({ tone: markerTone })}>{time}</p>
+              <p className={scheduleTimeVariants({ tone: tone ?? categoryTone })}>{time}</p>
               <p className="text-body font-semibold text-foreground md:text-h3">{title}</p>
               {speaker ? <p className="text-small text-muted-foreground">{speaker}</p> : null}
             </div>
@@ -218,15 +221,7 @@ export const ScheduleCategory = React.forwardRef<HTMLElement, ScheduleCategoryPr
 );
 ScheduleCategory.displayName = "ScheduleCategory";
 
-export const scheduleVariants = cva("relative isolate overflow-hidden rounded-lg px-4 py-8 sm:px-6", {
-  variants: {
-    surface: {
-      dark: "bg-dark-section text-dark-section-foreground",
-      default: "bg-background text-foreground",
-    },
-  },
-  defaultVariants: { surface: "dark" },
-});
+export const scheduleVariants = cva("relative isolate py-8");
 
 export interface ScheduleProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -273,13 +268,13 @@ function cloneWithLastMarker(nodes: React.ReactNode, targetPath: number[], depth
 }
 
 export const Schedule = React.forwardRef<HTMLDivElement, ScheduleProps>(
-  ({ className, children, surface, ...props }, ref) => {
+  ({ className, children, ...props }, ref) => {
     const lastMarkedPath = React.useMemo(() => findLastMarkedItemPath(children), [children]);
     const timelineChildren = lastMarkedPath
       ? cloneWithLastMarker(children, lastMarkedPath)
       : children;
     return (
-      <div ref={ref} className={cn(scheduleVariants({ surface }), className)} {...props}>
+      <div ref={ref} className={cn(scheduleVariants(), className)} {...props}>
         <div className="relative z-10">{timelineChildren}</div>
       </div>
     );

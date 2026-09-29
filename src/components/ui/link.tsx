@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "../../lib/utils";
@@ -30,15 +31,21 @@ export const linkVariants = cva(
 
 export interface LinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement>,
-    VariantProps<typeof linkVariants> {}
+    VariantProps<typeof linkVariants> {
+  /** Renders the link's classes onto the child element instead of an anchor. */
+  asChild?: boolean;
+}
 
 export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ className, variant, active, ...props }, ref) => (
-    <a
-      ref={ref}
-      className={cn(linkVariants({ variant, active }), className)}
-      {...props}
-    />
-  ),
+  ({ className, variant, active, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "a";
+    return (
+      <Comp
+        ref={ref}
+        className={cn(linkVariants({ variant, active }), className)}
+        {...props}
+      />
+    );
+  },
 );
 Link.displayName = "Link";

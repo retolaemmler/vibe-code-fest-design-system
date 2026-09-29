@@ -1359,24 +1359,15 @@
       "import_path": "",
       "props": [
         {
-          "name": "surface",
-          "type": "enum",
-          "values": [
-            "dark",
-            "default"
-          ],
-          "default": "dark"
-        },
-        {
           "name": "children",
           "type": "any",
           "required": true
         }
       ],
-      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline on either a dark branded or default page surface.",
+      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline placed directly on the page background — Schedule itself adds no card or surface of its own.",
       "examples": [
         {
-          "label": "Dark event timeline",
+          "label": "Event timeline",
           "code": "\u003cSchedule\u003e\u003cScheduleCategory markerTone=\"accent\" headerTransition=\"primaryAccent\"\u003e...\u003c/ScheduleCategory\u003e\u003c/Schedule\u003e"
         }
       ],
@@ -1420,13 +1411,16 @@
       "import_path": "",
       "props": [
         {
-          "name": "variant",
+          "name": "tone",
           "type": "enum",
           "values": [
-            "glass",
-            "solid"
+            "primary",
+            "accent",
+            "info",
+            "success",
+            "warning"
           ],
-          "default": "glass"
+          "default": "inherited from ScheduleCategory"
         },
         {
           "name": "padding",
@@ -1464,7 +1458,7 @@
           "type": "any"
         }
       ],
-      "usage": "Shows a timed programme entry on a glassy or solid surface. Its enlarged title aligns with the marker, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Pass avatar to show the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks, lunch, and other passive moments.",
+      "usage": "Shows a timed programme entry on a very light tint of its category colour, so each section stays readable directly on the page background. Its enlarged title aligns with the marker, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Pass avatar to show the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks, lunch, and other passive moments.",
       "examples": [
         {
           "label": "Talk with speaker avatar",

@@ -274,7 +274,7 @@ export const Schedule = React.forwardRef<HTMLDivElement, ScheduleProps>(
       ? cloneWithLastMarker(children, lastMarkedPath)
       : children;
     return (
-      <div ref={ref} className={cn(scheduleVariants({ surface }), className)} {...props}>
+      <div ref={ref} className={cn(scheduleVariants(), className)} {...props}>
         <div className="relative z-10">{timelineChildren}</div>
       </div>
     );

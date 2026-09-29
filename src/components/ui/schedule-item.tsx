@@ -16,18 +16,21 @@ export const scheduleItemVariants = cva(
   "ml-16 rounded-card text-card-foreground shadow-raised",
   {
     variants: {
-      variant: {
-        glass: "surface-glass",
-        solid: "border border-border/60 bg-card",
+      tone: {
+        primary: "bg-primary-subtle",
+        accent: "bg-accent-subtle",
+        info: "bg-info-subtle",
+        success: "bg-success-subtle",
+        warning: "bg-warning-subtle",
       },
       padding: { sm: "p-4", md: "p-5" },
     },
-    defaultVariants: { variant: "glass", padding: "md" },
+    defaultVariants: { tone: "primary", padding: "md" },
   },
 );
 
 export const scheduleMarkerVariants = cva(
-  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-dark-section",
+  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-background",
   {
     variants: {
       tone: {
@@ -84,7 +87,7 @@ export const scheduleTimeVariants = cva("text-h3 font-mono", {
 });
 
 export const scheduleHeaderMedallionVariants = cva(
-  "flex size-12 shrink-0 items-center justify-center rounded-pill text-primary-foreground shadow-raised ring-4 ring-dark-section",
+  "flex size-12 shrink-0 items-center justify-center rounded-pill text-primary-foreground shadow-raised ring-4 ring-background",
   {
     variants: {
       transition: {

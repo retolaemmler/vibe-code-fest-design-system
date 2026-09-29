@@ -1094,6 +1094,11 @@
             "false"
           ],
           "default": "false"
+        },
+        {
+          "name": "asChild",
+          "type": "boolean",
+          "default": "false"
         }
       ]
     },

@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.32.0",
+    "version": "1.33.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "4db08e0e81e0712c8373f075a96ced5b44b7d3baeb120a3fcea333ffab8f2679",
+      "#enrichment": "142dcc1a9291cfa365a64f7ade796365cc1187362fff2fd99b56ed243f16b26e",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -43,9 +43,9 @@
       "src/components/ui/icon.tsx": "dfe998e949dc12f7bcf0b3352c4a65ba",
       "src/components/ui/input.tsx": "b537a884917f0b514545ea164abd4fd4",
       "src/components/ui/layout.tsx": "87221df44334e5e3547f09f0ab9a3005",
-      "src/components/ui/link.tsx": "307f2c0b5f03a3d4e887409ab6a7b08c",
+      "src/components/ui/link.tsx": "da2bd15726024535b9e0239a93604b67",
       "src/components/ui/navbar.tsx": "43c2b4329b83da9e819beae9fc9ed132",
-      "src/components/ui/schedule-item.tsx": "b06649b9eb26ef630be4f58640c83271",
+      "src/components/ui/schedule-item.tsx": "723bf306d6128288bbd9edb739c9757a",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
       "src/components/ui/speaker-card.tsx": "99c107cae38e7d014364a7799d0dd337",
       "src/components/ui/sponsor-card.tsx": "8b078f47505c49a6a7b4ba02e5d976a7",
@@ -1425,7 +1425,7 @@
             "success",
             "warning"
           ],
-          "default": "inherited from ScheduleCategory"
+          "default": "primary"
         },
         {
           "name": "padding",

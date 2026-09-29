@@ -315,6 +315,7 @@ import { Link } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab79
 |---|---|---|
 | `variant` | inline · nav · quiet | `inline` |
 | `active` | true · false | `false` |
+| `asChild` | boolean | `false` |
 
 ### LinkedInIcon
 
@@ -343,18 +344,17 @@ import { Navbar } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab
 import { Schedule } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline on either a dark branded or default page surface.
+Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline placed directly on the page background — Schedule itself adds no card or surface of its own.
 
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
-| `surface` | dark · default | `dark` |
 | `children` | any | `—` |
 
 **Examples:**
 
-_Dark event timeline_
+_Event timeline_
 ```tsx
 <Schedule><ScheduleCategory markerTone="accent" headerTransition="primaryAccent">...</ScheduleCategory></Schedule>
 ```
@@ -425,13 +425,13 @@ _Share category_
 import { ScheduleItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Shows a timed programme entry on a glassy or solid surface. Its enlarged title aligns with the marker, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Pass avatar to show the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks, lunch, and other passive moments.
+Shows a timed programme entry on a very light tint of its category colour, so each section stays readable directly on the page background. Its enlarged title aligns with the marker, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Pass avatar to show the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks, lunch, and other passive moments.
 
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
-| `variant` | glass · solid | `glass` |
+| `tone` | primary · accent · info · success · warning | `primary` |
 | `padding` | sm · md | `md` |
 | `time` | string | `—` |
 | `title` | string | `—` |
@@ -466,7 +466,7 @@ _Lunch without marker_
 
 - Do not add a marker to breaks or lunch.
 - Do not override the time colour; it is inherited from the category and adjusted for readable contrast.
-- Do not apply one-off glass, shadow, or marker colours through className.
+- Do not apply one-off backgrounds, shadows, or marker colours through className; the light tint is inherited from ScheduleCategory.
 
 ### Section
 

@@ -1476,7 +1476,7 @@
       "antipatterns": [
         "Do not add a marker to breaks or lunch.",
         "Do not override the time colour; it is inherited from the category and adjusted for readable contrast.",
-        "Do not apply one-off glass, shadow, or marker colours through className."
+        "Do not apply one-off backgrounds, shadows, or marker colours through className; the light tint is inherited from ScheduleCategory."
       ]
     },
     {

@@ -268,7 +268,7 @@ function cloneWithLastMarker(nodes: React.ReactNode, targetPath: number[], depth
 }
 
 export const Schedule = React.forwardRef<HTMLDivElement, ScheduleProps>(
-  ({ className, children, surface, ...props }, ref) => {
+  ({ className, children, ...props }, ref) => {
     const lastMarkedPath = React.useMemo(() => findLastMarkedItemPath(children), [children]);
     const timelineChildren = lastMarkedPath
       ? cloneWithLastMarker(children, lastMarkedPath)

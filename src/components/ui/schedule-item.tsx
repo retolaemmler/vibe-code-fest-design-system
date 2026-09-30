@@ -172,10 +172,10 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
               <p className={scheduleTimeVariants({ tone: tone ?? categoryTone })}>{time}</p>
               <p className="text-body font-semibold text-foreground md:text-h3">{title}</p>
               {speaker ? (
-                <div className="flex flex-wrap items-center gap-1">
-                  <span className="text-small text-muted-foreground">{speaker}</span>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <span className="text-small leading-none text-muted-foreground">{speaker}</span>
                   {linkedinHref ? (
-                    <Button asChild variant="ghost" size="sm" className="relative z-20 size-8 px-0" iconStart="linkedin">
+                    <Button asChild variant="ghost" size="sm" className="relative z-20 size-6 p-0" iconStart="linkedin">
                       <a href={linkedinHref} target="_blank" rel="noopener noreferrer" aria-label={`${speaker} on LinkedIn`} title={`${speaker} on LinkedIn`} />
                     </Button>
                   ) : null}

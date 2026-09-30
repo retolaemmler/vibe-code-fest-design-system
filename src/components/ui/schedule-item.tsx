@@ -164,7 +164,7 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
               aria-controls={descriptionId}
               onClick={() => setExpanded((current) => !current)}
             >
-              <Icon name="chevronDown" className={cn("transition-transform duration-(--duration-base) motion-reduce:transition-none", expanded && "rotate-180")} />
+              <Icon name="chevronDown" size="lg" tone="brand" className={cn("transition-transform duration-(--duration-base) motion-reduce:transition-none", expanded && "rotate-180")} />
             </Button>
           ) : null}
           <div className={cn("flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between", description && "pr-8")}>

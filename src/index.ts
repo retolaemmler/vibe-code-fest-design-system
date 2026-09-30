@@ -99,4 +99,3 @@ export {
   type TicketCardProps,
   type TicketRegularProps,
 } from "./components/ui/ticket-card";
-export { InstagramIcon, LinkedInIcon, WhatsAppIcon } from "./components/ui/social-icons";

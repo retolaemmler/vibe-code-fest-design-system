@@ -297,12 +297,6 @@ import { Input } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7
 | `error` | string | `—` |
 | `hint` | string | `—` |
 
-### InstagramIcon
-
-```ts
-import { InstagramIcon } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
-```
-
 ### Link
 
 ```ts
@@ -316,12 +310,6 @@ import { Link } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab79
 | `variant` | inline · nav · quiet | `inline` |
 | `active` | true · false | `false` |
 | `asChild` | boolean | `false` |
-
-### LinkedInIcon
-
-```ts
-import { LinkedInIcon } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
-```
 
 ### Navbar
 
@@ -425,7 +413,7 @@ _Share category_
 import { ScheduleItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Shows a timed programme entry on a very light tint of its category colour, so each section stays readable directly on the page background. Its enlarged title aligns with the marker, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Pass avatar to show the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks, lunch, and other passive moments.
+Shows a timed programme entry on a very light tint of its category colour. Pass description for an expandable talk with a chevron; omit it for passive entries. Pass linkedinHref alongside speaker for an icon-only profile link by the name. Pass avatar for the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks and lunch.
 
 **Props:**
 
@@ -436,6 +424,8 @@ Shows a timed programme entry on a very light tint of its category colour, so ea
 | `time` | string | `—` |
 | `title` | string | `—` |
 | `speaker` | string | `—` |
+| `linkedinHref` | string | `—` |
+| `description` | string | `—` |
 | `track` | string | `—` |
 | `markerIcon` | any | `—` |
 | `avatar` | any | `—` |
@@ -448,6 +438,8 @@ _Talk with speaker avatar_
   time="11:00–11:25"
   title="Community talk"
   speaker="Luca Bianchi"
+  linkedinHref="https://linkedin.com/in/luca-bianchi"
+  description="A conversation about building with the community."
   avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}
 />
 ```
@@ -465,6 +457,7 @@ _Lunch without marker_
 **Avoid:**
 
 - Do not add a marker to breaks or lunch.
+- Do not pass an empty description just to show a chevron, or pass a LinkedIn URL without a speaker name.
 - Do not override the time colour; it is inherited from the category and adjusted for readable contrast.
 - Do not apply one-off backgrounds, shadows, or marker colours through className; the light tint is inherited from ScheduleCategory.
 
@@ -663,11 +656,5 @@ _Regular-pass comparison_
 
 ```ts
 import { TicketTitle } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
-```
-
-### WhatsAppIcon
-
-```ts
-import { WhatsAppIcon } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 

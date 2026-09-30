@@ -1,0 +1,2 @@
+Schedule talk details live behind an optional description prop on ScheduleItem, and speaker profile links use its optional linkedinHref prop, because passive timeline entries must remain static and the reusable library API must carry both behaviors.
+Social glyph implementations stay internal to the shared Icon registry; export only Icon and its name map so consumers use one consistent icon API.

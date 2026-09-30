@@ -4,6 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 import { Avatar } from "./avatar";
 import { Badge } from "./badge";
+import { Button } from "./button";
 import { Icon, type IconName } from "./icon";
 
 export interface ScheduleItemAvatar {
@@ -112,6 +113,10 @@ export interface ScheduleItemProps
   time: string;
   title: string;
   speaker?: string;
+  /** Optional URL for the speaker's LinkedIn profile; shown beside their name. */
+  linkedinHref?: string;
+  /** When provided, the whole card can be expanded to reveal these talk details. */
+  description?: string;
   track?: string;
   /** Adds a solid circular icon node. Omit it for breaks, lunch, and passive moments. */
   markerIcon?: IconName;
@@ -120,8 +125,10 @@ export interface ScheduleItemProps
 }
 
 export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
-  ({ className, tone, padding, time, title, speaker, track, markerIcon, avatar, ...props }, ref) => {
+  ({ className, tone, padding, time, title, speaker, linkedinHref, description, track, markerIcon, avatar, ...props }, ref) => {
     const categoryTone = React.useContext(ScheduleMarkerToneContext);
+    const [expanded, setExpanded] = React.useState(false);
+    const descriptionId = React.useId();
     const isLast = (props as Record<string, unknown>)["data-schedule-last"] === "true";
     const hasMarker = markerIcon || avatar;
     return (
@@ -137,24 +144,51 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
           >
             {avatar ? (
               <Avatar size="md" src={avatar.src} name={avatar.name} />
-            ) : (
-              <Icon name={markerIcon!} size="sm" />
-            )}
+            ) : markerIcon ? (
+              <Icon name={markerIcon} size="sm" />
+            ) : null}
           </span>
         ) : null}
         <div
           ref={ref}
-          className={cn(scheduleItemVariants({ tone: tone ?? categoryTone, padding }), className)}
+          className={cn(scheduleItemVariants({ tone: tone ?? categoryTone, padding }), "relative", className)}
           {...props}
         >
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="min-w-0">
+          {description ? (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute inset-0 z-10 h-full w-full items-start justify-end rounded-card p-4 hover:bg-foreground/5 sm:p-5"
+              aria-label={`${expanded ? "Hide" : "Show"} details for ${title}`}
+              aria-expanded={expanded}
+              aria-controls={descriptionId}
+              onClick={() => setExpanded((current) => !current)}
+            >
+              <Icon name="chevronDown" className={cn("transition-transform duration-(--duration-base) motion-reduce:transition-none", expanded && "rotate-180")} />
+            </Button>
+          ) : null}
+          <div className={cn("flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between", description && "pr-8")}>
+            <div className="min-w-0 flex-1">
               <p className={scheduleTimeVariants({ tone: tone ?? categoryTone })}>{time}</p>
               <p className="text-body font-semibold text-foreground md:text-h3">{title}</p>
-              {speaker ? <p className="text-small text-muted-foreground">{speaker}</p> : null}
+              {speaker ? (
+                <div className="flex flex-wrap items-center gap-1">
+                  <span className="text-small text-muted-foreground">{speaker}</span>
+                  {linkedinHref ? (
+                    <Button asChild variant="ghost" size="sm" className="relative z-20 size-8 px-0" iconStart="linkedin">
+                      <a href={linkedinHref} target="_blank" rel="noopener noreferrer" aria-label={`${speaker} on LinkedIn`} title={`${speaker} on LinkedIn`} />
+                    </Button>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
             {track ? <Badge variant="neutral" className="self-start sm:self-center">{track}</Badge> : null}
           </div>
+          {description ? (
+            <div id={descriptionId} hidden={!expanded} className="mt-4 border-t border-border pt-4 text-body text-foreground">
+              {description}
+            </div>
+          ) : null}
         </div>
       </div>
     );

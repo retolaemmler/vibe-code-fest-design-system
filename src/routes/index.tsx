@@ -325,6 +325,8 @@ function Showcase() {
                   time="10:30–11:00"
                   title="Keynote & fireside chat"
                   speaker="Nora Keller"
+                  linkedinHref="https://linkedin.com/in/nora-keller"
+                  description="Nora shares how design systems help teams build together, followed by an open conversation about turning ideas into useful products."
                   avatar={{ src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face", name: "Nora Keller" }}
                 />
               </div>
@@ -336,6 +338,8 @@ function Showcase() {
                   time="11:00–11:25"
                   title="Community talk"
                   speaker="Luca Bianchi"
+                  linkedinHref="https://linkedin.com/in/luca-bianchi"
+                  description="A conversation about the tools, decisions, and lessons behind building with the community."
                   avatar={{ src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face", name: "Luca Bianchi" }}
                 />
                 <ScheduleItem time="12:30" title="Lunch" />
@@ -348,6 +352,8 @@ function Showcase() {
                   time="15:00–18:15"
                   title="Hackathon"
                   speaker="Ada Mwangi"
+                  linkedinHref="https://linkedin.com/in/ada-mwangi"
+                  description="Build a working prototype with support from mentors and peers, then get ready to share what you made."
                   avatar={{ src: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop&crop=face", name: "Ada Mwangi" }}
                 />
                 <ScheduleItem time="18:15" title="Pizza break" />

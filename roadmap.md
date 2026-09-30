@@ -14,3 +14,4 @@
 - [x] Replace the outline Button with a gradient-surface-only muted variant
 - [x] Match enlarged schedule times to each category with contrast-safe tones
 - [x] Enlarge schedule titles and align them with timeline marker icons
+- [x] Expand talk cards for descriptions and link speaker names to LinkedIn

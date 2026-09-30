@@ -1451,6 +1451,14 @@
           "type": "string"
         },
         {
+          "name": "linkedinHref",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
           "name": "track",
           "type": "string"
         },
@@ -1463,11 +1471,11 @@
           "type": "any"
         }
       ],
-      "usage": "Shows a timed programme entry on a very light tint of its category colour, so each section stays readable directly on the page background. Its enlarged title aligns with the marker, while the prominent time label follows its ScheduleCategory marker hue with a contrast-safe text tone. Pass avatar to show the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks, lunch, and other passive moments.",
+      "usage": "Shows a timed programme entry on a very light tint of its category colour. Pass description for an expandable talk with a chevron; omit it for passive entries. Pass linkedinHref alongside speaker for an icon-only profile link by the name. Pass avatar for the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks and lunch.",
       "examples": [
         {
           "label": "Talk with speaker avatar",
-          "code": "\u003cScheduleItem\n  time=\"11:00–11:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/\u003e"
+          "code": "\u003cScheduleItem\n  time=\"11:00–11:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/\u003e"
         },
         {
           "label": "Talk with icon marker",
@@ -1480,6 +1488,7 @@
       ],
       "antipatterns": [
         "Do not add a marker to breaks or lunch.",
+        "Do not pass an empty description just to show a chevron, or pass a LinkedIn URL without a speaker name.",
         "Do not override the time colour; it is inherited from the category and adjusted for readable contrast.",
         "Do not apply one-off backgrounds, shadows, or marker colours through className; the light tint is inherited from ScheduleCategory."
       ]

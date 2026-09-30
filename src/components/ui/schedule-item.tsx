@@ -144,9 +144,9 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
           >
             {avatar ? (
               <Avatar size="md" src={avatar.src} name={avatar.name} />
-            ) : (
-              <Icon name={markerIcon!} size="sm" />
-            )}
+            ) : markerIcon ? (
+              <Icon name={markerIcon} size="sm" />
+            ) : null}
           </span>
         ) : null}
         <div

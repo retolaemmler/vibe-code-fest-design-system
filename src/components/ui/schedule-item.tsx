@@ -158,13 +158,13 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
             <Button
               variant="ghost"
               size="icon"
-              className="absolute inset-0 z-10 h-full w-full items-start justify-end rounded-card p-4 hover:bg-foreground/5 sm:p-5"
+              className="absolute inset-0 z-10 h-full w-full items-start justify-end rounded-card p-4 hover:bg-foreground/5 sm:p-5 [&_svg]:size-6"
               aria-label={`${expanded ? "Hide" : "Show"} details for ${title}`}
               aria-expanded={expanded}
               aria-controls={descriptionId}
               onClick={() => setExpanded((current) => !current)}
             >
-              <Icon name="chevronDown" className={cn("transition-transform duration-(--duration-base) motion-reduce:transition-none", expanded && "rotate-180")} />
+              <Icon name="chevronDown" size="lg" tone="brand" className={cn("transition-transform duration-(--duration-base) motion-reduce:transition-none", expanded && "rotate-180")} />
             </Button>
           ) : null}
           <div className={cn("flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between", description && "pr-8")}>

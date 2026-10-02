@@ -43,6 +43,7 @@ export {
 } from "./components/ui/icon";
 export { Input, inputVariants, type InputProps } from "./components/ui/input";
 export { Avatar, avatarVariants, type AvatarProps } from "./components/ui/avatar";
+export { LinkedInBubble, linkedinBubbleVariants, type LinkedInBubbleProps } from "./components/ui/linkedin-bubble";
 export {
   SpeakerCard,
   type SpeakerCardProps,

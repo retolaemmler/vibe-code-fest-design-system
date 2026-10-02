@@ -5,7 +5,7 @@ import { Avatar } from "./avatar";
 import { Badge } from "./badge";
 import { Button } from "./button";
 import { Card, type CardProps } from "./card";
-import { Icon } from "./icon";
+import { LinkedInBubble } from "./linkedin-bubble";
 import { Heading, Text } from "./typography";
 
 export interface SpeakerCardProps extends Omit<CardProps, "children"> {
@@ -48,19 +48,7 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
     >
       <div className={cn("relative", variant === "plain" ? "self-center" : "self-start")}>
         <Avatar name={name} src={photoUrl} size="xl" shape="circle" ring="gradient" />
-        {linkedinHref && (
-          <Button
-            variant="secondary"
-            size="icon"
-            asChild
-            className="absolute -bottom-1 -right-1 size-8 rounded-full border-2 border-card shadow-raised transition-shadow duration-(--duration-fast) ease-(--ease-standard) hover:shadow-lifted"
-            aria-label={`${name} on LinkedIn`}
-          >
-            <a href={linkedinHref} target="_blank" rel="noopener noreferrer">
-              <Icon name="linkedin" size="sm" />
-            </a>
-          </Button>
-        )}
+        {linkedinHref && <LinkedInBubble href={linkedinHref} name={name} placement="avatar" />}
       </div>
       <div
         className={cn(

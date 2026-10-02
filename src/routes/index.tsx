@@ -27,7 +27,7 @@ import {
 } from "@/components/ui/ticket-card";
 import { Heading, Text } from "@/components/ui/typography";
 import atollLogo from "@/assets/logos/atoll-logo.png";
-import vibeLogo from "@/assets/logos/vibe-code-fest-logo.png.asset.json";
+import vibeLogo from "@/assets/logos/vibe-code-fest-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -70,7 +70,7 @@ function Showcase() {
         variant="glass"
         brand={
           <Link variant="quiet" href="/" aria-label="Vibe Code Fest home">
-            <img src={vibeLogo.url} alt="Vibe Code Fest" className="size-12 object-contain" />
+            <img src={vibeLogo} alt="Vibe Code Fest" className="size-12 object-contain" />
           </Link>
         }
         actions={
@@ -413,7 +413,7 @@ function Showcase() {
         surface="muted"
         brand={
           <Link variant="quiet" href="/" aria-label="Vibe Code Fest home">
-            <img src={vibeLogo.url} alt="Vibe Code Fest" className="size-16 object-contain" />
+            <img src={vibeLogo} alt="Vibe Code Fest" className="size-16 object-contain" />
           </Link>
         }
         center={

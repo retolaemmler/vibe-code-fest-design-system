@@ -33,7 +33,7 @@ import {
 import { Heading, Text } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
 import atollLogo from "@/assets/logos/atoll-logo.png";
-import vibeLogo from "@/assets/logos/vibe-code-fest-logo.png.asset.json";
+import vibeLogo from "@/assets/logos/vibe-code-fest-logo.png";
 
 export const Route = createFileRoute("/style-guide")({
   head: () => ({
@@ -371,7 +371,7 @@ function StyleGuide() {
         variant="glass"
         brand={
           <Link variant="quiet" href="/" aria-label="Vibe Code Fest home">
-            <img src={vibeLogo.url} alt="Vibe Code Fest" className="size-12 object-contain" />
+            <img src={vibeLogo} alt="Vibe Code Fest" className="size-12 object-contain" />
           </Link>
         }
         actions={
@@ -1136,7 +1136,7 @@ function StyleGuide() {
                 <Navbar
                   brand={
                     <Link variant="quiet" href="/" aria-label="Vibe Code Fest home">
-                      <img src={vibeLogo.url} alt="Vibe Code Fest" className="size-12 object-contain" />
+                      <img src={vibeLogo} alt="Vibe Code Fest" className="size-12 object-contain" />
                     </Link>
                   }
                   actions={
@@ -1157,7 +1157,7 @@ function StyleGuide() {
                   surface="muted"
                   brand={
                     <Link variant="quiet" href="/" aria-label="Vibe Code Fest home">
-                      <img src={vibeLogo.url} alt="Vibe Code Fest" className="size-16 object-contain" />
+                      <img src={vibeLogo} alt="Vibe Code Fest" className="size-16 object-contain" />
                     </Link>
                   }
                   center={

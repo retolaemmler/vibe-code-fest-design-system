@@ -1716,6 +1716,11 @@
         {
           "name": "onAction",
           "type": "function"
+        },
+        {
+          "name": "image",
+          "type": "{ src: string; alt: string }",
+          "description": "Optional photo rendered as a circle on the left side of the panel; stacks above the content on small screens."
         }
       ]
     },

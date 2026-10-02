@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { FeatureCard } from "@/components/ui/feature-card";
 import { CtaPanel } from "@/components/ui/cta-panel";
+import ctaPhoto from "@/assets/photography/silvan-muehlemann.jpeg";
 import {
   Card,
   CardContent,
@@ -792,10 +793,11 @@ function StyleGuide() {
                   description="Full-bleed gradient panel for the closing action on a page."
                   actionLabel="Get your ticket"
                   actionHref="#"
+                  image={{ src: ctaPhoto, alt: "Vibe Code Fest speaker" }}
                 />
               </div>
               <Snippet
-                code={`<FeatureCard\n  icon="sparkles"\n  title="Feature card"\n  description="Short supporting text."\n/>\n\n<CtaPanel\n  title="Call-to-action panel"\n  description="Full-bleed gradient panel."\n  actionLabel="Get your ticket"\n  actionHref="/tickets"\n/>`}
+                code={`<FeatureCard\n  icon="sparkles"\n  title="Feature card"\n  description="Short supporting text."\n/>\n\n<CtaPanel\n  title="Call-to-action panel"\n  description="Full-bleed gradient panel."\n  actionLabel="Get your ticket"\n  actionHref="/tickets"\n  image={{ src: speakerPhoto, alt: "Speaker" }}\n/>`}
               />
             </div>
 

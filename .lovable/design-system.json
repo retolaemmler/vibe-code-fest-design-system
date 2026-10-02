@@ -1716,7 +1716,23 @@
         {
           "name": "onAction",
           "type": "function"
+        },
+        {
+          "name": "image",
+          "type": "{ src: string; alt: string }",
+          "description": "Optional photo rendered as a circle on the left side of the panel; stacks above the content on small screens."
         }
+      ],
+      "usage": "Use as the closing call-to-action on a page, on a gradient surface. Pass image to show a circular photo on the left; omit it for a compact centred panel.",
+      "examples": [
+        {
+          "label": "Panel with circular photo",
+          "code": "<CtaPanel\n  title=\"Ready to build with us?\"\n  description=\"Join 600+ attendees in Zurich.\"\n  actionLabel=\"Get your ticket\"\n  actionHref=\"/tickets\"\n  image={{ src: speakerPhoto, alt: \"Speaker\" }}\n/>"
+        }
+      ],
+      "antipatterns": [
+        "Do not use the muted action button outside gradient surfaces — here it is the correct pairing.",
+        "Do not pass more than one photo or non-square images without object-cover cropping; the image renders as a circle."
       ]
     },
     {

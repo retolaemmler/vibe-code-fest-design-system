@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/ticket-card";
 import { Heading, Text } from "@/components/ui/typography";
 import atollLogo from "@/assets/logos/atoll-logo.png";
+import vibeLogo from "@/assets/logos/vibe-code-fest-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -68,7 +69,9 @@ function Showcase() {
         sticky
         variant="glass"
         brand={
-          <span className="text-h3 text-gradient-primary">Vibe</span>
+          <Link variant="quiet" href="/" aria-label="Vibe Code Fest home">
+            <img src={vibeLogo.url} alt="Vibe Code Fest" className="size-12 object-contain" />
+          </Link>
         }
         actions={
           <Button variant="gradient" size="sm">
@@ -408,7 +411,11 @@ function Showcase() {
 
       <Footer
         surface="muted"
-        brand={<span className="text-h3 text-gradient-primary">Vibe</span>}
+        brand={
+          <Link variant="quiet" href="/" aria-label="Vibe Code Fest home">
+            <img src={vibeLogo.url} alt="Vibe Code Fest" className="size-16 object-contain" />
+          </Link>
+        }
         center={
           <span className="flex items-center gap-1 text-small text-muted-foreground">
             Vibe coded with <Icon name="heart" size="xs" className="text-destructive" aria-label="love" /> in Zurich

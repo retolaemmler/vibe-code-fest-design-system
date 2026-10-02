@@ -1427,7 +1427,8 @@
             "accent",
             "info",
             "success",
-            "warning"
+            "warning",
+            "violet"
           ],
           "default": "primary"
         },

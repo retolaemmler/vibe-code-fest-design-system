@@ -1330,6 +1330,24 @@
       ]
     },
     {
+      "name": "LinkedInBubble",
+      "file": "src/components/ui/linkedin-bubble",
+      "import_path": "",
+      "props": [
+        { "name": "href", "type": "string", "required": true },
+        { "name": "name", "type": "string", "required": true },
+        { "name": "placement", "type": "enum", "values": ["inline", "avatar"], "default": "inline" }
+      ],
+      "usage": "Use for an icon-only LinkedIn profile link beside a speaker name or attached to a speaker avatar. Both placements use the same circular secondary action styling.",
+      "examples": [
+        { "label": "Speaker profile link", "code": "<LinkedInBubble href=\"https://linkedin.com/in/ada-mwangi\" name=\"Ada Mwangi\" />" }
+      ],
+      "antipatterns": [
+        "Do not rebuild the LinkedIn bubble using custom Button styling; use this component in both schedule and speaker contexts.",
+        "Do not use the avatar placement outside a positioned avatar container."
+      ]
+    },
+    {
       "name": "SpeakerCard",
       "file": "src/components/ui/speaker-card",
       "import_path": "",

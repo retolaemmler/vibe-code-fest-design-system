@@ -16,3 +16,4 @@
 - [x] Enlarge schedule titles and align them with timeline marker icons
 - [x] Expand talk cards for descriptions and link speaker names to LinkedIn
 - [x] Use the official Vibe Code Fest logo in header and footer previews
+- [x] Unify speaker and timeline LinkedIn bubbles into one reusable control

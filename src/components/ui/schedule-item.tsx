@@ -6,6 +6,7 @@ import { Avatar } from "./avatar";
 import { Badge } from "./badge";
 import { Button } from "./button";
 import { Icon, type IconName } from "./icon";
+import { LinkedInBubble } from "./linkedin-bubble";
 
 export interface ScheduleItemAvatar {
   src?: string;
@@ -200,9 +201,7 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
                 <div className="flex flex-wrap items-center gap-1.5">
                   <span className="mt-1 text-small leading-none text-muted-foreground">{speaker}</span>
                   {linkedinHref ? (
-                    <Button asChild variant="ghost" size="sm" className="relative z-20 size-6 p-0" iconStart="linkedin">
-                      <a href={linkedinHref} target="_blank" rel="noopener noreferrer" aria-label={`${speaker} on LinkedIn`} title={`${speaker} on LinkedIn`} />
-                    </Button>
+                    <LinkedInBubble href={linkedinHref} name={speaker} />
                   ) : null}
                 </div>
               ) : null}

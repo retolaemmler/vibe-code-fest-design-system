@@ -1751,7 +1751,27 @@
           "name": "description",
           "type": "string",
           "required": true
+        },
+        {
+          "name": "variant",
+          "type": "default · highlight",
+          "default": "default"
+        },
+        {
+          "name": "href",
+          "type": "string"
         }
+      ],
+      "usage": "Elevated card with an icon medallion, heading and short supporting text. Use variant=\"highlight\" for a primary stroke on a light purple background; pass href to make the whole card a clickable link with hover lift.",
+      "examples": [
+        {
+          "label": "Clickable highlight card",
+          "code": "<FeatureCard variant=\"highlight\" href=\"/programme\" icon=\"ticket\" title=\"Live workshops\" description=\"Hands-on sessions across two tracks.\" />"
+        }
+      ],
+      "antipatterns": [
+        "Do not add a one-off className border or background to make a card stand out; use variant=\"highlight\".",
+        "Do not nest a Button inside a card that already has href; the whole card is the link."
       ]
     },
     {

@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.35.0",
+    "version": "1.36.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "7f26786792f07711a93dfa68f8f99217589053618bee50ab747c186dba15f2bc",
+      "#enrichment": "cd99e8c18582e7388701795b12a1663d31306b19b12622051e18f2dc755fbeb9",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -22,7 +22,7 @@
       ".lovable/plan/section-colored-schedule-timeline-2026-09-13.md": "e9a775136da1991d36a18e86a357c909",
       ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
-      ".lovable/system.md": "705ff31e5f249076cc543b8114822e91",
+      ".lovable/system.md": "78c48ceb2032a3faf5c77818829397ca",
       "AGENTS.md": "f5830e8efaa30f81f0eaf8300ea318a1",
       "README.md": "546e5b1f850a58d461165943ea376d15",
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
@@ -56,7 +56,7 @@
       "src/components/ui/stat.tsx": "a4963e8607f16f8ba7daf18b83c11147",
       "src/components/ui/ticket-card.tsx": "ecb9af95c143e82604fa83ff7a56b73d",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
-      "src/index.css": "c0588c01ffce228cff9c1d8a84d25868",
+      "src/index.css": "ccbafb440e2b0c1df03324ab2cb4637f",
       "src/index.ts": "67b24d47cc3924d650dab8fa4e4f0057",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
@@ -66,7 +66,7 @@
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "a9450ec2a544783e425465a3230d71b3",
       "src/routes/index.tsx": "54697f7031a1b716dd453149f2452b3c",
-      "src/routes/style-guide.tsx": "167678f48c82f1fe8f0ef0e803dd1000",
+      "src/routes/style-guide.tsx": "ae122b6753c42a6b9786a12e70ad7e75",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -169,6 +169,11 @@
       {
         "name": "--accent-subtle",
         "raw": "330 81% 96%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--accent-on-dark",
+        "raw": "262 85% 82%",
         "source": "src/index.css"
       },
       {
@@ -389,6 +394,11 @@
       {
         "name": "--color-accent-subtle",
         "raw": "hsl(var(--accent-subtle))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-accent-on-dark",
+        "raw": "hsl(var(--accent-on-dark))",
         "source": "src/index.css"
       },
       {

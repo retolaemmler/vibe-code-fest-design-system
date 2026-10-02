@@ -45,10 +45,17 @@ Every shadow in the system is one of these tokens. Never write a raw
 
 Use `--dark-section` / `bg-dark-section` for full-bleed alternate bands that
 must feel heavy and branded: sponsor strips, large CTAs, footer backgrounds.
-It uses the same cobalt-blue hue as `--primary` and stays dark in both light and dark
+It uses the same hue as `--primary` and stays dark in both light and dark
 mode. Always pair it with `--dark-section-foreground` (white) and the gradient
-or `secondary` button variants; never place default body text (`text-foreground`)
-straight on it.
+or `secondary` button variants; never place default body text
+(`text-foreground`) straight on it.
+
+For headings and emphasized text on a dark-section band, use
+`--accent-on-dark` / `text-accent-on-dark` — a light violet ramp of
+brand-purple that harmonizes with the band. Use it **only** on
+`bg-dark-section` surfaces; never on light backgrounds (use `--accent` or
+`--primary` there instead). The token is identical in `:root` and `.dark`
+because the dark section is dark in both modes.
 
 
 ## Icons — one set, no exceptions

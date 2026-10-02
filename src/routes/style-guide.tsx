@@ -207,6 +207,7 @@ const COLOR_GROUPS: { group: string; blurb: string; swatches: Swatch[] }[] = [
       { token: "muted-foreground", usage: "Supporting text: captions, labels, metadata, placeholders.", on: "background" },
       { token: "primary-foreground", usage: "Text and icons on a primary or gradient fill.", on: "primary" },
       { token: "accent-foreground", usage: "Text and icons on the pink accent fill.", on: "accent" },
+      { token: "accent-on-dark", usage: "Headings and emphasized text on a dark-section band. Never on light backgrounds.", on: "dark-section" },
     ],
   },
   {

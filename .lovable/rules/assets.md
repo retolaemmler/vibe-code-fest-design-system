@@ -12,4 +12,10 @@ The full machine-readable catalog lives in this library's `design-system.json` (
 ## Logos
 
 - `@/design-system/{slug}/assets/logos/atoll-logo.png` (png)
+- `@/design-system/{slug}/assets/logos/vibe-code-fest-logo.png` (png)
+
+## Photography
+
+- `@/design-system/{slug}/assets/photography/katy-wirz.png` (png)
+- `@/design-system/{slug}/assets/photography/silvan-muehlemann.jpeg` (jpeg)
 

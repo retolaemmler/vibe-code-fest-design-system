@@ -125,6 +125,8 @@ import { Container } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1
 import { CtaPanel } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
+Use as the closing call-to-action on a page, on a gradient surface. Pass image to show a circular photo on the left; omit it for a compact centred panel.
+
 **Props:**
 
 | Prop | Type | Default |
@@ -134,6 +136,25 @@ import { CtaPanel } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1b
 | `actionLabel` | string | `—` |
 | `actionHref` | string | `—` |
 | `onAction` | function | `—` |
+| `image` | object | `—` |
+
+**Examples:**
+
+_Panel with circular photo_
+```tsx
+<CtaPanel
+  title="Ready to build with us?"
+  description="Join 600+ attendees in Zurich."
+  actionLabel="Get your ticket"
+  actionHref="/tickets"
+  image={{ src: speakerPhoto, alt: "Speaker" }}
+/>
+```
+
+**Avoid:**
+
+- Do not use the muted action button outside gradient surfaces — here it is the correct pairing.
+- Do not pass more than one photo or non-square images without object-cover cropping; the image renders as a circle.
 
 ### Faq
 

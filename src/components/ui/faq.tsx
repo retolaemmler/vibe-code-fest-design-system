@@ -29,7 +29,7 @@ export const FaqTrigger = React.forwardRef<
         "flex flex-1 items-center justify-between gap-4 rounded-field py-5 text-left outline-none",
         "text-body font-medium text-foreground",
         "transition-colors duration-(--duration-fast) ease-(--ease-standard) hover:text-primary",
-        "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        "outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         "disabled:pointer-events-none disabled:opacity-50",
         "[&[data-state=open]>svg]:rotate-180",
         className,

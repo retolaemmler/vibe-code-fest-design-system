@@ -31,7 +31,7 @@ export const scheduleItemVariants = cva(
 );
 
 export const scheduleMarkerVariants = cva(
-  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-background",
+  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4",
   {
     variants: {
       tone: {

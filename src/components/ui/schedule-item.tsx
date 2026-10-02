@@ -180,7 +180,10 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
             <Button
               variant="ghost"
               size="icon"
-              className="absolute inset-0 z-10 h-full w-full items-start justify-end rounded-card p-4 hover:bg-foreground/5 sm:p-5 [&_svg]:size-6"
+              className={cn(
+                "absolute inset-0 z-10 h-full w-full items-start justify-end rounded-card p-4 sm:p-5 [&_svg]:size-6",
+                scheduleHoverOverlayVariants({ tone: tone ?? categoryTone }),
+              )}
               aria-label={`${expanded ? "Hide" : "Show"} details for ${title}`}
               aria-expanded={expanded}
               aria-controls={descriptionId}

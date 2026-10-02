@@ -348,6 +348,33 @@ import { Link } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab79
 | `active` | true · false | `false` |
 | `asChild` | boolean | `false` |
 
+### LinkedInBubble
+
+```ts
+import { LinkedInBubble } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+Use for an icon-only LinkedIn profile link beside a speaker name or attached to a speaker avatar. Both placements use the same circular secondary action styling.
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `href` | string | `—` |
+| `name` | string | `—` |
+
+**Examples:**
+
+_Speaker profile link_
+```tsx
+<LinkedInBubble href="https://linkedin.com/in/ada-mwangi" name="Ada Mwangi" />
+```
+
+**Avoid:**
+
+- Do not rebuild the LinkedIn bubble using custom Button styling; use this component in both schedule and speaker contexts.
+- Do not use the avatar placement outside a positioned avatar container.
+
 ### Navbar
 
 ```ts
@@ -523,7 +550,7 @@ Use to introduce a speaker with their photo, role, company and topic tags. Pass 
 
 | Prop | Type | Default |
 |---|---|---|
-| `name` | string | `linkedin` |
+| `name` | string | `—` |
 | `role` | string | `—` |
 | `company` | string | `—` |
 | `photoUrl` | string | `—` |

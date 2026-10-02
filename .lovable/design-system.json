@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.38.0",
+    "version": "1.39.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "936bd3b22bf7943e72fc283484ae1595279cd97f9ad19ed09ea627876f4cfc5d",
+      "#enrichment": "e10b8b82fa89def8b8c921d017621ef2fbb92f8b7f1fefe9cd66c06dee8e6904",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -23,14 +23,14 @@
       ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
       ".lovable/system.md": "78c48ceb2032a3faf5c77818829397ca",
-      "AGENTS.md": "f5830e8efaa30f81f0eaf8300ea318a1",
+      "AGENTS.md": "7ef9c8211c9c069448589e8ad30cf1ab",
       "README.md": "546e5b1f850a58d461165943ea376d15",
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
       "package.json": "5f8e34f695f7133be9ac499c3edcd93f",
       "public/favicon.png": "69d984f278397f6136e8e93fd8afd74b",
-      "roadmap.md": "a02689f938005de2a2c99791920c1b63",
+      "roadmap.md": "e38f54a2d64b6e3665e1ad22e380e4f8",
       "src/assets/logos/atoll-logo.png": "a229369f3e1e0cfbdcd536c9b5ec2aec",
       "src/assets/logos/vibe-code-fest-logo.png": "ff361f9b784588d3825375acf92408d0",
       "src/assets/photography/katy-wirz.png": "aef68675fa1690d5fd1a5584e57c55c5",
@@ -48,16 +48,17 @@
       "src/components/ui/input.tsx": "b537a884917f0b514545ea164abd4fd4",
       "src/components/ui/layout.tsx": "87221df44334e5e3547f09f0ab9a3005",
       "src/components/ui/link.tsx": "da2bd15726024535b9e0239a93604b67",
+      "src/components/ui/linkedin-bubble.tsx": "a15a2b93d2177c00a9a072006492901f",
       "src/components/ui/navbar.tsx": "43c2b4329b83da9e819beae9fc9ed132",
-      "src/components/ui/schedule-item.tsx": "57de31edd41fc19e409b5a01a2622401",
+      "src/components/ui/schedule-item.tsx": "21e7fb8c325122ea886f34329db909ec",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
-      "src/components/ui/speaker-card.tsx": "99c107cae38e7d014364a7799d0dd337",
+      "src/components/ui/speaker-card.tsx": "7a7187d02c5ea734ad5fca1ca8475e9c",
       "src/components/ui/sponsor-card.tsx": "8b078f47505c49a6a7b4ba02e5d976a7",
       "src/components/ui/stat.tsx": "a4963e8607f16f8ba7daf18b83c11147",
       "src/components/ui/ticket-card.tsx": "ecb9af95c143e82604fa83ff7a56b73d",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
       "src/index.css": "835b9c421d9f46f5398a03be0ca9fa35",
-      "src/index.ts": "6fa53360617ac8845a04f78ddb09247d",
+      "src/index.ts": "ec7e43259e2fa241b7cd536fa852a54a",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -1334,13 +1335,23 @@
       "file": "src/components/ui/linkedin-bubble",
       "import_path": "",
       "props": [
-        { "name": "href", "type": "string", "required": true },
-        { "name": "name", "type": "string", "required": true },
-        { "name": "placement", "type": "enum", "values": ["inline", "avatar"], "default": "inline" }
+        {
+          "name": "href",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true
+        }
       ],
       "usage": "Use for an icon-only LinkedIn profile link beside a speaker name or attached to a speaker avatar. Both placements use the same circular secondary action styling.",
       "examples": [
-        { "label": "Speaker profile link", "code": "<LinkedInBubble href=\"https://linkedin.com/in/ada-mwangi\" name=\"Ada Mwangi\" />" }
+        {
+          "label": "Speaker profile link",
+          "code": "\u003cLinkedInBubble href=\"https://linkedin.com/in/ada-mwangi\" name=\"Ada Mwangi\" /\u003e"
+        }
       ],
       "antipatterns": [
         "Do not rebuild the LinkedIn bubble using custom Button styling; use this component in both schedule and speaker contexts.",
@@ -1355,7 +1366,6 @@
         {
           "name": "name",
           "type": "string",
-          "default": "linkedin",
           "required": true
         },
         {

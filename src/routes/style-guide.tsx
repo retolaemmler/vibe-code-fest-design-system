@@ -1057,7 +1057,7 @@ function StyleGuide() {
                     <ScheduleItem time="12:30" title="Lunch" />
                   </div>
                 </ScheduleCategory>
-                <ScheduleCategory markerTone="success" headerTransition="infoSuccess">
+                <ScheduleCategory markerTone="violet" headerTransition="infoViolet">
                   <ScheduleHeader icon="code" title="BUILD" subtext="Turn ideas into working products." />
                   <div className="grid gap-3">
                     <ScheduleItem
@@ -1071,7 +1071,7 @@ function StyleGuide() {
                     <ScheduleItem time="18:15" title="Pizza break" />
                   </div>
                 </ScheduleCategory>
-                <ScheduleCategory markerTone="warning" headerTransition="successWarning">
+                <ScheduleCategory markerTone="warning" headerTransition="violetWarning">
                   <ScheduleHeader icon="star" title="CELEBRATE" subtext="Recognise the winners and close the day together." />
                   <div className="grid gap-3">
                     <ScheduleItem time="19:30" title="Top five app pitches" speaker="Community voting and winner selection" markerIcon="star" />

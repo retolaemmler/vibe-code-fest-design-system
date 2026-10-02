@@ -80,6 +80,10 @@
   --warning: 38 92% 50%;
   --warning-foreground: 60 3% 11%;
   --warning-subtle: 48 96% 94%;
+  /* Timeline violet (BUILD section ramp, hue 262) */
+  --violet: 262 72% 45%;
+  --violet-foreground: 0 0% 100%;
+  --violet-subtle: 262 70% 96%;
 
   /* --- Schedule time text -------------------------------------------------
      Hue-matched to timeline markers, with darker light-theme values so large
@@ -89,6 +93,7 @@
   --schedule-time-accent: 330 72% 42%;
   --schedule-time-info: 217 78% 43%;
   --schedule-time-success: 142 72% 30%;
+  --schedule-time-violet: 262 72% 32%;
   --schedule-time-warning: 38 92% 30%;
 
   /* --- Lines, fields, focus ---------------------------------------------- */
@@ -136,6 +141,16 @@
   --gradient-success-warning: linear-gradient(
     135deg,
     hsl(var(--success)) 0%,
+    hsl(var(--warning)) 100%
+  );
+  --gradient-info-violet: linear-gradient(
+    135deg,
+    hsl(var(--info)) 0%,
+    hsl(var(--violet)) 100%
+  );
+  --gradient-violet-warning: linear-gradient(
+    135deg,
+    hsl(var(--violet)) 0%,
     hsl(var(--warning)) 100%
   );
   --gradient-primary-accent: linear-gradient(
@@ -263,12 +278,17 @@
   --warning: 38 92% 58%;
   --warning-foreground: 60 3% 7%;
   --warning-subtle: 38 45% 16%;
+  /* Timeline violet (BUILD section ramp, hue 262) */
+  --violet: 262 85% 70%;
+  --violet-foreground: 60 3% 7%;
+  --violet-subtle: 262 35% 16%;
 
   /* --- Schedule time text --------------------------------------------------- */
   --schedule-time-primary: 249 80% 76%;
   --schedule-time-accent: 330 81% 72%;
   --schedule-time-info: 217 91% 74%;
   --schedule-time-success: 142 62% 66%;
+  --schedule-time-violet: 262 85% 75%;
   --schedule-time-warning: 38 92% 68%;
 
   /* --- Lines, fields, focus -------------------------------------------------- */
@@ -312,6 +332,16 @@
   --gradient-success-warning: linear-gradient(
     135deg,
     hsl(var(--success)) 0%,
+    hsl(var(--warning)) 100%
+  );
+  --gradient-info-violet: linear-gradient(
+    135deg,
+    hsl(var(--info)) 0%,
+    hsl(var(--violet)) 100%
+  );
+  --gradient-violet-warning: linear-gradient(
+    135deg,
+    hsl(var(--violet)) 0%,
     hsl(var(--warning)) 100%
   );
   --gradient-primary-accent: linear-gradient(
@@ -374,7 +404,7 @@
   --text-body-leading: 1.65;
   --text-body-tracking: 0em;
 
-  --text-small-size: 0.875rem;
+  --text-small-size: 0.9375rem;
   --text-small-weight: 400;
   --text-small-leading: 1.55;
   --text-small-tracking: 0em;
@@ -426,11 +456,15 @@
   --color-warning: hsl(var(--warning));
   --color-warning-foreground: hsl(var(--warning-foreground));
   --color-warning-subtle: hsl(var(--warning-subtle));
+  --color-violet: hsl(var(--violet));
+  --color-violet-foreground: hsl(var(--violet-foreground));
+  --color-violet-subtle: hsl(var(--violet-subtle));
   --color-schedule-time-primary: hsl(var(--schedule-time-primary));
   --color-schedule-time-accent: hsl(var(--schedule-time-accent));
   --color-schedule-time-info: hsl(var(--schedule-time-info));
   --color-schedule-time-success: hsl(var(--schedule-time-success));
   --color-schedule-time-warning: hsl(var(--schedule-time-warning));
+  --color-schedule-time-violet: hsl(var(--schedule-time-violet));
 
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
@@ -547,6 +581,12 @@
 }
 @utility bg-gradient-success-warning {
   background-image: var(--gradient-success-warning);
+}
+@utility bg-gradient-info-violet {
+  background-image: var(--gradient-info-violet);
+}
+@utility bg-gradient-violet-warning {
+  background-image: var(--gradient-violet-warning);
 }
 @utility bg-gradient-primary-accent {
   background-image: var(--gradient-primary-accent);

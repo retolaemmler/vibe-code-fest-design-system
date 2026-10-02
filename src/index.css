@@ -334,6 +334,16 @@
     hsl(var(--success)) 0%,
     hsl(var(--warning)) 100%
   );
+  --gradient-info-violet: linear-gradient(
+    135deg,
+    hsl(var(--info)) 0%,
+    hsl(var(--violet)) 100%
+  );
+  --gradient-violet-warning: linear-gradient(
+    135deg,
+    hsl(var(--violet)) 0%,
+    hsl(var(--warning)) 100%
+  );
   --gradient-primary-accent: linear-gradient(
     135deg,
     hsl(var(--primary)) 0%,
@@ -446,11 +456,15 @@
   --color-warning: hsl(var(--warning));
   --color-warning-foreground: hsl(var(--warning-foreground));
   --color-warning-subtle: hsl(var(--warning-subtle));
+  --color-violet: hsl(var(--violet));
+  --color-violet-foreground: hsl(var(--violet-foreground));
+  --color-violet-subtle: hsl(var(--violet-subtle));
   --color-schedule-time-primary: hsl(var(--schedule-time-primary));
   --color-schedule-time-accent: hsl(var(--schedule-time-accent));
   --color-schedule-time-info: hsl(var(--schedule-time-info));
   --color-schedule-time-success: hsl(var(--schedule-time-success));
   --color-schedule-time-warning: hsl(var(--schedule-time-warning));
+  --color-schedule-time-violet: hsl(var(--schedule-time-violet));
 
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));

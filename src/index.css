@@ -64,6 +64,8 @@
   --accent: 330 81% 60%;
   --accent-foreground: 0 0% 100%;
   --accent-subtle: 330 81% 96%;
+  /* Light violet for headings/emphasized text on --dark-section; dark in both themes, so no .dark counterpart value. */
+  --accent-on-dark: 262 85% 82%;
 
   /* --- Status ------------------------------------------------------------ */
   --destructive: 0 84% 60%;
@@ -246,6 +248,7 @@
   --accent: 330 81% 66%;
   --accent-foreground: 60 3% 7%;
   --accent-subtle: 330 40% 18%;
+  --accent-on-dark: 262 85% 82%;
 
   /* --- Status --------------------------------------------------------------- */
   --destructive: 0 72% 58%;
@@ -409,6 +412,7 @@
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
   --color-accent-subtle: hsl(var(--accent-subtle));
+  --color-accent-on-dark: hsl(var(--accent-on-dark));
 
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));

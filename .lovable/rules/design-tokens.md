@@ -31,6 +31,7 @@ Apply with any color utility: `bg-<name>`, `text-<name>`, `border-<name>`, `ring
 | `accent` | `--color-accent` |
 | `accent-foreground` | `--color-accent-foreground` |
 | `accent-subtle` | `--color-accent-subtle` |
+| `accent-on-dark` | `--color-accent-on-dark` |
 | `destructive` | `--color-destructive` |
 | `destructive-foreground` | `--color-destructive-foreground` |
 | `destructive-subtle` | `--color-destructive-subtle` |

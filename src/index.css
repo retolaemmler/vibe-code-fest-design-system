@@ -80,6 +80,10 @@
   --warning: 38 92% 50%;
   --warning-foreground: 60 3% 11%;
   --warning-subtle: 48 96% 94%;
+  /* Timeline violet (BUILD section ramp, hue 262) */
+  --violet: 262 72% 45%;
+  --violet-foreground: 0 0% 100%;
+  --violet-subtle: 262 70% 96%;
 
   /* --- Schedule time text -------------------------------------------------
      Hue-matched to timeline markers, with darker light-theme values so large
@@ -89,6 +93,7 @@
   --schedule-time-accent: 330 72% 42%;
   --schedule-time-info: 217 78% 43%;
   --schedule-time-success: 142 72% 30%;
+  --schedule-time-violet: 262 72% 32%;
   --schedule-time-warning: 38 92% 30%;
 
   /* --- Lines, fields, focus ---------------------------------------------- */
@@ -263,12 +268,17 @@
   --warning: 38 92% 58%;
   --warning-foreground: 60 3% 7%;
   --warning-subtle: 38 45% 16%;
+  /* Timeline violet (BUILD section ramp, hue 262) */
+  --violet: 262 85% 70%;
+  --violet-foreground: 60 3% 7%;
+  --violet-subtle: 262 35% 16%;
 
   /* --- Schedule time text --------------------------------------------------- */
   --schedule-time-primary: 249 80% 76%;
   --schedule-time-accent: 330 81% 72%;
   --schedule-time-info: 217 91% 74%;
   --schedule-time-success: 142 62% 66%;
+  --schedule-time-violet: 262 85% 75%;
   --schedule-time-warning: 38 92% 68%;
 
   /* --- Lines, fields, focus -------------------------------------------------- */

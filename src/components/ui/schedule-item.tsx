@@ -31,15 +31,15 @@ export const scheduleItemVariants = cva(
 );
 
 export const scheduleMarkerVariants = cva(
-  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4 ring-background",
+  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4",
   {
     variants: {
       tone: {
-        primary: "bg-primary text-primary-foreground",
-        accent: "bg-accent text-accent-foreground",
-        info: "bg-info text-info-foreground",
-        success: "bg-success text-success-foreground",
-        warning: "bg-warning text-warning-foreground",
+        primary: "bg-primary text-primary-foreground ring-primary",
+        accent: "bg-accent text-accent-foreground ring-accent",
+        info: "bg-info text-info-foreground ring-info",
+        success: "bg-success text-success-foreground ring-success",
+        warning: "bg-warning text-warning-foreground ring-warning",
       },
       position: {
         titleSm: "top-14 -translate-y-1/2",

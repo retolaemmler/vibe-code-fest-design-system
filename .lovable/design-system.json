@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.37.0",
+    "version": "1.38.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "49a37334ec3f34ae3bba4d5a4fec3dc151551b537e5746666dabed6b0e4df99f",
+      "#enrichment": "936bd3b22bf7943e72fc283484ae1595279cd97f9ad19ed09ea627876f4cfc5d",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -41,7 +41,7 @@
       "src/components/ui/card.tsx": "c5ac2297c50fddf79f74b5ecbfd36c1a",
       "src/components/ui/cta-panel.tsx": "33a533e879e9beff2eacfec87c7c0d2a",
       "src/components/ui/faq.tsx": "3b60bb8279918236e728c0b77e8ed40b",
-      "src/components/ui/feature-card.tsx": "b99e10edcf034c58f8e97f6390a1e60c",
+      "src/components/ui/feature-card.tsx": "915b2cd9c5c54a556f3c7a660e96fdd7",
       "src/components/ui/fonts.tsx": "8b0c5ef8153eedbaebd1678ba3dc23ed",
       "src/components/ui/footer.tsx": "67a04ef265091afe625b602cebeffa8d",
       "src/components/ui/icon.tsx": "dfe998e949dc12f7bcf0b3352c4a65ba",
@@ -56,8 +56,8 @@
       "src/components/ui/stat.tsx": "a4963e8607f16f8ba7daf18b83c11147",
       "src/components/ui/ticket-card.tsx": "ecb9af95c143e82604fa83ff7a56b73d",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
-      "src/index.css": "61715875e810462f3e909656889046d1",
-      "src/index.ts": "67b24d47cc3924d650dab8fa4e4f0057",
+      "src/index.css": "835b9c421d9f46f5398a03be0ca9fa35",
+      "src/index.ts": "6fa53360617ac8845a04f78ddb09247d",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -66,7 +66,7 @@
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "a9450ec2a544783e425465a3230d71b3",
       "src/routes/index.tsx": "f064e99634a0d2892a8c31bb7c69e623",
-      "src/routes/style-guide.tsx": "eec552b546ef3e8cbdbfe38363d735de",
+      "src/routes/style-guide.tsx": "d66412a7d0ec32502a63cc208fb8bdd9",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -1738,6 +1738,15 @@
       "import_path": "",
       "props": [
         {
+          "name": "variant",
+          "type": "enum",
+          "values": [
+            "default",
+            "highlight"
+          ],
+          "default": "default"
+        },
+        {
           "name": "icon",
           "type": "any",
           "required": true
@@ -1753,11 +1762,6 @@
           "required": true
         },
         {
-          "name": "variant",
-          "type": "default · highlight",
-          "default": "default"
-        },
-        {
           "name": "href",
           "type": "string"
         }
@@ -1766,7 +1770,7 @@
       "examples": [
         {
           "label": "Clickable highlight card",
-          "code": "<FeatureCard variant=\"highlight\" href=\"/programme\" icon=\"ticket\" title=\"Live workshops\" description=\"Hands-on sessions across two tracks.\" />"
+          "code": "\u003cFeatureCard variant=\"highlight\" href=\"/programme\" icon=\"ticket\" title=\"Live workshops\" description=\"Hands-on sessions across two tracks.\" /\u003e"
         }
       ],
       "antipatterns": [

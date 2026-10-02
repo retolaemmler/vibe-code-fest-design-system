@@ -23,6 +23,8 @@ export const scheduleItemVariants = cva(
         info: "bg-info-subtle",
         success: "bg-success-subtle",
         warning: "bg-warning-subtle",
+        violet: "bg-violet-subtle",
+        warning: "bg-warning-subtle",
       },
       padding: { sm: "p-4", md: "p-5" },
     },

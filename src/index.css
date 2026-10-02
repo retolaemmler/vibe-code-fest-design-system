@@ -582,6 +582,12 @@
 @utility bg-gradient-success-warning {
   background-image: var(--gradient-success-warning);
 }
+@utility bg-gradient-info-violet {
+  background-image: var(--gradient-info-violet);
+}
+@utility bg-gradient-violet-warning {
+  background-image: var(--gradient-violet-warning);
+}
 @utility bg-gradient-primary-accent {
   background-image: var(--gradient-primary-accent);
 }

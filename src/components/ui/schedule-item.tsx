@@ -31,6 +31,22 @@ export const scheduleItemVariants = cva(
   },
 );
 
+/* Hover darkens each card with its own section hue — a neutral overlay reads
+   muddy over the tinted subtle backgrounds. */
+export const scheduleHoverOverlayVariants = cva("", {
+  variants: {
+    tone: {
+      primary: "hover:bg-primary/15",
+      accent: "hover:bg-accent/15",
+      info: "hover:bg-info/15",
+      success: "hover:bg-success/15",
+      warning: "hover:bg-warning/15",
+      violet: "hover:bg-violet/15",
+    },
+  },
+  defaultVariants: { tone: "primary" },
+});
+
 export const scheduleMarkerVariants = cva(
   "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4",
   {
@@ -164,7 +180,10 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
             <Button
               variant="ghost"
               size="icon"
-              className="absolute inset-0 z-10 h-full w-full items-start justify-end rounded-card p-4 hover:bg-foreground/5 sm:p-5 [&_svg]:size-6"
+              className={cn(
+                "absolute inset-0 z-10 h-full w-full items-start justify-end rounded-card p-4 sm:p-5 [&_svg]:size-6",
+                scheduleHoverOverlayVariants({ tone: tone ?? categoryTone }),
+              )}
               aria-label={`${expanded ? "Hide" : "Show"} details for ${title}`}
               aria-expanded={expanded}
               aria-controls={descriptionId}

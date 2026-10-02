@@ -1804,6 +1804,11 @@
       "file": "src/assets/logos/atoll-logo.png",
       "kind": "logo",
       "format": "png"
+    },
+    {
+      "file": "src/assets/logos/vibe-code-fest-logo.png",
+      "kind": "logo",
+      "format": "png"
     }
   ]
 }

@@ -84,6 +84,7 @@ export {
 } from "./components/ui/footer";
 export {
   FeatureCard,
+  featureCardVariants,
   featureMedallionVariants,
   type FeatureCardProps,
 } from "./components/ui/feature-card";

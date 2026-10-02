@@ -44,11 +44,15 @@ Apply with any color utility: `bg-<name>`, `text-<name>`, `border-<name>`, `ring
 | `warning` | `--color-warning` |
 | `warning-foreground` | `--color-warning-foreground` |
 | `warning-subtle` | `--color-warning-subtle` |
+| `violet` | `--color-violet` |
+| `violet-foreground` | `--color-violet-foreground` |
+| `violet-subtle` | `--color-violet-subtle` |
 | `schedule-time-primary` | `--color-schedule-time-primary` |
 | `schedule-time-accent` | `--color-schedule-time-accent` |
 | `schedule-time-info` | `--color-schedule-time-info` |
 | `schedule-time-success` | `--color-schedule-time-success` |
 | `schedule-time-warning` | `--color-schedule-time-warning` |
+| `schedule-time-violet` | `--color-schedule-time-violet` |
 | `border` | `--color-border` |
 | `input` | `--color-input` |
 | `ring` | `--color-ring` |
@@ -125,6 +129,8 @@ Reference via `var(--name)` in inline styles or CSS.
 |---|
 | `--gradient-info-success` |
 | `--gradient-success-warning` |
+| `--gradient-info-violet` |
+| `--gradient-violet-warning` |
 | `--gradient-surface` |
 | `--blur-surface` |
 | `--duration-fast` |

@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.36.0",
+    "version": "1.37.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "cd99e8c18582e7388701795b12a1663d31306b19b12622051e18f2dc755fbeb9",
+      "#enrichment": "49a37334ec3f34ae3bba4d5a4fec3dc151551b537e5746666dabed6b0e4df99f",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -40,7 +40,7 @@
       "src/components/ui/button.tsx": "48faeaba9e5e79384fea0a2be4695fb8",
       "src/components/ui/card.tsx": "c5ac2297c50fddf79f74b5ecbfd36c1a",
       "src/components/ui/cta-panel.tsx": "33a533e879e9beff2eacfec87c7c0d2a",
-      "src/components/ui/faq.tsx": "e28571b15b9eb6f6eff783839901644a",
+      "src/components/ui/faq.tsx": "3b60bb8279918236e728c0b77e8ed40b",
       "src/components/ui/feature-card.tsx": "b99e10edcf034c58f8e97f6390a1e60c",
       "src/components/ui/fonts.tsx": "8b0c5ef8153eedbaebd1678ba3dc23ed",
       "src/components/ui/footer.tsx": "67a04ef265091afe625b602cebeffa8d",
@@ -49,14 +49,14 @@
       "src/components/ui/layout.tsx": "87221df44334e5e3547f09f0ab9a3005",
       "src/components/ui/link.tsx": "da2bd15726024535b9e0239a93604b67",
       "src/components/ui/navbar.tsx": "43c2b4329b83da9e819beae9fc9ed132",
-      "src/components/ui/schedule-item.tsx": "bc47fb9136163d5f65a805bb09206a74",
+      "src/components/ui/schedule-item.tsx": "57de31edd41fc19e409b5a01a2622401",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
       "src/components/ui/speaker-card.tsx": "99c107cae38e7d014364a7799d0dd337",
       "src/components/ui/sponsor-card.tsx": "8b078f47505c49a6a7b4ba02e5d976a7",
       "src/components/ui/stat.tsx": "a4963e8607f16f8ba7daf18b83c11147",
       "src/components/ui/ticket-card.tsx": "ecb9af95c143e82604fa83ff7a56b73d",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
-      "src/index.css": "ccbafb440e2b0c1df03324ab2cb4637f",
+      "src/index.css": "61715875e810462f3e909656889046d1",
       "src/index.ts": "67b24d47cc3924d650dab8fa4e4f0057",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
@@ -65,8 +65,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "a9450ec2a544783e425465a3230d71b3",
-      "src/routes/index.tsx": "54697f7031a1b716dd453149f2452b3c",
-      "src/routes/style-guide.tsx": "ae122b6753c42a6b9786a12e70ad7e75",
+      "src/routes/index.tsx": "f064e99634a0d2892a8c31bb7c69e623",
+      "src/routes/style-guide.tsx": "eec552b546ef3e8cbdbfe38363d735de",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -237,6 +237,21 @@
         "source": "src/index.css"
       },
       {
+        "name": "--violet",
+        "raw": "262 72% 45%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--violet-foreground",
+        "raw": "0 0% 100%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--violet-subtle",
+        "raw": "262 70% 96%",
+        "source": "src/index.css"
+      },
+      {
         "name": "--schedule-time-primary",
         "raw": "249 60% 42%",
         "source": "src/index.css"
@@ -254,6 +269,11 @@
       {
         "name": "--schedule-time-success",
         "raw": "142 72% 30%",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--schedule-time-violet",
+        "raw": "262 72% 32%",
         "source": "src/index.css"
       },
       {
@@ -462,6 +482,21 @@
         "source": "src/index.css"
       },
       {
+        "name": "--color-violet",
+        "raw": "hsl(var(--violet))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-violet-foreground",
+        "raw": "hsl(var(--violet-foreground))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-violet-subtle",
+        "raw": "hsl(var(--violet-subtle))",
+        "source": "src/index.css"
+      },
+      {
         "name": "--color-schedule-time-primary",
         "raw": "hsl(var(--schedule-time-primary))",
         "source": "src/index.css"
@@ -484,6 +519,11 @@
       {
         "name": "--color-schedule-time-warning",
         "raw": "hsl(var(--schedule-time-warning))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-schedule-time-violet",
+        "raw": "hsl(var(--schedule-time-violet))",
         "source": "src/index.css"
       },
       {
@@ -732,6 +772,16 @@
       {
         "name": "--gradient-success-warning",
         "raw": "linear-gradient(\n    135deg,\n    hsl(var(--success)) 0%,\n    hsl(var(--warning)) 100%\n  )",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--gradient-info-violet",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--info)) 0%,\n    hsl(var(--violet)) 100%\n  )",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--gradient-violet-warning",
+        "raw": "linear-gradient(\n    135deg,\n    hsl(var(--violet)) 0%,\n    hsl(var(--warning)) 100%\n  )",
         "source": "src/index.css"
       },
       {

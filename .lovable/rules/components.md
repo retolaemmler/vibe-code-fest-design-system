@@ -440,7 +440,7 @@ Shows a timed programme entry on a very light tint of its category colour. Pass 
 
 | Prop | Type | Default |
 |---|---|---|
-| `tone` | primary · accent · info · success · warning | `primary` |
+| `tone` | primary · accent · info · success · warning · violet | `primary` |
 | `padding` | sm · md | `md` |
 | `time` | string | `—` |
 | `title` | string | `—` |

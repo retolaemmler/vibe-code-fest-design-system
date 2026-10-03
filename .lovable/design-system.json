@@ -1434,7 +1434,7 @@
           "type": "string"
         }
       ],
-      "usage": "Use to present sponsor logos in a consistent, responsive grid. Provide an href to make the whole card a clickable link with a lift-and-glow hover effect. Choose highlight only for sponsors that need stronger visual prominence.",
+      "usage": "Use to present sponsor logos in a consistent, responsive grid. Both variants carry the purple brand stroke; default keeps a white card background, highlight adds the light-purple background and glow. Provide an href to make the whole card a clickable link with a lift hover effect.",
       "examples": [
         {
           "label": "Default sponsor card",

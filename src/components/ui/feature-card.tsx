@@ -29,20 +29,9 @@ export const featureMedallionVariants = cva(
   },
 );
 
-export const featureCardVariants = cva("transition", {
-  variants: {
-    variant: {
-      default: "",
-      highlight: "border border-primary bg-primary-subtle hover:border-primary-hover",
-    },
-  },
-  defaultVariants: { variant: "default" },
-});
-
 export interface FeatureCardProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "title">,
-    VariantProps<typeof featureMedallionVariants>,
-    VariantProps<typeof featureCardVariants> {
+    VariantProps<typeof featureMedallionVariants> {
   /** Icon shown in the medallion at the top of the card. */
   icon: IconName;
   title: string;
@@ -53,20 +42,19 @@ export interface FeatureCardProps
 
 /**
  * Elevated card with an icon medallion, heading and short supporting text —
- * the pattern used for criteria, perks and highlights. Pass `href` to make
- * the whole card a clickable link; use variant="highlight" for a primary
- * stroke on a light purple background.
+ * the pattern used for criteria, perks and highlights. Use it as-is for
+ * non-interactive content; pass `href` to make the whole card a clickable
+ * link with hover lift and a focus ring.
  */
 export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
-  ({ className, icon, title, description, tone, size, variant, href, ...props }, ref) => {
+  ({ className, icon, title, description, tone, size, href, ...props }, ref) => {
     const card = (
       <Card
         ref={ref}
         variant="elevated"
         padding="lg"
         className={cn(
-          "flex flex-col gap-5",
-          featureCardVariants({ variant }),
+          "flex flex-col gap-5 transition",
           href &&
             "group-hover:-translate-y-1 group-hover:shadow-lifted group-active:translate-y-0",
           className,

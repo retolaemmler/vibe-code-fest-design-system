@@ -54,8 +54,7 @@ export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
         variant="elevated"
         padding="lg"
         className={cn(
-          "flex flex-col gap-5",
-          featureCardVariants({ variant }),
+          "flex flex-col gap-5 transition",
           href &&
             "group-hover:-translate-y-1 group-hover:shadow-lifted group-active:translate-y-0",
           className,

@@ -98,16 +98,17 @@ Pick the Button variant from the surface it sits on, not from personal taste.
   content like criteria, perks, and feature descriptions. It has no hover
   state and no link.
 - **`FeatureCard` (clickable)** — pass `href` when the **whole area is
-  clickable**: the card becomes a link with a hover lift, pressed state and
+  clickable**: the card becomes a link with a primary-purple stroke and
+  `primary-subtle` background, as well as a hover lift, pressed state and
   a `focus-visible` ring. Do not nest a `Button` inside it; the card itself
-  is the link.
+  is the link. The tint and stroke are automatic with `href`, not a separate
+  highlight variant.
 - **`CtaPanel`** — the closing call-to-action of a page, rendered on the
   brand gradient. Use it once per page, at the end. Its action button is
   `muted` — reserved for gradient surfaces. Pass `image` for the circular
   photo on the left; omit it for a compact centred panel.
-- Do not recreate a highlighted feature card with one-off `className`
-  borders or backgrounds; a card either is interactive (`href`) or it is
-  not.
+- Do not add one-off `className` borders or backgrounds to FeatureCard; its
+  appearance follows whether it is interactive (`href`) or not.
 
 ## Footer layout
 

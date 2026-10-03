@@ -787,23 +787,14 @@ function StyleGuide() {
                 <FeatureCard
                   icon="sparkles"
                   title="Feature card"
-                  description="Icon medallion, heading and short supporting text — the pattern used for criteria, perks and highlights."
+                  description="Icon medallion, heading and short supporting text — for non-interactive content."
                 />
-                <div className="flex flex-col gap-6">
-                  <FeatureCard
-                    variant="highlight"
-                    icon="ticket"
-                    title="Highlight feature card"
-                    description="Primary stroke on a light purple background — reserved for the one feature that matters most."
-                  />
-                  <FeatureCard
-                    variant="highlight"
-                    href="#"
-                    icon="calendar"
-                    title="Clickable feature card"
-                    description="Pass href and the whole card becomes a link, with hover lift and a focus ring."
-                  />
-                </div>
+                <FeatureCard
+                  href="#"
+                  icon="ticket"
+                  title="Clickable feature card"
+                  description="Pass href and the whole card becomes a link, with hover lift and a focus ring."
+                />
                 <CtaPanel
                   title="Call-to-action panel"
                   description="Full-bleed gradient panel for the closing action on a page."
@@ -813,7 +804,7 @@ function StyleGuide() {
                 />
               </div>
               <Snippet
-                code={`<FeatureCard\n  icon="sparkles"\n  title="Feature card"\n  description="Short supporting text."\n/>\n\n<FeatureCard\n  variant="highlight"\n  href="/programme"\n  icon="ticket"\n  title="Clickable highlight card"\n  description="Whole card is a link; stroke + light purple background."\n/>\n\n<CtaPanel\n  title="Call-to-action panel"\n  description="Full-bleed gradient panel."\n  actionLabel="Get your ticket"\n  actionHref="/tickets"\n  image={{ src: speakerPhoto, alt: "Speaker" }}\n/>`}
+                code={`<FeatureCard\n  icon="sparkles"\n  title="Feature card"\n  description="Short supporting text."\n/>\n\n<FeatureCard\n  href="/programme"\n  icon="ticket"\n  title="Clickable feature card"\n  description="Whole card is a link."\n/>\n\n<CtaPanel\n  title="Call-to-action panel"\n  description="Full-bleed gradient panel."\n  actionLabel="Get your ticket"\n  actionHref="/tickets"\n  image={{ src: speakerPhoto, alt: "Speaker" }}\n/>`}
               />
             </div>
 

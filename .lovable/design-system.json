@@ -1785,7 +1785,7 @@
           "type": "string"
         }
       ],
-      "usage": "Elevated card with an icon medallion, heading and short supporting text. Use it plain (white elevated background) for non-interactive content; pass href when the whole card should be a clickable link with hover lift.",
+      "usage": "Elevated card with an icon medallion, heading and short supporting text. Without href it has a plain white elevated background for non-interactive content. With href, the entire card is clickable with a primary-purple stroke, primary-subtle light purple background, hover lift and focus ring. The clickable look is automatic, not a separate highlight variant.",
       "examples": [
         {
           "label": "Clickable feature card",

@@ -163,24 +163,41 @@ export interface ScheduleItemProps
 }
 
 export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
-  ({ className, tone, padding, time, title, speaker, linkedinHref, description, track, markerIcon, avatar, ...props }, ref) => {
+  ({ className, tone, padding, time, title, speaker, linkedinHref, description, track, markerIcon, avatar, avatars, ...props }, ref) => {
     const categoryTone = React.useContext(ScheduleMarkerToneContext);
     const [expanded, setExpanded] = React.useState(false);
     const descriptionId = React.useId();
     const isLast = (props as Record<string, unknown>)["data-schedule-last"] === "true";
-    const hasMarker = markerIcon || avatar;
+    const hasMarker = markerIcon || avatar || avatars?.length;
+    const stacked = Boolean(avatars?.length);
     return (
       <div className="relative">
         {hasMarker ? (
           <span
             className={scheduleMarkerVariants({
               tone: tone ?? categoryTone,
-              position: isLast ? "end" : padding === "sm" ? "titleSm" : "titleMd",
-              size: avatar ? "avatar" : "icon",
+              position: stacked
+                ? "stack"
+                : isLast
+                  ? "end"
+                  : padding === "sm"
+                    ? "titleSm"
+                    : "titleMd",
+              size: stacked ? "stack" : avatar ? "avatar" : "icon",
             })}
             aria-hidden="true"
           >
-            {avatar ? (
+            {stacked ? (
+              avatars!.map((item) => (
+                <Avatar
+                  key={item.name}
+                  size="sm"
+                  src={item.src}
+                  name={item.name}
+                  className={cn("ring-2", stackAvatarRing[tone ?? categoryTone])}
+                />
+              ))
+            ) : avatar ? (
               <Avatar size="md" src={avatar.src} name={avatar.name} />
             ) : markerIcon ? (
               <Icon name={markerIcon} size="sm" />

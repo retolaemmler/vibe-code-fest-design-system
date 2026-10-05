@@ -1946,26 +1946,41 @@
         {
           "name": "href",
           "type": "string",
-          "description": "Optional destination that makes the complete frame a link."
+          "description": "Optional destination opened by the gallery button inside the frame."
         },
         {
           "name": "linkLabel",
           "type": "string",
-          "default": "View full photo gallery",
-          "description": "Accessible label for the linked frame."
+          "default": "View Full Photo Gallery",
+          "description": "Label for the gallery button inside the frame."
+        },
+        {
+          "name": "credit",
+          "type": "string",
+          "description": "Plain credit text shown under the gallery button, e.g. \"Photos by Jane Doe\"."
+        },
+        {
+          "name": "creditLabel",
+          "type": "string",
+          "description": "Link label rendered in parentheses after the credit text."
+        },
+        {
+          "name": "creditHref",
+          "type": "string",
+          "description": "Destination of the credit link."
         }
       ],
-      "usage": "Use for the six-image “Impressions from the last event” gallery. It renders one thin-lined frame with two columns on mobile and three on larger screens; pass href only when the complete frame opens a larger gallery.",
+      "usage": "Use for the six-image “Impressions from the last event” gallery. One pink→purple gradient frame wraps rounded photo tiles (two columns on mobile, three on larger screens), with the gradient gallery button and an optional photographer-credit link inside the frame.",
       "examples": [
         {
-          "label": "Linked event impressions frame",
-          "code": "<PhotoFrame photos={eventPhotos} href=\"https://example.com/full-gallery\" />"
+          "label": "Event impressions frame",
+          "code": "<PhotoFrame photos={eventPhotos} href=\"https://example.com/full-gallery\" credit=\"Photos by Silvan Mühlelemann\" creditLabel=\"mühlelemann+popp AG\" creditHref=\"https://example.com\" />"
         }
       ],
       "antipatterns": [
-        "Do not recreate the hairline grid with separate cards, gaps, rotations, or per-image shadows.",
+        "Do not recreate the gradient frame with separate cards, rotations, or per-image shadows.",
         "Do not pass decorative or duplicate alt text; describe the distinct event moment in each photograph.",
-        "Do not place buttons or other interactive controls inside a linked PhotoFrame."
+        "Do not link the whole frame; the gallery button inside the frame is the single interactive action."
       ]
     },
     {

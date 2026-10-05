@@ -977,7 +977,22 @@
             "lg"
           ],
           "default": "md"
+        },
+        {
+          "name": "action",
+          "type": "React.ReactNode",
+          "description": "Optional action (e.g. an icon-only Button) pinned to the card's top-right corner."
         }
+      ],
+      "usage": "General-purpose content surface with elevation, padding and glass variants. Pass an optional `action` (typically an icon-only ghost Button, e.g. edit) to pin a corner action to the top-right.",
+      "examples": [
+        {
+          "label": "Card with corner edit action",
+          "code": "<Card\n  variant=\"elevated\"\n  action={\n    <Button variant=\"ghost\" size=\"icon\" aria-label=\"Edit\">\n      <Icon name=\"pencil\" />\n    </Button>\n  }\n>\n  <CardHeader>\n    <CardTitle>Workshop pass</CardTitle>\n  </CardHeader>\n</Card>"
+        }
+      ],
+      "antipatterns": [
+        "Do not position a corner action with ad-hoc absolute className overrides \u2014 use the `action` prop, which places and offsets it correctly."
       ]
     },
     {
@@ -1461,7 +1476,7 @@
           "required": true
         }
       ],
-      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline placed directly on the page background — Schedule itself adds no card or surface of its own.",
+      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline placed directly on the page background \u2014 Schedule itself adds no card or surface of its own.",
       "examples": [
         {
           "label": "Event timeline",
@@ -1568,11 +1583,11 @@
       "examples": [
         {
           "label": "Talk with speaker avatar",
-          "code": "<ScheduleItem\n  time=\"11:00–11:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/>"
+          "code": "<ScheduleItem\n  time=\"11:00\u201311:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/>"
         },
         {
           "label": "Talk with icon marker",
-          "code": "<ScheduleItem time=\"11:00–11:25\" title=\"Community talk\" markerIcon=\"mic\" />"
+          "code": "<ScheduleItem time=\"11:00\u201311:25\" title=\"Community talk\" markerIcon=\"mic\" />"
         },
         {
           "label": "Lunch without marker",
@@ -1838,7 +1853,7 @@
         }
       ],
       "antipatterns": [
-        "Do not use the muted action button outside gradient surfaces — here it is the correct pairing.",
+        "Do not use the muted action button outside gradient surfaces \u2014 here it is the correct pairing.",
         "Do not pass more than one photo or non-square images without object-cover cropping; the image renders as a circle."
       ]
     },

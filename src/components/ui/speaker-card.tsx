@@ -32,6 +32,7 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
       topics,
       linkedinHref,
       action,
+      cornerAction,
       variant = "outline",
       ...props
     },
@@ -40,6 +41,7 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
     <Card
       ref={ref}
       variant={variant}
+      action={cornerAction}
       className={cn(
         "flex flex-col gap-4",
         variant === "plain" ? "items-center" : "items-start",

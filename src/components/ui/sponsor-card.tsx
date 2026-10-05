@@ -4,17 +4,41 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
 export const sponsorCardVariants = cva(
-  "group flex min-h-48 items-center justify-center overflow-hidden rounded-card border p-6 transition-all duration-fast ease-standard",
+  "group flex min-h-48 items-center justify-center overflow-hidden rounded-card p-6 transition-all duration-fast ease-standard",
   {
     variants: {
       variant: {
         default:
-          "border-primary bg-card text-card-foreground shadow-raised hover:-translate-y-1 hover:border-primary-hover hover:shadow-lifted",
+          "bg-card text-card-foreground shadow-raised hover:-translate-y-1 hover:shadow-lifted",
         highlight:
-          "border-primary bg-primary-subtle text-primary shadow-lifted hover:-translate-y-1 hover:shadow-glow",
+          "border border-primary bg-primary-subtle text-primary shadow-lifted hover:-translate-y-1 hover:shadow-glow",
+      },
+      size: {
+        lg: "",
+        sm: "min-h-24 p-4",
       },
     },
-    defaultVariants: { variant: "default" },
+    compoundVariants: [
+      {
+        variant: "highlight",
+        size: "sm",
+        class: "shadow-raised hover:shadow-lifted",
+      },
+    ],
+    defaultVariants: { variant: "default", size: "lg" },
+  },
+);
+
+const sponsorLogoVariants = cva(
+  "w-full object-contain transition-transform duration-fast ease-standard group-hover:scale-[1.02]",
+  {
+    variants: {
+      size: {
+        lg: "max-h-32 max-w-64",
+        sm: "max-h-12 max-w-36",
+      },
+    },
+    defaultVariants: { size: "lg" },
   },
 );
 
@@ -30,12 +54,12 @@ export interface SponsorCardProps
 }
 
 export const SponsorCard = React.forwardRef<HTMLAnchorElement, SponsorCardProps>(
-  ({ className, variant, logoSrc, name, href, ...props }, ref) => {
+  ({ className, variant, size, logoSrc, name, href, ...props }, ref) => {
     const logo = (
       <img
         src={logoSrc}
         alt={`${name} logo`}
-        className="max-h-32 w-full max-w-64 object-contain transition-transform duration-fast ease-standard group-hover:scale-[1.02]"
+        className={cn(sponsorLogoVariants({ size }))}
         loading="lazy"
       />
     );
@@ -46,7 +70,7 @@ export const SponsorCard = React.forwardRef<HTMLAnchorElement, SponsorCardProps>
           ref={ref}
           href={href}
           aria-label={`Visit ${name}`}
-          className={cn(sponsorCardVariants({ variant }), className)}
+          className={cn(sponsorCardVariants({ variant, size }), className)}
           {...props}
         >
           {logo}
@@ -56,7 +80,7 @@ export const SponsorCard = React.forwardRef<HTMLAnchorElement, SponsorCardProps>
 
     return (
       <div
-        className={cn(sponsorCardVariants({ variant }), className)}
+        className={cn(sponsorCardVariants({ variant, size }), className)}
         {...props}
       >
         {logo}

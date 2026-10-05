@@ -20,11 +20,6 @@ export const sponsorCardVariants = cva(
     },
     compoundVariants: [
       {
-        variant: "default",
-        size: "sm",
-        class: "shadow-flat hover:shadow-raised",
-      },
-      {
         variant: "highlight",
         size: "sm",
         class: "shadow-raised hover:shadow-lifted",

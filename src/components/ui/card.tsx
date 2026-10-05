@@ -8,7 +8,7 @@ import { cn } from "../../lib/utils";
  * plain / outline -> level 0 flat, raised -> level 1, elevated -> level 2,
  * overlay -> level 3, gradient -> brand glow.
  */
-export const cardVariants = cva("rounded-card text-card-foreground", {
+export const cardVariants = cva("rounded-card relative text-card-foreground", {
   variants: {
     variant: {
       plain: "bg-card shadow-flat",

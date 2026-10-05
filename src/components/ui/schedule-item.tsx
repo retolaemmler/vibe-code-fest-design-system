@@ -332,7 +332,7 @@ function findLastMarkedItemPath(
   arr.forEach((child, index) => {
     if (!React.isValidElement<{ children?: React.ReactNode }>(child)) return;
     const childPath = [...path, index];
-    if (isScheduleItemElement(child) && (child.props.markerIcon || child.props.avatar)) {
+    if (isScheduleItemElement(child) && (child.props.markerIcon || child.props.avatar || child.props.avatars?.length)) {
       result = childPath;
     }
     const nested = findLastMarkedItemPath(child.props.children, childPath);

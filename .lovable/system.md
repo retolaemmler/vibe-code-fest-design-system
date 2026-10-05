@@ -106,7 +106,7 @@ Pick the Button variant from the surface it sits on, not from personal taste.
 - **`CtaPanel`** — the closing call-to-action of a page, rendered on the
   brand gradient. Use it once per page, at the end. Its action button is
   `muted` — reserved for gradient surfaces. Pass `image` for the circular
-  photo on the left; omit it for a compact centred panel.
+  photo; all content (photo, title, description, button) is centred.
 - Do not add one-off `className` borders or backgrounds to FeatureCard; its
   appearance follows whether it is interactive (`href`) or not.
 

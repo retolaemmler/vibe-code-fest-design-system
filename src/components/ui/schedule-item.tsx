@@ -49,7 +49,7 @@ export const scheduleHoverOverlayVariants = cva("", {
 });
 
 export const scheduleMarkerVariants = cva(
-  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4",
+  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised",
   {
     variants: {
       tone: {
@@ -64,15 +64,28 @@ export const scheduleMarkerVariants = cva(
         titleSm: "top-14 -translate-y-1/2",
         titleMd: "top-16 -translate-y-1/2",
         end: "bottom-7 sm:bottom-3",
+        stack: "top-1/2 -translate-y-1/2",
       },
       size: {
-        icon: "size-10",
-        avatar: "size-14",
+        icon: "size-10 ring-4",
+        avatar: "size-14 ring-4",
+        stack: "size-12 flex-col gap-1",
       },
     },
     defaultVariants: { tone: "primary", position: "titleMd", size: "icon" },
   },
 );
+
+/* Each stacked avatar carries its own ring in the section tone, so the
+   borders keep matching the timeline segment colour. */
+const stackAvatarRing: Record<ScheduleMarkerTone, string> = {
+  primary: "ring-primary",
+  accent: "ring-accent",
+  info: "ring-info",
+  success: "ring-success",
+  warning: "ring-warning",
+  violet: "ring-violet",
+};
 
 export type ScheduleMarkerTone = NonNullable<VariantProps<typeof scheduleMarkerVariants>["tone"]>;
 const ScheduleMarkerToneContext = React.createContext<ScheduleMarkerTone>("primary");

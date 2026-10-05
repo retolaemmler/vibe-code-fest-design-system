@@ -960,18 +960,23 @@ function StyleGuide() {
               <PhotoFrame
                 photos={eventPhotos}
                 href="https://vibe-code-fest.pictureclub.io/camera-roll/6999d4b6-7886-4091-8c64-f2837ab42ad7?scrolltostart=1"
+                credit="Photos by Silvan Mühlelemann"
+                creditLabel="mühlelemann+popp AG"
+                creditHref="https://www.muehlemannpopp.ch"
               />
               <div className="flex flex-wrap gap-2">
-                <TokenName>border-border</TokenName>
-                <TokenName>bg-border</TokenName>
+                <TokenName>bg-gradient-primary</TokenName>
+                <TokenName>bg-card</TokenName>
                 <TokenName>rounded-card</TokenName>
-                <TokenName>ring-ring</TokenName>
+                <TokenName>rounded-lg</TokenName>
               </div>
               <Text size="small" tone="muted">
-                Six photographs share one thin-lined frame. The grid uses two
-                columns on mobile and three columns from tablet size onward.
+                Six photographs share one gradient frame with rounded tiles,
+                a gallery button and an optional credit line inside. The grid
+                uses two columns on mobile and three columns from tablet size
+                onward.
               </Text>
-              <Snippet code={'<PhotoFrame\n  photos={eventPhotos}\n  href="https://example.com/full-gallery"\n/>'} />
+              <Snippet code={'<PhotoFrame\n  photos={eventPhotos}\n  href="https://example.com/full-gallery"\n  credit="Photos by Silvan Mühlelemann"\n  creditLabel="mühlelemann+popp AG"\n  creditHref="https://example.com"\n/>'} />
             </div>
 
             {/* Ticket card */}

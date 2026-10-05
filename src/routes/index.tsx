@@ -434,6 +434,9 @@ function Showcase() {
           <PhotoFrame
             photos={eventPhotos}
             href="https://vibe-code-fest.pictureclub.io/camera-roll/6999d4b6-7886-4091-8c64-f2837ab42ad7?scrolltostart=1"
+            credit="Photos by Silvan Mühlelemann"
+            creditLabel="mühlelemann+popp AG"
+            creditHref="https://www.muehlemannpopp.ch"
           />
         </Container>
       </Section>

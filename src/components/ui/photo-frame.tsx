@@ -2,6 +2,7 @@ import * as React from "react";
 import { cva } from "class-variance-authority";
 
 import { cn } from "../../lib/utils";
+import { Button } from "./button";
 
 export interface PhotoFramePhoto {
   src: string;
@@ -10,20 +11,11 @@ export interface PhotoFramePhoto {
 }
 
 export const photoFrameVariants = cva(
-  "grid grid-cols-2 gap-px overflow-hidden rounded-card border border-border bg-border md:grid-cols-3",
-  {
-    variants: {
-      interactive: {
-        false: "",
-        true: "transition-colors duration-fast hover:border-primary-hover active:border-primary",
-      },
-    },
-    defaultVariants: { interactive: false },
-  },
+  "w-full rounded-card bg-gradient-primary p-2 md:p-3",
 );
 
 export const photoFrameImageVariants = cva(
-  "block aspect-[4/3] size-full object-cover",
+  "block aspect-[4/3] size-full rounded-lg object-cover",
   {
     variants: {
       position: {
@@ -38,7 +30,7 @@ export const photoFrameImageVariants = cva(
 
 export interface PhotoFrameProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
-  /** Six photographs displayed as one responsive, thin-lined frame. */
+  /** Six photographs displayed as one responsive, gradient-framed gallery. */
   photos: readonly [
     PhotoFramePhoto,
     PhotoFramePhoto,
@@ -47,47 +39,83 @@ export interface PhotoFrameProps
     PhotoFramePhoto,
     PhotoFramePhoto,
   ];
-  /** Optional destination that makes the complete frame a link. */
+  /** Optional destination opened by the gallery button inside the frame. */
   href?: string;
-  /** Accessible label for the linked frame. */
+  /** Label for the gallery button inside the frame. */
   linkLabel?: string;
+  /** Plain credit text shown under the gallery button, e.g. "Photos by Jane Doe". */
+  credit?: string;
+  /** Link label rendered in parentheses after the credit text. */
+  creditLabel?: string;
+  /** Destination of the credit link. */
+  creditHref?: string;
 }
 
 /**
- * A responsive six-photo event frame with shared hairline dividers. Pass href
- * only when the entire frame should open a larger gallery.
+ * A responsive six-photo event gallery inside one gradient frame. Pass href to
+ * render the gallery button inside the frame; pass credit/creditLabel/creditHref
+ * to add the photographer credit line with an inline link under the button.
  */
 export const PhotoFrame = React.forwardRef<HTMLDivElement, PhotoFrameProps>(
-  ({ className, photos, href, linkLabel = "View full photo gallery", ...props }, ref) => {
-    const images = (
-      <div className={photoFrameVariants({ interactive: Boolean(href) })}>
-        {photos.slice(0, 6).map((photo) => (
-          <img
-            key={`${photo.src}-${photo.alt}`}
-            src={photo.src}
-            alt={photo.alt}
-            loading="lazy"
-            className={photoFrameImageVariants({ position: photo.position })}
-          />
-        ))}
-      </div>
-    );
-
+  (
+    {
+      className,
+      photos,
+      href,
+      linkLabel = "View Full Photo Gallery",
+      credit,
+      creditLabel,
+      creditHref,
+      ...props
+    },
+    ref,
+  ) => {
     return (
-      <div ref={ref} className={cn("w-full", className)} {...props}>
-        {href ? (
-          <a
-            href={href}
-            aria-label={linkLabel}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block rounded-card outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-          >
-            {images}
-          </a>
-        ) : (
-          images
-        )}
+      <div
+        ref={ref}
+        className={cn(photoFrameVariants(), className)}
+        {...props}
+      >
+        <div className="flex w-full flex-col gap-4 rounded-card bg-card p-4 md:gap-6 md:p-6">
+          <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
+            {photos.slice(0, 6).map((photo) => (
+              <img
+                key={`${photo.src}-${photo.alt}`}
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+                className={photoFrameImageVariants({ position: photo.position })}
+              />
+            ))}
+          </div>
+          {href && (
+            <Button asChild variant="gradient" className="self-center">
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {linkLabel}
+              </a>
+            </Button>
+          )}
+          {(credit || creditLabel) && (
+            <p className="text-center text-small text-muted-foreground">
+              {credit}
+              {credit && creditLabel && " "}
+              {creditLabel && (
+                <>
+                  {"( "}
+                  <a
+                    href={creditHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-primary underline underline-offset-2 hover:text-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  >
+                    {creditLabel}
+                  </a>
+                  {" )"}
+                </>
+              )}
+            </p>
+          )}
+        </div>
       </div>
     );
   },

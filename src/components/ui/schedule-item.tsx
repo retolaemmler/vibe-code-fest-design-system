@@ -49,7 +49,7 @@ export const scheduleHoverOverlayVariants = cva("", {
 });
 
 export const scheduleMarkerVariants = cva(
-  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised ring-4",
+  "absolute left-6 z-20 flex -translate-x-1/2 items-center justify-center rounded-pill shadow-raised",
   {
     variants: {
       tone: {
@@ -64,15 +64,28 @@ export const scheduleMarkerVariants = cva(
         titleSm: "top-14 -translate-y-1/2",
         titleMd: "top-16 -translate-y-1/2",
         end: "bottom-7 sm:bottom-3",
+        stack: "top-1/2 -translate-y-1/2",
       },
       size: {
-        icon: "size-10",
-        avatar: "size-14",
+        icon: "size-10 ring-4",
+        avatar: "size-14 ring-4",
+        stack: "size-12 flex-col gap-1",
       },
     },
     defaultVariants: { tone: "primary", position: "titleMd", size: "icon" },
   },
 );
+
+/* Each stacked avatar carries its own ring in the section tone, so the
+   borders keep matching the timeline segment colour. */
+const stackAvatarRing: Record<ScheduleMarkerTone, string> = {
+  primary: "ring-primary",
+  accent: "ring-accent",
+  info: "ring-info",
+  success: "ring-success",
+  warning: "ring-warning",
+  violet: "ring-violet",
+};
 
 export type ScheduleMarkerTone = NonNullable<VariantProps<typeof scheduleMarkerVariants>["tone"]>;
 const ScheduleMarkerToneContext = React.createContext<ScheduleMarkerTone>("primary");
@@ -145,27 +158,46 @@ export interface ScheduleItemProps
   markerIcon?: IconName;
   /** Replaces the icon marker with a speaker avatar (size="md"). */
   avatar?: ScheduleItemAvatar;
+  /** Replaces the icon marker with speaker avatars stacked on the timeline, slightly overflowing the card. */
+  avatars?: ScheduleItemAvatar[];
 }
 
 export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
-  ({ className, tone, padding, time, title, speaker, linkedinHref, description, track, markerIcon, avatar, ...props }, ref) => {
+  ({ className, tone, padding, time, title, speaker, linkedinHref, description, track, markerIcon, avatar, avatars, ...props }, ref) => {
     const categoryTone = React.useContext(ScheduleMarkerToneContext);
     const [expanded, setExpanded] = React.useState(false);
     const descriptionId = React.useId();
     const isLast = (props as Record<string, unknown>)["data-schedule-last"] === "true";
-    const hasMarker = markerIcon || avatar;
+    const hasMarker = markerIcon || avatar || avatars?.length;
+    const stacked = Boolean(avatars?.length);
     return (
       <div className="relative">
         {hasMarker ? (
           <span
             className={scheduleMarkerVariants({
               tone: tone ?? categoryTone,
-              position: isLast ? "end" : padding === "sm" ? "titleSm" : "titleMd",
-              size: avatar ? "avatar" : "icon",
+              position: stacked
+                ? "stack"
+                : isLast
+                  ? "end"
+                  : padding === "sm"
+                    ? "titleSm"
+                    : "titleMd",
+              size: stacked ? "stack" : avatar ? "avatar" : "icon",
             })}
             aria-hidden="true"
           >
-            {avatar ? (
+            {stacked ? (
+              avatars!.map((item) => (
+                <Avatar
+                  key={item.name}
+                  size="sm"
+                  src={item.src}
+                  name={item.name}
+                  className={cn("ring-2", stackAvatarRing[tone ?? categoryTone])}
+                />
+              ))
+            ) : avatar ? (
               <Avatar size="md" src={avatar.src} name={avatar.name} />
             ) : markerIcon ? (
               <Icon name={markerIcon} size="sm" />
@@ -300,7 +332,7 @@ function findLastMarkedItemPath(
   arr.forEach((child, index) => {
     if (!React.isValidElement<{ children?: React.ReactNode }>(child)) return;
     const childPath = [...path, index];
-    if (isScheduleItemElement(child) && (child.props.markerIcon || child.props.avatar)) {
+    if (isScheduleItemElement(child) && (child.props.markerIcon || child.props.avatar || child.props.avatars?.length)) {
       result = childPath;
     }
     const nested = findLastMarkedItemPath(child.props.children, childPath);

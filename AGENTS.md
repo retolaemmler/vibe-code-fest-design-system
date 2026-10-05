@@ -1,7 +1,7 @@
-Schedule talk details live behind an optional description prop on ScheduleItem, and speaker profile links use its optional linkedinHref prop, because passive timeline entries must remain static and the reusable library API must carry both behaviors.
+Schedule talk details live behind an optional description prop on ScheduleItem, speaker profile links use its optional linkedinHref prop, and multi-speaker talks use the avatars prop (stacked on the timeline line, slightly overflowing the card), because passive timeline entries must remain static and the reusable library API must carry both behaviors.
 Social glyph implementations stay internal to the shared Icon registry; export only Icon and its name map so consumers use one consistent icon API.
 Use the official Vibe Code Fest logo asset in brand slots on preview pages instead of text stand-ins, so the library showcase reflects the actual brand.
 Render LinkedIn profile actions through the shared LinkedInBubble in speaker cards and schedule items, so both contexts retain identical styling and accessibility.
 FeatureCard derives its purple-tinted, primary-stroked clickable look from `href` rather than a separate highlight variant, so its visual state always matches its interaction.
 Use Radix Tabs wrapped by the token-driven Tabs primitives for exclusive content switching, so keyboard interaction and selected-state semantics remain consistent in consuming projects.
-Use PhotoFrame for six-image event impressions: one thin-lined responsive frame, two columns on mobile and three on larger screens, with optional whole-frame gallery linking.
+Use PhotoFrame for six-image event impressions: one gradient-framed responsive gallery (pink→purple frame, rounded tiles, two columns on mobile / three on larger screens) with the gallery button and optional photographer-credit link inside the frame.

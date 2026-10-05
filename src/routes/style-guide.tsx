@@ -960,18 +960,23 @@ function StyleGuide() {
               <PhotoFrame
                 photos={eventPhotos}
                 href="https://vibe-code-fest.pictureclub.io/camera-roll/6999d4b6-7886-4091-8c64-f2837ab42ad7?scrolltostart=1"
+                credit="Photos by Silvan Mühlelemann"
+                creditLabel="mühlelemann+popp AG"
+                creditHref="https://www.muehlemannpopp.ch"
               />
               <div className="flex flex-wrap gap-2">
-                <TokenName>border-border</TokenName>
-                <TokenName>bg-border</TokenName>
+                <TokenName>bg-gradient-primary</TokenName>
+                <TokenName>bg-card</TokenName>
                 <TokenName>rounded-card</TokenName>
-                <TokenName>ring-ring</TokenName>
+                <TokenName>rounded-lg</TokenName>
               </div>
               <Text size="small" tone="muted">
-                Six photographs share one thin-lined frame. The grid uses two
-                columns on mobile and three columns from tablet size onward.
+                Six photographs share one gradient frame with rounded tiles,
+                a gallery button and an optional credit line inside. The grid
+                uses two columns on mobile and three columns from tablet size
+                onward.
               </Text>
-              <Snippet code={'<PhotoFrame\n  photos={eventPhotos}\n  href="https://example.com/full-gallery"\n/>'} />
+              <Snippet code={'<PhotoFrame\n  photos={eventPhotos}\n  href="https://example.com/full-gallery"\n  credit="Photos by Silvan Mühlelemann"\n  creditLabel="mühlelemann+popp AG"\n  creditHref="https://example.com"\n/>'} />
             </div>
 
             {/* Ticket card */}
@@ -1147,10 +1152,13 @@ function StyleGuide() {
                     <ScheduleItem
                       time="10:30–11:00"
                       title="Keynote & fireside chat"
-                      speaker="Nora Keller"
+                      speaker="Nora Keller & Marco Frei"
                       linkedinHref="https://linkedin.com/in/nora-keller"
                       description="Nora shares how design systems help teams build together, followed by an open conversation about turning ideas into useful products."
-                      avatar={{ src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face", name: "Nora Keller" }}
+                      avatars={[
+                        { src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face", name: "Nora Keller" },
+                        { src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face", name: "Marco Frei" },
+                      ]}
                     />
                   </div>
                 </ScheduleCategory>

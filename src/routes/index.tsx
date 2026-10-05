@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { Icon, icons, type IconName } from "@/components/ui/icon";
 import { Faq, FaqContent, FaqItem, FaqTrigger } from "@/components/ui/faq";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Footer } from "@/components/ui/footer";
 import { Container, Section } from "@/components/ui/layout";
 import { Link } from "@/components/ui/link";
@@ -387,6 +388,22 @@ function Showcase() {
               </FaqContent>
             </FaqItem>
           </Faq>
+
+          <Heading level="h2">Tabs</Heading>
+          <Tabs defaultValue="talk" className="w-full max-w-md">
+            <TabsList aria-label="Ways to contribute">
+              <TabsTrigger value="talk">Talk/Session</TabsTrigger>
+              <TabsTrigger value="volunteer">Volunteer</TabsTrigger>
+            </TabsList>
+            <TabsContent value="talk">
+              <Heading level="h3">Share your expertise</Heading>
+              <Text tone="muted">Propose a talk or hands-on session for the festival.</Text>
+            </TabsContent>
+            <TabsContent value="volunteer">
+              <Heading level="h3">Help make it happen</Heading>
+              <Text tone="muted">Join the team welcoming and supporting attendees.</Text>
+            </TabsContent>
+          </Tabs>
         </Container>
       </Section>
 

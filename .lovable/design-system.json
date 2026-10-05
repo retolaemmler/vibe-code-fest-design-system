@@ -992,7 +992,7 @@
         }
       ],
       "antipatterns": [
-        "Do not position a corner action with ad-hoc absolute className overrides \u2014 use the `action` prop, which places and offsets it correctly."
+        "Do not position a corner action with ad-hoc absolute className overrides — use the `action` prop, which places and offsets it correctly."
       ]
     },
     {
@@ -1476,7 +1476,7 @@
           "required": true
         }
       ],
-      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline placed directly on the page background \u2014 Schedule itself adds no card or surface of its own.",
+      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline placed directly on the page background — Schedule itself adds no card or surface of its own.",
       "examples": [
         {
           "label": "Event timeline",
@@ -1583,11 +1583,11 @@
       "examples": [
         {
           "label": "Talk with speaker avatar",
-          "code": "<ScheduleItem\n  time=\"11:00\u201311:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/>"
+          "code": "<ScheduleItem\n  time=\"11:00–11:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/>"
         },
         {
           "label": "Talk with icon marker",
-          "code": "<ScheduleItem time=\"11:00\u201311:25\" title=\"Community talk\" markerIcon=\"mic\" />"
+          "code": "<ScheduleItem time=\"11:00–11:25\" title=\"Community talk\" markerIcon=\"mic\" />"
         },
         {
           "label": "Lunch without marker",
@@ -1853,7 +1853,7 @@
         }
       ],
       "antipatterns": [
-        "Do not use the muted action button outside gradient surfaces \u2014 here it is the correct pairing.",
+        "Do not use the muted action button outside gradient surfaces — here it is the correct pairing.",
         "Do not pass more than one photo or non-square images without object-cover cropping; the image renders as a circle."
       ]
     },
@@ -1934,6 +1934,82 @@
       ],
       "antipatterns": [
         "Do not use TicketRegular outside a TicketCard; it relies on the surrounding card styling and tear line."
+      ]
+    },
+    {
+      "name": "Tabs",
+      "file": "src/components/ui/tabs",
+      "import_path": "",
+      "props": [],
+      "usage": "Controlled or uncontrolled group of mutually exclusive panels. Set defaultValue or value, and match each trigger value to one content panel.",
+      "examples": [
+        {
+          "label": "Contribute tabs",
+          "code": "<Tabs defaultValue=\"talk\"><TabsList aria-label=\"Ways to contribute\"><TabsTrigger value=\"talk\">Talk/Session</TabsTrigger><TabsTrigger value=\"volunteer\">Volunteer</TabsTrigger></TabsList><TabsContent value=\"talk\">Propose a session</TabsContent><TabsContent value=\"volunteer\">Join the team</TabsContent></Tabs>"
+        }
+      ],
+      "antipatterns": [
+        "Do not use tabs for navigation between separate pages; tabs switch related content in place."
+      ]
+    },
+    {
+      "name": "TabsList",
+      "file": "src/components/ui/tabs",
+      "import_path": "",
+      "props": [],
+      "usage": "A muted, evenly spaced segmented track for TabsTrigger controls; add an accessible label when there is no adjacent heading.",
+      "examples": [
+        {
+          "label": "Contribute tabs",
+          "code": "<TabsList aria-label=\"Ways to contribute\"><TabsTrigger value=\"talk\">Talk/Session</TabsTrigger><TabsTrigger value=\"volunteer\">Volunteer</TabsTrigger></TabsList>"
+        }
+      ],
+      "antipatterns": [
+        "Do not restyle the track with arbitrary color classes."
+      ]
+    },
+    {
+      "name": "TabsTrigger",
+      "file": "src/components/ui/tabs",
+      "import_path": "",
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "usage": "A keyboard-reachable segment with token-backed selected, hover, focus, and disabled states.",
+      "examples": [
+        {
+          "label": "Contribute tabs",
+          "code": "<TabsTrigger value=\"volunteer\">Volunteer</TabsTrigger>"
+        }
+      ],
+      "antipatterns": [
+        "Do not use a standalone Button or omit the matching TabsContent value."
+      ]
+    },
+    {
+      "name": "TabsContent",
+      "file": "src/components/ui/tabs",
+      "import_path": "",
+      "props": [
+        {
+          "name": "value",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "usage": "Panel displayed when its matching trigger is selected; accepts any composed content.",
+      "examples": [
+        {
+          "label": "Contribute tabs",
+          "code": "<TabsContent value=\"volunteer\"><Text>Join the team.</Text></TabsContent>"
+        }
+      ],
+      "antipatterns": [
+        "Do not leave a trigger without a matching panel."
       ]
     }
   ],

@@ -102,6 +102,13 @@ export {
 } from "./components/ui/feature-card";
 export { CtaPanel, type CtaPanelProps } from "./components/ui/cta-panel";
 export {
+  PhotoFrame,
+  photoFrameVariants,
+  photoFrameImageVariants,
+  type PhotoFramePhoto,
+  type PhotoFrameProps,
+} from "./components/ui/photo-frame";
+export {
   TicketCard,
   TicketHeader,
   TicketTitle,

@@ -9,7 +9,7 @@ export const sponsorCardVariants = cva(
     variants: {
       variant: {
         default:
-          "borderless bg-card text-card-foreground shadow-raised hover:-translate-y-1 hover:shadow-lifted",
+          "bg-card text-card-foreground shadow-raised hover:-translate-y-1 hover:shadow-lifted",
         highlight:
           "border border-primary bg-primary-subtle text-primary shadow-lifted hover:-translate-y-1 hover:shadow-glow",
       },

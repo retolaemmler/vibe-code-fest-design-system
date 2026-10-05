@@ -1591,10 +1591,16 @@
         },
         {
           "name": "avatar",
-          "type": "any"
+          "type": "any",
+          "description": "Replaces the icon marker with a single speaker avatar on the timeline."
+        },
+        {
+          "name": "avatars",
+          "type": "ScheduleItemAvatar[]",
+          "description": "Replaces the icon marker with speaker avatars stacked under each other on the timeline, slightly overflowing the card."
         }
       ],
-      "usage": "Shows a timed programme entry on a very light tint of its category colour. Pass description for an expandable talk with a chevron; omit it for passive entries. Pass linkedinHref alongside speaker for an icon-only profile link by the name. Pass avatar for the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks and lunch.",
+      "usage": "Shows a timed programme entry on a very light tint of its category colour. Pass description for an expandable talk with a chevron; omit it for passive entries. Pass linkedinHref alongside speaker for an icon-only profile link by the name. Pass avatar for one speaker, avatars for two or more stacked on the line, markerIcon for active sessions without a known speaker, or omit both for breaks and lunch.",
       "examples": [
         {
           "label": "Talk with speaker avatar",

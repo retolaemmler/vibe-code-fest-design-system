@@ -174,17 +174,20 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
       <div className="relative">
         {hasMarker ? (
           <span
-            className={scheduleMarkerVariants({
-              tone: tone ?? categoryTone,
-              position: stacked
-                ? "stack"
-                : isLast
-                  ? "end"
-                  : padding === "sm"
-                    ? "titleSm"
-                    : "titleMd",
-              size: stacked ? "stack" : avatar ? "avatar" : "icon",
-            })}
+            className={cn(
+              stacked
+                ? /* Transparent wrapper: only the avatars show, no solid circle behind them. */
+                  "absolute left-6 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1"
+                : scheduleMarkerVariants({
+                    tone: tone ?? categoryTone,
+                    position: isLast
+                      ? "end"
+                      : padding === "sm"
+                        ? "titleSm"
+                        : "titleMd",
+                    size: avatar ? "avatar" : "icon",
+                  }),
+            )}
             aria-hidden="true"
           >
             {stacked ? (

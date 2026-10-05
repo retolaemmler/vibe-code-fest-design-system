@@ -22,8 +22,8 @@ export interface CtaPanelProps
 
 /**
  * Full-bleed gradient panel for the closing action on a page.
- * Pass `image` to show a circular photo on the left; on small screens
- * the photo stacks above the content.
+ * All content — photo, title, description and action — is centred.
+ * Pass `image` to show a circular photo above the content.
  */
 export const CtaPanel = React.forwardRef<HTMLDivElement, CtaPanelProps>(
   (
@@ -44,7 +44,7 @@ export const CtaPanel = React.forwardRef<HTMLDivElement, CtaPanelProps>(
       variant="gradient"
       padding="lg"
       className={cn(
-        "flex flex-col items-center gap-6 text-center md:flex-row md:gap-8",
+        "flex flex-col items-center gap-6 text-center",
         className,
       )}
       {...props}

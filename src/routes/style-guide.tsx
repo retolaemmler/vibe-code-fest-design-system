@@ -1157,7 +1157,7 @@ function StyleGuide() {
                       description="Nora shares how design systems help teams build together, followed by an open conversation about turning ideas into useful products."
                       avatars={[
                         { src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face", name: "Nora Keller" },
-                        { src: "https://images.unsplash.com/photo-1500648767791-00dcc224a43e?w=200&h=200&fit=crop&crop=face", name: "Marco Frei" },
+                        { src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face", name: "Marco Frei" },
                       ]}
                     />
                   </div>

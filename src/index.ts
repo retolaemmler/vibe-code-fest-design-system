@@ -76,6 +76,18 @@ export {
 } from "./components/ui/schedule-item";
 export { Stat, statVariants, type StatProps } from "./components/ui/stat";
 export { Faq, FaqItem, FaqTrigger, FaqContent } from "./components/ui/faq";
+export {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+  tabsListVariants,
+  tabsTriggerVariants,
+  type TabsProps,
+  type TabsListProps,
+  type TabsTriggerProps,
+  type TabsContentProps,
+} from "./components/ui/tabs";
 export { Navbar, navbarVariants, type NavbarProps } from "./components/ui/navbar";
 export {
   Footer,

@@ -16,6 +16,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Faq, FaqContent, FaqItem, FaqTrigger } from "@/components/ui/faq";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Footer } from "@/components/ui/footer";
 import { Icon, icons, type IconName } from "@/components/ui/icon";
 import { Input } from "@/components/ui/input";
@@ -696,6 +697,40 @@ function StyleGuide() {
             title="Components"
             intro="Every variant and every state that applies, side by side. States that a component does not own are marked so — they are handled by the field or the surrounding form."
           >
+            {/* Tabs */}
+            <div className="flex flex-col gap-4">
+              <Heading level="h3">Tabs</Heading>
+              <Tabs defaultValue="talk" className="w-full max-w-md">
+                <TabsList aria-label="Ways to contribute">
+                  <TabsTrigger value="talk">Talk/Session</TabsTrigger>
+                  <TabsTrigger value="volunteer">Volunteer</TabsTrigger>
+                </TabsList>
+                <TabsContent value="talk">
+                  <Text>Teach something amazing at Vibe Code Fest.</Text>
+                </TabsContent>
+                <TabsContent value="volunteer">
+                  <Text>Help make the festival happen.</Text>
+                </TabsContent>
+              </Tabs>
+              <div className="flex flex-wrap gap-2">
+                <TokenName>bg-muted</TokenName>
+                <TokenName>data-[state=active]:bg-background</TokenName>
+                <TokenName>shadow-raised</TokenName>
+                <TokenName>ring-ring</TokenName>
+              </div>
+              <Spec label="Disabled trigger" token="disabled:opacity-50">
+                <Tabs defaultValue="talk" className="w-full max-w-md">
+                  <TabsList aria-label="Unavailable contribution options">
+                    <TabsTrigger value="talk">Talk/Session</TabsTrigger>
+                    <TabsTrigger value="volunteer" disabled>Volunteer</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="talk"><Text>Talk proposals are open.</Text></TabsContent>
+                  <TabsContent value="volunteer"><Text>Volunteer signups are closed.</Text></TabsContent>
+                </Tabs>
+              </Spec>
+              <Snippet code={'<Tabs defaultValue="talk">\n  <TabsList aria-label="Ways to contribute">\n    <TabsTrigger value="talk">Talk/Session</TabsTrigger>\n    <TabsTrigger value="volunteer">Volunteer</TabsTrigger>\n  </TabsList>\n  <TabsContent value="talk">Talk content</TabsContent>\n  <TabsContent value="volunteer">Volunteer content</TabsContent>\n</Tabs>'} />
+            </div>
+
             {/* Button */}
             <div className="flex flex-col gap-4">
               <Heading level="h3">Button</Heading>

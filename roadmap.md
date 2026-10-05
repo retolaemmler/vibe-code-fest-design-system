@@ -17,3 +17,4 @@
 - [x] Expand talk cards for descriptions and link speaker names to LinkedIn
 - [x] Use the official Vibe Code Fest logo in header and footer previews
 - [x] Unify speaker and timeline LinkedIn bubbles into one reusable control
+- [x] Add mobile-reference segmented tabs with token-backed light/dark styling and keyboard interaction

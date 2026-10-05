@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 
 import { cn } from "../../lib/utils";
 
@@ -37,10 +37,16 @@ export const photoFrameImageVariants = cva(
 );
 
 export interface PhotoFrameProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "children">,
-    VariantProps<typeof photoFrameVariants> {
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "children"> {
   /** Six photographs displayed as one responsive, thin-lined frame. */
-  photos: readonly PhotoFramePhoto[];
+  photos: readonly [
+    PhotoFramePhoto,
+    PhotoFramePhoto,
+    PhotoFramePhoto,
+    PhotoFramePhoto,
+    PhotoFramePhoto,
+    PhotoFramePhoto,
+  ];
   /** Optional destination that makes the complete frame a link. */
   href?: string;
   /** Accessible label for the linked frame. */

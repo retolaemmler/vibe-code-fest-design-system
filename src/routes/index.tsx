@@ -37,14 +37,14 @@ import gallery4 from "@/assets/photography/vcf2026-gallery-4.jpg.asset.json";
 import gallery5 from "@/assets/photography/vcf2026-gallery-5.jpg.asset.json";
 import gallery6 from "@/assets/photography/vcf2026-gallery-6.jpg.asset.json";
 
-const eventPhotos: readonly PhotoFramePhoto[] = [
+const eventPhotos = [
   { src: gallery1.url, alt: "Vibe Code Fest organizers together", position: "top" },
   { src: gallery2.url, alt: "Organizers celebrating with raised hands", position: "upper" },
   { src: gallery3.url, alt: "Vibe Code Fest winners on stage" },
   { src: gallery4.url, alt: "Speaker presenting at Vibe Code Fest" },
   { src: gallery5.url, alt: "Audience applauding during the event" },
   { src: gallery6.url, alt: "Ice bath experience at Vibe Code Fest", position: "upper" },
-];
+] as const satisfies PhotoFramePhoto[];
 
 export const Route = createFileRoute("/")({
   head: () => ({

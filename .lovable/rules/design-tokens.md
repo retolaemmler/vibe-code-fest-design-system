@@ -1,6 +1,6 @@
 # Design Tokens
 
-Token reference for **VibeCode Fest Incremental Current Polish**. Use utility classes and CSS variables — never raw values.
+Token reference for **Vibe Code Fest Design System**. Use utility classes and CSS variables — never raw values.
 
 ## Colors
 

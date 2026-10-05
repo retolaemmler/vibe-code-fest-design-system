@@ -1,6 +1,6 @@
 # Components
 
-Component catalog for **VibeCode Fest Incremental Current Polish**. Import all components from `@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b`.
+Component catalog for **Vibe Code Fest Design System**. Import all components from `@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b`.
 
 ### Avatar
 
@@ -415,6 +415,38 @@ import { Navbar } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab
 | `brand` | any | `—` |
 | `actions` | any | `—` |
 
+### PhotoFrame
+
+```ts
+import { PhotoFrame } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+Use for the six-image “Impressions from the last event” gallery. One pink→purple gradient frame wraps rounded photo tiles (two columns on mobile, three on larger screens), with the gradient gallery button and an optional photographer-credit link inside the frame.
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `photos` | any | `—` |
+| `href` | string | `—` |
+| `linkLabel` | string | `View Full Photo Gallery` |
+| `credit` | string | `—` |
+| `creditLabel` | string | `—` |
+| `creditHref` | string | `—` |
+
+**Examples:**
+
+_Event impressions frame_
+```tsx
+<PhotoFrame photos={eventPhotos} href="https://example.com/full-gallery" credit="Photos by Silvan Mühlelemann" creditLabel="mühlelemann+popp AG" creditHref="https://example.com" />
+```
+
+**Avoid:**
+
+- Do not recreate the gradient frame with separate cards, rotations, or per-image shadows.
+- Do not pass decorative or duplicate alt text; describe the distinct event moment in each photograph.
+- Do not link the whole frame; the gallery button inside the frame is the single interactive action.
+
 ### Schedule
 
 ```ts
@@ -502,7 +534,7 @@ _Share category_
 import { ScheduleItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Shows a timed programme entry on a very light tint of its category colour. Pass description for an expandable talk with a chevron; omit it for passive entries. Pass linkedinHref alongside speaker for an icon-only profile link by the name. Pass avatar for the speaker's photo, markerIcon for active sessions without a known speaker, or omit both for breaks and lunch.
+Shows a timed programme entry on a very light tint of its category colour. Pass description for an expandable talk with a chevron; omit it for passive entries. Pass linkedinHref alongside speaker for an icon-only profile link by the name. Pass avatar for one speaker, avatars for two or more stacked on the line, markerIcon for active sessions without a known speaker, or omit both for breaks and lunch.
 
 **Props:**
 
@@ -518,6 +550,7 @@ Shows a timed programme entry on a very light tint of its category colour. Pass 
 | `track` | string | `—` |
 | `markerIcon` | any | `—` |
 | `avatar` | any | `—` |
+| `avatars` | any | `—` |
 
 **Examples:**
 
@@ -609,13 +642,14 @@ _Speaker with LinkedIn bubble_
 import { SponsorCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Use to present sponsor logos in a consistent, responsive grid. Both variants carry the purple brand stroke; default keeps a white card background, highlight adds the light-purple background and glow. Provide an href to make the whole card a clickable link with a lift hover effect.
+Use to present sponsor logos in a consistent, responsive grid. size="lg" is the large tile for headline sponsors; size="sm" is the compact tile for smaller sponsor rows. Default is a white card with shadow and no stroke; highlight carries the purple brand stroke with light-purple background and glow. Provide an href to make the whole card a clickable link with a lift hover effect.
 
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
 | `variant` | default · highlight | `default` |
+| `size` | lg · sm | `lg` |
 | `logoSrc` | string | `—` |
 | `name` | string | `—` |
 | `href` | string | `—` |
@@ -632,10 +666,16 @@ _Highlighted sponsor card_
 <SponsorCard logoSrc={atollLogo} name="ATOLL by EUTIMA" variant="highlight" href="https://atoll-by-eutima.example.com" />
 ```
 
+_Small sponsor card_
+```tsx
+<SponsorCard logoSrc={atollLogo} name="ATOLL by EUTIMA" size="sm" href="https://atoll-by-eutima.example.com" />
+```
+
 **Avoid:**
 
 - Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces.
 - Do not add extra hover transitions or shadows at the call site; elevation and motion are built into the component when href is provided.
+- Do not add a border or stroke to the default variant; it is strokeless by design and relies on shadow for elevation.
 
 ### Stat
 

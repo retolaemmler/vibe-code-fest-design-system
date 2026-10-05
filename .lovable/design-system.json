@@ -1,8 +1,8 @@
 {
   "meta": {
-    "name": "VibeCode Fest Incremental Current Polish",
+    "name": "Vibe Code Fest Design System",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.41.0",
+    "version": "1.42.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "752f182ff8af30f63bb624ad504ba22e77cd245cfa97a5aa6cf90fcdd61f6a14",
+      "#enrichment": "40e8deec283da2f69a6b7dbdc9e8704d2e723901d1f31cb6d26910f99f6f702e",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -20,21 +20,28 @@
       ".lovable/plan/replace-outline-button-with-muted-variant-2026-09-13.md": "23f136b4b66fe9b3e9daa64ab4360144",
       ".lovable/plan/responsive-three-column-footer-2026-09-11.md": "7d8d7b2cd7461b26257035153711ab44",
       ".lovable/plan/section-colored-schedule-timeline-2026-09-13.md": "e9a775136da1991d36a18e86a357c909",
+      ".lovable/plan/six-photo-event-impressions-frame-2026-10-05.md": "799286f9815fb489d3cd486b0912ab1c",
       ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
       ".lovable/system.md": "9fb8cb306d7ff1b97b331b363c9946e8",
-      "AGENTS.md": "f870b316fd03ef26801d9c0495712ce4",
+      "AGENTS.md": "f4dc1aa76d5c9a80ac29040b394755d2",
       "README.md": "546e5b1f850a58d461165943ea376d15",
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
       "package.json": "af360c77c40914e703c4d7c774a14a08",
       "public/favicon.png": "69d984f278397f6136e8e93fd8afd74b",
-      "roadmap.md": "d69e3f5b4f9817a5deb69521459b8a23",
+      "roadmap.md": "495ccc18b59d9c35a19f3732bc09c668",
       "src/assets/logos/atoll-logo.png": "a229369f3e1e0cfbdcd536c9b5ec2aec",
       "src/assets/logos/vibe-code-fest-logo.png": "ff361f9b784588d3825375acf92408d0",
       "src/assets/photography/katy-wirz.png": "aef68675fa1690d5fd1a5584e57c55c5",
       "src/assets/photography/silvan-muehlemann.jpeg": "c3cad46634f65ef3fc75affce0532c5c",
+      "src/assets/photography/vcf2026-gallery-1.jpg.asset.json": "0a03ed7df47c1809ff5c11a519045ac0",
+      "src/assets/photography/vcf2026-gallery-2.jpg.asset.json": "249cb09c723ab75d990cd75ffb197769",
+      "src/assets/photography/vcf2026-gallery-3.jpg.asset.json": "9f6cda21a35290ebca2631f64a393526",
+      "src/assets/photography/vcf2026-gallery-4.jpg.asset.json": "1e67e9f72da3ab91642d8e8f632f817e",
+      "src/assets/photography/vcf2026-gallery-5.jpg.asset.json": "dae574976c17222ee08d6ac09dfadbb2",
+      "src/assets/photography/vcf2026-gallery-6.jpg.asset.json": "4ccd185a01fbe37c3cb367c46a08ab9f",
       "src/components/ui/avatar.tsx": "c92065c26dd5b6bf5df08788efcf55f3",
       "src/components/ui/badge.tsx": "013ef4984a3085302b84de64ed375a71",
       "src/components/ui/button.tsx": "48faeaba9e5e79384fea0a2be4695fb8",
@@ -50,16 +57,17 @@
       "src/components/ui/link.tsx": "da2bd15726024535b9e0239a93604b67",
       "src/components/ui/linkedin-bubble.tsx": "a15a2b93d2177c00a9a072006492901f",
       "src/components/ui/navbar.tsx": "43c2b4329b83da9e819beae9fc9ed132",
-      "src/components/ui/schedule-item.tsx": "21e7fb8c325122ea886f34329db909ec",
+      "src/components/ui/photo-frame.tsx": "796535cfc86da2e75862ce6733f3797d",
+      "src/components/ui/schedule-item.tsx": "70fcdc52c281811b59e622da7ce7af80",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
       "src/components/ui/speaker-card.tsx": "7a7187d02c5ea734ad5fca1ca8475e9c",
-      "src/components/ui/sponsor-card.tsx": "e75ef9d43952861f63eb90ad00615110",
+      "src/components/ui/sponsor-card.tsx": "aead03e48ce03df5eed7bcdd15bb387e",
       "src/components/ui/stat.tsx": "a4963e8607f16f8ba7daf18b83c11147",
       "src/components/ui/tabs.tsx": "7808699ffa47435ae831029b709c23da",
       "src/components/ui/ticket-card.tsx": "ecb9af95c143e82604fa83ff7a56b73d",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
       "src/index.css": "5c977d9a6587bb91ba7c6d3555e40ba9",
-      "src/index.ts": "8e499ec3c3de96ae50cd60adc4fcc66d",
+      "src/index.ts": "29cb98711a71badb2db1dc6595bfa19a",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -67,8 +75,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "a9450ec2a544783e425465a3230d71b3",
-      "src/routes/index.tsx": "fdac317d238a8a3b9f1e4e48ac8d75df",
-      "src/routes/style-guide.tsx": "6bdb2258efd19675b015be9878c71a48",
+      "src/routes/index.tsx": "6f29faac23ae5762e7e9d8445d5b8ed2",
+      "src/routes/style-guide.tsx": "8b9803951068f93c264f72f420b8be9c",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -839,11 +847,11 @@
           "type": "any"
         }
       ],
-      "usage": "Mount once inside the consumer app shell, ideally in <head>, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
+      "usage": "Mount once inside the consumer app shell, ideally in \u003chead\u003e, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
       "examples": [
         {
           "label": "Inside a TanStack Start root shell",
-          "code": "<html lang=\"en\">\n  <head>\n    <HeadContent />\n    <Fonts />\n  </head>\n  <body>{children}</body>\n</html>"
+          "code": "\u003chtml lang=\"en\"\u003e\n  \u003chead\u003e\n    \u003cHeadContent /\u003e\n    \u003cFonts /\u003e\n  \u003c/head\u003e\n  \u003cbody\u003e{children}\u003c/body\u003e\n\u003c/html\u003e"
         }
       ],
       "antipatterns": [
@@ -904,7 +912,7 @@
       "examples": [
         {
           "label": "Muted action on a gradient panel",
-          "code": "<div className=\"bg-gradient-primary\"><Button variant=\"muted\">Get tickets</Button></div>"
+          "code": "\u003cdiv className=\"bg-gradient-primary\"\u003e\u003cButton variant=\"muted\"\u003eGet tickets\u003c/Button\u003e\u003c/div\u003e"
         }
       ],
       "antipatterns": [
@@ -988,7 +996,7 @@
       "examples": [
         {
           "label": "Card with corner edit action",
-          "code": "<Card\n  variant=\"elevated\"\n  action={\n    <Button variant=\"ghost\" size=\"icon\" aria-label=\"Edit\">\n      <Icon name=\"pencil\" />\n    </Button>\n  }\n>\n  <CardHeader>\n    <CardTitle>Workshop pass</CardTitle>\n  </CardHeader>\n</Card>"
+          "code": "\u003cCard\n  variant=\"elevated\"\n  action={\n    \u003cButton variant=\"ghost\" size=\"icon\" aria-label=\"Edit\"\u003e\n      \u003cIcon name=\"pencil\" /\u003e\n    \u003c/Button\u003e\n  }\n\u003e\n  \u003cCardHeader\u003e\n    \u003cCardTitle\u003eWorkshop pass\u003c/CardTitle\u003e\n  \u003c/CardHeader\u003e\n\u003c/Card\u003e"
         }
       ],
       "antipatterns": [
@@ -1366,7 +1374,7 @@
       "examples": [
         {
           "label": "Speaker profile link",
-          "code": "<LinkedInBubble href=\"https://linkedin.com/in/ada-mwangi\" name=\"Ada Mwangi\" />"
+          "code": "\u003cLinkedInBubble href=\"https://linkedin.com/in/ada-mwangi\" name=\"Ada Mwangi\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1413,7 +1421,7 @@
       "examples": [
         {
           "label": "Speaker with LinkedIn bubble",
-          "code": "<SpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={<Button variant=\"secondary\" size=\"sm\">View profile</Button>}\n/>"
+          "code": "\u003cSpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={\u003cButton variant=\"secondary\" size=\"sm\"\u003eView profile\u003c/Button\u003e}\n/\u003e"
         }
       ],
       "antipatterns": [
@@ -1463,15 +1471,15 @@
       "examples": [
         {
           "label": "Default sponsor card",
-          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" />"
+          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
         },
         {
           "label": "Highlighted sponsor card",
-          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" />"
+          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
         },
         {
           "label": "Small sponsor card",
-          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" size=\"sm\" href=\"https://atoll-by-eutima.example.com\" />"
+          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" size=\"sm\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1495,7 +1503,7 @@
       "examples": [
         {
           "label": "Event timeline",
-          "code": "<Schedule><ScheduleCategory markerTone=\"accent\" headerTransition=\"primaryAccent\">...</ScheduleCategory></Schedule>"
+          "code": "\u003cSchedule\u003e\u003cScheduleCategory markerTone=\"accent\" headerTransition=\"primaryAccent\"\u003e...\u003c/ScheduleCategory\u003e\u003c/Schedule\u003e"
         }
       ],
       "antipatterns": [
@@ -1523,7 +1531,7 @@
       "examples": [
         {
           "label": "Community category",
-          "code": "<ScheduleCategory markerTone=\"info\" headerTransition=\"accentInfo\"><ScheduleHeader icon=\"share\" title=\"SHARE\" /><ScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /></ScheduleCategory>"
+          "code": "\u003cScheduleCategory markerTone=\"info\" headerTransition=\"accentInfo\"\u003e\u003cScheduleHeader icon=\"share\" title=\"SHARE\" /\u003e\u003cScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /\u003e\u003c/ScheduleCategory\u003e"
         }
       ],
       "antipatterns": [
@@ -1591,28 +1599,26 @@
         },
         {
           "name": "avatar",
-          "type": "any",
-          "description": "Replaces the icon marker with a single speaker avatar on the timeline."
+          "type": "any"
         },
         {
           "name": "avatars",
-          "type": "ScheduleItemAvatar[]",
-          "description": "Replaces the icon marker with speaker avatars stacked under each other on the timeline, slightly overflowing the card."
+          "type": "any"
         }
       ],
       "usage": "Shows a timed programme entry on a very light tint of its category colour. Pass description for an expandable talk with a chevron; omit it for passive entries. Pass linkedinHref alongside speaker for an icon-only profile link by the name. Pass avatar for one speaker, avatars for two or more stacked on the line, markerIcon for active sessions without a known speaker, or omit both for breaks and lunch.",
       "examples": [
         {
           "label": "Talk with speaker avatar",
-          "code": "<ScheduleItem\n  time=\"11:00–11:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/>"
+          "code": "\u003cScheduleItem\n  time=\"11:00–11:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/\u003e"
         },
         {
           "label": "Talk with icon marker",
-          "code": "<ScheduleItem time=\"11:00–11:25\" title=\"Community talk\" markerIcon=\"mic\" />"
+          "code": "\u003cScheduleItem time=\"11:00–11:25\" title=\"Community talk\" markerIcon=\"mic\" /\u003e"
         },
         {
           "label": "Lunch without marker",
-          "code": "<ScheduleItem time=\"12:30\" title=\"Lunch\" />"
+          "code": "\u003cScheduleItem time=\"12:30\" title=\"Lunch\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1646,7 +1652,7 @@
       "examples": [
         {
           "label": "Share category",
-          "code": "<ScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" />"
+          "code": "\u003cScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1716,7 +1722,7 @@
       "examples": [
         {
           "label": "Contribute tabs",
-          "code": "<Tabs defaultValue=\"talk\"><TabsList aria-label=\"Ways to contribute\"><TabsTrigger value=\"talk\">Talk/Session</TabsTrigger><TabsTrigger value=\"volunteer\">Volunteer</TabsTrigger></TabsList><TabsContent value=\"talk\">Propose a session</TabsContent><TabsContent value=\"volunteer\">Join the team</TabsContent></Tabs>"
+          "code": "\u003cTabs defaultValue=\"talk\"\u003e\u003cTabsList aria-label=\"Ways to contribute\"\u003e\u003cTabsTrigger value=\"talk\"\u003eTalk/Session\u003c/TabsTrigger\u003e\u003cTabsTrigger value=\"volunteer\"\u003eVolunteer\u003c/TabsTrigger\u003e\u003c/TabsList\u003e\u003cTabsContent value=\"talk\"\u003ePropose a session\u003c/TabsContent\u003e\u003cTabsContent value=\"volunteer\"\u003eJoin the team\u003c/TabsContent\u003e\u003c/Tabs\u003e"
         }
       ],
       "antipatterns": [
@@ -1731,7 +1737,7 @@
       "examples": [
         {
           "label": "Contribute tabs",
-          "code": "<TabsList aria-label=\"Ways to contribute\"><TabsTrigger value=\"talk\">Talk/Session</TabsTrigger><TabsTrigger value=\"volunteer\">Volunteer</TabsTrigger></TabsList>"
+          "code": "\u003cTabsList aria-label=\"Ways to contribute\"\u003e\u003cTabsTrigger value=\"talk\"\u003eTalk/Session\u003c/TabsTrigger\u003e\u003cTabsTrigger value=\"volunteer\"\u003eVolunteer\u003c/TabsTrigger\u003e\u003c/TabsList\u003e"
         }
       ],
       "antipatterns": [
@@ -1746,7 +1752,7 @@
       "examples": [
         {
           "label": "Contribute tabs",
-          "code": "<TabsTrigger value=\"volunteer\">Volunteer</TabsTrigger>"
+          "code": "\u003cTabsTrigger value=\"volunteer\"\u003eVolunteer\u003c/TabsTrigger\u003e"
         }
       ],
       "antipatterns": [
@@ -1761,7 +1767,7 @@
       "examples": [
         {
           "label": "Contribute tabs",
-          "code": "<TabsContent value=\"volunteer\"><Text>Join the team.</Text></TabsContent>"
+          "code": "\u003cTabsContent value=\"volunteer\"\u003e\u003cText\u003eJoin the team.\u003c/Text\u003e\u003c/TabsContent\u003e"
         }
       ],
       "antipatterns": [
@@ -1847,7 +1853,7 @@
       "examples": [
         {
           "label": "Event footer",
-          "code": "<Footer\n  brand={<Logo />}\n  center={<span>Vibe coded with <Icon name=\"heart\" /> in Zurich</span>}\n  links={[\n    { label: 'Terms & Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice & Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  socials={[\n    { name: 'instagram', href: 'https://instagram.com', label: 'Instagram' },\n    { name: 'whatsapp', href: 'https://wa.me', label: 'WhatsApp' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/>"
+          "code": "\u003cFooter\n  brand={\u003cLogo /\u003e}\n  center={\u003cspan\u003eVibe coded with \u003cIcon name=\"heart\" /\u003e in Zurich\u003c/span\u003e}\n  links={[\n    { label: 'Terms \u0026 Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice \u0026 Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  socials={[\n    { name: 'instagram', href: 'https://instagram.com', label: 'Instagram' },\n    { name: 'whatsapp', href: 'https://wa.me', label: 'WhatsApp' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/\u003e"
         }
       ],
       "antipatterns": [
@@ -1885,7 +1891,7 @@
       "examples": [
         {
           "label": "Clickable feature card",
-          "code": "<FeatureCard href=\"/programme\" icon=\"ticket\" title=\"Live workshops\" description=\"Hands-on sessions across two tracks.\" />"
+          "code": "\u003cFeatureCard href=\"/programme\" icon=\"ticket\" title=\"Live workshops\" description=\"Hands-on sessions across two tracks.\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1930,7 +1936,7 @@
       "examples": [
         {
           "label": "Panel with circular photo",
-          "code": "<CtaPanel\n  title=\"Ready to build with us?\"\n  description=\"Join 600+ attendees in Zurich.\"\n  actionLabel=\"Get your ticket\"\n  actionHref=\"/tickets\"\n  image={{ src: speakerPhoto, alt: \"Speaker\" }}\n/>"
+          "code": "\u003cCtaPanel\n  title=\"Ready to build with us?\"\n  description=\"Join 600+ attendees in Zurich.\"\n  actionLabel=\"Get your ticket\"\n  actionHref=\"/tickets\"\n  image={{ src: speakerPhoto, alt: \"Speaker\" }}\n/\u003e"
         }
       ],
       "antipatterns": [
@@ -1945,42 +1951,36 @@
       "props": [
         {
           "name": "photos",
-          "type": "readonly PhotoFramePhoto[]",
-          "required": true,
-          "description": "Exactly six photographs with accessible alternative text and optional crop position."
+          "type": "any",
+          "required": true
         },
         {
           "name": "href",
-          "type": "string",
-          "description": "Optional destination opened by the gallery button inside the frame."
+          "type": "string"
         },
         {
           "name": "linkLabel",
           "type": "string",
-          "default": "View Full Photo Gallery",
-          "description": "Label for the gallery button inside the frame."
+          "default": "View Full Photo Gallery"
         },
         {
           "name": "credit",
-          "type": "string",
-          "description": "Plain credit text shown under the gallery button, e.g. \"Photos by Jane Doe\"."
+          "type": "string"
         },
         {
           "name": "creditLabel",
-          "type": "string",
-          "description": "Link label rendered in parentheses after the credit text."
+          "type": "string"
         },
         {
           "name": "creditHref",
-          "type": "string",
-          "description": "Destination of the credit link."
+          "type": "string"
         }
       ],
       "usage": "Use for the six-image “Impressions from the last event” gallery. One pink→purple gradient frame wraps rounded photo tiles (two columns on mobile, three on larger screens), with the gradient gallery button and an optional photographer-credit link inside the frame.",
       "examples": [
         {
           "label": "Event impressions frame",
-          "code": "<PhotoFrame photos={eventPhotos} href=\"https://example.com/full-gallery\" credit=\"Photos by Silvan Mühlelemann\" creditLabel=\"mühlelemann+popp AG\" creditHref=\"https://example.com\" />"
+          "code": "\u003cPhotoFrame photos={eventPhotos} href=\"https://example.com/full-gallery\" credit=\"Photos by Silvan Mühlelemann\" creditLabel=\"mühlelemann+popp AG\" creditHref=\"https://example.com\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -2014,7 +2014,7 @@
       "examples": [
         {
           "label": "Early-bird ticket",
-          "code": "<TicketCard pill={<Badge variant=\"brand\" tone=\"solid\">Early bird</Badge>}>\n  <TicketPrice><span className=\"text-h3\">89 CHF</span></TicketPrice>\n  <TicketRegular label=\"regular price\" price=\"129 CHF\" />\n</TicketCard>"
+          "code": "\u003cTicketCard pill={\u003cBadge variant=\"brand\" tone=\"solid\"\u003eEarly bird\u003c/Badge\u003e}\u003e\n  \u003cTicketPrice\u003e\u003cspan className=\"text-h3\"\u003e89 CHF\u003c/span\u003e\u003c/TicketPrice\u003e\n  \u003cTicketRegular label=\"regular price\" price=\"129 CHF\" /\u003e\n\u003c/TicketCard\u003e"
         }
       ],
       "antipatterns": [
@@ -2061,7 +2061,7 @@
       "examples": [
         {
           "label": "Regular-pass comparison",
-          "code": "<TicketRegular label=\"regular price\" price=\"129 CHF\" />"
+          "code": "\u003cTicketRegular label=\"regular price\" price=\"129 CHF\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -2089,6 +2089,42 @@
       "file": "src/assets/photography/silvan-muehlemann.jpeg",
       "kind": "photography",
       "format": "jpeg"
+    },
+    {
+      "file": "src/assets/photography/vcf2026-gallery-1.jpg.asset.json",
+      "kind": "photography",
+      "format": "jpg",
+      "pointer": true
+    },
+    {
+      "file": "src/assets/photography/vcf2026-gallery-2.jpg.asset.json",
+      "kind": "photography",
+      "format": "jpg",
+      "pointer": true
+    },
+    {
+      "file": "src/assets/photography/vcf2026-gallery-3.jpg.asset.json",
+      "kind": "photography",
+      "format": "jpg",
+      "pointer": true
+    },
+    {
+      "file": "src/assets/photography/vcf2026-gallery-4.jpg.asset.json",
+      "kind": "photography",
+      "format": "jpg",
+      "pointer": true
+    },
+    {
+      "file": "src/assets/photography/vcf2026-gallery-5.jpg.asset.json",
+      "kind": "photography",
+      "format": "jpg",
+      "pointer": true
+    },
+    {
+      "file": "src/assets/photography/vcf2026-gallery-6.jpg.asset.json",
+      "kind": "photography",
+      "format": "jpg",
+      "pointer": true
     }
   ]
 }

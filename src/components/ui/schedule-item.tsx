@@ -158,6 +158,8 @@ export interface ScheduleItemProps
   markerIcon?: IconName;
   /** Replaces the icon marker with a speaker avatar (size="md"). */
   avatar?: ScheduleItemAvatar;
+  /** Replaces the icon marker with speaker avatars stacked on the timeline, slightly overflowing the card. */
+  avatars?: ScheduleItemAvatar[];
 }
 
 export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(

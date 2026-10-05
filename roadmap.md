@@ -20,3 +20,4 @@
 - [x] Unify speaker and timeline LinkedIn bubbles into one reusable control
 - [x] Add mobile-reference segmented tabs with token-backed light/dark styling and keyboard interaction
 - [x] Add the responsive six-photo event impressions frame from the connected Vibe Code Fest site
+- [ ] Allow two stacked avatars on one schedule timeline item (overflowing the line)

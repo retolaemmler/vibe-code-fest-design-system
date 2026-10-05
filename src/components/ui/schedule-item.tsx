@@ -177,7 +177,7 @@ export const ScheduleItem = React.forwardRef<HTMLDivElement, ScheduleItemProps>(
             className={cn(
               stacked
                 ? /* Transparent wrapper: only the avatars show, no solid circle behind them. */
-                  "absolute left-6 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1"
+                  "absolute left-6 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center -space-y-2"
                 : scheduleMarkerVariants({
                     tone: tone ?? categoryTone,
                     position: isLast

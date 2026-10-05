@@ -1,4 +1,4 @@
-Schedule talk details live behind an optional description prop on ScheduleItem, and speaker profile links use its optional linkedinHref prop, because passive timeline entries must remain static and the reusable library API must carry both behaviors.
+Schedule talk details live behind an optional description prop on ScheduleItem, speaker profile links use its optional linkedinHref prop, and multi-speaker talks use the avatars prop (stacked on the timeline line, slightly overflowing the card), because passive timeline entries must remain static and the reusable library API must carry both behaviors.
 Social glyph implementations stay internal to the shared Icon registry; export only Icon and its name map so consumers use one consistent icon API.
 Use the official Vibe Code Fest logo asset in brand slots on preview pages instead of text stand-ins, so the library showcase reflects the actual brand.
 Render LinkedIn profile actions through the shared LinkedInBubble in speaker cards and schedule items, so both contexts retain identical styling and accessibility.

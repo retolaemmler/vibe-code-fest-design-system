@@ -1436,6 +1436,15 @@
           "default": "default"
         },
         {
+          "name": "size",
+          "type": "enum",
+          "values": [
+            "lg",
+            "sm"
+          ],
+          "default": "lg"
+        },
+        {
           "name": "logoSrc",
           "type": "string",
           "required": true
@@ -1450,7 +1459,7 @@
           "type": "string"
         }
       ],
-      "usage": "Use to present sponsor logos in a consistent, responsive grid. Both variants carry the purple brand stroke; default keeps a white card background, highlight adds the light-purple background and glow. Provide an href to make the whole card a clickable link with a lift hover effect.",
+      "usage": "Use to present sponsor logos in a consistent, responsive grid. size=\"lg\" is the large tile for headline sponsors; size=\"sm\" is the compact tile for smaller sponsor rows. Default is a white card with shadow and no stroke; highlight carries the purple brand stroke with light-purple background and glow. Provide an href to make the whole card a clickable link with a lift hover effect.",
       "examples": [
         {
           "label": "Default sponsor card",
@@ -1459,11 +1468,16 @@
         {
           "label": "Highlighted sponsor card",
           "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" />"
+        },
+        {
+          "label": "Small sponsor card",
+          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" size=\"sm\" href=\"https://atoll-by-eutima.example.com\" />"
         }
       ],
       "antipatterns": [
         "Do not crop, stretch, or place sponsor logos directly on inconsistent page surfaces.",
-        "Do not add extra hover transitions or shadows at the call site; elevation and motion are built into the component when href is provided."
+        "Do not add extra hover transitions or shadows at the call site; elevation and motion are built into the component when href is provided.",
+        "Do not add a border or stroke to the default variant; it is strokeless by design and relies on shadow for elevation."
       ]
     },
     {

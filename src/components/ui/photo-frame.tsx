@@ -15,7 +15,7 @@ export const photoFrameVariants = cva(
 );
 
 export const photoFrameImageVariants = cva(
-  "block aspect-[4/3] size-full rounded-lg object-cover",
+  "block aspect-[4/3] size-full rounded-lg object-cover shadow-raised transition-transform duration-base ease-standard hover:rotate-1",
   {
     variants: {
       position: {

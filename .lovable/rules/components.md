@@ -602,7 +602,7 @@ import { Section } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1ba
 import { SpeakerCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Use to introduce a speaker with their photo, role, company and topic tags. Pass linkedinHref to add a bubble LinkedIn action on the avatar; use the action slot for a secondary bottom button such as "View profile".
+Use to introduce a speaker with their photo, role, company and topic tags. Pass linkedinHref to add a bubble LinkedIn action on the avatar; use the action slot for a secondary bottom button such as "View profile", and cornerAction for an optional icon-only edit button pinned to the top-right corner.
 
 **Props:**
 
@@ -615,6 +615,7 @@ Use to introduce a speaker with their photo, role, company and topic tags. Pass 
 | `topics` | any | `—` |
 | `linkedinHref` | string | `—` |
 | `action` | any | `—` |
+| `cornerAction` | any | `—` |
 
 **Examples:**
 

@@ -23,6 +23,7 @@ import { Input } from "@/components/ui/input";
 import { Container, Section } from "@/components/ui/layout";
 import { Link } from "@/components/ui/link";
 import { Navbar } from "@/components/ui/navbar";
+import { PhotoFrame, type PhotoFramePhoto } from "@/components/ui/photo-frame";
 import { Schedule, ScheduleCategory, ScheduleHeader, ScheduleItem } from "@/components/ui/schedule-item";
 import { SpeakerCard } from "@/components/ui/speaker-card";
 import { SponsorCard } from "@/components/ui/sponsor-card";
@@ -36,6 +37,21 @@ import { Heading, Text } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
 import atollLogo from "@/assets/logos/atoll-logo.png";
 import vibeLogo from "@/assets/logos/vibe-code-fest-logo.png";
+import gallery1 from "@/assets/photography/vcf2026-gallery-1.jpg.asset.json";
+import gallery2 from "@/assets/photography/vcf2026-gallery-2.jpg.asset.json";
+import gallery3 from "@/assets/photography/vcf2026-gallery-3.jpg.asset.json";
+import gallery4 from "@/assets/photography/vcf2026-gallery-4.jpg.asset.json";
+import gallery5 from "@/assets/photography/vcf2026-gallery-5.jpg.asset.json";
+import gallery6 from "@/assets/photography/vcf2026-gallery-6.jpg.asset.json";
+
+const eventPhotos: readonly PhotoFramePhoto[] = [
+  { src: gallery1.url, alt: "Vibe Code Fest organizers together", position: "top" },
+  { src: gallery2.url, alt: "Organizers celebrating with raised hands", position: "upper" },
+  { src: gallery3.url, alt: "Vibe Code Fest winners on stage" },
+  { src: gallery4.url, alt: "Speaker presenting at Vibe Code Fest" },
+  { src: gallery5.url, alt: "Audience applauding during the event" },
+  { src: gallery6.url, alt: "Ice bath experience at Vibe Code Fest", position: "upper" },
+];
 
 export const Route = createFileRoute("/style-guide")({
   head: () => ({
@@ -936,6 +952,26 @@ function StyleGuide() {
               <Snippet
                 code={`<Card variant="glass">\n  <CardHeader><CardTitle>Workshop pass</CardTitle></CardHeader>\n</Card>\n\n<Card\n  variant="elevated"\n  action={\n    <Button variant="ghost" size="icon" aria-label="Edit">\n      <Icon name="pencil" />\n    </Button>\n  }\n>\n  …\n</Card>`}
               />
+            </div>
+
+            {/* Photo frame */}
+            <div className="flex flex-col gap-4">
+              <Heading level="h3">Photo frame</Heading>
+              <PhotoFrame
+                photos={eventPhotos}
+                href="https://vibe-code-fest.pictureclub.io/camera-roll/6999d4b6-7886-4091-8c64-f2837ab42ad7?scrolltostart=1"
+              />
+              <div className="flex flex-wrap gap-2">
+                <TokenName>border-border</TokenName>
+                <TokenName>bg-border</TokenName>
+                <TokenName>rounded-card</TokenName>
+                <TokenName>ring-ring</TokenName>
+              </div>
+              <Text size="small" tone="muted">
+                Six photographs share one thin-lined frame. The grid uses two
+                columns on mobile and three columns from tablet size onward.
+              </Text>
+              <Snippet code={'<PhotoFrame\n  photos={eventPhotos}\n  href="https://example.com/full-gallery"\n/>'} />
             </div>
 
             {/* Ticket card */}

@@ -4,3 +4,4 @@ Use the official Vibe Code Fest logo asset in brand slots on preview pages inste
 Render LinkedIn profile actions through the shared LinkedInBubble in speaker cards and schedule items, so both contexts retain identical styling and accessibility.
 FeatureCard derives its purple-tinted, primary-stroked clickable look from `href` rather than a separate highlight variant, so its visual state always matches its interaction.
 Use Radix Tabs wrapped by the token-driven Tabs primitives for exclusive content switching, so keyboard interaction and selected-state semantics remain consistent in consuming projects.
+Use PhotoFrame for six-image event impressions: one thin-lined responsive frame, two columns on mobile and three on larger screens, with optional whole-frame gallery linking.

@@ -17,6 +17,7 @@ import { Footer } from "@/components/ui/footer";
 import { Container, Section } from "@/components/ui/layout";
 import { Link } from "@/components/ui/link";
 import { Navbar } from "@/components/ui/navbar";
+import { PhotoFrame, type PhotoFramePhoto } from "@/components/ui/photo-frame";
 import { Schedule, ScheduleCategory, ScheduleHeader, ScheduleItem } from "@/components/ui/schedule-item";
 import { SpeakerCard } from "@/components/ui/speaker-card";
 import { SponsorCard } from "@/components/ui/sponsor-card";
@@ -29,6 +30,21 @@ import {
 import { Heading, Text } from "@/components/ui/typography";
 import atollLogo from "@/assets/logos/atoll-logo.png";
 import vibeLogo from "@/assets/logos/vibe-code-fest-logo.png";
+import gallery1 from "@/assets/photography/vcf2026-gallery-1.jpg.asset.json";
+import gallery2 from "@/assets/photography/vcf2026-gallery-2.jpg.asset.json";
+import gallery3 from "@/assets/photography/vcf2026-gallery-3.jpg.asset.json";
+import gallery4 from "@/assets/photography/vcf2026-gallery-4.jpg.asset.json";
+import gallery5 from "@/assets/photography/vcf2026-gallery-5.jpg.asset.json";
+import gallery6 from "@/assets/photography/vcf2026-gallery-6.jpg.asset.json";
+
+const eventPhotos: readonly PhotoFramePhoto[] = [
+  { src: gallery1.url, alt: "Vibe Code Fest organizers together", position: "top" },
+  { src: gallery2.url, alt: "Organizers celebrating with raised hands", position: "upper" },
+  { src: gallery3.url, alt: "Vibe Code Fest winners on stage" },
+  { src: gallery4.url, alt: "Speaker presenting at Vibe Code Fest" },
+  { src: gallery5.url, alt: "Audience applauding during the event" },
+  { src: gallery6.url, alt: "Ice bath experience at Vibe Code Fest", position: "upper" },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -404,6 +420,21 @@ function Showcase() {
               <Text tone="muted">Join the team welcoming and supporting attendees.</Text>
             </TabsContent>
           </Tabs>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container size="md" className="flex flex-col gap-8">
+          <div className="flex flex-col gap-3 text-center">
+            <Heading level="h2">Impressions from the last event</Heading>
+            <Text size="body" tone="muted" className="mx-auto max-w-2xl">
+              A glimpse of the energy, the people and the fun at Vibe Code Fest 2026.
+            </Text>
+          </div>
+          <PhotoFrame
+            photos={eventPhotos}
+            href="https://vibe-code-fest.pictureclub.io/camera-roll/6999d4b6-7886-4091-8c64-f2837ab42ad7?scrolltostart=1"
+          />
         </Container>
       </Section>
 

@@ -17,6 +17,8 @@ export interface SpeakerCardProps extends Omit<CardProps, "children"> {
   linkedinHref?: string;
   /** Optional bottom action, typically a Button with variant="secondary". */
   action?: React.ReactNode;
+  /** Optional icon-only action pinned to the card's top-right corner, e.g. an edit button. */
+  cornerAction?: React.ReactNode;
 }
 
 export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
@@ -30,6 +32,7 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
       topics,
       linkedinHref,
       action,
+      cornerAction,
       variant = "outline",
       ...props
     },
@@ -38,6 +41,7 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
     <Card
       ref={ref}
       variant={variant}
+      action={cornerAction}
       className={cn(
         "flex flex-col gap-4",
         variant === "plain" ? "items-center" : "items-start",

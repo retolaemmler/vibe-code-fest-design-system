@@ -313,6 +313,11 @@ function Showcase() {
               company="Studio Nord"
               topics={["Design systems", "Tokens"]}
               linkedinHref="https://linkedin.com/in/nora-keller"
+              cornerAction={
+                <Button variant="ghost" size="icon" aria-label="Edit">
+                  <Icon name="pencil" />
+                </Button>
+              }
               action={<Button variant="secondary" size="sm">View profile</Button>}
             />
             <SpeakerCard
@@ -322,6 +327,11 @@ function Showcase() {
               topics={["AI tooling"]}
               variant="elevated"
               linkedinHref="https://linkedin.com/in/luca-bianchi"
+              cornerAction={
+                <Button variant="ghost" size="icon" aria-label="Edit">
+                  <Icon name="pencil" />
+                </Button>
+              }
               action={<Button variant="secondary" size="sm">View profile</Button>}
             />
             <SpeakerCard
@@ -331,6 +341,11 @@ function Showcase() {
               topics={["Performance", "DX"]}
               variant="glass"
               linkedinHref="https://linkedin.com/in/ada-mwangi"
+              cornerAction={
+                <Button variant="ghost" size="icon" aria-label="Edit">
+                  <Icon name="pencil" />
+                </Button>
+              }
               action={<Button variant="secondary" size="sm">View profile</Button>}
             />
           </div>

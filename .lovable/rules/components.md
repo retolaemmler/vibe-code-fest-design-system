@@ -70,12 +70,37 @@ _Muted action on a gradient panel_
 import { Card } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
+General-purpose content surface with elevation, padding and glass variants. Pass an optional `action` (typically an icon-only ghost Button, e.g. edit) to pin a corner action to the top-right.
+
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
 | `variant` | plain · outline · raised · elevated · overlay · glass · gradient | `outline` |
 | `padding` | none · sm · md · lg | `md` |
+| `action` | any | `—` |
+
+**Examples:**
+
+_Card with corner edit action_
+```tsx
+<Card
+  variant="elevated"
+  action={
+    <Button variant="ghost" size="icon" aria-label="Edit">
+      <Icon name="pencil" />
+    </Button>
+  }
+>
+  <CardHeader>
+    <CardTitle>Workshop pass</CardTitle>
+  </CardHeader>
+</Card>
+```
+
+**Avoid:**
+
+- Do not position a corner action with ad-hoc absolute className overrides — use the `action` prop, which places and offsets it correctly.
 
 ### CardContent
 
@@ -186,13 +211,12 @@ import { FaqTrigger } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb
 import { FeatureCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Elevated card with an icon medallion, heading and short supporting text. Use variant="highlight" for a primary stroke on a light purple background; pass href to make the whole card a clickable link with hover lift.
+Elevated card with an icon medallion, heading and short supporting text. Without href it has a plain white elevated background for non-interactive content. With href, the entire card is clickable with a primary-purple stroke, primary-subtle light purple background, hover lift and focus ring. The clickable look is automatic, not a separate highlight variant.
 
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
-| `variant` | default · highlight | `default` |
 | `icon` | any | `—` |
 | `title` | string | `—` |
 | `description` | string | `—` |
@@ -200,15 +224,16 @@ Elevated card with an icon medallion, heading and short supporting text. Use var
 
 **Examples:**
 
-_Clickable highlight card_
+_Clickable feature card_
 ```tsx
-<FeatureCard variant="highlight" href="/programme" icon="ticket" title="Live workshops" description="Hands-on sessions across two tracks." />
+<FeatureCard href="/programme" icon="ticket" title="Live workshops" description="Hands-on sessions across two tracks." />
 ```
 
 **Avoid:**
 
-- Do not add a one-off className border or background to make a card stand out; use variant="highlight".
+- Do not add a one-off className border or background to make a card stand out.
 - Do not nest a Button inside a card that already has href; the whole card is the link.
+- Do not use FeatureCard for the closing page action; use CtaPanel on a gradient surface instead.
 
 ### Fonts
 
@@ -315,7 +340,7 @@ import { Icon } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab79
 |---|---|---|
 | `size` | xs · sm · md · lg · xl | `sm` |
 | `tone` | current · default · muted · brand · info · success · warning · destructive | `current` |
-| `name` | arrowRight · arrowUpRight · calendar · check · chevronDown · chevronRight · clock · code · externalLink · globe · heart · link · spinner · info · instagram · linkedin · mail · moon · mapPin · menu · mic · minus · plus · search · send · sparkles · share · star · sun · ticket · warning · users · video · whatsapp · close | `—` |
+| `name` | arrowRight · arrowUpRight · calendar · check · chevronDown · chevronRight · clock · code · externalLink · globe · heart · link · spinner · info · instagram · linkedin · mail · moon · mapPin · menu · mic · minus · pencil · plus · search · send · sparkles · share · star · sun · ticket · warning · users · video · whatsapp · close | `—` |
 | `label` | string | `—` |
 
 ### Input
@@ -584,7 +609,7 @@ _Speaker with LinkedIn bubble_
 import { SponsorCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Use to present sponsor logos in a consistent, responsive grid. Provide an href to make the whole card a clickable link with a lift-and-glow hover effect. Choose highlight only for sponsors that need stronger visual prominence.
+Use to present sponsor logos in a consistent, responsive grid. Both variants carry the purple brand stroke; default keeps a white card background, highlight adds the light-purple background and glow. Provide an href to make the whole card a clickable link with a lift hover effect.
 
 **Props:**
 
@@ -626,6 +651,82 @@ import { Stat } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab79
 | `tone` | default · brand | `default` |
 | `value` | string | `—` |
 | `label` | string | `—` |
+
+### Tabs
+
+```ts
+import { Tabs } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+Controlled or uncontrolled group of mutually exclusive panels. Set defaultValue or value, and match each trigger value to one content panel.
+
+**Examples:**
+
+_Contribute tabs_
+```tsx
+<Tabs defaultValue="talk"><TabsList aria-label="Ways to contribute"><TabsTrigger value="talk">Talk/Session</TabsTrigger><TabsTrigger value="volunteer">Volunteer</TabsTrigger></TabsList><TabsContent value="talk">Propose a session</TabsContent><TabsContent value="volunteer">Join the team</TabsContent></Tabs>
+```
+
+**Avoid:**
+
+- Do not use tabs for navigation between separate pages; tabs switch related content in place.
+
+### TabsContent
+
+```ts
+import { TabsContent } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+Panel displayed when its matching trigger is selected; accepts any composed content.
+
+**Examples:**
+
+_Contribute tabs_
+```tsx
+<TabsContent value="volunteer"><Text>Join the team.</Text></TabsContent>
+```
+
+**Avoid:**
+
+- Do not leave a trigger without a matching panel.
+
+### TabsList
+
+```ts
+import { TabsList } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+A muted, evenly spaced segmented track for TabsTrigger controls; add an accessible label when there is no adjacent heading.
+
+**Examples:**
+
+_Contribute tabs_
+```tsx
+<TabsList aria-label="Ways to contribute"><TabsTrigger value="talk">Talk/Session</TabsTrigger><TabsTrigger value="volunteer">Volunteer</TabsTrigger></TabsList>
+```
+
+**Avoid:**
+
+- Do not restyle the track with arbitrary color classes.
+
+### TabsTrigger
+
+```ts
+import { TabsTrigger } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+A keyboard-reachable segment with token-backed selected, hover, focus, and disabled states.
+
+**Examples:**
+
+_Contribute tabs_
+```tsx
+<TabsTrigger value="volunteer">Volunteer</TabsTrigger>
+```
+
+**Avoid:**
+
+- Do not use a standalone Button or omit the matching TabsContent value.
 
 ### Text
 

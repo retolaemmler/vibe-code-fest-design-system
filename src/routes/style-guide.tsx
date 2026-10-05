@@ -1098,6 +1098,11 @@ function StyleGuide() {
                       topics={["Performance", "DX"]}
                       variant={variant}
                       linkedinHref="https://linkedin.com/in/ada-mwangi"
+                      cornerAction={
+                        <Button variant="ghost" size="icon" aria-label="Edit">
+                          <Icon name="pencil" />
+                        </Button>
+                      }
                       action={<Button variant="secondary" size="sm">View profile</Button>}
                     />
                     <TokenName>{`variant="${variant}"`}</TokenName>

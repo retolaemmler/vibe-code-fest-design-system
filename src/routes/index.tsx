@@ -344,10 +344,13 @@ function Showcase() {
                 <ScheduleItem
                   time="10:30–11:00"
                   title="Keynote & fireside chat"
-                  speaker="Nora Keller"
+                  speaker="Nora Keller & Marco Frei"
                   linkedinHref="https://linkedin.com/in/nora-keller"
                   description="Nora shares how design systems help teams build together, followed by an open conversation about turning ideas into useful products."
-                  avatar={{ src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face", name: "Nora Keller" }}
+                  avatars={[
+                    { src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face", name: "Nora Keller" },
+                    { src: "https://images.unsplash.com/photo-1500648767791-00dcc224a43e?w=200&h=200&fit=crop&crop=face", name: "Marco Frei" },
+                  ]}
                 />
               </div>
             </ScheduleCategory>

@@ -8,7 +8,7 @@ import { cn } from "../../lib/utils";
  * plain / outline -> level 0 flat, raised -> level 1, elevated -> level 2,
  * overlay -> level 3, gradient -> brand glow.
  */
-export const cardVariants = cva("rounded-card text-card-foreground", {
+export const cardVariants = cva("rounded-card relative text-card-foreground", {
   variants: {
     variant: {
       plain: "bg-card shadow-flat",
@@ -26,15 +26,21 @@ export const cardVariants = cva("rounded-card text-card-foreground", {
 
 export interface CardProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof cardVariants> {}
+    VariantProps<typeof cardVariants> {
+  /** Optional action (e.g. an icon-only Button) pinned to the card's top-right corner. */
+  action?: React.ReactNode;
+}
 
 export const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, variant, padding, ...props }, ref) => (
+  ({ className, variant, padding, action, children, ...props }, ref) => (
     <div
       ref={ref}
       className={cn(cardVariants({ variant, padding }), className)}
       {...props}
-    />
+    >
+      {action ? <div className="absolute right-4 top-4">{action}</div> : null}
+      {children}
+    </div>
   ),
 );
 Card.displayName = "Card";

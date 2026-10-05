@@ -186,12 +186,13 @@ import { FaqTrigger } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb
 import { FeatureCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Elevated card with an icon medallion, heading and short supporting text. Without href it has a plain white elevated background for non-interactive content. With href, the entire card is clickable with a primary-purple stroke, primary-subtle light purple background, hover lift and focus ring. The clickable look is automatic, not a separate highlight variant.
+Elevated card with an icon medallion, heading and short supporting text. Use variant="highlight" for a primary stroke on a light purple background; pass href to make the whole card a clickable link with hover lift.
 
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
+| `variant` | default · highlight | `default` |
 | `icon` | any | `—` |
 | `title` | string | `—` |
 | `description` | string | `—` |
@@ -199,16 +200,15 @@ Elevated card with an icon medallion, heading and short supporting text. Without
 
 **Examples:**
 
-_Clickable feature card_
+_Clickable highlight card_
 ```tsx
-<FeatureCard href="/programme" icon="ticket" title="Live workshops" description="Hands-on sessions across two tracks." />
+<FeatureCard variant="highlight" href="/programme" icon="ticket" title="Live workshops" description="Hands-on sessions across two tracks." />
 ```
 
 **Avoid:**
 
-- Do not add a one-off className border or background to make a card stand out.
+- Do not add a one-off className border or background to make a card stand out; use variant="highlight".
 - Do not nest a Button inside a card that already has href; the whole card is the link.
-- Do not use FeatureCard for the closing page action; use CtaPanel on a gradient surface instead.
 
 ### Fonts
 
@@ -584,7 +584,7 @@ _Speaker with LinkedIn bubble_
 import { SponsorCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Use to present sponsor logos in a consistent, responsive grid. Both variants carry the purple brand stroke; default keeps a white card background, highlight adds the light-purple background and glow. Provide an href to make the whole card a clickable link with a lift hover effect.
+Use to present sponsor logos in a consistent, responsive grid. Provide an href to make the whole card a clickable link with a lift-and-glow hover effect. Choose highlight only for sponsors that need stronger visual prominence.
 
 **Props:**
 

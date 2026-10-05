@@ -2,7 +2,7 @@
   "meta": {
     "name": "VibeCode Fest Incremental Current Polish",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.41.0",
+    "version": "1.40.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "43f17f34aae9aa0976afa98b9f1e1b7938d3fc572b983a06962eef6f28787b4e",
+      "#enrichment": "e10b8b82fa89def8b8c921d017621ef2fbb92f8b7f1fefe9cd66c06dee8e6904",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -22,8 +22,8 @@
       ".lovable/plan/section-colored-schedule-timeline-2026-09-13.md": "e9a775136da1991d36a18e86a357c909",
       ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
-      ".lovable/system.md": "9fb8cb306d7ff1b97b331b363c9946e8",
-      "AGENTS.md": "86bbb9f16f385c7d421139dbf78db4fd",
+      ".lovable/system.md": "78c48ceb2032a3faf5c77818829397ca",
+      "AGENTS.md": "7ef9c8211c9c069448589e8ad30cf1ab",
       "README.md": "546e5b1f850a58d461165943ea376d15",
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
@@ -41,7 +41,7 @@
       "src/components/ui/card.tsx": "c5ac2297c50fddf79f74b5ecbfd36c1a",
       "src/components/ui/cta-panel.tsx": "33a533e879e9beff2eacfec87c7c0d2a",
       "src/components/ui/faq.tsx": "3b60bb8279918236e728c0b77e8ed40b",
-      "src/components/ui/feature-card.tsx": "ab0758be1f031e7b7c01ced24d312598",
+      "src/components/ui/feature-card.tsx": "915b2cd9c5c54a556f3c7a660e96fdd7",
       "src/components/ui/fonts.tsx": "8b0c5ef8153eedbaebd1678ba3dc23ed",
       "src/components/ui/footer.tsx": "67a04ef265091afe625b602cebeffa8d",
       "src/components/ui/icon.tsx": "dfe998e949dc12f7bcf0b3352c4a65ba",
@@ -53,12 +53,12 @@
       "src/components/ui/schedule-item.tsx": "21e7fb8c325122ea886f34329db909ec",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
       "src/components/ui/speaker-card.tsx": "7a7187d02c5ea734ad5fca1ca8475e9c",
-      "src/components/ui/sponsor-card.tsx": "e75ef9d43952861f63eb90ad00615110",
+      "src/components/ui/sponsor-card.tsx": "8b078f47505c49a6a7b4ba02e5d976a7",
       "src/components/ui/stat.tsx": "a4963e8607f16f8ba7daf18b83c11147",
       "src/components/ui/ticket-card.tsx": "ecb9af95c143e82604fa83ff7a56b73d",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
       "src/index.css": "5c977d9a6587bb91ba7c6d3555e40ba9",
-      "src/index.ts": "00f39ef78de561ad5add466af1f556c6",
+      "src/index.ts": "ec7e43259e2fa241b7cd536fa852a54a",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -67,7 +67,7 @@
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "a9450ec2a544783e425465a3230d71b3",
       "src/routes/index.tsx": "f064e99634a0d2892a8c31bb7c69e623",
-      "src/routes/style-guide.tsx": "f566e31f9f265dfff6c09b21e6c52e70",
+      "src/routes/style-guide.tsx": "d66412a7d0ec32502a63cc208fb8bdd9",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -838,11 +838,11 @@
           "type": "any"
         }
       ],
-      "usage": "Mount once inside the consumer app shell, ideally in \u003chead\u003e, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
+      "usage": "Mount once inside the consumer app shell, ideally in <head>, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
       "examples": [
         {
           "label": "Inside a TanStack Start root shell",
-          "code": "\u003chtml lang=\"en\"\u003e\n  \u003chead\u003e\n    \u003cHeadContent /\u003e\n    \u003cFonts /\u003e\n  \u003c/head\u003e\n  \u003cbody\u003e{children}\u003c/body\u003e\n\u003c/html\u003e"
+          "code": "<html lang=\"en\">\n  <head>\n    <HeadContent />\n    <Fonts />\n  </head>\n  <body>{children}</body>\n</html>"
         }
       ],
       "antipatterns": [
@@ -903,7 +903,7 @@
       "examples": [
         {
           "label": "Muted action on a gradient panel",
-          "code": "\u003cdiv className=\"bg-gradient-primary\"\u003e\u003cButton variant=\"muted\"\u003eGet tickets\u003c/Button\u003e\u003c/div\u003e"
+          "code": "<div className=\"bg-gradient-primary\"><Button variant=\"muted\">Get tickets</Button></div>"
         }
       ],
       "antipatterns": [
@@ -977,7 +977,22 @@
             "lg"
           ],
           "default": "md"
+        },
+        {
+          "name": "action",
+          "type": "React.ReactNode",
+          "description": "Optional action (e.g. an icon-only Button) pinned to the card's top-right corner."
         }
+      ],
+      "usage": "General-purpose content surface with elevation, padding and glass variants. Pass an optional `action` (typically an icon-only ghost Button, e.g. edit) to pin a corner action to the top-right.",
+      "examples": [
+        {
+          "label": "Card with corner edit action",
+          "code": "<Card\n  variant=\"elevated\"\n  action={\n    <Button variant=\"ghost\" size=\"icon\" aria-label=\"Edit\">\n      <Icon name=\"pencil\" />\n    </Button>\n  }\n>\n  <CardHeader>\n    <CardTitle>Workshop pass</CardTitle>\n  </CardHeader>\n</Card>"
+        }
+      ],
+      "antipatterns": [
+        "Do not position a corner action with ad-hoc absolute className overrides \u2014 use the `action` prop, which places and offsets it correctly."
       ]
     },
     {
@@ -1350,7 +1365,7 @@
       "examples": [
         {
           "label": "Speaker profile link",
-          "code": "\u003cLinkedInBubble href=\"https://linkedin.com/in/ada-mwangi\" name=\"Ada Mwangi\" /\u003e"
+          "code": "<LinkedInBubble href=\"https://linkedin.com/in/ada-mwangi\" name=\"Ada Mwangi\" />"
         }
       ],
       "antipatterns": [
@@ -1397,7 +1412,7 @@
       "examples": [
         {
           "label": "Speaker with LinkedIn bubble",
-          "code": "\u003cSpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={\u003cButton variant=\"secondary\" size=\"sm\"\u003eView profile\u003c/Button\u003e}\n/\u003e"
+          "code": "<SpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={<Button variant=\"secondary\" size=\"sm\">View profile</Button>}\n/>"
         }
       ],
       "antipatterns": [
@@ -1438,11 +1453,11 @@
       "examples": [
         {
           "label": "Default sponsor card",
-          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
+          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" />"
         },
         {
           "label": "Highlighted sponsor card",
-          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
+          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" />"
         }
       ],
       "antipatterns": [
@@ -1461,11 +1476,11 @@
           "required": true
         }
       ],
-      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline placed directly on the page background — Schedule itself adds no card or surface of its own.",
+      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline placed directly on the page background \u2014 Schedule itself adds no card or surface of its own.",
       "examples": [
         {
           "label": "Event timeline",
-          "code": "\u003cSchedule\u003e\u003cScheduleCategory markerTone=\"accent\" headerTransition=\"primaryAccent\"\u003e...\u003c/ScheduleCategory\u003e\u003c/Schedule\u003e"
+          "code": "<Schedule><ScheduleCategory markerTone=\"accent\" headerTransition=\"primaryAccent\">...</ScheduleCategory></Schedule>"
         }
       ],
       "antipatterns": [
@@ -1493,7 +1508,7 @@
       "examples": [
         {
           "label": "Community category",
-          "code": "\u003cScheduleCategory markerTone=\"info\" headerTransition=\"accentInfo\"\u003e\u003cScheduleHeader icon=\"share\" title=\"SHARE\" /\u003e\u003cScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /\u003e\u003c/ScheduleCategory\u003e"
+          "code": "<ScheduleCategory markerTone=\"info\" headerTransition=\"accentInfo\"><ScheduleHeader icon=\"share\" title=\"SHARE\" /><ScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /></ScheduleCategory>"
         }
       ],
       "antipatterns": [
@@ -1568,15 +1583,15 @@
       "examples": [
         {
           "label": "Talk with speaker avatar",
-          "code": "\u003cScheduleItem\n  time=\"11:00–11:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/\u003e"
+          "code": "<ScheduleItem\n  time=\"11:00\u201311:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/>"
         },
         {
           "label": "Talk with icon marker",
-          "code": "\u003cScheduleItem time=\"11:00–11:25\" title=\"Community talk\" markerIcon=\"mic\" /\u003e"
+          "code": "<ScheduleItem time=\"11:00\u201311:25\" title=\"Community talk\" markerIcon=\"mic\" />"
         },
         {
           "label": "Lunch without marker",
-          "code": "\u003cScheduleItem time=\"12:30\" title=\"Lunch\" /\u003e"
+          "code": "<ScheduleItem time=\"12:30\" title=\"Lunch\" />"
         }
       ],
       "antipatterns": [
@@ -1610,7 +1625,7 @@
       "examples": [
         {
           "label": "Share category",
-          "code": "\u003cScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" /\u003e"
+          "code": "<ScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" />"
         }
       ],
       "antipatterns": [
@@ -1751,7 +1766,7 @@
       "examples": [
         {
           "label": "Event footer",
-          "code": "\u003cFooter\n  brand={\u003cLogo /\u003e}\n  center={\u003cspan\u003eVibe coded with \u003cIcon name=\"heart\" /\u003e in Zurich\u003c/span\u003e}\n  links={[\n    { label: 'Terms \u0026 Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice \u0026 Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  socials={[\n    { name: 'instagram', href: 'https://instagram.com', label: 'Instagram' },\n    { name: 'whatsapp', href: 'https://wa.me', label: 'WhatsApp' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/\u003e"
+          "code": "<Footer\n  brand={<Logo />}\n  center={<span>Vibe coded with <Icon name=\"heart\" /> in Zurich</span>}\n  links={[\n    { label: 'Terms & Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice & Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  socials={[\n    { name: 'instagram', href: 'https://instagram.com', label: 'Instagram' },\n    { name: 'whatsapp', href: 'https://wa.me', label: 'WhatsApp' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/>"
         }
       ],
       "antipatterns": [
@@ -1789,7 +1804,7 @@
       "examples": [
         {
           "label": "Clickable feature card",
-          "code": "\u003cFeatureCard href=\"/programme\" icon=\"ticket\" title=\"Live workshops\" description=\"Hands-on sessions across two tracks.\" /\u003e"
+          "code": "<FeatureCard href=\"/programme\" icon=\"ticket\" title=\"Live workshops\" description=\"Hands-on sessions across two tracks.\" />"
         }
       ],
       "antipatterns": [
@@ -1834,11 +1849,11 @@
       "examples": [
         {
           "label": "Panel with circular photo",
-          "code": "\u003cCtaPanel\n  title=\"Ready to build with us?\"\n  description=\"Join 600+ attendees in Zurich.\"\n  actionLabel=\"Get your ticket\"\n  actionHref=\"/tickets\"\n  image={{ src: speakerPhoto, alt: \"Speaker\" }}\n/\u003e"
+          "code": "<CtaPanel\n  title=\"Ready to build with us?\"\n  description=\"Join 600+ attendees in Zurich.\"\n  actionLabel=\"Get your ticket\"\n  actionHref=\"/tickets\"\n  image={{ src: speakerPhoto, alt: \"Speaker\" }}\n/>"
         }
       ],
       "antipatterns": [
-        "Do not use the muted action button outside gradient surfaces — here it is the correct pairing.",
+        "Do not use the muted action button outside gradient surfaces \u2014 here it is the correct pairing.",
         "Do not pass more than one photo or non-square images without object-cover cropping; the image renders as a circle."
       ]
     },
@@ -1867,7 +1882,7 @@
       "examples": [
         {
           "label": "Early-bird ticket",
-          "code": "\u003cTicketCard pill={\u003cBadge variant=\"brand\" tone=\"solid\"\u003eEarly bird\u003c/Badge\u003e}\u003e\n  \u003cTicketPrice\u003e\u003cspan className=\"text-h3\"\u003e89 CHF\u003c/span\u003e\u003c/TicketPrice\u003e\n  \u003cTicketRegular label=\"regular price\" price=\"129 CHF\" /\u003e\n\u003c/TicketCard\u003e"
+          "code": "<TicketCard pill={<Badge variant=\"brand\" tone=\"solid\">Early bird</Badge>}>\n  <TicketPrice><span className=\"text-h3\">89 CHF</span></TicketPrice>\n  <TicketRegular label=\"regular price\" price=\"129 CHF\" />\n</TicketCard>"
         }
       ],
       "antipatterns": [
@@ -1914,7 +1929,7 @@
       "examples": [
         {
           "label": "Regular-pass comparison",
-          "code": "\u003cTicketRegular label=\"regular price\" price=\"129 CHF\" /\u003e"
+          "code": "<TicketRegular label=\"regular price\" price=\"129 CHF\" />"
         }
       ],
       "antipatterns": [

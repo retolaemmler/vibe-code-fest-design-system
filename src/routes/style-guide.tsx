@@ -878,8 +878,28 @@ function StyleGuide() {
                   </div>
                 ))}
               </div>
+              <Card
+                variant="elevated"
+                className="max-w-md"
+                action={
+                  <Button variant="ghost" size="icon" aria-label="Edit">
+                    <Icon name="pencil" />
+                  </Button>
+                }
+              >
+                <CardHeader>
+                  <CardTitle>Workshop pass</CardTitle>
+                  <CardDescription>Twelve seats, hands on</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Text size="small" tone="muted">
+                    Pass an optional action and an icon-only Button lands in the
+                    top-right corner of the card.
+                  </Text>
+                </CardContent>
+              </Card>
               <Snippet
-                code={`<Card variant="glass">\n  <CardHeader><CardTitle>Workshop pass</CardTitle></CardHeader>\n</Card>`}
+                code={`<Card variant="glass">\n  <CardHeader><CardTitle>Workshop pass</CardTitle></CardHeader>\n</Card>\n\n<Card\n  variant="elevated"\n  action={\n    <Button variant="ghost" size="icon" aria-label="Edit">\n      <Icon name="pencil" />\n    </Button>\n  }\n>\n  …\n</Card>`}
               />
             </div>
 

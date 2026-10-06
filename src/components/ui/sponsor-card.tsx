@@ -30,12 +30,12 @@ export const sponsorCardVariants = cva(
 );
 
 const sponsorLogoVariants = cva(
-  "w-full object-contain transition-transform duration-fast ease-standard group-hover:scale-[1.02]",
+  "object-contain object-center transition-transform duration-fast ease-standard group-hover:scale-[1.02]",
   {
     variants: {
       size: {
-        lg: "max-h-32 max-w-64",
-        sm: "max-h-16 max-w-24",
+        lg: "h-24 w-full max-w-64",
+        sm: "h-16 w-full",
       },
     },
     defaultVariants: { size: "lg" },

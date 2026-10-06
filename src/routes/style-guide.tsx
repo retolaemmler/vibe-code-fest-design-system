@@ -843,6 +843,12 @@ function StyleGuide() {
                   title="Clickable feature card"
                   description="Pass href and the whole card becomes a link, with hover lift and a focus ring."
                 />
+                <FeatureCard
+                  imageSrc={ctaPhoto}
+                  imageAlt="Vibe Code Fest speaker"
+                  title="Feature card with picture"
+                  description="Pass imageSrc and a circular photo replaces the icon medallion."
+                />
                 <CtaPanel
                   title="Call-to-action panel"
                   description="Full-bleed gradient panel for the closing action on a page."
@@ -852,7 +858,7 @@ function StyleGuide() {
                 />
               </div>
               <Snippet
-                code={`<FeatureCard\n  icon="sparkles"\n  title="Feature card"\n  description="Short supporting text."\n/>\n\n<FeatureCard\n  href="/programme"\n  icon="ticket"\n  title="Clickable feature card"\n  description="Whole card is a link."\n/>\n\n<CtaPanel\n  title="Call-to-action panel"\n  description="Full-bleed gradient panel."\n  actionLabel="Get your ticket"\n  actionHref="/tickets"\n  image={{ src: speakerPhoto, alt: "Speaker" }}\n/>`}
+                code={`<FeatureCard\n  icon="sparkles"\n  title="Feature card"\n  description="Short supporting text."\n/>\n\n<FeatureCard\n  href="/programme"\n  icon="ticket"\n  title="Clickable feature card"\n  description="Whole card is a link."\n/>\n\n<FeatureCard\n  imageSrc={speakerPhoto}\n  imageAlt="Speaker"\n  title="Feature card with picture"\n  description="Circular photo instead of the icon medallion."\n/>\n\n<CtaPanel\n  title="Call-to-action panel"\n  description="Full-bleed gradient panel."\n  actionLabel="Get your ticket"\n  actionHref="/tickets"\n  image={{ src: speakerPhoto, alt: "Speaker" }}\n/>`}
               />
             </div>
 

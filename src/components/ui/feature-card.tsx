@@ -29,7 +29,7 @@ export const featureMedallionVariants = cva(
   },
 );
 
-/** Circular photo slot — sized larger than the icon medallion. */
+/** Circular photo slot — `xl` matches the CTA panel photo (96px, 128px on md+). */
 export const featurePhotoVariants = cva(
   "flex shrink-0 items-center justify-center overflow-hidden rounded-pill",
   {
@@ -38,6 +38,7 @@ export const featurePhotoVariants = cva(
         sm: "size-14",
         md: "size-16",
         lg: "size-20",
+        xl: "size-24 md:size-32",
       },
     },
     defaultVariants: { size: "lg" },
@@ -59,7 +60,7 @@ export interface FeatureCardProps
     VariantProps<typeof featureMedallionVariants> {
   /** Icon shown in the medallion at the top of the card. Ignored when `imageSrc` is set. */
   icon?: IconName;
-  /** Optional photo shown as a circular picture instead of the icon medallion. */
+  /** Optional photo shown as a large circular picture in a horizontal layout — picture left, text vertically centered right. */
   imageSrc?: string;
   /** Accessible description of the photo (required when `imageSrc` is set). */
   imageAlt?: string;
@@ -84,12 +85,13 @@ export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
         padding="lg"
         className={cn(
           featureCardSurfaceVariants({ clickable: Boolean(href) }),
+          imageSrc && "flex-row items-center gap-6 md:gap-8",
           className,
         )}
         {...props}
       >
         {imageSrc ? (
-          <span className={featurePhotoVariants({ size })}>
+          <span className={featurePhotoVariants({ size: "xl" })}>
             <img
               src={imageSrc}
               alt={imageAlt ?? ""}

@@ -17,13 +17,13 @@ export const linkVariants = cva(
       variant: {
         inline:
           "px-1 py-1 text-primary underline underline-offset-2 hover:text-primary-hover",
-        nav: "px-3 py-2 text-small text-foreground/80 hover:text-foreground",
+        nav: "px-3 py-2 text-small font-medium text-foreground hover:text-primary",
         quiet: "px-1 py-1 text-muted-foreground hover:text-foreground",
       },
       active: { true: "", false: "" },
     },
     compoundVariants: [
-      { variant: "nav", active: true, class: "text-foreground" },
+      { variant: "nav", active: true, class: "text-primary" },
     ],
     defaultVariants: { variant: "inline", active: false },
   },

@@ -1784,6 +1784,9 @@
       "name": "Navbar",
       "file": "src/components/ui/navbar",
       "import_path": "",
+      "usage": "Use for shared site navigation. On mobile its burger opens a fixed full-viewport menu with direct dropdown links and locked page scrolling.",
+      "examples": [{ "label": "Site navigation", "code": "<Navbar sticky brand={<BrandLogo />}><Link variant=\"nav\" href=\"/\">Home</Link><NavDropdown label=\"Contribute\"><NavDropdownItem href=\"/volunteer\">Volunteer</NavDropdownItem></NavDropdown></Navbar>" }],
+      "antipatterns": ["Do not add a second mobile menu or a page-scrolling menu container.", "Do not nest dropdown menus inside the mobile navigation."],
       "props": [
         {
           "name": "variant",
@@ -2089,6 +2092,9 @@
       "name": "NavDropdown",
       "file": "src/components/ui/nav-dropdown.tsx",
       "import_path": "",
+      "usage": "Use for grouped desktop navigation options. Within Navbar's mobile menu the label and all options display inline without a dropdown trigger.",
+      "examples": [{ "label": "Grouped navigation", "code": "<NavDropdown label=\"Contribute\"><NavDropdownItem href=\"/volunteer\">Volunteer</NavDropdownItem></NavDropdown>" }],
+      "antipatterns": ["Do not hide mobile options behind another dropdown."],
       "props": [
         {
           "name": "label",
@@ -2125,6 +2131,9 @@
       "name": "NavDropdownItem",
       "file": "src/components/ui/nav-dropdown.tsx",
       "import_path": "",
+      "usage": "Use for an option inside NavDropdown; renders as a direct link in mobile navigation.",
+      "examples": [{ "label": "Navigation option", "code": "<NavDropdownItem href=\"/volunteer\">Volunteer</NavDropdownItem>" }],
+      "antipatterns": ["Do not use outside NavDropdown."],
       "props": [
         {
           "name": "active",

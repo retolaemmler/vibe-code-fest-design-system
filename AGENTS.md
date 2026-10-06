@@ -6,3 +6,4 @@ FeatureCard derives its purple-tinted, primary-stroked clickable look from `href
 Use Radix Tabs wrapped by the token-driven Tabs primitives for exclusive content switching, so keyboard interaction and selected-state semantics remain consistent in consuming projects.
 Use PhotoFrame for six-image event impressions: one gradient-framed responsive gallery (pink→purple frame, rounded tiles, two columns on mobile / three on larger screens) with the gallery button and optional photographer-credit link inside the frame.
 Navbar keeps compact tablet spacing and nowrap nav labels, so longer header links do not wrap before desktop spacing returns.
+Navbar uses a portaled modal dialog for fixed full-viewport mobile navigation and an internal context to render NavDropdown options as direct links, so menus cannot scroll with the page or hide options behind nested dropdowns.

@@ -5,6 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 import { Icon } from "./icon";
 import { linkVariants } from "./link";
+import { MobileNavigationContext } from "./navigation-context";
 
 export const navDropdownContentVariants = cva(
   "z-50 min-w-48 rounded-card border border-border bg-popover p-2 text-popover-foreground shadow-overlay",
@@ -41,7 +42,15 @@ export interface NavDropdownProps
 
 /** A nav link that opens a menu of NavDropdownItem links, with a chevron. */
 export const NavDropdown = React.forwardRef<HTMLButtonElement, NavDropdownProps>(
-  ({ label, active = false, align = "start", className, children, ...props }, ref) => (
+  ({ label, active = false, align = "start", className, children, ...props }, ref) => {
+    const mobile = React.useContext(MobileNavigationContext);
+    if (mobile) return (
+      <div className={cn("flex flex-col gap-1", className)}>
+        <span className="px-3 py-2 text-small text-muted-foreground">{label}</span>
+        {children}
+      </div>
+    );
+    return (
     <DropdownMenu.Root modal={false} {...props}>
       <DropdownMenu.Trigger
         ref={ref}
@@ -68,7 +77,8 @@ export const NavDropdown = React.forwardRef<HTMLButtonElement, NavDropdownProps>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>
-  ),
+    );
+  },
 );
 NavDropdown.displayName = "NavDropdown";
 
@@ -80,7 +90,21 @@ export interface NavDropdownItemProps
 
 /** One option inside a NavDropdown; renders an anchor. */
 export const NavDropdownItem = React.forwardRef<HTMLAnchorElement, NavDropdownItemProps>(
-  ({ className, active, disabled, ...props }, ref) => (
+  ({ className, active, disabled, ...props }, ref) => {
+    const mobile = React.useContext(MobileNavigationContext);
+    if (mobile) return (
+      <a
+        {...props}
+        href={disabled ? undefined : props.href}
+        ref={ref}
+        aria-current={active ? "page" : undefined}
+        aria-disabled={disabled || undefined}
+        data-disabled={disabled ? "" : undefined}
+        tabIndex={disabled ? -1 : props.tabIndex}
+        className={cn(navDropdownItemVariants({ active }), className)}
+      />
+    );
+    return (
     <DropdownMenu.Item asChild disabled={disabled}>
       <a
         ref={ref}
@@ -89,6 +113,7 @@ export const NavDropdownItem = React.forwardRef<HTMLAnchorElement, NavDropdownIt
         {...props}
       />
     </DropdownMenu.Item>
-  ),
+    );
+  },
 );
 NavDropdownItem.displayName = "NavDropdownItem";

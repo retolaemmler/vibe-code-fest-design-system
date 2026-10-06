@@ -75,7 +75,16 @@ export {
   type ScheduleItemAvatar,
 } from "./components/ui/schedule-item";
 export { Stat, statVariants, type StatProps } from "./components/ui/stat";
-export { Faq, FaqItem, FaqTrigger, FaqContent } from "./components/ui/faq";
+export {
+  Faq,
+  FaqItem,
+  FaqTrigger,
+  FaqContent,
+  type FaqProps,
+  type FaqItemProps,
+  type FaqTriggerProps,
+  type FaqContentProps,
+} from "./components/ui/faq";
 export {
   Tabs,
   TabsList,

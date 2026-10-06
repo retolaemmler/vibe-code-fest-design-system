@@ -407,6 +407,35 @@ _Speaker profile link_
 - Do not rebuild the LinkedIn bubble using custom Button styling; use this component in both schedule and speaker contexts.
 - Do not use the avatar placement outside a positioned avatar container.
 
+### NavDropdown
+
+```ts
+import { NavDropdown } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `label` | any | `—` |
+| `active` | boolean | `false` |
+| `align` | start · end | `start` |
+| `className` | string | `transition-transform duration-(--duration-fast) group-data-[state=open]:rotate-180` |
+| `children` | any | `—` |
+
+### NavDropdownItem
+
+```ts
+import { NavDropdownItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
+```
+
+**Props:**
+
+| Prop | Type | Default |
+|---|---|---|
+| `active` | true · false | `false` |
+| `disabled` | boolean | `—` |
+
 ### Navbar
 
 ```ts

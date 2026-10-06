@@ -2,7 +2,7 @@
   "meta": {
     "name": "Vibe Code Fest Design System",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.45.0",
+    "version": "1.46.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "6907fcc14ca862b986a5e3365e30bac91a30cbdf4542dc9905105a2764dde041",
+      "#enrichment": "226e996f47cdf06bb9766c30756c42f97fb48a09535ae3affb42af692d4f0579",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -29,7 +29,7 @@
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
       "mockupPreviewPlugin.ts": "8024d439734f27417621536969f64db1",
-      "package.json": "af360c77c40914e703c4d7c774a14a08",
+      "package.json": "c2bc50376ae0685f3a0e056ef3f63ccf",
       "public/favicon.png": "69d984f278397f6136e8e93fd8afd74b",
       "roadmap.md": "495ccc18b59d9c35a19f3732bc09c668",
       "src/assets/logos/atoll-logo.png": "a229369f3e1e0cfbdcd536c9b5ec2aec",
@@ -54,20 +54,21 @@
       "src/components/ui/icon.tsx": "465065941f991d5e633e705dba86327f",
       "src/components/ui/input.tsx": "b537a884917f0b514545ea164abd4fd4",
       "src/components/ui/layout.tsx": "87221df44334e5e3547f09f0ab9a3005",
-      "src/components/ui/link.tsx": "049c4f0aa01605e05178b75a2912a955",
+      "src/components/ui/link.tsx": "b4fc6ca2c484841851f8b190de5aa007",
       "src/components/ui/linkedin-bubble.tsx": "a15a2b93d2177c00a9a072006492901f",
+      "src/components/ui/nav-dropdown.tsx": "287e4954507a78a86147c2766675328d",
       "src/components/ui/navbar.tsx": "43c2b4329b83da9e819beae9fc9ed132",
       "src/components/ui/photo-frame.tsx": "bf233c309faae4f9255b5164c90c96e8",
       "src/components/ui/schedule-item.tsx": "70fcdc52c281811b59e622da7ce7af80",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
-      "src/components/ui/speaker-card.tsx": "b9f17d13835c0c8cf9c60a98565b7871",
-      "src/components/ui/sponsor-card.tsx": "b24bcd2e29596c02f98c12447f6ec193",
+      "src/components/ui/speaker-card.tsx": "e70ab0d42adffaf5e0859663b35694b2",
+      "src/components/ui/sponsor-card.tsx": "3d4adab025fc6523e47ed90f5295f8f7",
       "src/components/ui/stat.tsx": "a4963e8607f16f8ba7daf18b83c11147",
       "src/components/ui/tabs.tsx": "7808699ffa47435ae831029b709c23da",
       "src/components/ui/ticket-card.tsx": "ecb9af95c143e82604fa83ff7a56b73d",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
       "src/index.css": "5c977d9a6587bb91ba7c6d3555e40ba9",
-      "src/index.ts": "4dbb4e96297dcca1085e49ede2a05023",
+      "src/index.ts": "ed3d8535b8a2b0e0d292a10c59bda397",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "38969839f35ce2966e32a9f01a5c09ea",
       "src/routeTree.gen.ts": "bb2ecf6c5be5fb589043a42a1d79a83c",
@@ -76,7 +77,7 @@
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "a9450ec2a544783e425465a3230d71b3",
       "src/routes/index.tsx": "b6033be08212403f52e48cfb1d359629",
-      "src/routes/style-guide.tsx": "287e1c927375fd4def620aacb4e940db",
+      "src/routes/style-guide.tsx": "b957586bb22d00da41ff8f032d0cc4d9",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -2081,6 +2082,62 @@
       ],
       "antipatterns": [
         "Do not use TicketRegular outside a TicketCard; it relies on the surrounding card styling and tear line."
+      ]
+    },
+    {
+      "name": "NavDropdown",
+      "file": "src/components/ui/nav-dropdown.tsx",
+      "import_path": "",
+      "props": [
+        {
+          "name": "label",
+          "type": "any",
+          "required": true
+        },
+        {
+          "name": "active",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "align",
+          "type": "enum",
+          "values": [
+            "start",
+            "end"
+          ],
+          "default": "start"
+        },
+        {
+          "name": "className",
+          "type": "string",
+          "default": "transition-transform duration-(--duration-fast) group-data-[state=open]:rotate-180"
+        },
+        {
+          "name": "children",
+          "type": "any",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "NavDropdownItem",
+      "file": "src/components/ui/nav-dropdown.tsx",
+      "import_path": "",
+      "props": [
+        {
+          "name": "active",
+          "type": "enum",
+          "values": [
+            "true",
+            "false"
+          ],
+          "default": "false"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean"
+        }
       ]
     }
   ],

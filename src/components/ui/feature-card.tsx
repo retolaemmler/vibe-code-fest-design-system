@@ -42,8 +42,12 @@ const featureCardSurfaceVariants = cva("flex flex-col gap-5 transition", {
 export interface FeatureCardProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "title">,
     VariantProps<typeof featureMedallionVariants> {
-  /** Icon shown in the medallion at the top of the card. */
-  icon: IconName;
+  /** Icon shown in the medallion at the top of the card. Ignored when `imageSrc` is set. */
+  icon?: IconName;
+  /** Optional photo shown as a circular picture instead of the icon medallion. */
+  imageSrc?: string;
+  /** Accessible description of the photo (required when `imageSrc` is set). */
+  imageAlt?: string;
   title: string;
   description: string;
   /** When set, the whole card becomes a clickable link to this href. */
@@ -51,13 +55,13 @@ export interface FeatureCardProps
 }
 
 /**
- * Elevated card with an icon medallion, heading and short supporting text —
- * the pattern used for criteria, perks and highlights. Use it as-is for
- * non-interactive content; pass `href` for the purple-tinted, stroked clickable
- * card with hover lift and a focus ring.
+ * Elevated card with an icon medallion (or a circular photo via `imageSrc`),
+ * heading and short supporting text — the pattern used for criteria, perks
+ * and highlights. Use it as-is for non-interactive content; pass `href` for
+ * the purple-tinted, stroked clickable card with hover lift and a focus ring.
  */
 export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
-  ({ className, icon, title, description, tone, size, href, ...props }, ref) => {
+  ({ className, icon, imageSrc, imageAlt, title, description, tone, size, href, ...props }, ref) => {
     const card = (
       <Card
         ref={ref}
@@ -69,9 +73,22 @@ export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
         )}
         {...props}
       >
-        <span className={featureMedallionVariants({ tone, size })}>
-          <Icon name={icon} size={size === "md" ? "md" : "lg"} />
-        </span>
+        {imageSrc ? (
+          <span
+            className={cn(featureMedallionVariants({ size }), "overflow-hidden")}
+          >
+            <img
+              src={imageSrc}
+              alt={imageAlt ?? ""}
+              className="size-full object-cover"
+              loading="lazy"
+            />
+          </span>
+        ) : (
+          <span className={featureMedallionVariants({ tone, size })}>
+            <Icon name={icon} size={size === "md" ? "md" : "lg"} />
+          </span>
+        )}
         <div className="flex flex-col gap-2">
           <CardTitle>{title}</CardTitle>
           <CardDescription className="text-body">{description}</CardDescription>

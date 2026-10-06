@@ -29,6 +29,21 @@ export const featureMedallionVariants = cva(
   },
 );
 
+/** Circular photo slot — sized larger than the icon medallion. */
+export const featurePhotoVariants = cva(
+  "flex shrink-0 items-center justify-center overflow-hidden rounded-pill",
+  {
+    variants: {
+      size: {
+        sm: "size-14",
+        md: "size-16",
+        lg: "size-20",
+      },
+    },
+    defaultVariants: { size: "lg" },
+  },
+);
+
 const featureCardSurfaceVariants = cva("flex flex-col gap-5 transition", {
   variants: {
     clickable: {
@@ -74,9 +89,7 @@ export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
         {...props}
       >
         {imageSrc ? (
-          <span
-            className={cn(featureMedallionVariants({ size }), "overflow-hidden")}
-          >
+          <span className={featurePhotoVariants({ size })}>
             <img
               src={imageSrc}
               alt={imageAlt ?? ""}

@@ -29,7 +29,7 @@ export const featureMedallionVariants = cva(
   },
 );
 
-/** Circular photo slot — sized larger than the icon medallion. */
+/** Circular photo slot — `xl` matches the CTA panel photo (96px, 128px on md+). */
 export const featurePhotoVariants = cva(
   "flex shrink-0 items-center justify-center overflow-hidden rounded-pill",
   {
@@ -38,6 +38,7 @@ export const featurePhotoVariants = cva(
         sm: "size-14",
         md: "size-16",
         lg: "size-20",
+        xl: "size-24 md:size-32",
       },
     },
     defaultVariants: { size: "lg" },

@@ -93,6 +93,7 @@ export {
   Footer,
   footerVariants,
   type FooterLink,
+  type FooterSocial,
   type FooterProps,
 } from "./components/ui/footer";
 export {

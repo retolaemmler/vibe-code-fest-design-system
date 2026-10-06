@@ -405,12 +405,9 @@ function StyleGuide() {
           </Button>
         }
       >
-        <RouterLink
-          to="/"
-          className="text-small text-muted-foreground rounded-field px-2 py-1 outline-none hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-        >
-          Showcase
-        </RouterLink>
+        <Link variant="nav" asChild>
+          <RouterLink to="/">Showcase</RouterLink>
+        </Link>
         <Link variant="nav" href="#colour" active>
           Style guide
         </Link>

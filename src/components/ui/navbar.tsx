@@ -30,10 +30,10 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
       className={cn(navbarVariants({ variant, sticky }), className)}
       {...props}
     >
-      <Container className="flex h-16 items-center justify-between gap-6">
-        <div className="flex items-center gap-2">{brand}</div>
-        <nav className="hidden items-center gap-1 md:flex">{children}</nav>
-        <div className="flex items-center gap-2">{actions}</div>
+      <Container className="flex h-16 items-center justify-between gap-2 lg:gap-6">
+        <div className="flex shrink-0 items-center gap-2">{brand}</div>
+        <nav className="hidden min-w-0 items-center gap-0 md:flex lg:gap-1">{children}</nav>
+        <div className="flex shrink-0 items-center gap-2">{actions}</div>
       </Container>
     </header>
   ),

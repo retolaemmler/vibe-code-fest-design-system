@@ -23,7 +23,7 @@ export const linkVariants = cva(
       active: { true: "", false: "" },
     },
     compoundVariants: [
-      { variant: "nav", active: true, class: "text-foreground" },
+      { variant: "nav", active: true, class: "text-primary" },
     ],
     defaultVariants: { variant: "inline", active: false },
   },

@@ -85,12 +85,13 @@ export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
         padding="lg"
         className={cn(
           featureCardSurfaceVariants({ clickable: Boolean(href) }),
+          imageSrc && "flex-row items-center gap-6 md:gap-8",
           className,
         )}
         {...props}
       >
         {imageSrc ? (
-          <span className={featurePhotoVariants({ size })}>
+          <span className={featurePhotoVariants({ size: "xl" })}>
             <img
               src={imageSrc}
               alt={imageAlt ?? ""}

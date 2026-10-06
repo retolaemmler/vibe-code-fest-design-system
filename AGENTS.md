@@ -5,3 +5,4 @@ Render LinkedIn profile actions through the shared LinkedInBubble in speaker car
 FeatureCard derives its purple-tinted, primary-stroked clickable look from `href` rather than a separate highlight variant, so its visual state always matches its interaction.
 Use Radix Tabs wrapped by the token-driven Tabs primitives for exclusive content switching, so keyboard interaction and selected-state semantics remain consistent in consuming projects.
 Use PhotoFrame for six-image event impressions: one gradient-framed responsive gallery (pink→purple frame, rounded tiles, two columns on mobile / three on larger screens) with the gallery button and optional photographer-credit link inside the frame.
+Navbar keeps compact tablet spacing and nowrap nav labels, so longer header links do not wrap before desktop spacing returns.

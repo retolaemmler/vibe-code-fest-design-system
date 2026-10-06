@@ -120,3 +120,4 @@ export {
   type TicketCardProps,
   type TicketRegularProps,
 } from "./components/ui/ticket-card";
+export * from "./components/ui/nav-dropdown";

@@ -1124,7 +1124,7 @@ function StyleGuide() {
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-6 sm:max-w-3xl sm:grid-cols-3 lg:grid-cols-4">
                 {(["default", "highlight"] as const).map((variant) => (
                   <div key={variant} className="flex flex-col gap-2">
                     <SponsorCard

@@ -2,7 +2,7 @@
   "meta": {
     "name": "Vibe Code Fest Design System",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.48.0",
+    "version": "1.49.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -62,7 +62,7 @@
       "src/components/ui/photo-frame.tsx": "bf233c309faae4f9255b5164c90c96e8",
       "src/components/ui/schedule-item.tsx": "70fcdc52c281811b59e622da7ce7af80",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
-      "src/components/ui/speaker-card.tsx": "e70ab0d42adffaf5e0859663b35694b2",
+      "src/components/ui/speaker-card.tsx": "ec2bee9e8d75847cfafa8fc6354711fc",
       "src/components/ui/sponsor-card.tsx": "3d4adab025fc6523e47ed90f5295f8f7",
       "src/components/ui/stat.tsx": "a4963e8607f16f8ba7daf18b83c11147",
       "src/components/ui/tabs.tsx": "7808699ffa47435ae831029b709c23da",

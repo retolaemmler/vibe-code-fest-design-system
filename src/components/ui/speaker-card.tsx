@@ -63,7 +63,13 @@ export const SpeakerCard = React.forwardRef<HTMLDivElement, SpeakerCardProps>(
           {name}
         </Heading>
         {(role || company) && (
-          <Text size="small" tone="muted" className="self-start text-left">
+          <Text
+            size="small"
+            tone="muted"
+            className={cn(
+              variant === "plain" ? "self-center text-center" : "self-start text-left",
+            )}
+          >
             {[role, company].filter(Boolean).join(" · ")}
           </Text>
         )}

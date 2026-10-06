@@ -15,7 +15,7 @@ export const sponsorCardVariants = cva(
       },
       size: {
         lg: "",
-        sm: "min-h-24 p-4",
+        sm: "min-h-32 p-4",
       },
     },
     compoundVariants: [
@@ -35,7 +35,7 @@ const sponsorLogoVariants = cva(
     variants: {
       size: {
         lg: "max-h-32 max-w-64",
-        sm: "max-h-12 max-w-36",
+        sm: "max-h-16 max-w-24",
       },
     },
     defaultVariants: { size: "lg" },

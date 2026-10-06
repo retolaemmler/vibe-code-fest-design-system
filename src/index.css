@@ -204,32 +204,32 @@
   --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", monospace;
 
   /* --- Typography: named scale (size / weight / leading / tracking) -------- */
-  --text-display-size: clamp(2.5rem, 0.5rem + 4.1667vw, 4.5rem);
+  --text-display-size: clamp(2.5rem, 1.7rem + 3.3333vw, 4.5rem);
   --text-display-weight: 700;
   --text-display-leading: 1.02;
   --text-display-tracking: -0.03em;
 
-  --text-h1-size: clamp(2rem, 1.2rem + 1.6667vw, 3rem);
+  --text-h1-size: clamp(2rem, 1.6rem + 1.6667vw, 3rem);
   --text-h1-weight: 700;
   --text-h1-leading: 1.1;
   --text-h1-tracking: -0.025em;
 
-  --text-h2-size: clamp(1.5rem, 1.1rem + 0.8333vw, 2rem);
+  --text-h2-size: clamp(1.5rem, 1.3rem + 0.8333vw, 2rem);
   --text-h2-weight: 600;
   --text-h2-leading: 1.2;
   --text-h2-tracking: -0.02em;
 
-  --text-h3-size: clamp(1.1875rem, 1.0375rem + 0.3125vw, 1.375rem);
+  --text-h3-size: clamp(1.1875rem, 1.1125rem + 0.3125vw, 1.375rem);
   --text-h3-weight: 600;
   --text-h3-leading: 1.3;
   --text-h3-tracking: -0.01em;
 
-  --text-body-size: clamp(0.9375rem, 0.8875rem + 0.1042vw, 1rem);
+  --text-body-size: clamp(0.9375rem, 0.9125rem + 0.1042vw, 1rem);
   --text-body-weight: 400;
   --text-body-leading: 1.65;
   --text-body-tracking: 0em;
 
-  --text-small-size: clamp(0.875rem, 0.825rem + 0.1042vw, 0.9375rem);
+  --text-small-size: clamp(0.875rem, 0.85rem + 0.1042vw, 0.9375rem);
   --text-small-weight: 400;
   --text-small-leading: 1.55;
   --text-small-tracking: 0em;
@@ -381,32 +381,32 @@
   --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", monospace;
 
   /* --- Typography: named scale ------------------------------------------------------- */
-  --text-display-size: clamp(2.5rem, 0.5rem + 4.1667vw, 4.5rem);
+  --text-display-size: clamp(2.5rem, 1.7rem + 3.3333vw, 4.5rem);
   --text-display-weight: 700;
   --text-display-leading: 1.02;
   --text-display-tracking: -0.03em;
 
-  --text-h1-size: clamp(2rem, 1.2rem + 1.6667vw, 3rem);
+  --text-h1-size: clamp(2rem, 1.6rem + 1.6667vw, 3rem);
   --text-h1-weight: 700;
   --text-h1-leading: 1.1;
   --text-h1-tracking: -0.025em;
 
-  --text-h2-size: clamp(1.5rem, 1.1rem + 0.8333vw, 2rem);
+  --text-h2-size: clamp(1.5rem, 1.3rem + 0.8333vw, 2rem);
   --text-h2-weight: 600;
   --text-h2-leading: 1.2;
   --text-h2-tracking: -0.02em;
 
-  --text-h3-size: clamp(1.1875rem, 1.0375rem + 0.3125vw, 1.375rem);
+  --text-h3-size: clamp(1.1875rem, 1.1125rem + 0.3125vw, 1.375rem);
   --text-h3-weight: 600;
   --text-h3-leading: 1.3;
   --text-h3-tracking: -0.01em;
 
-  --text-body-size: clamp(0.9375rem, 0.8875rem + 0.1042vw, 1rem);
+  --text-body-size: clamp(0.9375rem, 0.9125rem + 0.1042vw, 1rem);
   --text-body-weight: 400;
   --text-body-leading: 1.65;
   --text-body-tracking: 0em;
 
-  --text-small-size: clamp(0.875rem, 0.825rem + 0.1042vw, 0.9375rem);
+  --text-small-size: clamp(0.875rem, 0.85rem + 0.1042vw, 0.9375rem);
   --text-small-weight: 400;
   --text-small-leading: 1.55;
   --text-small-tracking: 0em;

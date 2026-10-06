@@ -60,7 +60,7 @@ export interface FeatureCardProps
     VariantProps<typeof featureMedallionVariants> {
   /** Icon shown in the medallion at the top of the card. Ignored when `imageSrc` is set. */
   icon?: IconName;
-  /** Optional photo shown as a circular picture instead of the icon medallion. */
+  /** Optional photo shown as a large circular picture in a horizontal layout — picture left, text vertically centered right. */
   imageSrc?: string;
   /** Accessible description of the photo (required when `imageSrc` is set). */
   imageAlt?: string;

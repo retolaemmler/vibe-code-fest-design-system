@@ -84,11 +84,11 @@ export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
               loading="lazy"
             />
           </span>
-        ) : (
+        ) : icon ? (
           <span className={featureMedallionVariants({ tone, size })}>
             <Icon name={icon} size={size === "md" ? "md" : "lg"} />
           </span>
-        )}
+        ) : null}
         <div className="flex flex-col gap-2">
           <CardTitle>{title}</CardTitle>
           <CardDescription className="text-body">{description}</CardDescription>

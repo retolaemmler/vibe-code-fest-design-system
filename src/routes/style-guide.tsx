@@ -21,6 +21,7 @@ import { Footer } from "@/components/ui/footer";
 import { Icon, icons, type IconName } from "@/components/ui/icon";
 import { Input } from "@/components/ui/input";
 import { Container, Section } from "@/components/ui/layout";
+import { LinkedInBubble } from "@/components/ui/linkedin-bubble";
 import { Link } from "@/components/ui/link";
 import { Navbar } from "@/components/ui/navbar";
 import { PhotoFrame, type PhotoFramePhoto } from "@/components/ui/photo-frame";
@@ -1112,6 +1113,19 @@ function StyleGuide() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* LinkedIn bubble */}
+            <div className="flex flex-col gap-4">
+              <Heading level="h3">LinkedIn bubble</Heading>
+              <div className="flex flex-wrap items-center gap-4">
+                <LinkedInBubble href="https://linkedin.com/in/nora-keller" name="Nora Keller" />
+                <LinkedInBubble href="https://linkedin.com/in/nora-keller" name="Nora Keller" placement="avatar" />
+              </div>
+              <Caption>placement="inline" · placement="avatar"</Caption>
+              <Snippet
+                code={'<LinkedInBubble href="https://linkedin.com/in/nora-keller" name="Nora Keller" placement="inline" />'}
+              />
             </div>
 
             {/* Sponsor card */}

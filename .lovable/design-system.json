@@ -2,7 +2,7 @@
   "meta": {
     "name": "Vibe Code Fest Design System",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.49.0",
+    "version": "1.50.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "226e996f47cdf06bb9766c30756c42f97fb48a09535ae3affb42af692d4f0579",
+      "#enrichment": "f63712fa5a16038dbfa65669350e87ae8a8f4f9bc84dd4f18c3e25ad9e0d62a8",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -25,14 +25,14 @@
       ".lovable/plan/tablet-header-spacing-2026-10-06.md": "70ad1f74c66c6fdebd1ef0b545fd09e4",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
       ".lovable/system.md": "c7ba12bcd335db8956f822c6b8b8ca75",
-      "AGENTS.md": "5d34b08a5cf99bfc85dab8e3580ef2c5",
+      "AGENTS.md": "08799ceb377a22c0e6f660cec761b315",
       "README.md": "546e5b1f850a58d461165943ea376d15",
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
       "mockupPreviewPlugin.ts": "2fe27e209196fb34604d861c305d129c",
-      "package.json": "c2bc50376ae0685f3a0e056ef3f63ccf",
+      "package.json": "c6266fd9d0d3492f4d89f02380d12887",
       "public/favicon.png": "69d984f278397f6136e8e93fd8afd74b",
-      "roadmap.md": "495ccc18b59d9c35a19f3732bc09c668",
+      "roadmap.md": "22e34f71dd7738c75c5d9b474ba02ea5",
       "src/assets/logos/atoll-logo.png": "a229369f3e1e0cfbdcd536c9b5ec2aec",
       "src/assets/logos/vibe-code-fest-logo.png": "ff361f9b784588d3825375acf92408d0",
       "src/assets/photography/katy-wirz.png": "aef68675fa1690d5fd1a5584e57c55c5",
@@ -57,8 +57,9 @@
       "src/components/ui/layout.tsx": "87221df44334e5e3547f09f0ab9a3005",
       "src/components/ui/link.tsx": "36f2d29b4d16decced4c53c7d38c6ce5",
       "src/components/ui/linkedin-bubble.tsx": "a15a2b93d2177c00a9a072006492901f",
-      "src/components/ui/nav-dropdown.tsx": "287e4954507a78a86147c2766675328d",
-      "src/components/ui/navbar.tsx": "dd7a54cd7680020783d3f97c5a8fbb74",
+      "src/components/ui/nav-dropdown.tsx": "271d9667d84c3d5bca4f4581b60c0f92",
+      "src/components/ui/navbar.tsx": "ad32d5e83d215128c483cd276bd5c916",
+      "src/components/ui/navigation-context.ts": "ceaaf99aca8629931f5154b16b35b5eb",
       "src/components/ui/photo-frame.tsx": "bf233c309faae4f9255b5164c90c96e8",
       "src/components/ui/schedule-item.tsx": "70fcdc52c281811b59e622da7ce7af80",
       "src/components/ui/social-icons.tsx": "057ac47164b95dfa268c944e09b8a999",
@@ -1784,9 +1785,6 @@
       "name": "Navbar",
       "file": "src/components/ui/navbar",
       "import_path": "",
-      "usage": "Use for shared site navigation. On mobile its burger opens a fixed full-viewport menu with direct dropdown links and locked page scrolling.",
-      "examples": [{ "label": "Site navigation", "code": "<Navbar sticky brand={<BrandLogo />}><Link variant=\"nav\" href=\"/\">Home</Link><NavDropdown label=\"Contribute\"><NavDropdownItem href=\"/volunteer\">Volunteer</NavDropdownItem></NavDropdown></Navbar>" }],
-      "antipatterns": ["Do not add a second mobile menu or a page-scrolling menu container.", "Do not nest dropdown menus inside the mobile navigation."],
       "props": [
         {
           "name": "variant",
@@ -1815,6 +1813,17 @@
           "name": "actions",
           "type": "any"
         }
+      ],
+      "usage": "Use for shared site navigation. On mobile its burger opens a fixed full-viewport menu with direct dropdown links and locked page scrolling.",
+      "examples": [
+        {
+          "label": "Site navigation",
+          "code": "\u003cNavbar sticky brand={\u003cBrandLogo /\u003e}\u003e\u003cLink variant=\"nav\" href=\"/\"\u003eHome\u003c/Link\u003e\u003cNavDropdown label=\"Contribute\"\u003e\u003cNavDropdownItem href=\"/volunteer\"\u003eVolunteer\u003c/NavDropdownItem\u003e\u003c/NavDropdown\u003e\u003c/Navbar\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not add a second mobile menu or a page-scrolling menu container.",
+        "Do not nest dropdown menus inside the mobile navigation."
       ]
     },
     {
@@ -2092,9 +2101,6 @@
       "name": "NavDropdown",
       "file": "src/components/ui/nav-dropdown.tsx",
       "import_path": "",
-      "usage": "Use for grouped desktop navigation options. Within Navbar's mobile menu the label and all options display inline without a dropdown trigger.",
-      "examples": [{ "label": "Grouped navigation", "code": "<NavDropdown label=\"Contribute\"><NavDropdownItem href=\"/volunteer\">Volunteer</NavDropdownItem></NavDropdown>" }],
-      "antipatterns": ["Do not hide mobile options behind another dropdown."],
       "props": [
         {
           "name": "label",
@@ -2118,22 +2124,29 @@
         {
           "name": "className",
           "type": "string",
-          "default": "transition-transform duration-(--duration-fast) group-data-[state=open]:rotate-180"
+          "default": "px-3 py-2 text-small text-muted-foreground"
         },
         {
           "name": "children",
           "type": "any",
           "required": true
         }
+      ],
+      "usage": "Use for grouped desktop navigation options. Within Navbar's mobile menu the label and all options display inline without a dropdown trigger.",
+      "examples": [
+        {
+          "label": "Grouped navigation",
+          "code": "\u003cNavDropdown label=\"Contribute\"\u003e\u003cNavDropdownItem href=\"/volunteer\"\u003eVolunteer\u003c/NavDropdownItem\u003e\u003c/NavDropdown\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not hide mobile options behind another dropdown."
       ]
     },
     {
       "name": "NavDropdownItem",
       "file": "src/components/ui/nav-dropdown.tsx",
       "import_path": "",
-      "usage": "Use for an option inside NavDropdown; renders as a direct link in mobile navigation.",
-      "examples": [{ "label": "Navigation option", "code": "<NavDropdownItem href=\"/volunteer\">Volunteer</NavDropdownItem>" }],
-      "antipatterns": ["Do not use outside NavDropdown."],
       "props": [
         {
           "name": "active",
@@ -2148,6 +2161,16 @@
           "name": "disabled",
           "type": "boolean"
         }
+      ],
+      "usage": "Use for an option inside NavDropdown; renders as a direct link in mobile navigation.",
+      "examples": [
+        {
+          "label": "Navigation option",
+          "code": "\u003cNavDropdownItem href=\"/volunteer\"\u003eVolunteer\u003c/NavDropdownItem\u003e"
+        }
+      ],
+      "antipatterns": [
+        "Do not use outside NavDropdown."
       ]
     }
   ],

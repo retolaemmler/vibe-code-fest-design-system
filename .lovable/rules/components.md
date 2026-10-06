@@ -413,6 +413,8 @@ _Speaker profile link_
 import { NavDropdown } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
+Use for grouped desktop navigation options. Within Navbar's mobile menu the label and all options display inline without a dropdown trigger.
+
 **Props:**
 
 | Prop | Type | Default |
@@ -420,14 +422,27 @@ import { NavDropdown } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ce
 | `label` | any | `—` |
 | `active` | boolean | `false` |
 | `align` | start · end | `start` |
-| `className` | string | `transition-transform duration-(--duration-fast) group-data-[state=open]:rotate-180` |
+| `className` | string | `px-3 py-2 text-small text-muted-foreground` |
 | `children` | any | `—` |
+
+**Examples:**
+
+_Grouped navigation_
+```tsx
+<NavDropdown label="Contribute"><NavDropdownItem href="/volunteer">Volunteer</NavDropdownItem></NavDropdown>
+```
+
+**Avoid:**
+
+- Do not hide mobile options behind another dropdown.
 
 ### NavDropdownItem
 
 ```ts
 import { NavDropdownItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
+
+Use for an option inside NavDropdown; renders as a direct link in mobile navigation.
 
 **Props:**
 
@@ -436,11 +451,24 @@ import { NavDropdownItem } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973
 | `active` | true · false | `false` |
 | `disabled` | boolean | `—` |
 
+**Examples:**
+
+_Navigation option_
+```tsx
+<NavDropdownItem href="/volunteer">Volunteer</NavDropdownItem>
+```
+
+**Avoid:**
+
+- Do not use outside NavDropdown.
+
 ### Navbar
 
 ```ts
 import { Navbar } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
+
+Use for shared site navigation. On mobile its burger opens a fixed full-viewport menu with direct dropdown links and locked page scrolling.
 
 **Props:**
 
@@ -450,6 +478,18 @@ import { Navbar } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab
 | `sticky` | true · false | `false` |
 | `brand` | any | `—` |
 | `actions` | any | `—` |
+
+**Examples:**
+
+_Site navigation_
+```tsx
+<Navbar sticky brand={<BrandLogo />}><Link variant="nav" href="/">Home</Link><NavDropdown label="Contribute"><NavDropdownItem href="/volunteer">Volunteer</NavDropdownItem></NavDropdown></Navbar>
+```
+
+**Avoid:**
+
+- Do not add a second mobile menu or a page-scrolling menu container.
+- Do not nest dropdown menus inside the mobile navigation.
 
 ### PhotoFrame
 

@@ -89,9 +89,7 @@ export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
         {...props}
       >
         {imageSrc ? (
-          <span
-            className={cn(featureMedallionVariants({ size }), "overflow-hidden")}
-          >
+          <span className={featurePhotoVariants({ size })}>
             <img
               src={imageSrc}
               alt={imageAlt ?? ""}

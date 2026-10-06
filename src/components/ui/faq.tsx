@@ -4,8 +4,10 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { cn } from "../../lib/utils";
 import { Icon } from "./icon";
 
+export type FaqProps = React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Root>;
 export const Faq = AccordionPrimitive.Root;
 
+export type FaqItemProps = React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>;
 export const FaqItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
@@ -18,6 +20,7 @@ export const FaqItem = React.forwardRef<
 ));
 FaqItem.displayName = "FaqItem";
 
+export type FaqTriggerProps = React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>;
 export const FaqTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
@@ -47,6 +50,7 @@ export const FaqTrigger = React.forwardRef<
 ));
 FaqTrigger.displayName = "FaqTrigger";
 
+export type FaqContentProps = React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>;
 export const FaqContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>

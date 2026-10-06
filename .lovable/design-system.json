@@ -2,7 +2,7 @@
   "meta": {
     "name": "Vibe Code Fest Design System",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.51.0",
+    "version": "1.52.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -69,7 +69,7 @@
       "src/components/ui/tabs.tsx": "7808699ffa47435ae831029b709c23da",
       "src/components/ui/ticket-card.tsx": "ecb9af95c143e82604fa83ff7a56b73d",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
-      "src/index.css": "ee388849219192dc513d8d4a04650530",
+      "src/index.css": "24150c650bc4c2bccea5b33ec2ad0b60",
       "src/index.ts": "8f7493754c52aad0257e55db870cab8d",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "a76b7da7acc371612cc181ae485d1634",
@@ -583,7 +583,7 @@
       },
       {
         "name": "--text-display-size",
-        "raw": "4.5rem",
+        "raw": "clamp(2.5rem, 1.7rem + 3.3333vw, 4.5rem)",
         "source": "src/index.css"
       },
       {
@@ -603,7 +603,7 @@
       },
       {
         "name": "--text-h1-size",
-        "raw": "3rem",
+        "raw": "clamp(2rem, 1.6rem + 1.6667vw, 3rem)",
         "source": "src/index.css"
       },
       {
@@ -623,7 +623,7 @@
       },
       {
         "name": "--text-h2-size",
-        "raw": "2rem",
+        "raw": "clamp(1.5rem, 1.3rem + 0.8333vw, 2rem)",
         "source": "src/index.css"
       },
       {
@@ -643,7 +643,7 @@
       },
       {
         "name": "--text-h3-size",
-        "raw": "1.375rem",
+        "raw": "clamp(1.1875rem, 1.1125rem + 0.3125vw, 1.375rem)",
         "source": "src/index.css"
       },
       {
@@ -663,7 +663,7 @@
       },
       {
         "name": "--text-body-size",
-        "raw": "1rem",
+        "raw": "clamp(0.9375rem, 0.9125rem + 0.1042vw, 1rem)",
         "source": "src/index.css"
       },
       {
@@ -683,7 +683,7 @@
       },
       {
         "name": "--text-small-size",
-        "raw": "0.9375rem",
+        "raw": "clamp(0.875rem, 0.85rem + 0.1042vw, 0.9375rem)",
         "source": "src/index.css"
       },
       {

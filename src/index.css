@@ -204,32 +204,32 @@
   --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", monospace;
 
   /* --- Typography: named scale (size / weight / leading / tracking) -------- */
-  --text-display-size: 4.5rem;
+  --text-display-size: clamp(2.5rem, 0.5rem + 4.1667vw, 4.5rem);
   --text-display-weight: 700;
   --text-display-leading: 1.02;
   --text-display-tracking: -0.03em;
 
-  --text-h1-size: 3rem;
+  --text-h1-size: clamp(2rem, 1.2rem + 1.6667vw, 3rem);
   --text-h1-weight: 700;
   --text-h1-leading: 1.1;
   --text-h1-tracking: -0.025em;
 
-  --text-h2-size: 2rem;
+  --text-h2-size: clamp(1.5rem, 1.1rem + 0.8333vw, 2rem);
   --text-h2-weight: 600;
   --text-h2-leading: 1.2;
   --text-h2-tracking: -0.02em;
 
-  --text-h3-size: 1.375rem;
+  --text-h3-size: clamp(1.1875rem, 1.0375rem + 0.3125vw, 1.375rem);
   --text-h3-weight: 600;
   --text-h3-leading: 1.3;
   --text-h3-tracking: -0.01em;
 
-  --text-body-size: 1rem;
+  --text-body-size: clamp(0.9375rem, 0.8875rem + 0.1042vw, 1rem);
   --text-body-weight: 400;
   --text-body-leading: 1.65;
   --text-body-tracking: 0em;
 
-  --text-small-size: 0.9375rem;
+  --text-small-size: clamp(0.875rem, 0.825rem + 0.1042vw, 0.9375rem);
   --text-small-weight: 400;
   --text-small-leading: 1.55;
   --text-small-tracking: 0em;
@@ -381,32 +381,32 @@
   --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", monospace;
 
   /* --- Typography: named scale ------------------------------------------------------- */
-  --text-display-size: 4.5rem;
+  --text-display-size: clamp(2.5rem, 0.5rem + 4.1667vw, 4.5rem);
   --text-display-weight: 700;
   --text-display-leading: 1.02;
   --text-display-tracking: -0.03em;
 
-  --text-h1-size: 3rem;
+  --text-h1-size: clamp(2rem, 1.2rem + 1.6667vw, 3rem);
   --text-h1-weight: 700;
   --text-h1-leading: 1.1;
   --text-h1-tracking: -0.025em;
 
-  --text-h2-size: 2rem;
+  --text-h2-size: clamp(1.5rem, 1.1rem + 0.8333vw, 2rem);
   --text-h2-weight: 600;
   --text-h2-leading: 1.2;
   --text-h2-tracking: -0.02em;
 
-  --text-h3-size: 1.375rem;
+  --text-h3-size: clamp(1.1875rem, 1.0375rem + 0.3125vw, 1.375rem);
   --text-h3-weight: 600;
   --text-h3-leading: 1.3;
   --text-h3-tracking: -0.01em;
 
-  --text-body-size: 1rem;
+  --text-body-size: clamp(0.9375rem, 0.8875rem + 0.1042vw, 1rem);
   --text-body-weight: 400;
   --text-body-leading: 1.65;
   --text-body-tracking: 0em;
 
-  --text-small-size: 0.9375rem;
+  --text-small-size: clamp(0.875rem, 0.825rem + 0.1042vw, 0.9375rem);
   --text-small-weight: 400;
   --text-small-leading: 1.55;
   --text-small-tracking: 0em;
@@ -502,26 +502,11 @@
   --font-mono: var(--font-mono);
 }
 
-/* --- Responsive type scale -------------------------------------------------
-   Below the `md` breakpoint (768px) the named scale steps down so headings fit
-   narrow screens. Only the *-size tokens change; weight / leading / tracking
-   stay identical, and the step-down is deliberately modest (body and small
-   barely move) so text stays comfortably readable on phones. Because the
-   utilities read these variables, every component inherits the mobile scale
-   automatically — never hand-write a `text-sm md:text-base` override.
+/* --- Fluid type scale ------------------------------------------------------
+   The *-size tokens use clamp() to scale smoothly from their mobile minimum
+   (at 384px viewport) to their desktop maximum (at 1344px). No breakpoint
+   steps — never hand-write a `text-sm md:text-base` override.
    --------------------------------------------------------------------------- */
-@media (max-width: 767px) {
-  :root,
-  .dark {
-    --text-display-size: 2.5rem;
-    --text-h1-size: 2rem;
-    --text-h2-size: 1.5rem;
-    --text-h3-size: 1.1875rem;
-    --text-body-size: 0.9375rem;
-    --text-small-size: 0.875rem;
-    --text-caption-size: 0.75rem;
-  }
-}
 
 /* --- Named type scale utilities: text-display … text-caption -------------- */
 @utility text-display {

@@ -101,16 +101,18 @@ export const PhotoFrame = React.forwardRef<HTMLDivElement, PhotoFrameProps>(
               {credit && creditLabel && " "}
               {creditLabel && (
                 <>
-                  {"( "}
-                  <a
-                    href={creditHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-primary underline underline-offset-2 hover:text-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                  >
-                    {creditLabel}
-                  </a>
-                  {" )"}
+                  <span className="whitespace-nowrap">
+                    {"("}
+                    <a
+                      href={creditHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-primary underline underline-offset-2 hover:text-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      {creditLabel}
+                    </a>
+                    {")"}
+                  </span>
                 </>
               )}
             </p>

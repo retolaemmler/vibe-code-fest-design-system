@@ -211,13 +211,15 @@ import { FaqTrigger } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb
 import { FeatureCard } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Elevated card with an icon medallion, heading and short supporting text. Without href it has a plain white elevated background for non-interactive content. With href, the entire card is clickable with a primary-purple stroke, primary-subtle light purple background, hover lift and focus ring. The clickable look is automatic, not a separate highlight variant.
+Elevated card with a heading and short supporting text. The top slot is an icon medallion by default, or a circular photo when imageSrc is set (icon is ignored then). Without href it has a plain white elevated background for non-interactive content. With href, the entire card is clickable with a primary-purple stroke, primary-subtle light purple background, hover lift and focus ring. The clickable look is automatic, not a separate highlight variant.
 
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
 | `icon` | any | `—` |
+| `imageSrc` | string | `—` |
+| `imageAlt` | string | `—` |
 | `title` | string | `—` |
 | `description` | string | `—` |
 | `href` | string | `—` |
@@ -227,6 +229,11 @@ Elevated card with an icon medallion, heading and short supporting text. Without
 _Clickable feature card_
 ```tsx
 <FeatureCard href="/programme" icon="ticket" title="Live workshops" description="Hands-on sessions across two tracks." />
+```
+
+_Feature card with picture_
+```tsx
+<FeatureCard imageSrc={speakerPhoto} imageAlt="Speaker" title="Community" description="Meet the people behind the fest." />
 ```
 
 **Avoid:**

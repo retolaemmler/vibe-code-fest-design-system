@@ -1,3 +1,4 @@
+import { NavDropdown, NavDropdownItem } from "@/components/ui/nav-dropdown";
 import * as React from "react";
 import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 
@@ -1296,6 +1297,11 @@ function StyleGuide() {
                   <Link variant="nav" href="#components">
                     Schedule
                   </Link>
+                  <NavDropdown label="Contribute">
+                    <NavDropdownItem href="#components">Become a speaker</NavDropdownItem>
+                    <NavDropdownItem href="#components">Become a sponsor</NavDropdownItem>
+                    <NavDropdownItem href="#components">Volunteer</NavDropdownItem>
+                  </NavDropdown>
                 </Navbar>
                 <Footer
                   surface="muted"

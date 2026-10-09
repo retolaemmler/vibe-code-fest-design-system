@@ -122,6 +122,7 @@ Pick the Button variant from the surface it sits on, not from personal taste.
   `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6` (or `gap-8` for prominent feature cards).
 - **Height matching:** Always use `h-full` on cards in a grid so row heights match.
 - **Section pairing:** Place raised cards on `surface="muted"` or `surface="muted-alternate"` for optimal contrast.
+- **Odd-numbered rows:** When there is an uneven number of cards and one card is left alone in a separate row, center that single card on the page on desktop (see the current speaker-card implementation on the Vibe Code Fest page).
 
 ## Footer layout
 

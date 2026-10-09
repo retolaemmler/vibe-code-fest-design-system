@@ -32,6 +32,7 @@ export const sectionVariants = cva("w-full", {
     surface: {
       none: "",
       muted: "bg-muted",
+      "muted-alternate": "bg-muted-alternate",
       card: "bg-card",
       gradient: "bg-gradient-surface",
     },

@@ -159,7 +159,7 @@ function Showcase() {
         </Container>
       </Section>
 
-      <Section id="buttons">
+      <Section id="buttons" surface="muted">
         <Container className="flex flex-col gap-10">
           <Heading level="h2">Buttons</Heading>
           <Row title="Variants">
@@ -266,7 +266,7 @@ function Showcase() {
         </Container>
       </Section>
 
-      <Section id="cards" surface="muted">
+      <Section id="cards" surface="muted-alternate">
         <Container className="flex flex-col gap-8">
           <Heading level="h2">Cards</Heading>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -300,7 +300,7 @@ function Showcase() {
         </Container>
       </Section>
 
-      <Section id="event">
+      <Section id="event" surface="muted">
         <Container className="flex flex-col gap-10">
           <Heading level="h2">Speakers</Heading>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -438,7 +438,7 @@ function Showcase() {
         </Container>
       </Section>
 
-      <Section>
+      <Section surface="muted-alternate">
         <Container size="md" className="flex flex-col gap-8">
           <div className="flex flex-col gap-3 text-center">
             <Heading level="h2">Impressions from the last event</Heading>

@@ -208,7 +208,8 @@ const COLOR_GROUPS: { group: string; blurb: string; swatches: Swatch[] }[] = [
       { token: "background", usage: "The page itself. Every screen starts here." },
       { token: "card", usage: "Panels sitting on the page: cards, speaker tiles, schedule rows." },
       { token: "popover", usage: "Floating layers above the page: menus, tooltips, dialogs." },
-      { token: "muted", usage: "Quiet bands and fills that separate a section without a border." },
+      { token: "muted", usage: "Near-neutral primary-hue section fill. Alternate with muted-alternate behind raised cards." },
+      { token: "muted-alternate", usage: "Near-neutral accent-hue section fill. Alternate with muted; not an accent or selected-state fill." },
       { token: "secondary", usage: "Neutral chips and secondary fills that must not read as brand." },
       { token: "surface-glass", usage: "The frosted sticky header and glass cards." },
       { token: "dark-section", usage: "Full-bleed alternate bands that stay dark in both themes: CTA, sponsors, footer.", on: "dark-section" },
@@ -495,6 +496,26 @@ function StyleGuide() {
                 </div>
               </div>
             ))}
+
+            <div className="flex flex-col gap-4">
+              <Heading level="h3">Alternating section backgrounds</Heading>
+              <div>
+                {(["muted", "muted-alternate"] as const).map((surface) => (
+                  <Section key={surface} surface={surface} spacing="sm">
+                    <Container className="flex flex-col gap-4">
+                      <TokenName>{`surface="${surface}" · bg-${surface}`}</TokenName>
+                      <Card variant="raised">
+                        <CardHeader>
+                          <CardTitle>Raised card</CardTitle>
+                          <CardDescription>Card surface with the shared raised shadow.</CardDescription>
+                        </CardHeader>
+                      </Card>
+                    </Container>
+                  </Section>
+                ))}
+              </div>
+              <Caption>Alternate these two quiet fills for consecutive sections. Keep cards on bg-card and use the existing elevation tokens; neither section fill denotes a brand action or status.</Caption>
+            </div>
 
             <div className="flex flex-col gap-4">
               <Heading level="h3">Gradient</Heading>

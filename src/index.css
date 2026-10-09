@@ -61,7 +61,9 @@
   --primary-subtle: 249 90% 96%;
   --secondary: 60 5% 96%;
   --secondary-foreground: 60 3% 11%;
-  --muted: 60 5% 96%;
+  /* Alternating section fills: near-neutral primary and accent hues. */
+  --muted: 249 12% 95%;
+  --muted-alternate: 330 12% 95%;
   --muted-foreground: 240 4% 46%;
   --accent: 330 81% 60%;
   --accent-foreground: 0 0% 100%;
@@ -260,7 +262,8 @@
   --primary-subtle: 249 48% 18%;
   --secondary: 60 3% 15%;
   --secondary-foreground: 60 9% 98%;
-  --muted: 60 3% 15%;
+  --muted: 249 5% 15%;
+  --muted-alternate: 330 5% 15%;
   --muted-foreground: 240 5% 65%;
   --accent: 330 81% 66%;
   --accent-foreground: 60 3% 7%;
@@ -440,6 +443,7 @@
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
   --color-muted: hsl(var(--muted));
+  --color-muted-alternate: hsl(var(--muted-alternate));
   --color-muted-foreground: hsl(var(--muted-foreground));
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));

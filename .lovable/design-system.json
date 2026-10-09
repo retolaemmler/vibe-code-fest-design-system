@@ -167,7 +167,7 @@
       },
       {
         "name": "--muted-alternate",
-        "raw": "330 12% 90%",
+        "raw": "330 18% 92.5%",
         "source": "src/index.css",
         "description": "Near-neutral accent-hue section fill; alternate with muted, never as a brand or status treatment."
       },

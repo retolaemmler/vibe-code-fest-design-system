@@ -2,7 +2,7 @@
   "meta": {
     "name": "Vibe Code Fest Design System",
     "package": "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b",
-    "version": "1.52.0",
+    "version": "1.53.0",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system",
@@ -11,7 +11,7 @@
     ],
     "source_type": "local",
     "source_manifest": {
-      "#enrichment": "f63712fa5a16038dbfa65669350e87ae8a8f4f9bc84dd4f18c3e25ad9e0d62a8",
+      "#enrichment": "ca07020de4549b8b3c6f33ed48b392b05012d759458501ac7e33111523119ae1",
       ".dsignore": "b2f57211e19ff82d979b90be1d50aa10",
       ".gitignore": "6059213806e442947666752f3db6bfdc",
       ".lovable/meta.yaml": "8794970d6049858cc148d2b86f7a2b22",
@@ -24,15 +24,15 @@
       ".lovable/plan/sponsor-card-component-2026-09-12.md": "ac3c9c3ca06c78a2a5bbb8cb6fa2af8b",
       ".lovable/plan/tablet-header-spacing-2026-10-06.md": "70ad1f74c66c6fdebd1ef0b545fd09e4",
       ".lovable/sources.yaml": "4ad98317da75ea1049fe2fd4f0a54f94",
-      ".lovable/system.md": "c7ba12bcd335db8956f822c6b8b8ca75",
-      "AGENTS.md": "08799ceb377a22c0e6f660cec761b315",
+      ".lovable/system.md": "8b08cc1cc1d29fbe9defa916792da696",
+      "AGENTS.md": "79d842719fb8e67eb5078465c6e8a43c",
       "README.md": "546e5b1f850a58d461165943ea376d15",
       "bunfig.toml": "25f4c8696b22b0943db7191e0cdf7942",
       "eslint.config.js": "07a67437fb1a45ab36d6de0145ff09de",
       "mockupPreviewPlugin.ts": "2fe27e209196fb34604d861c305d129c",
       "package.json": "c6266fd9d0d3492f4d89f02380d12887",
       "public/favicon.png": "69d984f278397f6136e8e93fd8afd74b",
-      "roadmap.md": "22e34f71dd7738c75c5d9b474ba02ea5",
+      "roadmap.md": "3b87458918c5a946bd8069711685af3a",
       "src/assets/logos/atoll-logo.png": "a229369f3e1e0cfbdcd536c9b5ec2aec",
       "src/assets/logos/vibe-code-fest-logo.png": "ff361f9b784588d3825375acf92408d0",
       "src/assets/photography/katy-wirz.png": "aef68675fa1690d5fd1a5584e57c55c5",
@@ -54,7 +54,7 @@
       "src/components/ui/footer.tsx": "67a04ef265091afe625b602cebeffa8d",
       "src/components/ui/icon.tsx": "465065941f991d5e633e705dba86327f",
       "src/components/ui/input.tsx": "b537a884917f0b514545ea164abd4fd4",
-      "src/components/ui/layout.tsx": "87221df44334e5e3547f09f0ab9a3005",
+      "src/components/ui/layout.tsx": "94e9927d560573109b79044562c97eee",
       "src/components/ui/link.tsx": "36f2d29b4d16decced4c53c7d38c6ce5",
       "src/components/ui/linkedin-bubble.tsx": "a15a2b93d2177c00a9a072006492901f",
       "src/components/ui/nav-dropdown.tsx": "271d9667d84c3d5bca4f4581b60c0f92",
@@ -69,7 +69,7 @@
       "src/components/ui/tabs.tsx": "7808699ffa47435ae831029b709c23da",
       "src/components/ui/ticket-card.tsx": "ecb9af95c143e82604fa83ff7a56b73d",
       "src/components/ui/typography.tsx": "e84c983c4a0617123d617b71ec4baec2",
-      "src/index.css": "24150c650bc4c2bccea5b33ec2ad0b60",
+      "src/index.css": "fac1e795ce48f77b263478061d2f08d7",
       "src/index.ts": "8f7493754c52aad0257e55db870cab8d",
       "src/lib/utils.ts": "f685e690779cd21766663c55781ee9b0",
       "src/mockup-preview.d.ts": "a76b7da7acc371612cc181ae485d1634",
@@ -78,8 +78,8 @@
       "src/routes/[__component].preview.$.tsx": "3a40af1fe37daff2e891175a6e6d4f99",
       "src/routes/[__mockup].preview.$.tsx": "5d9f42470848aa60148f20f9580e240e",
       "src/routes/__root.tsx": "a9450ec2a544783e425465a3230d71b3",
-      "src/routes/index.tsx": "b6033be08212403f52e48cfb1d359629",
-      "src/routes/style-guide.tsx": "b957586bb22d00da41ff8f032d0cc4d9",
+      "src/routes/index.tsx": "b862651a4f8cc0ab16f47e24b00a4fb7",
+      "src/routes/style-guide.tsx": "e20df91fd2b84a81a9738768cfa7235b",
       "src/styles.css": "662a6021113e8938d08a9b51b83f63f3",
       "tsconfig.json": "994abf64c2b9f78b568879f80ed0170e",
       "vite.config.ts": "aa3cd5a0f557eeef887df210791329a2",
@@ -162,14 +162,12 @@
       {
         "name": "--muted",
         "raw": "249 12% 95%",
-        "source": "src/index.css",
-        "description": "Near-neutral primary-hue section fill; alternate with muted-alternate behind raised cards."
+        "source": "src/index.css"
       },
       {
         "name": "--muted-alternate",
         "raw": "330 12% 95%",
-        "source": "src/index.css",
-        "description": "Near-neutral accent-hue section fill; alternate with muted, never as a brand or status treatment."
+        "source": "src/index.css"
       },
       {
         "name": "--muted-foreground",
@@ -414,6 +412,11 @@
       {
         "name": "--color-muted",
         "raw": "hsl(var(--muted))",
+        "source": "src/index.css"
+      },
+      {
+        "name": "--color-muted-alternate",
+        "raw": "hsl(var(--muted-alternate))",
         "source": "src/index.css"
       },
       {
@@ -857,11 +860,11 @@
           "type": "any"
         }
       ],
-      "usage": "Mount once inside the consumer app shell, ideally in <head>, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
+      "usage": "Mount once inside the consumer app shell, ideally in \u003chead\u003e, to load the Geist Sans and Geist Mono brand fonts required by the design system.",
       "examples": [
         {
           "label": "Inside a TanStack Start root shell",
-          "code": "<html lang=\"en\">\n  <head>\n    <HeadContent />\n    <Fonts />\n  </head>\n  <body>{children}</body>\n</html>"
+          "code": "\u003chtml lang=\"en\"\u003e\n  \u003chead\u003e\n    \u003cHeadContent /\u003e\n    \u003cFonts /\u003e\n  \u003c/head\u003e\n  \u003cbody\u003e{children}\u003c/body\u003e\n\u003c/html\u003e"
         }
       ],
       "antipatterns": [
@@ -922,7 +925,7 @@
       "examples": [
         {
           "label": "Muted action on a gradient panel",
-          "code": "<div className=\"bg-gradient-primary\"><Button variant=\"muted\">Get tickets</Button></div>"
+          "code": "\u003cdiv className=\"bg-gradient-primary\"\u003e\u003cButton variant=\"muted\"\u003eGet tickets\u003c/Button\u003e\u003c/div\u003e"
         }
       ],
       "antipatterns": [
@@ -1006,11 +1009,11 @@
       "examples": [
         {
           "label": "Card with corner edit action",
-          "code": "<Card\n  variant=\"elevated\"\n  action={\n    <Button variant=\"ghost\" size=\"icon\" aria-label=\"Edit\">\n      <Icon name=\"pencil\" />\n    </Button>\n  }\n>\n  <CardHeader>\n    <CardTitle>Workshop pass</CardTitle>\n  </CardHeader>\n</Card>"
+          "code": "\u003cCard\n  variant=\"elevated\"\n  action={\n    \u003cButton variant=\"ghost\" size=\"icon\" aria-label=\"Edit\"\u003e\n      \u003cIcon name=\"pencil\" /\u003e\n    \u003c/Button\u003e\n  }\n\u003e\n  \u003cCardHeader\u003e\n    \u003cCardTitle\u003eWorkshop pass\u003c/CardTitle\u003e\n  \u003c/CardHeader\u003e\n\u003c/Card\u003e"
         }
       ],
       "antipatterns": [
-        "Do not position a corner action with ad-hoc absolute className overrides \u2014 use the `action` prop, which places and offsets it correctly."
+        "Do not position a corner action with ad-hoc absolute className overrides — use the `action` prop, which places and offsets it correctly."
       ]
     },
     {
@@ -1088,7 +1091,7 @@
       "examples": [
         {
           "label": "Alternating quiet bands",
-          "code": "<Section surface=\"muted\"><Container><Card variant=\"raised\">First section</Card></Container></Section>\n<Section surface=\"muted-alternate\"><Container><Card variant=\"raised\">Next section</Card></Container></Section>"
+          "code": "\u003cSection surface=\"muted\"\u003e\u003cContainer\u003e\u003cCard variant=\"raised\"\u003eFirst section\u003c/Card\u003e\u003c/Container\u003e\u003c/Section\u003e\n\u003cSection surface=\"muted-alternate\"\u003e\u003cContainer\u003e\u003cCard variant=\"raised\"\u003eNext section\u003c/Card\u003e\u003c/Container\u003e\u003c/Section\u003e"
         }
       ],
       "antipatterns": [
@@ -1396,7 +1399,7 @@
       "examples": [
         {
           "label": "Speaker profile link",
-          "code": "<LinkedInBubble href=\"https://linkedin.com/in/ada-mwangi\" name=\"Ada Mwangi\" />"
+          "code": "\u003cLinkedInBubble href=\"https://linkedin.com/in/ada-mwangi\" name=\"Ada Mwangi\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1447,7 +1450,7 @@
       "examples": [
         {
           "label": "Speaker with LinkedIn bubble",
-          "code": "<SpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={<Button variant=\"secondary\" size=\"sm\">View profile</Button>}\n/>"
+          "code": "\u003cSpeakerCard\n  name=\"Ada Mwangi\"\n  role=\"Staff Engineer\"\n  company=\"Northwind\"\n  photoUrl=\"https://example.com/ada.jpg\"\n  topics={['Performance', 'DX']}\n  linkedinHref=\"https://linkedin.com/in/ada-mwangi\"\n  action={\u003cButton variant=\"secondary\" size=\"sm\"\u003eView profile\u003c/Button\u003e}\n/\u003e"
         }
       ],
       "antipatterns": [
@@ -1497,15 +1500,15 @@
       "examples": [
         {
           "label": "Default sponsor card",
-          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" />"
+          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
         },
         {
           "label": "Highlighted sponsor card",
-          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" />"
+          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" variant=\"highlight\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
         },
         {
           "label": "Small sponsor card",
-          "code": "<SponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" size=\"sm\" href=\"https://atoll-by-eutima.example.com\" />"
+          "code": "\u003cSponsorCard logoSrc={atollLogo} name=\"ATOLL by EUTIMA\" size=\"sm\" href=\"https://atoll-by-eutima.example.com\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1525,11 +1528,11 @@
           "required": true
         }
       ],
-      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline placed directly on the page background \u2014 Schedule itself adds no card or surface of its own.",
+      "usage": "Use as the outer frame for an event programme. Its categories connect into a continuous, section-coloured timeline placed directly on the page background — Schedule itself adds no card or surface of its own.",
       "examples": [
         {
           "label": "Event timeline",
-          "code": "<Schedule><ScheduleCategory markerTone=\"accent\" headerTransition=\"primaryAccent\">...</ScheduleCategory></Schedule>"
+          "code": "\u003cSchedule\u003e\u003cScheduleCategory markerTone=\"accent\" headerTransition=\"primaryAccent\"\u003e...\u003c/ScheduleCategory\u003e\u003c/Schedule\u003e"
         }
       ],
       "antipatterns": [
@@ -1557,7 +1560,7 @@
       "examples": [
         {
           "label": "Community category",
-          "code": "<ScheduleCategory markerTone=\"info\" headerTransition=\"accentInfo\"><ScheduleHeader icon=\"share\" title=\"SHARE\" /><ScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /></ScheduleCategory>"
+          "code": "\u003cScheduleCategory markerTone=\"info\" headerTransition=\"accentInfo\"\u003e\u003cScheduleHeader icon=\"share\" title=\"SHARE\" /\u003e\u003cScheduleItem time=\"11:00\" title=\"Community talk\" markerIcon=\"mic\" /\u003e\u003c/ScheduleCategory\u003e"
         }
       ],
       "antipatterns": [
@@ -1636,15 +1639,15 @@
       "examples": [
         {
           "label": "Talk with speaker avatar",
-          "code": "<ScheduleItem\n  time=\"11:00\u201311:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/>"
+          "code": "\u003cScheduleItem\n  time=\"11:00–11:25\"\n  title=\"Community talk\"\n  speaker=\"Luca Bianchi\"\n  linkedinHref=\"https://linkedin.com/in/luca-bianchi\"\n  description=\"A conversation about building with the community.\"\n  avatar={{ src: 'https://example.com/luca.jpg', name: 'Luca Bianchi' }}\n/\u003e"
         },
         {
           "label": "Talk with icon marker",
-          "code": "<ScheduleItem time=\"11:00\u201311:25\" title=\"Community talk\" markerIcon=\"mic\" />"
+          "code": "\u003cScheduleItem time=\"11:00–11:25\" title=\"Community talk\" markerIcon=\"mic\" /\u003e"
         },
         {
           "label": "Lunch without marker",
-          "code": "<ScheduleItem time=\"12:30\" title=\"Lunch\" />"
+          "code": "\u003cScheduleItem time=\"12:30\" title=\"Lunch\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1678,7 +1681,7 @@
       "examples": [
         {
           "label": "Share category",
-          "code": "<ScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" />"
+          "code": "\u003cScheduleHeader icon=\"share\" title=\"SHARE\" subtext=\"Interactive sessions led by the community.\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1748,7 +1751,7 @@
       "examples": [
         {
           "label": "Contribute tabs",
-          "code": "<Tabs defaultValue=\"talk\"><TabsList aria-label=\"Ways to contribute\"><TabsTrigger value=\"talk\">Talk/Session</TabsTrigger><TabsTrigger value=\"volunteer\">Volunteer</TabsTrigger></TabsList><TabsContent value=\"talk\">Propose a session</TabsContent><TabsContent value=\"volunteer\">Join the team</TabsContent></Tabs>"
+          "code": "\u003cTabs defaultValue=\"talk\"\u003e\u003cTabsList aria-label=\"Ways to contribute\"\u003e\u003cTabsTrigger value=\"talk\"\u003eTalk/Session\u003c/TabsTrigger\u003e\u003cTabsTrigger value=\"volunteer\"\u003eVolunteer\u003c/TabsTrigger\u003e\u003c/TabsList\u003e\u003cTabsContent value=\"talk\"\u003ePropose a session\u003c/TabsContent\u003e\u003cTabsContent value=\"volunteer\"\u003eJoin the team\u003c/TabsContent\u003e\u003c/Tabs\u003e"
         }
       ],
       "antipatterns": [
@@ -1763,7 +1766,7 @@
       "examples": [
         {
           "label": "Contribute tabs",
-          "code": "<TabsList aria-label=\"Ways to contribute\"><TabsTrigger value=\"talk\">Talk/Session</TabsTrigger><TabsTrigger value=\"volunteer\">Volunteer</TabsTrigger></TabsList>"
+          "code": "\u003cTabsList aria-label=\"Ways to contribute\"\u003e\u003cTabsTrigger value=\"talk\"\u003eTalk/Session\u003c/TabsTrigger\u003e\u003cTabsTrigger value=\"volunteer\"\u003eVolunteer\u003c/TabsTrigger\u003e\u003c/TabsList\u003e"
         }
       ],
       "antipatterns": [
@@ -1778,7 +1781,7 @@
       "examples": [
         {
           "label": "Contribute tabs",
-          "code": "<TabsTrigger value=\"volunteer\">Volunteer</TabsTrigger>"
+          "code": "\u003cTabsTrigger value=\"volunteer\"\u003eVolunteer\u003c/TabsTrigger\u003e"
         }
       ],
       "antipatterns": [
@@ -1793,7 +1796,7 @@
       "examples": [
         {
           "label": "Contribute tabs",
-          "code": "<TabsContent value=\"volunteer\"><Text>Join the team.</Text></TabsContent>"
+          "code": "\u003cTabsContent value=\"volunteer\"\u003e\u003cText\u003eJoin the team.\u003c/Text\u003e\u003c/TabsContent\u003e"
         }
       ],
       "antipatterns": [
@@ -1837,7 +1840,7 @@
       "examples": [
         {
           "label": "Site navigation",
-          "code": "<Navbar sticky brand={<BrandLogo />}><Link variant=\"nav\" href=\"/\">Home</Link><NavDropdown label=\"Contribute\"><NavDropdownItem href=\"/volunteer\">Volunteer</NavDropdownItem></NavDropdown></Navbar>"
+          "code": "\u003cNavbar sticky brand={\u003cBrandLogo /\u003e}\u003e\u003cLink variant=\"nav\" href=\"/\"\u003eHome\u003c/Link\u003e\u003cNavDropdown label=\"Contribute\"\u003e\u003cNavDropdownItem href=\"/volunteer\"\u003eVolunteer\u003c/NavDropdownItem\u003e\u003c/NavDropdown\u003e\u003c/Navbar\u003e"
         }
       ],
       "antipatterns": [
@@ -1890,7 +1893,7 @@
       "examples": [
         {
           "label": "Event footer",
-          "code": "<Footer\n  brand={<Logo />}\n  center={<span>Vibe coded with <Icon name=\"heart\" /> in Zurich</span>}\n  links={[\n    { label: 'Terms & Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice & Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  socials={[\n    { name: 'instagram', href: 'https://instagram.com', label: 'Instagram' },\n    { name: 'whatsapp', href: 'https://wa.me', label: 'WhatsApp' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/>"
+          "code": "\u003cFooter\n  brand={\u003cLogo /\u003e}\n  center={\u003cspan\u003eVibe coded with \u003cIcon name=\"heart\" /\u003e in Zurich\u003c/span\u003e}\n  links={[\n    { label: 'Terms \u0026 Conditions', href: '/terms' },\n    { label: 'Privacy Policy', href: '/privacy' },\n    { label: 'Legal Notice \u0026 Contact', href: '/contact' },\n    { label: 'Internal', href: '/internal' },\n  ]}\n  socials={[\n    { name: 'instagram', href: 'https://instagram.com', label: 'Instagram' },\n    { name: 'whatsapp', href: 'https://wa.me', label: 'WhatsApp' },\n  ]}\n  newsletterHref=\"/newsletter\"\n/\u003e"
         }
       ],
       "antipatterns": [
@@ -1935,11 +1938,11 @@
       "examples": [
         {
           "label": "Clickable feature card",
-          "code": "<FeatureCard href=\"/programme\" icon=\"ticket\" title=\"Live workshops\" description=\"Hands-on sessions across two tracks.\" />"
+          "code": "\u003cFeatureCard href=\"/programme\" icon=\"ticket\" title=\"Live workshops\" description=\"Hands-on sessions across two tracks.\" /\u003e"
         },
         {
           "label": "Feature card with picture",
-          "code": "<FeatureCard imageSrc={speakerPhoto} imageAlt=\"Speaker\" title=\"Community\" description=\"Meet the people behind the fest.\" />"
+          "code": "\u003cFeatureCard imageSrc={speakerPhoto} imageAlt=\"Speaker\" title=\"Community\" description=\"Meet the people behind the fest.\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -1984,11 +1987,11 @@
       "examples": [
         {
           "label": "Panel with circular photo",
-          "code": "<CtaPanel\n  title=\"Ready to build with us?\"\n  description=\"Join 600+ attendees in Zurich.\"\n  actionLabel=\"Get your ticket\"\n  actionHref=\"/tickets\"\n  image={{ src: speakerPhoto, alt: \"Speaker\" }}\n/>"
+          "code": "\u003cCtaPanel\n  title=\"Ready to build with us?\"\n  description=\"Join 600+ attendees in Zurich.\"\n  actionLabel=\"Get your ticket\"\n  actionHref=\"/tickets\"\n  image={{ src: speakerPhoto, alt: \"Speaker\" }}\n/\u003e"
         }
       ],
       "antipatterns": [
-        "Do not use the muted action button outside gradient surfaces \u2014 here it is the correct pairing.",
+        "Do not use the muted action button outside gradient surfaces — here it is the correct pairing.",
         "Do not pass more than one photo or non-square images without object-cover cropping; the image renders as a circle."
       ]
     },
@@ -2024,11 +2027,11 @@
           "type": "string"
         }
       ],
-      "usage": "Use for the six-image \u201cImpressions from the last event\u201d gallery. One pink\u2192purple gradient frame wraps rounded photo tiles (two columns on mobile, three on larger screens), with the gradient gallery button and an optional photographer-credit link inside the frame.",
+      "usage": "Use for the six-image “Impressions from the last event” gallery. One pink→purple gradient frame wraps rounded photo tiles (two columns on mobile, three on larger screens), with the gradient gallery button and an optional photographer-credit link inside the frame.",
       "examples": [
         {
           "label": "Event impressions frame",
-          "code": "<PhotoFrame photos={eventPhotos} href=\"https://example.com/full-gallery\" credit=\"Photos by Silvan M\u00fchlelemann\" creditLabel=\"m\u00fchlelemann+popp AG\" creditHref=\"https://example.com\" />"
+          "code": "\u003cPhotoFrame photos={eventPhotos} href=\"https://example.com/full-gallery\" credit=\"Photos by Silvan Mühlelemann\" creditLabel=\"mühlelemann+popp AG\" creditHref=\"https://example.com\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -2062,7 +2065,7 @@
       "examples": [
         {
           "label": "Early-bird ticket",
-          "code": "<TicketCard pill={<Badge variant=\"brand\" tone=\"solid\">Early bird</Badge>}>\n  <TicketPrice><span className=\"text-h3\">89 CHF</span></TicketPrice>\n  <TicketRegular label=\"regular price\" price=\"129 CHF\" />\n</TicketCard>"
+          "code": "\u003cTicketCard pill={\u003cBadge variant=\"brand\" tone=\"solid\"\u003eEarly bird\u003c/Badge\u003e}\u003e\n  \u003cTicketPrice\u003e\u003cspan className=\"text-h3\"\u003e89 CHF\u003c/span\u003e\u003c/TicketPrice\u003e\n  \u003cTicketRegular label=\"regular price\" price=\"129 CHF\" /\u003e\n\u003c/TicketCard\u003e"
         }
       ],
       "antipatterns": [
@@ -2109,7 +2112,7 @@
       "examples": [
         {
           "label": "Regular-pass comparison",
-          "code": "<TicketRegular label=\"regular price\" price=\"129 CHF\" />"
+          "code": "\u003cTicketRegular label=\"regular price\" price=\"129 CHF\" /\u003e"
         }
       ],
       "antipatterns": [
@@ -2155,7 +2158,7 @@
       "examples": [
         {
           "label": "Grouped navigation",
-          "code": "<NavDropdown label=\"Contribute\"><NavDropdownItem href=\"/volunteer\">Volunteer</NavDropdownItem></NavDropdown>"
+          "code": "\u003cNavDropdown label=\"Contribute\"\u003e\u003cNavDropdownItem href=\"/volunteer\"\u003eVolunteer\u003c/NavDropdownItem\u003e\u003c/NavDropdown\u003e"
         }
       ],
       "antipatterns": [
@@ -2185,7 +2188,7 @@
       "examples": [
         {
           "label": "Navigation option",
-          "code": "<NavDropdownItem href=\"/volunteer\">Volunteer</NavDropdownItem>"
+          "code": "\u003cNavDropdownItem href=\"/volunteer\"\u003eVolunteer\u003c/NavDropdownItem\u003e"
         }
       ],
       "antipatterns": [

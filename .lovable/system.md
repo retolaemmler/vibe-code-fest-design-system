@@ -116,6 +116,13 @@ Pick the Button variant from the surface it sits on, not from personal taste.
 - Do not add one-off `className` borders or backgrounds to FeatureCard; its
   appearance follows whether it is interactive (`href`) or not.
 
+## Card layout guidelines
+
+- **Grid structure:** Place cards inside `<Container>` using standard responsive grids:
+  `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6` (or `gap-8` for prominent feature cards).
+- **Height matching:** Always use `h-full` on cards in a grid so row heights match.
+- **Section pairing:** Place raised cards on `surface="muted"` or `surface="muted-alternate"` for optimal contrast.
+
 ## Footer layout
 
 The `Footer` component is a fixed three-part pattern:

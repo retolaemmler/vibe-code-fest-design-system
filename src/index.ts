@@ -108,6 +108,7 @@ export {
 export {
   FeatureCard,
   featureMedallionVariants,
+  featurePhotoVariants,
   type FeatureCardProps,
 } from "./components/ui/feature-card";
 export { CtaPanel, type CtaPanelProps } from "./components/ui/cta-panel";

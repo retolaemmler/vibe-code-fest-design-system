@@ -43,6 +43,12 @@ Every shadow in the system is one of these tokens. Never write a raw
 
 ## Dark sections
 
+For consecutive quiet sections, alternate `Section surface="muted"` and
+`Section surface="muted-alternate"` (`bg-muted` / `bg-muted-alternate`).
+These near-neutral primary- and accent-hue fills read as off-white in light
+mode, with subdued dark equivalents. Keep raised cards on `bg-card` with
+the existing shadow tokens. Neither fill represents a brand action or status.
+
 Use `--dark-section` / `bg-dark-section` for full-bleed alternate bands that
 must feel heavy and branded: sponsor strips, large CTAs, footer backgrounds.
 It uses the same hue as `--primary` and stays dark in both light and dark

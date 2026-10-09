@@ -1,5 +1,7 @@
 # Task roadmap
 
+- [x] Add two near-neutral background fills and alternate section previews behind raised cards
+
 - [x] Fix mobile navigation to the viewport, fill its height, and expose dropdown options as direct links
 
 - [x] Shift the primary, focus, gradient, and dark-section palette from violet to one blue hue

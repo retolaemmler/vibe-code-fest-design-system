@@ -2154,7 +2154,7 @@
           "required": true
         }
       ],
-      "usage": "Use for grouped desktop navigation options. Within Navbar's mobile menu the label and all options display inline without a dropdown trigger.",
+      "usage": "Use for grouped desktop navigation options; export from the library entry point so it reaches consumers. Within Navbar's mobile menu the label and all options display inline without a dropdown trigger.",
       "examples": [
         {
           "label": "Grouped navigation",
@@ -2184,7 +2184,7 @@
           "type": "boolean"
         }
       ],
-      "usage": "Use for an option inside NavDropdown; renders as a direct link in mobile navigation.",
+      "usage": "Use for an option inside NavDropdown; export from the library entry point so it reaches consumers. Renders as a direct link in mobile navigation.",
       "examples": [
         {
           "label": "Navigation option",

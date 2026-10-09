@@ -45,8 +45,9 @@ Every shadow in the system is one of these tokens. Never write a raw
 
 For consecutive quiet sections, alternate `Section surface="muted"` and
 `Section surface="muted-alternate"` (`bg-muted` / `bg-muted-alternate`).
-These near-neutral primary- and accent-hue fills read as off-white in light
-mode, with subdued dark equivalents. Keep raised cards on `bg-card` with
+`muted` carries the primary violet hue; `muted-alternate` carries a cool blue
+sitting next to that violet. Both stay near-neutral and read as off-white in
+light mode, with subdued dark equivalents. Keep raised cards on `bg-card` with
 the existing shadow tokens. Neither fill represents a brand action or status.
 
 Use `--dark-section` / `bg-dark-section` for full-bleed alternate bands that

@@ -99,6 +99,14 @@ export {
 } from "./components/ui/tabs";
 export { Navbar, navbarVariants, type NavbarProps } from "./components/ui/navbar";
 export {
+  NavDropdown,
+  NavDropdownItem,
+  navDropdownContentVariants,
+  navDropdownItemVariants,
+  type NavDropdownProps,
+  type NavDropdownItemProps,
+} from "./components/ui/nav-dropdown";
+export {
   Footer,
   footerVariants,
   type FooterLink,

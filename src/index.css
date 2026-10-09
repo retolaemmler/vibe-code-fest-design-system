@@ -63,7 +63,7 @@
   --secondary-foreground: 60 3% 11%;
   /* Alternating section fills: near-neutral primary and accent hues. */
   --muted: 249 12% 95%;
-  --muted-alternate: 330 18% 92.5%;
+  --muted-alternate: 228 26% 92.5%;
   --muted-foreground: 240 4% 46%;
   --accent: 330 81% 60%;
   --accent-foreground: 0 0% 100%;
@@ -263,7 +263,7 @@
   --secondary: 60 3% 15%;
   --secondary-foreground: 60 9% 98%;
   --muted: 249 5% 15%;
-  --muted-alternate: 330 7% 18%;
+  --muted-alternate: 228 12% 18%;
   --muted-foreground: 240 5% 65%;
   --accent: 330 81% 66%;
   --accent-foreground: 60 3% 7%;

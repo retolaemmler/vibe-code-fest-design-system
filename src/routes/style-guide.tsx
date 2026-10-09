@@ -209,7 +209,7 @@ const COLOR_GROUPS: { group: string; blurb: string; swatches: Swatch[] }[] = [
       { token: "card", usage: "Panels sitting on the page: cards, speaker tiles, schedule rows." },
       { token: "popover", usage: "Floating layers above the page: menus, tooltips, dialogs." },
       { token: "muted", usage: "Near-neutral primary-hue section fill. Alternate with muted-alternate behind raised cards." },
-      { token: "muted-alternate", usage: "Near-neutral accent-hue section fill. Alternate with muted; not an accent or selected-state fill." },
+      { token: "muted-alternate", usage: "Near-neutral cool-blue section fill next to the primary violet. Alternate with muted; not an accent or selected-state fill." },
       { token: "secondary", usage: "Neutral chips and secondary fills that must not read as brand." },
       { token: "surface-glass", usage: "The frosted sticky header and glass cards." },
       { token: "dark-section", usage: "Full-bleed alternate bands that stay dark in both themes: CTA, sponsors, footer.", on: "dark-section" },

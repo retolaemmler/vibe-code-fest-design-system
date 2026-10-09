@@ -27,7 +27,6 @@ Apply with any color utility: `bg-<name>`, `text-<name>`, `border-<name>`, `ring
 | `secondary` | `--color-secondary` |
 | `secondary-foreground` | `--color-secondary-foreground` |
 | `muted` | `--color-muted` |
-| `muted-alternate` | `--color-muted-alternate` |
 | `muted-foreground` | `--color-muted-foreground` |
 | `accent` | `--color-accent` |
 | `accent-foreground` | `--color-accent-foreground` |

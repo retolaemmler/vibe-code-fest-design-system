@@ -665,27 +665,12 @@ _Lunch without marker_
 import { Section } from "@ws-05nvb9wgger8dlwh2bqp/de82839c-64ec-44ae-973b-ceb1bab7994b"
 ```
 
-Use Section for full-width page bands. Alternate muted and muted-alternate surfaces behind raised cards.
-
 **Props:**
 
 | Prop | Type | Default |
 |---|---|---|
 | `spacing` | sm · md · lg | `md` |
-| `surface` | none · muted · muted-alternate · card · gradient | `none` |
-
-**Examples:**
-
-_Alternating quiet bands_
-```tsx
-<Section surface="muted"><Container><Card variant="raised">First section</Card></Container></Section>
-<Section surface="muted-alternate"><Container><Card variant="raised">Next section</Card></Container></Section>
-```
-
-**Avoid:**
-
-- Do not override section backgrounds with className; choose a surface variant.
-- Do not use these quiet fills as brand-action or status colors.
+| `surface` | none · muted · card · gradient | `none` |
 
 ### SpeakerCard
 
